@@ -12,6 +12,7 @@
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/adapter-node": "^1.1.4",
+		"@sveltejs/adapter-vercel": "^1.0.5",
 		"@sveltejs/kit": "^1.0.0",
 		"@types/fuzzy-search": "^2.1.2",
 		"svelte": "^3.54.0",
