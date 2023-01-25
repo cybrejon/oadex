@@ -83,6 +83,10 @@
 
 </script>
 
+<svelte:head>
+	<title>OADex</title>
+</svelte:head>
+
 
   <div class="shiki-selection-header">
     <Toggles buttons={[

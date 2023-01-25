@@ -21,6 +21,10 @@
 
 </script>
 
+<svelte:head>
+	<title>OADex | {curr_shiki_obj.式神名称}</title>
+</svelte:head>
+
 <div class="container">
 
   <Basic area_name='basic' data={{
