@@ -1,0 +1,81 @@
+.shiki-selection-container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 30px 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.shikigami-image {
+  background-color: #282A2F;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+
+.shiki-selection-header {
+  z-index: 10;
+  background-color: #36393F;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shiki-utility-header {
+  margin: 30px auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+  transition: .2s;
+}
+
+.filter-container:hover {
+  filter: drop-shadow(0 15px 15px #282A2F);
+}
+
+/* .filter-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  background-color: #282A2F;
+  color: #fff;
+}
+
+.filter-button:hover {
+  background-color: rgba(255, 255, 255, 0.118);
+}
+
+.filter-button:active {
+  background-color: #ccfe0533;
+  outline-offset: 3px;
+  outline: 3px solid #ffffff5a;
+} */
+
+.filter-input {
+  width: 400px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 10px 10px 15px;
+  background-color: #40444B;
+  color: #fff;
+}
+
+.filter-input:focus {
+  outline-offset: 3px;
+  outline: 3px solid #ffffff5a;
+}

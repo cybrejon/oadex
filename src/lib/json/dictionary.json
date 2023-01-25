@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "1": "D",
+    "2": "C",
+    "3": "B",
+    "4": "A",
+    "5": "S"
+  },
+  "roles": {
+    "射": "MARKSMAN",
+    "忍": "NINJA",
+    "守": "TANK",
+    "侍": "SAMURAI",
+    "巫": "MAGE",
+    "祝": "SUPPORT"
+  },
+  "roles_numeral": {
+    "1": "SAMURAI",
+    "2": "MAGE",
+    "3": "MARKSMAN",
+    "4": "NINJA",
+    "5": "TANK",
+    "6": "SUPPORT"
+  },
+  "lanes": {
+    "中": "Mid Laner",
+    "辅": "Bottom Laner Support",
+    "上": "Top Laner",
+    "野": "Jungler/Gank",
+    "下": "Bottom Laner Marksman"
+  },
+  "non_global_shikis": [
+    "1124",
+    "1119",
+    "1120",
+    "1125",
+    "1101",
+    "1102"
+  ]
+}

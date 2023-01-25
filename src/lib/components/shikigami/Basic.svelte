@@ -1,0 +1,151 @@
+<script>
+  export let data;
+
+  export let area_name;
+
+  let { 
+    name: name,
+    classification: classification,
+    voices: voices,
+    lane: lane,
+    specialty: specialty
+  } = data;
+
+  import Container from "$lib/components/shikigami/Container.svelte";
+</script>
+
+<Container area_name={area_name}>
+  <div class="name-container">
+    <p class="name {classification[0].toLowerCase()}-name">🪪 {name}</p>
+  </div>
+  <ul class="classification-ul">
+    🏛️
+    {#each classification as role}
+    <li class="c-li {role.toLowerCase()}">{role}</li>
+    {/each}
+  </ul>
+  <p class="lane">📍 {lane}</p>
+  <p class="lane">⚖️ {specialty}</p>
+  <div class="vas">
+    <p class="vas-title">Voice Actors</p>
+    <ul class="vas-ul">
+      {#if voices[0]}
+        <li class="vas-li">🇯🇵 {voices[0]}</li>
+      {/if}
+      {#if voices[1]}
+        <li class="vas-li">🇨🇳 {voices[1]}</li>
+      {/if}
+      {#if voices[2]}
+        <li class="vas-li">🇺🇸 {voices[2]}</li>
+      {/if}
+      {#if voices[3]}
+        <li class="vas-li">🇰🇷 {voices[3]}</li>
+      {/if}
+    </ul>
+  </div>
+</Container>
+
+<style>
+
+  .name {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  .classification-ul {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: 5px;
+  }
+
+  .c-li {
+    font-size: .7rem;
+    font-weight: 900;
+    display: inline-block;
+    border-radius: 100px;
+    padding: 5px 10px;
+  }
+
+  .vas {
+    background-color: #3C3F46;
+    border-radius: 6px;
+    padding: 15px;
+  }
+
+  .vas-ul {
+    margin-top: 10px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+
+  .vas-li {
+    font-size: .9rem;
+  }
+
+  .vas-title {
+    font-weight: 800;
+  }
+
+  .lane {
+    font-weight: 800;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  .ninja {
+    background-color: rgba(218, 138, 25, 0.178);
+  }
+  .ninja-name {
+    color: rgb(255, 215, 158);
+  }
+
+  .mage {
+    background-color: rgba(25, 125, 218, 0.178);
+  }
+  .mage-name {
+    color: rgb(148, 203, 255);
+  }
+
+  .support {
+    background-color: rgba(25, 218, 25, 0.178);
+  }
+  .support-name {
+    color: rgb(147, 255, 147);
+  }
+
+  .samurai {
+    background-color: rgba(221, 86, 86, 0.267);
+  }
+  .samurai-name {
+    color: rgb(255, 96, 96);
+  }
+
+  .tank {
+    background-color: rgba(178, 97, 221, 0.322);
+  }
+  .tank-name {
+    color: rgb(206, 150, 237);
+  }
+  
+  .marksman {
+    background-color: rgba(215, 218, 25, 0.178);
+  }
+  .marksman-name {
+    color: rgb(231, 233, 135);
+  }
+  
+</style>

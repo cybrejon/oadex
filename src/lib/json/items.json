@@ -1,0 +1,3587 @@
+{
+  "data": {
+    "Genji Longbow": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/20.png",
+      "子物品": [
+        "Shuriken",
+        "Shuriken"
+      ],
+      "可合成装备": [
+        20,
+        23,
+        28,
+        88,
+        113,
+        124,
+        130
+      ],
+      "装备名称": "Genji Longbow",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+30% Attack Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 9,
+      "装备价格": 450,
+      "装备额外描述": null
+    },
+    "Greater Devourer Ball": {
+      "装备被动技能": [
+        "#ODevourer#n: Generate a shield that can absorb 240#c9e45fa(+120%Attack) #n  magic damage. The shield will refresh if no magic damage is taken for 20 seconds. When the shield breaks, Movement Speed is increased by30% for 3 seconds but will gradually slow down during this period."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/36.png",
+      "子物品": [
+        "Devourer Ball",
+        "Chibiki Blade"
+      ],
+      "可合成装备": [],
+      "装备名称": "Greater Devourer Ball",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+75 Attack Damage",
+        "+105 Magic Resist",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 32,
+      "装备价格": 2100,
+      "装备额外描述": null
+    },
+    "Tsukuyomi Do": {
+      "装备被动技能": [
+        "#OKing Mu Order#n: When damage (prior to damage reduction) equal to 30% of your Max HP is taken within 5 second(s), a shield that absorbs 200#c0066cc(+15%Max MP) #n  damage will be generated. A frost ring that decreases the target's Attack Speed by 20% for 4 second(s) will also be triggered. The cooldown of this effect is 12 seconds.",
+        "#Soul Infusion#n: You gain 8 MP for the death of each nearby enemy unit to a maximum of 800. The effect is doubled when you kill the enemy unit."
+      ],
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/83.png",
+      "子物品": [
+        "Ningyo Soulstone",
+        "Kitsune Mask"
+      ],
+      "可合成装备": [],
+      "装备名称": "Tsukuyomi Do",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+350 HP",
+        "+300 MP",
+        "+90 Armor",
+        "+10% Cooldown Reduction",
+        "+100% MP Regen"
+      ],
+      "装备主动技能": null,
+      "装备ID": 74,
+      "装备价格": 1900,
+      "装备额外描述": null
+    },
+    "Nether Crossbow": {
+      "装备被动技能": [
+        "#ONether Arrow#n: Basic attacks deal 30#c0095cc(+2*Current Level) #n  extra magic damage to target. Every time after using 2 basic attacks or abilities, the next basic attack will trigger a bonus basic attack effect."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/120.png",
+      "子物品": [
+        "Genji Longbow",
+        "Genji Longbow",
+        "Shajuko"
+      ],
+      "可合成装备": [],
+      "装备名称": "Nether Crossbow",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+60% Attack Speed",
+        "+20 Main Stats"
+      ],
+      "装备主动技能": null,
+      "装备ID": 113,
+      "装备价格": 2200,
+      "装备额外描述": null
+    },
+    "Hateful Tachi": {
+      "装备被动技能": [
+        "#OSuppression#n: Physical damage dealt by you reduces the healing effect of enemy shikigami by 20% over 2 seconds."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/08.png",
+      "子物品": [
+        "Shuriken"
+      ],
+      "可合成装备": [
+        24
+      ],
+      "装备名称": "Hateful Tachi",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+30% Attack Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 14,
+      "装备价格": 650,
+      "装备额外描述": null
+    },
+    "Soul Infusion": {
+      "装备被动技能": [
+        "#OSoul Talisman#n: Recover 15% of the MP consumed when an ability is used."
+      ],
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/48.png",
+      "子物品": [
+        "History Parchment",
+        "Onmyoji Amulet"
+      ],
+      "可合成装备": [
+        48
+      ],
+      "装备名称": "Soul Infusion",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+40 Ability Power",
+        "+75% MP Regen"
+      ],
+      "装备主动技能": null,
+      "装备ID": 39,
+      "装备价格": 600,
+      "装备额外描述": null
+    },
+    "God-killing Halberd": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/127.png",
+      "子物品": [
+        "Psychic Umbrella",
+        "Domaru Armor"
+      ],
+      "可合成装备": [],
+      "装备名称": "God-killing Halberd",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+150 Armor",
+        "+150 Magic Resist"
+      ],
+      "装备主动技能": "#OActive - Demon Visage#n: Immediately gain a 60% Haste effect that gradually decreases over time. If damage is dealt to enemy shikigami within the next 5 seconds, temporarily increases your Max HP by an additional 30-70% (changes according to the number of enemy shikigami nearby) for 10 seconds.",
+      "装备ID": 123,
+      "装备价格": 2000,
+      "装备额外描述": null
+    },
+    "Omoikane's Bow": {
+      "装备被动技能": [
+        "#ONightwing#n: +10% Life Steal",
+        "#OAmewakahiko#n: Every 8 seconds, the next attack deals an additional #cffba35(+6%TargetMax HP) #n  physical damage and inflicts a 0.8-second 70% Slow effect on the target that weakens over time. Attacking or casting abilities will decrease the cooldown by 1 seconds."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/28.png",
+      "子物品": [
+        "Redmark Katar",
+        "Katar",
+        "Dragon Gun"
+      ],
+      "可合成装备": [],
+      "装备名称": "Omoikane's Bow",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+60 Attack Damage",
+        "+25% Crit Rate",
+        "+10% Cooldown Reduction",
+        "+50% MP Regen"
+      ],
+      "装备主动技能": null,
+      "装备ID": 22,
+      "装备价格": 2100,
+      "装备额外描述": null
+    },
+    "Earth Imperial Lance": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r",
+        "#OScepter#n: Your abilities deal an additional 90#c39b54a(+12%Ability Power) #n  magic damage to the shikigami or monster target (2.4x damage against monsters). This can only be triggered once every 3 seconds for each target."
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/94.png",
+      "子物品": [
+        "Imperial Lance",
+        "Earth Jade Echo"
+      ],
+      "可合成装备": [],
+      "装备名称": "Earth Imperial Lance",
+      "装备等级": 5,
+      "装备属性": [
+        "+100 Ability Power",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 151,
+      "装备价格": 1750,
+      "装备额外描述": null
+    },
+    "Bronze Scale": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/68.png",
+      "子物品": null,
+      "可合成装备": [
+        12,
+        38,
+        43,
+        45,
+        46,
+        65,
+        66,
+        68,
+        69,
+        129
+      ],
+      "装备名称": "Bronze Scale",
+      "装备等级": "Basic",
+      "装备属性": [
+        "+225 HP"
+      ],
+      "装备主动技能": null,
+      "装备ID": 60,
+      "装备价格": 265,
+      "装备额外描述": null
+    },
+    "Demonic Boots": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Movement"
+      ],
+      "图标路径": "gui/res/equip/101.png",
+      "子物品": [
+        "Swift Boots"
+      ],
+      "可合成装备": [],
+      "装备名称": "Demonic Boots",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+30 Magic Penetration",
+        "+45 Movement Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 92,
+      "装备价格": 730,
+      "装备额外描述": null
+    },
+    "Bonerotter": {
+      "装备被动技能": [
+        "#OSacred Bones#n: Grants 0.75% Life Steal and Spell Vampire for every 10% HP lost, up to a maximum of 6%."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/23.png",
+      "子物品": [
+        "Redmark Katar",
+        "Domaru Armor",
+        "Tachi"
+      ],
+      "可合成装备": [],
+      "装备名称": "Bonerotter",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+85 Attack Damage",
+        "+90 Armor",
+        "+8% Life Steal",
+        "+8% Spell Vampire"
+      ],
+      "装备主动技能": null,
+      "装备ID": 31,
+      "装备价格": 2100,
+      "装备额外描述": null
+    },
+    "Fashionable Trinket": {
+      "装备被动技能": [
+        "#OFortune#n: Deals an additional 20#c0095cc(+10*Current Level) #n  Magic Damage and grants 12 Coins (8 Coins at long range) when attacking an enemy shikigami. #rWhen your total Coins is among the last two in the team, grants 1 layer of energy recharge every 9 seconds, up to a maximum of 3 layers.",
+        "#ORakuzen#n: The reward obtained from killing minions and monsters before Lv. 8 will be transferred to nearby allied shikigami.",
+        "#OFine Jade#n: Increases nearby ally shikigami's Armor by #c0095cc(+2.5*Current Level) #n  and Magic Resist by #c0095cc(+2*Current Level) #n ."
+      ],
+      "装备类型": [
+        "Support"
+      ],
+      "图标路径": "gui/res/equip/108.png",
+      "子物品": [
+        "Destiny's Tile",
+        "Shajuko"
+      ],
+      "可合成装备": [],
+      "装备名称": "Fashionable Trinket",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+150 HP",
+        "+30 Main Stats",
+        "+50% HP Regen",
+        "+50% MP Regen",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": "#OActive - Windrunner#n: Increases Movement Speed and Slow immunity of nearby ally units by 50% each for 3.5 second(s). When ally units with the Movement Speed bonus attack for the first time, they deal an additional 30#c0095cc#n  #Umagic damage#n and inflict a 30% Slow effect that lasts 1.5 second(s) (Cooldown: 60 seconds).",
+      "装备ID": 98,
+      "装备价格": 1650,
+      "装备额外描述": null
+    },
+    "Shajuko": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon",
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/124.png",
+      "子物品": null,
+      "可合成装备": [
+        43,
+        52,
+        98,
+        99,
+        100,
+        101,
+        113,
+        132
+      ],
+      "装备名称": "Shajuko",
+      "装备等级": "Basic",
+      "装备属性": [
+        "+20 Main Stats"
+      ],
+      "装备主动技能": null,
+      "装备ID": 120,
+      "装备价格": 300,
+      "装备额外描述": null
+    },
+    "Astrolabe": {
+      "装备被动技能": [
+        "#OFortune#n: Deals an additional 10.5#c0095cc(+1.5*Current Level) #n  Magic Damage and grants 12 Coins (8 Coins at long range) when attacking an enemy shikigami. #rWhen your total Coins is among the last two in the team, grants 1 layer of energy recharge every 9 seconds, up to a maximum of 3 layers.",
+        "#ORakuzen#n: The reward obtained from killing minions and monsters before Lv. 8 will be transferred to nearby allied shikigami.",
+        "#OFine Jade#n: Increases nearby ally shikigami's Armor by #c0095cc(+2.5*Current Level) #n  and Magic Resist by #c0095cc(+2*Current Level) #n ."
+      ],
+      "装备类型": [
+        "Support"
+      ],
+      "图标路径": "gui/res/equip/111.png",
+      "子物品": [
+        "Destiny's Tile",
+        "Shajuko"
+      ],
+      "可合成装备": [],
+      "装备名称": "Astrolabe",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+150 HP",
+        "+30 Main Stats",
+        "+50% HP Regen",
+        "+50% MP Regen",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": "#OActive - Sea Sprite#n: Create a shield that lasts for 3.5 second(s) to protect nearby ally shikigami. This can absorb 60#c0095cc(+35*Current Level) #n  damage (Cooldown: 60 seconds).",
+      "装备ID": 100,
+      "装备价格": 1650,
+      "装备额外描述": null
+    },
+    "Hoko Do": {
+      "装备被动技能": [
+        "#OKing Mu Order#n: When damage equal to 35% of your Max HP is taken, a frost ring is triggered that decreases the target's Movement Speed by 50% for 2 seconds. The CD of this effect is 12.",
+        "#OSuppression#n: When being hit by a basic attack, it reduces the healing effect of the attacker by 35% for 1 seconds."
+      ],
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/81.png",
+      "子物品": [
+        "Shadow Breastplate",
+        "Gold Bracer",
+        "Hermit Kariginu"
+      ],
+      "可合成装备": [],
+      "装备名称": "Hoko Do",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+135 Armor",
+        "+650 HP"
+      ],
+      "装备主动技能": null,
+      "装备ID": 75,
+      "装备价格": 2000,
+      "装备额外描述": null
+    },
+    "Righteous Blank Lance": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r"
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/92.png",
+      "子物品": [
+        "Blank Lance",
+        "Righteous Jade Echo"
+      ],
+      "可合成装备": [],
+      "装备名称": "Righteous Blank Lance",
+      "装备等级": 5,
+      "装备属性": [
+        "+90 Attack Damage",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 153,
+      "装备价格": 1750,
+      "装备额外描述": null
+    },
+    "Dream Vestiges": {
+      "装备被动技能": [
+        "#OMemento#n: After an ability hits an enemy, the target takes 8% more damage for 3 second(s). This effect has a cooldown of 10 second(s)."
+      ],
+      "装备类型": [
+        "Support"
+      ],
+      "图标路径": "gui/res/equip/134.png",
+      "子物品": [
+        "Virtuous Staff",
+        "Shajuko",
+        "Silver Bracer"
+      ],
+      "可合成装备": [],
+      "装备名称": "Dream Vestiges",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+60 Main Stats",
+        "+350 HP",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 101,
+      "装备价格": 1800,
+      "装备额外描述": null
+    },
+    "Kojiki Scroll": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/47.png",
+      "子物品": [
+        "History Parchment"
+      ],
+      "可合成装备": [
+        48,
+        54,
+        55,
+        87,
+        104
+      ],
+      "装备名称": "Kojiki Scroll",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+45 Ability Power",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 42,
+      "装备价格": 600,
+      "装备额外描述": null
+    },
+    "Nature's Glory": {
+      "装备被动技能": [
+        "#OThousand Images#n: Increases Ability Damage by 4-10% (reaches the maximum at Lv. 18).",
+        "#OWatcher#n: Basic Attacks against shikigami with less than 40% HP deal 45#c0095cc(+22*Current Level) #n  Physical Damage and greatly reduce the target's Movement Speed for a short period of time. (This effect can only be triggered on a target once every 10 seconds.)"
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/26.png",
+      "子物品": [
+        "Chibiki Blade",
+        "Nether Scythe"
+      ],
+      "可合成装备": [],
+      "装备名称": "Nature's Glory",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+80 Attack Damage",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 27,
+      "装备价格": 1950,
+      "装备额外描述": null
+    },
+    "Heaven's Thunder": {
+      "装备被动技能": [
+        "#ONightwing#n: +10% Life Steal",
+        "#OThunder#n: Every 9 seconds, basic attacks trigger chain lightning that deals 50#c0095cc(+12.5*Current Level) #n  magic damage to 5 targets. This damage can crit. Each basic attack to enemy shikigami or monsters reduces the cooldown by 3 seconds. Chain lightning damage will be reduced by 20% with each bounce, to a minimum of 40% of original damage. "
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/31.png",
+      "子物品": [
+        "Dragon Gun",
+        "Feather Bow",
+        "Redmark Katar"
+      ],
+      "可合成装备": [],
+      "装备名称": "Heaven's Thunder",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+45 Attack Damage",
+        "+25% Attack Speed",
+        "+25% Crit Rate"
+      ],
+      "装备主动技能": null,
+      "装备ID": 21,
+      "装备价格": 2100,
+      "装备额外描述": null
+    },
+    "Eclipse Blade": {
+      "装备被动技能": [
+        "#OChop#n: Basic melee attacks deal #c9e45fa(+25%Attack) #n  physical damage to enemies near the target. Damage to minions is increased by 100%."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/113.png",
+      "子物品": [
+        "Tachi",
+        "Tachi"
+      ],
+      "可合成装备": [
+        82,
+        107
+      ],
+      "装备名称": "Eclipse Blade",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+30 Attack Damage",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 70,
+      "装备价格": 850,
+      "装备额外描述": null
+    },
+    "Orochibane": {
+      "装备被动技能": [
+        "#OOctocaput#n: Gains a 80% Movement Speed bonus that gradually reduces over 3 seconds after defeating or assisting to defeat a shikigami."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/118.png",
+      "子物品": [
+        "Murasame",
+        "Murasame",
+        "Murasame"
+      ],
+      "可合成装备": [],
+      "装备名称": "Orochibane",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+200 Attack Damage"
+      ],
+      "装备主动技能": null,
+      "装备ID": 108,
+      "装备价格": 4000,
+      "装备额外描述": null
+    },
+    "Gold Bracer": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/77.png",
+      "子物品": [
+        "Bronze Scale"
+      ],
+      "可合成装备": [
+        75,
+        76,
+        81,
+        105,
+        122
+      ],
+      "装备名称": "Gold Bracer",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+570 HP"
+      ],
+      "装备主动技能": null,
+      "装备ID": 66,
+      "装备价格": 665,
+      "装备额外描述": null
+    },
+    "Hawk Bow": {
+      "装备被动技能": [
+        "#ORising Wind#n: The Basic Attacks of ranged shikigami are divided up to simultaneously attack up to 3 units within range. The damage of this Basic Attack decreases by 15% for each unit hit.",
+        "#OWhistling Leaves#n: Basic attacks additionally deal #c9e45fa(+10%Attack) #n  physical damage."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/30.png",
+      "子物品": [
+        "Nether Scythe",
+        "Genji Longbow"
+      ],
+      "可合成装备": [],
+      "装备名称": "Hawk Bow",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+40 Attack Damage",
+        "+50% Attack Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 23,
+      "装备价格": 1750,
+      "装备额外描述": null
+    },
+    "Hermit Kariginu": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/67.png",
+      "子物品": null,
+      "可合成装备": [
+        64,
+        67,
+        68,
+        73,
+        75,
+        76,
+        90,
+        106
+      ],
+      "装备名称": "Hermit Kariginu",
+      "装备等级": "Basic",
+      "装备属性": [
+        "+30 Armor"
+      ],
+      "装备主动技能": null,
+      "装备ID": 61,
+      "装备价格": 200,
+      "装备额外描述": null
+    },
+    "Nether Scythe": {
+      "装备被动技能": [
+        "#OShadow Scythe#n: Basic Attacks deal an 15 Physical Damage to the target."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/15.png",
+      "子物品": [
+        "Tachi",
+        "Tachi"
+      ],
+      "可合成装备": [
+        23,
+        26,
+        27
+      ],
+      "装备名称": "Nether Scythe",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+40 Attack Damage"
+      ],
+      "装备主动技能": null,
+      "装备ID": 13,
+      "装备价格": 750,
+      "装备额外描述": null
+    },
+    "Ama-no-Ohabari": {
+      "装备被动技能": [
+        "#OCursed Scar#n: For the next 5 seconds after using this ability, the next Basic Attack deals an additional 50#c39b54a(+40%Ability Power) #n #c0095cc(+10*Current Level) #n  extra magic damage. This effect can be triggered once every 1.5 seconds."
+      ],
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/63.png",
+      "子物品": [
+        "Kitsune Sword",
+        "Yatagarasu Feather"
+      ],
+      "可合成装备": [],
+      "装备名称": "Ama-no-Ohabari",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+100 Ability Power",
+        "+450 HP",
+        "+10% Cooldown Reduction",
+        "+5% Movement Speed",
+        "+20% Attack Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 58,
+      "装备价格": 2150,
+      "装备额外描述": null
+    },
+    "Silver Bracer": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/73.png",
+      "子物品": [
+        "Bronze Scale"
+      ],
+      "可合成装备": [
+        28,
+        29,
+        33,
+        73,
+        77,
+        78,
+        79,
+        81,
+        101
+      ],
+      "装备名称": "Silver Bracer",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+300 HP",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 65,
+      "装备价格": 530,
+      "装备额外描述": null
+    },
+    "Sessho-seki Do": {
+      "装备被动技能": [
+        "#OJizo Deity#n: When you take a critical hit, you obtain a shield that can absorb 15% of its Physical Damage.",
+        "#OSessho-seki#n: Counterattack when you take a Basic Attack, dealing Magic Damage equal to 20%% Armor + 15%% of the damage taken before damage reduction."
+      ],
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/80.png",
+      "子物品": [
+        "Domaru Armor",
+        "Domaru Armor"
+      ],
+      "可合成装备": [],
+      "装备名称": "Sessho-seki Do",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+165 Armor"
+      ],
+      "装备主动技能": null,
+      "装备ID": 71,
+      "装备价格": 1900,
+      "装备额外描述": null
+    },
+    "Chidori Twin Swords": {
+      "装备被动技能": [
+        "#OChidori#n: When HP falls below 35%, 50% of the damage taken within 5 second(s) is converted into Bleed damage (non-fatal). Also gains 8% Life Steal."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/35.png",
+      "子物品": [
+        "Sulfur Hammer",
+        "Feather Bow"
+      ],
+      "可合成装备": [],
+      "装备名称": "Chidori Twin Swords",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+40 Attack Damage",
+        "+450 HP",
+        "+20% Attack Speed",
+        "+15% Crit Rate",
+        "+5% Movement Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 25,
+      "装备价格": 2100,
+      "装备额外描述": null
+    },
+    "Otenta": {
+      "装备被动技能": [
+        "#OSeductress#n: Deal an additional 20#c9e45fa(+35%Attack) #n  Physical Damage when a Basic Attack crits."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/37.png",
+      "子物品": [
+        "Murasame",
+        "Katar",
+        "Katar"
+      ],
+      "可合成装备": [],
+      "装备名称": "Otenta",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+80 Attack Damage",
+        "+25% Crit Rate"
+      ],
+      "装备主动技能": null,
+      "装备ID": 19,
+      "装备价格": 2150,
+      "装备额外描述": null
+    },
+    "Hunting Knife": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r"
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/90.png",
+      "子物品": null,
+      "可合成装备": [
+        85,
+        86,
+        87,
+        88
+      ],
+      "装备名称": "Hunting Knife",
+      "装备等级": "Basic",
+      "装备属性": [],
+      "装备主动技能": null,
+      "装备ID": 83,
+      "装备价格": 250,
+      "装备额外描述": null
+    },
+    "Shuriken": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/03.png",
+      "子物品": null,
+      "可合成装备": [
+        9,
+        10,
+        14,
+        126
+      ],
+      "装备名称": "Shuriken",
+      "装备等级": "Basic",
+      "装备属性": [
+        "+15% Attack Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 1,
+      "装备价格": 225,
+      "装备额外描述": null
+    },
+    "Otome Blade": {
+      "装备被动技能": [
+        "#OCursed Scar#n: Basic Attack restores MP by 2."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/24.png",
+      "子物品": [
+        "Tachi",
+        "Tachi"
+      ],
+      "可合成装备": [
+        28
+      ],
+      "装备名称": "Otome Blade",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+40 Attack Damage"
+      ],
+      "装备主动技能": null,
+      "装备ID": 17,
+      "装备价格": 800,
+      "装备额外描述": null
+    },
+    "Onimaru": {
+      "装备被动技能": [
+        "#OHimeidori#n: Restores Base HP by 10% when you defeat or assist to defeat an enemy shikigami."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/39.png",
+      "子物品": [
+        "Murasame",
+        "Tachi",
+        "Redmark Katar"
+      ],
+      "可合成装备": [],
+      "装备名称": "Onimaru",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+90 Attack Damage",
+        "+10% Life Steal",
+        "+15% Attack Damage"
+      ],
+      "装备主动技能": null,
+      "装备ID": 18,
+      "装备价格": 2300,
+      "装备额外描述": null
+    },
+    "Ame-no-habaya": {
+      "装备被动技能": [
+        "#OGolden Kite#n: Attacking enemy shikigami grants the Golden Kite state up to 5 stacks. For each stack, basic attacks will deal an additional 4#c0095cc(+1*Current Level) #n  physical damage and grant a 2% Haste effect.#rFor non-shikigami units, basic attacks will deal an additional 12#c0095cc(+3*Current Level) #n  physical damage."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/126.png",
+      "子物品": [
+        "Bow of Ame-no-kago",
+        "Genji Longbow"
+      ],
+      "可合成装备": [],
+      "装备名称": "Ame-no-habaya",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+25% Armor Penetration",
+        "+25% Magic Penetration",
+        "+35% Attack Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 124,
+      "装备价格": 2150,
+      "装备额外描述": null
+    },
+    "Signet Shield": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/117.png",
+      "子物品": [
+        "Gold Bracer",
+        "Psychic Umbrella",
+        "Domaru Armor"
+      ],
+      "可合成装备": [],
+      "装备名称": "Signet Shield",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+120 Armor",
+        "+120 Magic Resist",
+        "+1200 HP"
+      ],
+      "装备主动技能": "#OActive: Signet#n: Increases armor and magic resist by 100% for 4 seconds. Can be used under Control. Cooldown: 60 seconds",
+      "装备ID": 110,
+      "装备价格": 4000,
+      "装备额外描述": null
+    },
+    "Yatagarasu Feather": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/46.png",
+      "子物品": [
+        "History Parchment"
+      ],
+      "可合成装备": [
+        47,
+        48,
+        58
+      ],
+      "装备名称": "Yatagarasu Feather",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+45 Ability Power",
+        "+5% Movement Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 41,
+      "装备价格": 565,
+      "装备额外描述": null
+    },
+    "Ice Fire King Lance": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r",
+        "#OSkyfire#n: Incinerates the souls of nearby enemies, dealing 30#cffba35(+3%(+0.1%*Current Level)BonusMax HP) #n  magic damage per second (3x damage to monsters, 1.5x damage to minions)."
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/93.png",
+      "子物品": [
+        "Fire King Lance",
+        "Ice Jade Echo"
+      ],
+      "可合成装备": [],
+      "装备名称": "Ice Fire King Lance",
+      "装备等级": 5,
+      "装备属性": [
+        "+500 HP",
+        "+45 Armor",
+        "+30 Magic Resist"
+      ],
+      "装备主动技能": null,
+      "装备ID": 146,
+      "装备价格": 1750,
+      "装备额外描述": null
+    },
+    "Sylph's Harp": {
+      "装备被动技能": [
+        "#OSylph#n: Performing 3 basic attacks or abilities on the same shikigami will grant a shield that absorbs 200#c39b54a(+30%Ability Power) #n  damage for 4 seconds. CD: 15 seconds."
+      ],
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/54.png",
+      "子物品": [
+        "Kitsune Sword",
+        "Celestial Weave"
+      ],
+      "可合成装备": [],
+      "装备名称": "Sylph's Harp",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+100 Ability Power",
+        "+350 HP",
+        "+30 Magic Penetration"
+      ],
+      "装备主动技能": null,
+      "装备ID": 57,
+      "装备价格": 1950,
+      "装备额外描述": null
+    },
+    "Earth Blank Lance": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r"
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/92.png",
+      "子物品": [
+        "Blank Lance",
+        "Earth Jade Echo"
+      ],
+      "可合成装备": [],
+      "装备名称": "Earth Blank Lance",
+      "装备等级": 5,
+      "装备属性": [
+        "+90 Attack Damage",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 149,
+      "装备价格": 1750,
+      "装备额外描述": null
+    },
+    "Celestial Weave": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/138.png",
+      "子物品": [
+        "History Parchment"
+      ],
+      "可合成装备": [
+        53,
+        57,
+        111,
+        112
+      ],
+      "装备名称": "Celestial Weave",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+30 Ability Power",
+        "+10 Magic Penetration"
+      ],
+      "装备主动技能": null,
+      "装备ID": 133,
+      "装备价格": 500,
+      "装备额外描述": null
+    },
+    "Ningyo Soulstone": {
+      "装备被动技能": [
+        "#Soul Infusion#n: You gain 8 MP for the death of each nearby enemy unit to a maximum of 800. The effect is doubled when you kill the enemy unit."
+      ],
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/44.png",
+      "子物品": [
+        "Jade Pendant",
+        "Bronze Scale"
+      ],
+      "可合成装备": [
+        47,
+        74
+      ],
+      "装备名称": "Ningyo Soulstone",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+350 HP",
+        "+300 MP",
+        "+50% MP Regen"
+      ],
+      "装备主动技能": null,
+      "装备ID": 38,
+      "装备价格": 750,
+      "装备额外描述": null
+    },
+    "Raja Warhammer": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon",
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/29.png",
+      "子物品": [
+        "Virtuous Staff",
+        "Silver Bracer"
+      ],
+      "可合成装备": [],
+      "装备名称": "Raja Warhammer",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+75 Main Stats",
+        "+450 HP",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": "#OActive - Rakshasa#n: Removes all control effects and grants immunity to controlling effects in the coming 2 seconds. (CD: 90 seconds.)",
+      "装备ID": 33,
+      "装备价格": 2000,
+      "装备额外描述": null
+    },
+    "Bloodberry": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/66.png",
+      "子物品": null,
+      "可合成装备": [
+        72,
+        95,
+        135
+      ],
+      "装备名称": "Bloodberry",
+      "装备等级": "Basic",
+      "装备属性": [
+        "+50% HP Regen"
+      ],
+      "装备主动技能": null,
+      "装备ID": 59,
+      "装备价格": 100,
+      "装备额外描述": null
+    },
+    "Demon Mask": {
+      "装备被动技能": [
+        "#ODemon Visage#n: Instantly gains a shield that can absorb 200#cffba35(+30%BonusMax HP) #n #c9e45fa(+200%Attack) #n  damage for 4 seconds when HP is less than 35% and increases Base Attack by 50% for 5 seconds. Dealing damage to enemy shikigami can refresh duration time. CD: 90 seconds."
+      ],
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/115.png",
+      "子物品": [
+        "Tachi",
+        "Tachi",
+        "Gold Bracer"
+      ],
+      "可合成装备": [],
+      "装备名称": "Demon Mask",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+40 Attack Damage",
+        "+600 HP"
+      ],
+      "装备主动技能": null,
+      "装备ID": 105,
+      "装备价格": 2000,
+      "装备额外描述": null
+    },
+    "History Parchment": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/43.png",
+      "子物品": null,
+      "可合成装备": [
+        39,
+        40,
+        41,
+        42,
+        45,
+        46,
+        47,
+        49,
+        53,
+        133
+      ],
+      "装备名称": "History Parchment",
+      "装备等级": "Basic",
+      "装备属性": [
+        "+30 Ability Power"
+      ],
+      "装备主动技能": null,
+      "装备ID": 36,
+      "装备价格": 290,
+      "装备额外描述": null
+    },
+    "Earth Fire King Lance": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r",
+        "#OSkyfire#n: Incinerates the souls of nearby enemies, dealing 30#cffba35(+3%(+0.1%*Current Level)BonusMax HP) #n  magic damage per second (3x damage to monsters, 1.5x damage to minions)."
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/93.png",
+      "子物品": [
+        "Fire King Lance",
+        "Earth Jade Echo"
+      ],
+      "可合成装备": [],
+      "装备名称": "Earth Fire King Lance",
+      "装备等级": 5,
+      "装备属性": [
+        "+500 HP",
+        "+45 Armor",
+        "+30 Magic Resist"
+      ],
+      "装备主动技能": null,
+      "装备ID": 150,
+      "装备价格": 1750,
+      "装备额外描述": null
+    },
+    "Grass-cutting Sword": {
+      "装备被动技能": [
+        "#OCursed Scar#n: Basic Attack restores MP by 3. For the next 5 seconds after using this ability, the next Basic Attack deals an additional 90#c9e45fa(+90%BonusAttack) #n  physical damage. This can be triggered once every 1.5 seconds."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/40.png",
+      "子物品": [
+        "Otome Blade",
+        "Silver Bracer",
+        "Genji Longbow"
+      ],
+      "可合成装备": [],
+      "装备名称": "Grass-cutting Sword",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+300 HP",
+        "+40 Attack Damage",
+        "+40% Attack Speed",
+        "+20% Cooldown Reduction",
+        "+5% Movement Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 28,
+      "装备价格": 2250,
+      "装备额外描述": null
+    },
+    "Void Triple-Hook Arrow": {
+      "装备被动技能": [
+        "#OSoaring#n: After dealing 3 basic attacks against shikigami, increases own Movement Speed by 12%#c0095cc(+0.75%*Current Level) #n  and Attack Damage by 20#c0095cc(+1.5*Current Level) #n  for 4 second(s). The cooldown of this effect is 15 second(s)."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/139.png",
+      "子物品": [
+        "Feather Bow",
+        "Genji Longbow"
+      ],
+      "可合成装备": [],
+      "装备名称": "Void Triple-Hook Arrow",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+45% Attack Speed",
+        "+25% Crit Rate",
+        "+7% Movement Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 130,
+      "装备价格": 1750,
+      "装备额外描述": null
+    },
+    "Katar": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/05.png",
+      "子物品": null,
+      "可合成装备": [
+        10,
+        19,
+        22
+      ],
+      "装备名称": "Katar",
+      "装备等级": "Basic",
+      "装备属性": [
+        "+10% Crit Rate"
+      ],
+      "装备主动技能": null,
+      "装备ID": 3,
+      "装备价格": 265,
+      "装备额外描述": null
+    },
+    "Destiny's Tile": {
+      "装备被动技能": [
+        "#OFortune#n: Deals an additional 10.5#c0095cc(+1.5*Current Level) #n  Magic Damage and grants 12 Coins (8 Coins at long range) when attacking an enemy shikigami. #rWhen your total Coins is among the last two in the team, grants 1 layer of energy recharge every 9 seconds, up to a maximum of 3 layers.",
+        "#ORakuzen#n: The reward obtained from killing minions and monsters before Lv. 8 will be transferred to nearby allied shikigami."
+      ],
+      "装备类型": [
+        "Support"
+      ],
+      "图标路径": "gui/res/equip/105.png",
+      "子物品": [
+        "Wealth Amulet"
+      ],
+      "可合成装备": [
+        98,
+        99,
+        100
+      ],
+      "装备名称": "Destiny's Tile",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+50% HP Regen",
+        "+50% MP Regen",
+        "+150 HP",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 97,
+      "装备价格": 600,
+      "装备额外描述": null
+    },
+    "Ice Imperial Lance": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r",
+        "#OScepter#n: Your abilities deal an additional 90#c39b54a(+12%Ability Power) #n  magic damage to the shikigami or monster target (2.4x damage against monsters). This can only be triggered once every 3 seconds for each target."
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/94.png",
+      "子物品": [
+        "Imperial Lance",
+        "Ice Jade Echo"
+      ],
+      "可合成装备": [],
+      "装备名称": "Ice Imperial Lance",
+      "装备等级": 5,
+      "装备属性": [
+        "+100 Ability Power",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 147,
+      "装备价格": 1750,
+      "装备额外描述": null
+    },
+    "Ice Unholy Halberd": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r",
+        "#OShatter#n: Basic attacks deal an additional #cffba35(+4%TargetMax HP) #n  physical damage. Maximum damage to non-shikigami units is 100."
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/95.png",
+      "子物品": [
+        "Unholy Halberd",
+        "Ice Jade Echo"
+      ],
+      "可合成装备": [],
+      "装备名称": "Ice Unholy Halberd",
+      "装备等级": 5,
+      "装备属性": [
+        "+50% Attack Speed",
+        "+15 Attack Damage"
+      ],
+      "装备主动技能": null,
+      "装备ID": 148,
+      "装备价格": 1750,
+      "装备额外描述": null
+    },
+    "Amenonuhoko": {
+      "装备被动技能": [
+        "#O Cangming #n: Using general attack to hit the enemy can cause 12#c9e45fa(+8%BonusAttack) #n  points of #R physical damage #n, and recover 18#c9e45fa(+12%BonusAttack) #n  points of #Ghealth value #n every 0.5 seconds for 2 seconds. This effect has a cooldown of 15 seconds, and the HP recovery and damage gain are halved when using the remote style god."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/147.png",
+      "子物品": [
+        "Tachi",
+        "Bloodberry"
+      ],
+      "可合成装备": [
+        82
+      ],
+      "装备名称": "Amenonuhoko",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+35 Attack Damage",
+        "+50% HP Regen"
+      ],
+      "装备主动技能": null,
+      "装备ID": 135,
+      "装备价格": 800,
+      "装备额外描述": null
+    },
+    "Lucky Parasol": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/79.png",
+      "子物品": [
+        "Psychic Umbrella",
+        "Domaru Armor"
+      ],
+      "可合成装备": [],
+      "装备名称": "Lucky Parasol",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+135 Armor",
+        "+135 Magic Resist",
+        "+35% Increase Healing Received"
+      ],
+      "装备主动技能": null,
+      "装备ID": 80,
+      "装备价格": 1800,
+      "装备额外描述": null
+    },
+    "Righteous Unholy Halberd": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r",
+        "#OShatter#n: Basic attacks deal an additional #cffba35(+4%TargetMax HP) #n  physical damage. Maximum damage to non-shikigami units is 100."
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/95.png",
+      "子物品": [
+        "Unholy Halberd",
+        "Righteous Jade Echo"
+      ],
+      "可合成装备": [],
+      "装备名称": "Righteous Unholy Halberd",
+      "装备等级": 5,
+      "装备属性": [
+        "+50% Attack Speed",
+        "+15 Attack Damage"
+      ],
+      "装备主动技能": null,
+      "装备ID": 156,
+      "装备价格": 1750,
+      "装备额外描述": null
+    },
+    "Gold Hachiman Do": {
+      "装备被动技能": [
+        "#OGolden Armor#n: After inflicting a control effect on an enemy shikigami, the target deals 10% less damage for 4 second(s)."
+      ],
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/88.png",
+      "子物品": [
+        "Hermit Kariginu",
+        "Gold Bracer",
+        "Straw Hat"
+      ],
+      "可合成装备": [],
+      "装备名称": "Gold Hachiman Do",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+60 Armor",
+        "+575 HP",
+        "+60 Magic Resist",
+        "+5% Movement Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 76,
+      "装备价格": 2000,
+      "装备额外描述": null
+    },
+    "Distilled Wine": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Support"
+      ],
+      "图标路径": "gui/res/equip/133.png",
+      "子物品": null,
+      "可合成装备": [],
+      "装备名称": "Distilled Wine",
+      "装备等级": 4,
+      "装备属性": [],
+      "装备主动技能": "The next basic attack or ability every 12 seconds deals an additional 30#cffba35(+4%Max HP) #n  #Umagic damage#n. Effect lasts for 40 seconds.",
+      "装备ID": 117,
+      "装备价格": 1,
+      "装备额外描述": null
+    },
+    "Night Parasol": {
+      "装备被动技能": [
+        "#ONight Parasol#n: The shikigami gains a 80% Damage Reduction that decreases over 1 seconds after taking damage from shikigami or monsters. Cooldown of 30 seconds."
+      ],
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/84.png",
+      "子物品": [
+        "Kojiki Scroll",
+        "Psychic Umbrella"
+      ],
+      "可合成装备": [],
+      "装备名称": "Night Parasol",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+120 Ability Power",
+        "+75 Magic Resist",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 54,
+      "装备价格": 2000,
+      "装备额外描述": null
+    },
+    "Imperial Lance": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r",
+        "#OScepter#n: Your abilities deal an additional 90#c39b54a(+12%Ability Power) #n  magic damage to the shikigami or monster target (2.4x damage against monsters). This can only be triggered once every 3 seconds for each target."
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/94.png",
+      "子物品": [
+        "Hunting Knife",
+        "Kojiki Scroll"
+      ],
+      "可合成装备": [],
+      "装备名称": "Imperial Lance",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+100 Ability Power",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 87,
+      "装备价格": 1650,
+      "装备额外描述": null
+    },
+    "Tale of Izumo": {
+      "装备被动技能": [
+        "#OIzumo#n: Increases Ability Power by 3% + Level * 1.5%, to a maximum of 30%."
+      ],
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/65.png",
+      "子物品": [
+        "Naraku Staff",
+        "Naraku Staff"
+      ],
+      "可合成装备": [],
+      "装备名称": "Tale of Izumo",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+125 Ability Power"
+      ],
+      "装备主动技能": null,
+      "装备ID": 51,
+      "装备价格": 2350,
+      "装备额外描述": null
+    },
+    "Kitsune Mask": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/75.png",
+      "子物品": [
+        "Hermit Kariginu"
+      ],
+      "可合成装备": [
+        56,
+        74
+      ],
+      "装备名称": "Kitsune Mask",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+60 Armor",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 67,
+      "装备价格": 665,
+      "装备额外描述": null
+    },
+    "Virtuous Staff": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/135.png",
+      "子物品": [
+        "Shajuko"
+      ],
+      "可合成装备": [
+        33,
+        56,
+        101
+      ],
+      "装备名称": "Virtuous Staff",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+40 Main Stats"
+      ],
+      "装备主动技能": null,
+      "装备ID": 132,
+      "装备价格": 600,
+      "装备额外描述": null
+    },
+    "Sanzu River Lantern": {
+      "装备被动技能": [
+        "#OOgawa River#n: After you deal ability damage to a target, your damage to the target will be increased by 1.5%. This effect can stack 1 layer every 0.5 seconds, up to a maximum of 8 layers. This effect will disappear if the target doesn't receive ability damage from you within 6 seconds."
+      ],
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/112.png",
+      "子物品": [
+        "Psychic Umbrella",
+        "Silver Bracer"
+      ],
+      "可合成装备": [],
+      "装备名称": "Sanzu River Lantern",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+525 HP",
+        "+110 Magic Resist",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 79,
+      "装备价格": 1865,
+      "装备额外描述": null
+    },
+    "Earth Unholy Halberd": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r",
+        "#OShatter#n: Basic attacks deal an additional #cffba35(+4%TargetMax HP) #n  physical damage. Maximum damage to non-shikigami units is 100."
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/95.png",
+      "子物品": [
+        "Unholy Halberd",
+        "Earth Jade Echo"
+      ],
+      "可合成装备": [],
+      "装备名称": "Earth Unholy Halberd",
+      "装备等级": 5,
+      "装备属性": [
+        "+50% Attack Speed",
+        "+15 Attack Damage"
+      ],
+      "装备主动技能": null,
+      "装备ID": 152,
+      "装备价格": 1750,
+      "装备额外描述": null
+    },
+    "Swift Boots": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Movement"
+      ],
+      "图标路径": "gui/res/equip/96.png",
+      "子物品": null,
+      "可合成装备": [
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        126
+      ],
+      "装备名称": "Swift Boots",
+      "装备等级": "Basic",
+      "装备属性": [
+        "+25 Movement Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 89,
+      "装备价格": 200,
+      "装备额外描述": null
+    },
+    "Shadow Breastplate": {
+      "装备被动技能": [
+        "#OSuppression#n: When being hit by a basic attack, it reduces the healing effect of the attacker by 20% for 1 seconds."
+      ],
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/76.png",
+      "子物品": [
+        "Hermit Kariginu"
+      ],
+      "可合成装备": [
+        75,
+        122
+      ],
+      "装备名称": "Shadow Breastplate",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+70 Armor"
+      ],
+      "装备主动技能": null,
+      "装备ID": 106,
+      "装备价格": 650,
+      "装备额外描述": null
+    },
+    "Phoenix Cloak": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/78.png",
+      "子物品": [
+        "Bronze Scale",
+        "Straw Hat"
+      ],
+      "可合成装备": [
+        77,
+        78
+      ],
+      "装备名称": "Phoenix Cloak",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+375 HP",
+        "+50 Magic Resist",
+        "+100% HP Regen"
+      ],
+      "装备主动技能": null,
+      "装备ID": 69,
+      "装备价格": 800,
+      "装备额外描述": null
+    },
+    "Wind Walkers": {
+      "装备被动技能": [
+        "#OWind Treader#n: After leaving battle, obtain the Fujin's blessing, increasing Movement Speed by 60 and HP Regen by 75%."
+      ],
+      "装备类型": [
+        "Movement"
+      ],
+      "图标路径": "gui/res/equip/98.png",
+      "子物品": [
+        "Swift Boots",
+        "Bloodberry"
+      ],
+      "可合成装备": [],
+      "装备名称": "Wind Walkers",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+45 Movement Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 95,
+      "装备价格": 600,
+      "装备额外描述": null
+    },
+    "Plum Wine": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Support"
+      ],
+      "图标路径": "gui/res/equip/132.png",
+      "子物品": null,
+      "可合成装备": [],
+      "装备名称": "Plum Wine",
+      "装备等级": 4,
+      "装备属性": [],
+      "装备主动技能": "Gain 8% Max HP bonus for 40 seconds.",
+      "装备ID": 118,
+      "装备价格": 1,
+      "装备额外描述": null
+    },
+    "Shadow Fan": {
+      "装备被动技能": [
+        "#OShadow#n: Basic attack and ability damage to enemy shikigami will increase Movement Speed. Each stack increases Movement Speed by 3% for 5 second(s). Stacks up to 8 times. Additionally grants 30% Slow immunity at maximum stacks."
+      ],
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/122.png",
+      "子物品": [
+        "Celestial Weave",
+        "Kitsune Sword"
+      ],
+      "可合成装备": [],
+      "装备名称": "Shadow Fan",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+60 Ability Power",
+        "+450 HP",
+        "+35% Magic Penetration"
+      ],
+      "装备主动技能": null,
+      "装备ID": 112,
+      "装备价格": 2100,
+      "装备额外描述": null
+    },
+    "Tachi": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/04.png",
+      "子物品": null,
+      "可合成装备": [
+        6,
+        7,
+        8,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        30,
+        31,
+        70,
+        105,
+        128,
+        129,
+        134,
+        135
+      ],
+      "装备名称": "Tachi",
+      "装备等级": "Basic",
+      "装备属性": [
+        "+15 Attack Damage"
+      ],
+      "装备主动技能": null,
+      "装备ID": 2,
+      "装备价格": 230,
+      "装备额外描述": null
+    },
+    "Eight Trigrams": {
+      "装备被动技能": [
+        "#OTaichi#n: Magic Damage is increased by 1% for every 100 HP the target has more than you, up to a maximum of 10%."
+      ],
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/55.png",
+      "子物品": [
+        "Celestial Weave",
+        "History Parchment"
+      ],
+      "可合成装备": [],
+      "装备名称": "Eight Trigrams",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+90 Ability Power",
+        "+40% Magic Penetration"
+      ],
+      "装备主动技能": null,
+      "装备ID": 53,
+      "装备价格": 2000,
+      "装备额外描述": null
+    },
+    "Spiked Maul": {
+      "装备被动技能": null,
+      "装备类型": [
+        0
+      ],
+      "图标路径": "gui/res/equip/06.png",
+      "子物品": null,
+      "可合成装备": [],
+      "装备名称": "Spiked Maul",
+      "装备等级": "Basic",
+      "装备属性": [
+        "+20% Crit Rate"
+      ],
+      "装备主动技能": null,
+      "装备ID": 4,
+      "装备价格": 540,
+      "装备额外描述": null
+    },
+    "Kusarigama": {
+      "装备被动技能": [
+        "#ODreamless#n: Increases Ability Damage by 4-10% (reaches the maximum at Lv. 18).",
+        "#OKyokushin#n: Increases Movement Speed by 3 per second. When it reaches 30, the next Basic Attack deals an additional 100#c0095cc(+5*Current Level) #n  Physical Damage. Melee shikigami also reduce the target's Movement Speed by 50% for 1 second.#rThe Haste effect is weakened when you take a Basic Attack or control effect."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/33.png",
+      "子物品": [
+        "Chibiki Blade",
+        "Nether Scythe"
+      ],
+      "可合成装备": [],
+      "装备名称": "Kusarigama",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+80 Attack Damage",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 26,
+      "装备价格": 1950,
+      "装备额外描述": null
+    },
+    "Nova Fan": {
+      "装备被动技能": [
+        "#OEmber#n: Your ability damage will deal magic damage equal to 2% of Max HP to the target within 3 seconds. Can deal up to 30 magic damage to monsters each time."
+      ],
+      "装备类型": [
+        "Weapon",
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/53.png",
+      "子物品": [
+        "Shajuko",
+        "Bronze Scale"
+      ],
+      "可合成装备": [
+        52
+      ],
+      "装备名称": "Nova Fan",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+25 Main Stats",
+        "+300 HP"
+      ],
+      "装备主动技能": null,
+      "装备ID": 43,
+      "装备价格": 1000,
+      "装备额外描述": null
+    },
+    "Little Bells": {
+      "装备被动技能": [
+        "#OTree Spirit#n: When healed or granted a shield, the target's next basic attack within 6 second(s) will deal additional magic damage equal to 5 + 15% of the healing or shield + (1*current level). This damage can be stacked when triggered."
+      ],
+      "装备类型": [
+        "Support"
+      ],
+      "图标路径": "gui/res/equip/107.png",
+      "子物品": [
+        "Inari Bell",
+        "Kojiki Scroll"
+      ],
+      "可合成装备": [],
+      "装备名称": "Little Bells",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+90 Ability Power",
+        "+300 MP",
+        "+50% MP Regen",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 104,
+      "装备价格": 1650,
+      "装备额外描述": null
+    },
+    "Moonlight Meditation": {
+      "装备被动技能": [
+        "#OMind Focus#n: Gains 25% Control Reduction for 4 second(s) after entering battle. Cooldown is 40 seconds. Also refreshes strong control effects on enemy shikigami."
+      ],
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/140.png",
+      "子物品": [
+        "Phoenix Cloak",
+        "Silver Bracer"
+      ],
+      "可合成装备": [],
+      "装备名称": "Moonlight Meditation",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+675 HP",
+        "+65 Magic Resist",
+        "+10% Cooldown Reduction",
+        "+100% HP Regen"
+      ],
+      "装备主动技能": null,
+      "装备ID": 78,
+      "装备价格": 1865,
+      "装备额外描述": null
+    },
+    "Ice Blank Lance": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r"
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/92.png",
+      "子物品": [
+        "Blank Lance",
+        "Ice Jade Echo"
+      ],
+      "可合成装备": [],
+      "装备名称": "Ice Blank Lance",
+      "装备等级": 5,
+      "装备属性": [
+        "+90 Attack Damage",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 145,
+      "装备价格": 1750,
+      "装备额外描述": null
+    },
+    "Murasame": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/19.png",
+      "子物品": [
+        "Tachi"
+      ],
+      "可合成装备": [
+        18,
+        19,
+        137
+      ],
+      "装备名称": "Murasame",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+60 Attack Damage"
+      ],
+      "装备主动技能": null,
+      "装备ID": 6,
+      "装备价格": 865,
+      "装备额外描述": null
+    },
+    "Blank Lance": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r"
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/92.png",
+      "子物品": [
+        "Hunting Knife",
+        "Chibiki Blade"
+      ],
+      "可合成装备": [],
+      "装备名称": "Blank Lance",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+90 Attack Damage",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 85,
+      "装备价格": 1650,
+      "装备额外描述": null
+    },
+    "Mikazuki": {
+      "装备被动技能": [
+        "#OMoonchaser#n: Whenever physical damage is dealt to an enemy shikigami, Armor Pierce is increased by 5% for 5 seconds. This can be stacked for a maximum of 8 times. The Armor Pierce increase for ranged shikigami is halved."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/34.png",
+      "子物品": [
+        "Demon Splitter",
+        "Silver Bracer"
+      ],
+      "可合成装备": [],
+      "装备名称": "Mikazuki",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+500 HP",
+        "+30 Attack Damage",
+        "+10% Cooldown Reduction",
+        "+20% Armor Penetration"
+      ],
+      "装备主动技能": null,
+      "装备ID": 29,
+      "装备价格": 2000,
+      "装备额外描述": null
+    },
+    "Fire King Lance": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r",
+        "#OSkyfire#n: Incinerates the souls of nearby enemies, dealing 30#cffba35(+3%(+0.1%*Current Level)BonusMax HP) #n  magic damage per second (3x damage to monsters, 1.5x damage to minions)."
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/93.png",
+      "子物品": [
+        "Hunting Knife",
+        "Rogue's Gauntlet",
+        "Straw Hat"
+      ],
+      "可合成装备": [],
+      "装备名称": "Fire King Lance",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+500 HP",
+        "+45 Armor",
+        "+30 Magic Resist"
+      ],
+      "装备主动技能": null,
+      "装备ID": 86,
+      "装备价格": 1650,
+      "装备额外描述": null
+    },
+    "Dark Fang Yomotsu": {
+      "装备被动技能": [
+        "#OAgkistrodon halys#n: When inflicting 3 independent damage to a single enemy style god 3 seconds, it will inflict a bleeding effect on the target, causing 8#c9e45fa(+9%BonusAttack) #n  points of # R physical damage #n every 0.1 seconds, lasting for 1.5 seconds, only effective in melee. This effect has a cooling time of 30 seconds. Participating in sealing will refresh the cooling time of this effect."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/148.png",
+      "子物品": [
+        "Murasame",
+        "Murasame"
+      ],
+      "可合成装备": [],
+      "装备名称": "Dark Fang Yomotsu",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+100 Attack Damage",
+        "+15% Attack Damage"
+      ],
+      "装备主动技能": null,
+      "装备ID": 137,
+      "装备价格": 2300,
+      "装备额外描述": null
+    },
+    "Ninth Heaven Wing": {
+      "装备被动技能": [
+        "#OPhoenix Wing#n: Whenever you take Magic Damage from a shikigami ability, decrease future Magic Damage taken by 2.4%. Stacks up to 3 layers and lasts 6 seconds."
+      ],
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/89.png",
+      "子物品": [
+        "Phoenix Cloak",
+        "Silver Bracer"
+      ],
+      "可合成装备": [],
+      "装备名称": "Ninth Heaven Wing",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+675 HP",
+        "+85 Magic Resist",
+        "+10% Cooldown Reduction",
+        "+100% HP Regen"
+      ],
+      "装备主动技能": null,
+      "装备ID": 77,
+      "装备价格": 1865,
+      "装备额外描述": null
+    },
+    "Redmark Katar": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/22.png",
+      "子物品": [
+        "Tachi"
+      ],
+      "可合成装备": [
+        18,
+        20,
+        21,
+        22,
+        31
+      ],
+      "装备名称": "Redmark Katar",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+20 Attack Damage",
+        "+7% Attack HP Steal"
+      ],
+      "装备主动技能": null,
+      "装备ID": 7,
+      "装备价格": 570,
+      "装备额外描述": null
+    },
+    "Shadow Blade": {
+      "装备被动技能": [
+        "#OSuppression#n: Physical damage dealt by you reduces the healing effect of enemy shikigami by 35% over 4 seconds.",
+        "#ODark Feathers#n: When attacks or abilities hit enemy shikigami, Movement Speed is increased by 8 for 4 seconds. This effect stacks up to 8 times."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/123.png",
+      "子物品": [
+        "Sulfur Hammer",
+        "Scattered Rays"
+      ],
+      "可合成装备": [],
+      "装备名称": "Shadow Blade",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+60 Attack Damage",
+        "+450 HP"
+      ],
+      "装备主动技能": null,
+      "装备ID": 115,
+      "装备价格": 1900,
+      "装备额外描述": null
+    },
+    "Righteous Imperial Lance": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r",
+        "#OScepter#n: Your abilities deal an additional 90#c39b54a(+12%Ability Power) #n  magic damage to the shikigami or monster target (2.4x damage against monsters). This can only be triggered once every 3 seconds for each target."
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/94.png",
+      "子物品": [
+        "Imperial Lance",
+        "Righteous Jade Echo"
+      ],
+      "可合成装备": [],
+      "装备名称": "Righteous Imperial Lance",
+      "装备等级": 5,
+      "装备属性": [
+        "+100 Ability Power",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 155,
+      "装备价格": 1750,
+      "装备额外描述": null
+    },
+    "Domaru Armor": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/72.png",
+      "子物品": [
+        "Hermit Kariginu"
+      ],
+      "可合成装备": [
+        31,
+        71,
+        73,
+        80,
+        123
+      ],
+      "装备名称": "Domaru Armor",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+80 Armor"
+      ],
+      "装备主动技能": null,
+      "装备ID": 64,
+      "装备价格": 530,
+      "装备额外描述": null
+    },
+    "Asakusa Glow": {
+      "装备被动技能": [
+        "#OFortune#n: Deals an additional 10.5#c0095cc(+1.5*Current Level) #n  Magic Damage and grants 12 Coins (8 Coins at long range) when attacking an enemy shikigami. #rWhen your total Coins is among the last two in the team, grants 1 layer of energy recharge every 9 seconds, up to a maximum of 3 layers.",
+        "#ORakuzen#n: The reward obtained from killing minions and monsters before Lv. 8 will be transferred to nearby allied shikigami.",
+        "#OFine Jade#n: Increases nearby ally shikigami's Armor by #c0095cc(+2.5*Current Level) #n  and Magic Resist by #c0095cc(+2*Current Level) #n ."
+      ],
+      "装备类型": [
+        "Support"
+      ],
+      "图标路径": "gui/res/equip/106.png",
+      "子物品": [
+        "Destiny's Tile",
+        "Shajuko"
+      ],
+      "可合成装备": [],
+      "装备名称": "Asakusa Glow",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+150 HP",
+        "+30 Main Stats",
+        "+50% HP Regen",
+        "+50% MP Regen",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": "#OActive - Fluorescence#n: Restores 40#c0095cc(+30*Current Level) #n  HP and 30#c0095cc(+15*Current Level) #n  MP for nearby allied shikigami over the next 4 seconds. (CD: 60 seconds).",
+      "装备ID": 99,
+      "装备价格": 1650,
+      "装备额外描述": null
+    },
+    "Sulfur Hammer": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/16.png",
+      "子物品": [
+        "Tachi",
+        "Bronze Scale"
+      ],
+      "可合成装备": [
+        25,
+        107,
+        115
+      ],
+      "装备名称": "Sulfur Hammer",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+25 Attack Damage",
+        "+450 HP"
+      ],
+      "装备主动技能": null,
+      "装备ID": 12,
+      "装备价格": 800,
+      "装备额外描述": null
+    },
+    "Tsurumaru": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/32.png",
+      "子物品": [
+        "Demon Splitter",
+        "Tachi",
+        "Tachi"
+      ],
+      "可合成装备": [],
+      "装备名称": "Tsurumaru",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+80 Attack Damage",
+        "+30% Armor Penetration"
+      ],
+      "装备主动技能": null,
+      "装备ID": 30,
+      "装备价格": 1800,
+      "装备额外描述": null
+    },
+    "Mandala Sutra": {
+      "装备被动技能": [
+        "#OSoul Talisman#n: Recover 25% of the MP consumed when an ability is used.",
+        "#OHarpy#n: Restores 20% of Max MP when you defeat or assist to defeat a shikigami."
+      ],
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/59.png",
+      "子物品": [
+        "Kojiki Scroll",
+        "Yatagarasu Feather",
+        "Soul Infusion"
+      ],
+      "可合成装备": [],
+      "装备名称": "Mandala Sutra",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+130 Ability Power",
+        "+75% MP Regen",
+        "+20% Cooldown Reduction",
+        "+8% Movement Speed",
+        "+15 Magic Penetration"
+      ],
+      "装备主动技能": null,
+      "装备ID": 48,
+      "装备价格": 1900,
+      "装备额外描述": null
+    },
+    "Stamp of Seimei": {
+      "装备被动技能": [
+        "#OSuppression#n: When your magic damage hits an enemy, it reduces the healing effect of enemy by 20% over 2 seconds."
+      ],
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/50.png",
+      "子物品": [
+        "History Parchment",
+        "Bronze Scale"
+      ],
+      "可合成装备": [
+        50
+      ],
+      "装备名称": "Stamp of Seimei",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+40 Ability Power",
+        "+225 HP"
+      ],
+      "装备主动技能": null,
+      "装备ID": 46,
+      "装备价格": 800,
+      "装备额外描述": null
+    },
+    "Gates of Amanoiwato": {
+      "装备被动技能": [
+        "#OSpirited#n: Unlocks exclusive Movement slot."
+      ],
+      "装备类型": [
+        "Movement"
+      ],
+      "图标路径": "gui/res/equip/129.png",
+      "子物品": null,
+      "可合成装备": [],
+      "装备名称": "Gates of Amanoiwato",
+      "装备等级": "Advanced",
+      "装备属性": [],
+      "装备主动技能": null,
+      "装备ID": 121,
+      "装备价格": 500,
+      "装备额外描述": null
+    },
+    "Ravening Zither": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon",
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/58.png",
+      "子物品": [
+        "Kitsune Mask",
+        "Virtuous Staff"
+      ],
+      "可合成装备": [],
+      "装备名称": "Ravening Zither",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+80 Main Stats",
+        "+80 Armor",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": "#OActive - Flash#n: Make your shikigami enter Flash for 2.5 seconds. The shikigami gains immunity to all damage and cannot be targeted (CD: 90 seconds).",
+      "装备ID": 56,
+      "装备价格": 1950,
+      "装备额外描述": null
+    },
+    "Righteous Jade Echo": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/149.png",
+      "子物品": null,
+      "可合成装备": [],
+      "装备名称": "Righteous Jade Echo",
+      "装备等级": "Advanced",
+      "装备属性": [],
+      "装备主动技能": null,
+      "装备ID": 144,
+      "装备价格": 100,
+      "装备额外描述": "#r#ODemonbane#n: Upgrade your Subdue Ability to Righteous Subdue."
+    },
+    "Feather Bow": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/11.png",
+      "子物品": [
+        "Katar",
+        "Shuriken"
+      ],
+      "可合成装备": [
+        21,
+        24,
+        25,
+        130
+      ],
+      "装备名称": "Feather Bow",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+15% Attack Speed",
+        "+15% Crit Rate",
+        "+5% Movement Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 10,
+      "装备价格": 750,
+      "装备额外描述": null
+    },
+    "Wealth Amulet": {
+      "装备被动技能": [
+        "#OFortune#n: Deals an additional 10.5#c0095cc(+1.5*Current Level) #n  Magic Damage and grants 12 Coins (8 Coins at long range) when attacking an enemy shikigami. #rWhen your total Coins is among the last two in the team, grants 1 layer of energy recharge every 9 seconds, up to a maximum of 3 layers.",
+        "#ORakuzen#n: The reward obtained from killing minions and monsters before Lv. 8 will be transferred to nearby allied shikigami."
+      ],
+      "装备类型": [
+        "Support"
+      ],
+      "图标路径": "gui/res/equip/104.png",
+      "子物品": null,
+      "可合成装备": [
+        97
+      ],
+      "装备名称": "Wealth Amulet",
+      "装备等级": "Basic",
+      "装备属性": [
+        "+25% HP Regen",
+        "+25% MP Regen"
+      ],
+      "装备主动技能": null,
+      "装备ID": 96,
+      "装备价格": 250,
+      "装备额外描述": null
+    },
+    "Rogue's Gauntlet": {
+      "装备被动技能": [
+        "#OSkyfire#n: Incinerates the souls of nearby enemies, dealing 8#c0095cc(+1.5*Current Level) #n  magic damage per second (2x damage against non-shikigami units)."
+      ],
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/70.png",
+      "子物品": [
+        "Bronze Scale",
+        "Hermit Kariginu"
+      ],
+      "可合成装备": [
+        72,
+        86
+      ],
+      "装备名称": "Rogue's Gauntlet",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+400 HP",
+        "+30 Armor"
+      ],
+      "装备主动技能": null,
+      "装备ID": 68,
+      "装备价格": 850,
+      "装备额外描述": null
+    },
+    "Straw Hat": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/69.png",
+      "子物品": null,
+      "可合成装备": [
+        16,
+        63,
+        69,
+        72,
+        76,
+        86,
+        91
+      ],
+      "装备名称": "Straw Hat",
+      "装备等级": "Basic",
+      "装备属性": [
+        "+35 Magic Resist"
+      ],
+      "装备主动技能": null,
+      "装备ID": 62,
+      "装备价格": 210,
+      "装备额外描述": null
+    },
+    "Blade-Shattering Soul": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/141.png",
+      "子物品": [
+        "Tachi"
+      ],
+      "可合成装备": [
+        129
+      ],
+      "装备名称": "Blade-Shattering Soul",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+20 Attack Damage",
+        "+10 Armor Penetration"
+      ],
+      "装备主动技能": null,
+      "装备ID": 134,
+      "装备价格": 500,
+      "装备额外描述": null
+    },
+    "Righteous Fire King Lance": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r",
+        "#OSkyfire#n: Incinerates the souls of nearby enemies, dealing 30#cffba35(+3%(+0.1%*Current Level)BonusMax HP) #n  magic damage per second (3x damage to monsters, 1.5x damage to minions)."
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/93.png",
+      "子物品": [
+        "Fire King Lance",
+        "Righteous Jade Echo"
+      ],
+      "可合成装备": [],
+      "装备名称": "Righteous Fire King Lance",
+      "装备等级": 5,
+      "装备属性": [
+        "+500 HP",
+        "+45 Armor",
+        "+30 Magic Resist"
+      ],
+      "装备主动技能": null,
+      "装备ID": 154,
+      "装备价格": 1750,
+      "装备额外描述": null
+    },
+    "Sake": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Support"
+      ],
+      "图标路径": "gui/res/equip/131.png",
+      "子物品": null,
+      "可合成装备": [],
+      "装备名称": "Sake",
+      "装备等级": 4,
+      "装备属性": [],
+      "装备主动技能": "Gain 5% Cooldown Reduction (can exceed Cooldown Limit) for 40 seconds.",
+      "装备ID": 119,
+      "装备价格": 1,
+      "装备额外描述": null
+    },
+    "Onmyoji Amulet": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/41.png",
+      "子物品": null,
+      "可合成装备": [
+        39,
+        102
+      ],
+      "装备名称": "Onmyoji Amulet",
+      "装备等级": "Basic",
+      "装备属性": [
+        "+25% MP Regen"
+      ],
+      "装备主动技能": null,
+      "装备ID": 34,
+      "装备价格": 80,
+      "装备额外描述": null
+    },
+    "Buddha Beads": {
+      "装备被动技能": [
+        "#OEyes of Wrath#n: Increases own damage by 12.5% for 5 seconds when inflicting strong control effects on enemy shikigami."
+      ],
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/121.png",
+      "子物品": [
+        "Kitsune Sword",
+        "Celestial Weave"
+      ],
+      "可合成装备": [],
+      "装备名称": "Buddha Beads",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+100 Ability Power",
+        "+350 HP",
+        "+30 Magic Penetration"
+      ],
+      "装备主动技能": null,
+      "装备ID": 111,
+      "装备价格": 1950,
+      "装备额外描述": null
+    },
+    "Vaisravana Drum": {
+      "装备被动技能": [
+        "#OSkyfire#n: Incinerates the souls of nearby enemies, dealing 30#cffba35(+3%BonusMax HP) #n  magic damage per second (2x damage against non-shikigami units)."
+      ],
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/57.png",
+      "子物品": [
+        "Rogue's Gauntlet",
+        "Straw Hat",
+        "Bloodberry"
+      ],
+      "可合成装备": [],
+      "装备名称": "Vaisravana Drum",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+600 HP",
+        "+100% HP Regen",
+        "+70 Armor",
+        "+40 Magic Resist"
+      ],
+      "装备主动技能": null,
+      "装备ID": 72,
+      "装备价格": 1900,
+      "装备额外描述": null
+    },
+    "Dragon Gun": {
+      "装备被动技能": [
+        "#OThunder#n: Basic attacks deal 40 additional magic damage every 6 seconds and can crit. Each basic attack reduces the cooldown by 2 seconds."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/07.png",
+      "子物品": [
+        "Tachi"
+      ],
+      "可合成装备": [
+        20,
+        21,
+        22
+      ],
+      "装备名称": "Dragon Gun",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+20 Attack Damage"
+      ],
+      "装备主动技能": null,
+      "装备ID": 8,
+      "装备价格": 480,
+      "装备额外描述": null
+    },
+    "Naraku Staff": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/52.png",
+      "子物品": [
+        "History Parchment"
+      ],
+      "可合成装备": [
+        49,
+        50,
+        51
+      ],
+      "装备名称": "Naraku Staff",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+90 Ability Power"
+      ],
+      "装备主动技能": null,
+      "装备ID": 40,
+      "装备价格": 850,
+      "装备额外描述": null
+    },
+    "Flexible Kogake": {
+      "装备被动技能": [
+        "#OFlexibility#n: Increases basic attack damage by 5%."
+      ],
+      "装备类型": [
+        "Movement"
+      ],
+      "图标路径": "gui/res/equip/130.png",
+      "子物品": [
+        "Swift Boots",
+        "Shuriken"
+      ],
+      "可合成装备": [],
+      "装备名称": "Flexible Kogake",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+45 Movement Speed",
+        "+20% Attack Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 126,
+      "装备价格": 730,
+      "装备额外描述": null
+    },
+    "Chibiki Blade": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/17.png",
+      "子物品": [
+        "Tachi",
+        "Tachi"
+      ],
+      "可合成装备": [
+        26,
+        27,
+        32,
+        85
+      ],
+      "装备名称": "Chibiki Blade",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+40 Attack Damage",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 11,
+      "装备价格": 730,
+      "装备额外描述": null
+    },
+    "Naginata": {
+      "装备被动技能": null,
+      "装备类型": [
+        0
+      ],
+      "图标路径": "gui/res/equip/09.png",
+      "子物品": null,
+      "可合成装备": [],
+      "装备名称": "Naginata",
+      "装备等级": "Basic",
+      "装备属性": [
+        "+35 Attack Damage"
+      ],
+      "装备主动技能": null,
+      "装备ID": 5,
+      "装备价格": 540,
+      "装备额外描述": null
+    },
+    "Earth Jade Echo": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/151.png",
+      "子物品": null,
+      "可合成装备": [],
+      "装备名称": "Earth Jade Echo",
+      "装备等级": "Advanced",
+      "装备属性": [],
+      "装备主动技能": null,
+      "装备ID": 143,
+      "装备价格": 100,
+      "装备额外描述": "#r#ODemonbane#n: Upgrade your Subdue Ability to Earth Subdue."
+    },
+    "Boots of Fury": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Movement"
+      ],
+      "图标路径": "gui/res/equip/100.png",
+      "子物品": [
+        "Swift Boots"
+      ],
+      "可合成装备": [],
+      "装备名称": "Boots of Fury",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+60 Movement Speed",
+        "+35% Reduce Slow Effect"
+      ],
+      "装备主动技能": null,
+      "装备ID": 93,
+      "装备价格": 610,
+      "装备额外描述": null
+    },
+    "Boots of Purity": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Movement"
+      ],
+      "图标路径": "gui/res/equip/99.png",
+      "子物品": [
+        "Swift Boots"
+      ],
+      "可合成装备": [],
+      "装备名称": "Boots of Purity",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+45 Movement Speed",
+        "+10% Cooldown Reduction",
+        "+10% Spell Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 94,
+      "装备价格": 600,
+      "装备额外描述": null
+    },
+    "Muramasa of Light": {
+      "装备被动技能": [
+        "#OLight Assault#n: Participating in sealing an enemy shikigami grants a shield that absorbs 50#c0095cc(+10*Current Level) #n  damage and a 50% Haste effect that gradually weakens over time for 1.5 second(s).",
+        "Increases Armor Pierce by 10 to 37 (reaches the maximum at Lv. 18)."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/136.png",
+      "子物品": [
+        "Tachi",
+        "Bronze Scale",
+        "Blade-Shattering Soul"
+      ],
+      "可合成装备": [],
+      "装备名称": "Muramasa of Light",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+80 Attack Damage",
+        "+250 HP"
+      ],
+      "装备主动技能": null,
+      "装备ID": 129,
+      "装备价格": 2000,
+      "装备额外描述": null
+    },
+    "Devourer Ball": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/21.png",
+      "子物品": [
+        "Tachi",
+        "Straw Hat"
+      ],
+      "可合成装备": [
+        32
+      ],
+      "装备名称": "Devourer Ball",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+35 Attack Damage",
+        "+70 Magic Resist"
+      ],
+      "装备主动技能": null,
+      "装备ID": 16,
+      "装备价格": 835,
+      "装备额外描述": null
+    },
+    "Hagakure Boots": {
+      "装备被动技能": [
+        "#OHagakure#n: Decreases all Physical Damage taken by 6%."
+      ],
+      "装备类型": [
+        "Movement"
+      ],
+      "图标路径": "gui/res/equip/103.png",
+      "子物品": [
+        "Swift Boots",
+        "Hermit Kariginu"
+      ],
+      "可合成装备": [],
+      "装备名称": "Hagakure Boots",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+60 Armor",
+        "+45 Movement Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 90,
+      "装备价格": 730,
+      "装备额外描述": null
+    },
+    "Demon Splitter": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/12.png",
+      "子物品": [
+        "Tachi"
+      ],
+      "可合成装备": [
+        29,
+        30
+      ],
+      "装备名称": "Demon Splitter",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+30 Attack Damage",
+        "+15% Armor Penetration"
+      ],
+      "装备主动技能": null,
+      "装备ID": 15,
+      "装备价格": 800,
+      "装备额外描述": null
+    },
+    "Eye of Orochi": {
+      "装备被动技能": [
+        "#OChop#n: Basic melee attacks deal #c9e45fa(+35%Attack) #n  physical damage to enemies near the target. Damage to minions is increased by 100%.",
+        "#O Cangming #n: Using general attack to hit the enemy can cause 120#c9e45fa(+80%BonusAttack) #n  points of #R physical damage #n, and recover 18#c9e45fa(+12%BonusAttack) #n  points of #Ghealth value #n every 0.5 seconds for 2 seconds. This effect has a cooldown of 15 seconds, and the HP recovery and damage gain are halved when using the remote style god."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/114.png",
+      "子物品": [
+        "Eclipse Blade",
+        "Amenonuhoko"
+      ],
+      "可合成装备": [],
+      "装备名称": "Eye of Orochi",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+90 Attack Damage",
+        "+100% HP Regen",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 82,
+      "装备价格": 2000,
+      "装备额外描述": null
+    },
+    "Soul Grabber": {
+      "装备被动技能": [
+        "#OCursed Scar#n: For the next 5 seconds after using this ability, the next Basic Attack deals an additional #cffba35(+70%BonusArmor) #n  physical damage, reduces the target's Movement Speed by 20% and increases your Movement Speed by 10% over 2 seconds. This effect can be triggered once every 6 seconds."
+      ],
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/82.png",
+      "子物品": [
+        "Domaru Armor",
+        "Silver Bracer",
+        "Hermit Kariginu"
+      ],
+      "可合成装备": [],
+      "装备名称": "Soul Grabber",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+120 Armor",
+        "+465 HP",
+        "+20% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 73,
+      "装备价格": 2000,
+      "装备额外描述": null
+    },
+    "Shichimen Tennyo": {
+      "装备被动技能": [
+        "#OTennyo#n: Increases HP by 15 and AP by 3 when defeating a shikigami or assisting to defeat a shikigami. Gain 1 layer every 40 seconds. Can store up to 25 layers.",
+        "#Soul Infusion#n: You gain 8 MP for the death of each nearby enemy unit to a maximum of 800. The effect is doubled when you kill the enemy unit."
+      ],
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/61.png",
+      "子物品": [
+        "Ningyo Soulstone",
+        "History Parchment",
+        "Yatagarasu Feather"
+      ],
+      "可合成装备": [],
+      "装备名称": "Shichimen Tennyo",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+80 Ability Power",
+        "+400 HP",
+        "+250 MP",
+        "+100% MP Regen",
+        "+10% Cooldown Reduction",
+        "+8% Movement Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 47,
+      "装备价格": 1900,
+      "装备额外描述": null
+    },
+    "Izanami's Scepter": {
+      "装备被动技能": [
+        "#OScepter#n: Your abilities deal an additional 200#c39b54a(+24%Ability Power) #n  magic damage to shikigami or monsters. This can only be triggered once every 9 seconds for each target."
+      ],
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/64.png",
+      "子物品": [
+        "Naraku Staff",
+        "History Parchment"
+      ],
+      "可合成装备": [],
+      "装备名称": "Izanami's Scepter",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+145 Ability Power"
+      ],
+      "装备主动技能": null,
+      "装备ID": 49,
+      "装备价格": 1950,
+      "装备额外描述": null
+    },
+    "Juzumaru": {
+      "装备被动技能": [
+        "#ONightwing#n: +10% Life Steal",
+        "#OShatter#n: Basic attacks deal an additional #cffba35(+4%TargetMax HP) #n  physical damage. Maximum damage to non-shikigami units is 90."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/38.png",
+      "子物品": [
+        "Dragon Gun",
+        "Genji Longbow",
+        "Redmark Katar"
+      ],
+      "可合成装备": [],
+      "装备名称": "Juzumaru",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+40 Attack Damage",
+        "+45% Attack Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 20,
+      "装备价格": 2100,
+      "装备额外描述": null
+    },
+    "Summer Ashes": {
+      "装备被动技能": [
+        "#OEmber#n: Your ability damage will deal magic damage equal to 1.85% of Max HP to the target within 3 seconds. This damage increases by 0.15%/0.225% respectively for every 100 points of Ability Power/Attack bonus. Stacks up to 4 times with a stacking cooldown of 0.75 second(s). Deals up to 70 magic damage to monsters each time."
+      ],
+      "装备类型": [
+        "Weapon",
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/62.png",
+      "子物品": [
+        "Nova Fan",
+        "Shajuko"
+      ],
+      "可合成装备": [],
+      "装备名称": "Summer Ashes",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+60 Main Stats",
+        "+375 HP",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 52,
+      "装备价格": 2100,
+      "装备额外描述": null
+    },
+    "Jade Pendant": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/42.png",
+      "子物品": null,
+      "可合成装备": [
+        38,
+        102
+      ],
+      "装备名称": "Jade Pendant",
+      "装备等级": "Basic",
+      "装备属性": [
+        "+250 MP"
+      ],
+      "装备主动技能": null,
+      "装备ID": 35,
+      "装备价格": 230,
+      "装备额外描述": null
+    },
+    "Kitsune Sword": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/49.png",
+      "子物品": [
+        "History Parchment",
+        "Bronze Scale"
+      ],
+      "可合成装备": [
+        55,
+        57,
+        58,
+        111,
+        112
+      ],
+      "装备名称": "Kitsune Sword",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+40 Ability Power",
+        "+300 HP"
+      ],
+      "装备主动技能": null,
+      "装备ID": 45,
+      "装备价格": 700,
+      "装备额外描述": null
+    },
+    "Bow of Ame-no-kago": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/125.png",
+      "子物品": null,
+      "可合成装备": [
+        124
+      ],
+      "装备名称": "Bow of Ame-no-kago",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+15% Armor Penetration",
+        "+15% Magic Penetration"
+      ],
+      "装备主动技能": null,
+      "装备ID": 125,
+      "装备价格": 1000,
+      "装备额外描述": null
+    },
+    "Dai-doro": {
+      "装备被动技能": [
+        "#OEverbright#n: Increases Cooldown Reduction limit to 50%."
+      ],
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/119.png",
+      "子物品": [
+        "Naraku Staff",
+        "Naraku Staff",
+        "Kojiki Scroll"
+      ],
+      "可合成装备": [],
+      "装备名称": "Dai-doro",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+300 Ability Power",
+        "+20% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 109,
+      "装备价格": 4000,
+      "装备额外描述": null
+    },
+    "Ice Jade Echo": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/150.png",
+      "子物品": null,
+      "可合成装备": [],
+      "装备名称": "Ice Jade Echo",
+      "装备等级": "Advanced",
+      "装备属性": [],
+      "装备主动技能": null,
+      "装备ID": 142,
+      "装备价格": 100,
+      "装备额外描述": "#r#ODemonbane#n: Upgrade the Subdue ability to Ice Subdue."
+    },
+    "Amanozako's Bow": {
+      "装备被动技能": [
+        "#OSuppression#n: Physical damage dealt by you reduces the healing effect of enemy shikigami by 35% over 4 seconds.",
+        "#OBrake#n: Basic attacks decrease the target's Movement Speed by 30% for the next 2 seconds. The effect of Brake is halved if the wearer is a ranged shikigami."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/27.png",
+      "子物品": [
+        "Feather Bow",
+        "Hateful Tachi"
+      ],
+      "可合成装备": [],
+      "装备名称": "Amanozako's Bow",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+45% Attack Speed",
+        "+25% Crit Rate",
+        "+7% Movement Speed"
+      ],
+      "装备主动技能": null,
+      "装备ID": 24,
+      "装备价格": 1750,
+      "装备额外描述": null
+    },
+    "Glittering Dream": {
+      "装备被动技能": [
+        "#OSwayed Dreams#n: When a strong control effect is inflicted on an enemy shikigami, restores 30#cffba35(+6%Max HP) #n  HP to self and a nearby teammate with the lowest HP."
+      ],
+      "装备类型": [
+        "Support"
+      ],
+      "图标路径": "gui/res/equip/128.png",
+      "子物品": [
+        "Gold Bracer",
+        "Shadow Breastplate"
+      ],
+      "可合成装备": [],
+      "装备名称": "Glittering Dream",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+70 Armor",
+        "+550 HP",
+        "+100% HP Regen"
+      ],
+      "装备主动技能": null,
+      "装备ID": 122,
+      "装备价格": 1800,
+      "装备额外描述": null
+    },
+    "Unholy Halberd": {
+      "装备被动技能": [
+        "#OHunt#n: Attacking monsters will deal continuous damage. Damage received will be decreased when being attacked by monsters.#rWipe out monsters to get extra EXP and restore HP and MP.#r",
+        "#OShatter#n: Basic attacks deal an additional #cffba35(+4%TargetMax HP) #n  physical damage. Maximum damage to non-shikigami units is 100."
+      ],
+      "装备类型": [
+        "Jungle"
+      ],
+      "图标路径": "gui/res/equip/95.png",
+      "子物品": [
+        "Hunting Knife",
+        "Genji Longbow"
+      ],
+      "可合成装备": [],
+      "装备名称": "Unholy Halberd",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+50% Attack Speed",
+        "+15 Attack Damage"
+      ],
+      "装备主动技能": null,
+      "装备ID": 88,
+      "装备价格": 1650,
+      "装备额外描述": null
+    },
+    "World Compass": {
+      "装备被动技能": null,
+      "装备类型": [
+        0
+      ],
+      "图标路径": "gui/res/equip/45.png",
+      "子物品": null,
+      "可合成装备": [],
+      "装备名称": "World Compass",
+      "装备等级": "Basic",
+      "装备属性": [
+        "+60 Ability Power"
+      ],
+      "装备主动技能": null,
+      "装备ID": 37,
+      "装备价格": 565,
+      "装备额外描述": null
+    },
+    "Yin Yang Wheel": {
+      "装备被动技能": [
+        "#OChop#n: Every 2 second(s), your next basic melee attack deals #cffba35(+3% (Every 80BonusAttack increases 1%)TargetMax HP) #n  physical damage to the target and enemies near the target. The damage to minions is 200%. Also recovers HP equal to 50% of the actual bonus damage dealt to the target. If the target is not a shikigami, HP recovery rate is reduced to 10%."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/116.png",
+      "子物品": [
+        "Eclipse Blade",
+        "Sulfur Hammer"
+      ],
+      "可合成装备": [],
+      "装备名称": "Yin Yang Wheel",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+60 Attack Damage",
+        "+450 HP",
+        "+100% HP Regen",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 107,
+      "装备价格": 2000,
+      "装备额外描述": null
+    },
+    "Chiyo's Sword": {
+      "装备被动技能": [
+        "#OHimeidori#n: Restores Base HP by 10% when you defeat or assist to defeat an enemy shikigami."
+      ],
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/60.png",
+      "子物品": [
+        "Kitsune Sword",
+        "Kojiki Scroll"
+      ],
+      "可合成装备": [],
+      "装备名称": "Chiyo's Sword",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+120 Ability Power",
+        "+300 HP",
+        "+10% Cooldown Reduction",
+        "+20% Spell Vampire"
+      ],
+      "装备主动技能": null,
+      "装备ID": 55,
+      "装备价格": 2100,
+      "装备额外描述": null
+    },
+    "Yata no Kagami": {
+      "装备被动技能": [
+        "#OYata no Kagami#n: Recovers 2% of Max HP per second (effect doubles at Lv. 15). This effect will decrease to 20% for 7 seconds after taking damage (the effect will decrease for 3.5 seconds after taking damage from minions and monsters)."
+      ],
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/25.png",
+      "子物品": [
+        "Gold Bracer",
+        "Gold Bracer",
+        "Silver Bracer"
+      ],
+      "可合成装备": [],
+      "装备名称": "Yata no Kagami",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+700 HP",
+        "+20% Base Health",
+        "+10% Cooldown Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 81,
+      "装备价格": 2350,
+      "装备额外描述": null
+    },
+    "Inari Bell": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Support"
+      ],
+      "图标路径": "gui/res/equip/110.png",
+      "子物品": [
+        "Onmyoji Amulet",
+        "Jade Pendant"
+      ],
+      "可合成装备": [
+        104
+      ],
+      "装备名称": "Inari Bell",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+250 MP",
+        "+50% MP Regen",
+        "+8% Heals and shields increased"
+      ],
+      "装备主动技能": null,
+      "装备ID": 102,
+      "装备价格": 530,
+      "装备额外描述": null
+    },
+    "Psychic Umbrella": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Defense"
+      ],
+      "图标路径": "gui/res/equip/71.png",
+      "子物品": [
+        "Straw Hat"
+      ],
+      "可合成装备": [
+        54,
+        79,
+        80,
+        123
+      ],
+      "装备名称": "Psychic Umbrella",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+80 Magic Resist"
+      ],
+      "装备主动技能": null,
+      "装备ID": 63,
+      "装备价格": 480,
+      "装备额外描述": null
+    },
+    "Marsh Moon": {
+      "装备被动技能": [
+        "#OAmanuma#n: Your magic damage reduces the Movement Speed of enemies it hits by 30% for 1 second.",
+        "#OSuppression#n: When your magic damage hits an enemy, it reduces the healing effect of enemy by 35% over 4 seconds."
+      ],
+      "装备类型": [
+        "Magic"
+      ],
+      "图标路径": "gui/res/equip/56.png",
+      "子物品": [
+        "Stamp of Seimei",
+        "Naraku Staff"
+      ],
+      "可合成装备": [],
+      "装备名称": "Marsh Moon",
+      "装备等级": "Advanced",
+      "装备属性": [
+        "+145 Ability Power",
+        "+250 HP"
+      ],
+      "装备主动技能": null,
+      "装备ID": 50,
+      "装备价格": 1950,
+      "装备额外描述": null
+    },
+    "Scattered Rays": {
+      "装备被动技能": [
+        "#OSuppression#n: Physical damage dealt by you reduces the healing effect of enemy shikigami by 20% over 2 seconds."
+      ],
+      "装备类型": [
+        "Weapon"
+      ],
+      "图标路径": "gui/res/equip/137.png",
+      "子物品": [
+        "Tachi"
+      ],
+      "可合成装备": [
+        115
+      ],
+      "装备名称": "Scattered Rays",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+30 Attack Damage"
+      ],
+      "装备主动技能": null,
+      "装备ID": 128,
+      "装备价格": 650,
+      "装备额外描述": null
+    },
+    "Takemikazuchi Boots": {
+      "装备被动技能": null,
+      "装备类型": [
+        "Movement"
+      ],
+      "图标路径": "gui/res/equip/102.png",
+      "子物品": [
+        "Swift Boots",
+        "Straw Hat"
+      ],
+      "可合成装备": [],
+      "装备名称": "Takemikazuchi Boots",
+      "装备等级": "Intermediate",
+      "装备属性": [
+        "+50 Magic Resist",
+        "+45 Movement Speed",
+        "+30% Control Reduction"
+      ],
+      "装备主动技能": null,
+      "装备ID": 91,
+      "装备价格": 730,
+      "装备额外描述": null
+    }
+  }
+}
