@@ -79,3 +79,19 @@
   outline-offset: 3px;
   outline: 3px solid #ffffff5a;
 }
+
+@media only screen and (max-width: 1170px) {
+  .shiki-selection-header {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .filter-input {
+    width: 90%;
+  }
+
+  .shiki-selection-container {
+    justify-content: center;
+  }
+}
