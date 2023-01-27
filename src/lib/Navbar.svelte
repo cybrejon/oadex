@@ -51,6 +51,7 @@
 <style>
 
   .overlay {
+    display: none;
     z-index: 11;
     background-color: #282a2fc9;
     backdrop-filter: blur(5px);
@@ -77,6 +78,7 @@
   }
 
   .mobile-nav {
+    display: none;
     z-index: 11;
     position: relative;
   }
