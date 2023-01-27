@@ -32,10 +32,10 @@
   <div class="mobile-nav">
     <button on:click={openNav} class="mobile-nav-toggle" type="button"><Icon icon="icon-park-outline:hamburger-button" style="font-size: 24px;" /></button>
     <ul id="mn" class="mobile-nav-ul">
-      <li><a on:click={closeNav(200)} class="{active_path === '/' ? "nav-item nav-item--active" : "nav-item"}" href="/">SHIKIS</a></li>
-      <li><a on:click={closeNav(200)} class="{active_path === '/items' ? "nav-item nav-item--active" : "nav-item"}" href="/items">ITEMS</a></li>
-      <li><a on:click={closeNav(200)} class="{active_path === '/onmyodos' ? "nav-item nav-item--active" : "nav-item"}" href="/onmyodos">ONMYODOS</a></li>
-      <li><a on:click={closeNav(200)} class="{active_path === '/spells' ? "nav-item nav-item--active" : "nav-item"}" href="/spells">SPELLS</a></li>
+      <li><a on:click={closeNav(250)} class="{active_path === '/' ? "nav-item nav-item--active" : "nav-item"}" href="/">SHIKIS</a></li>
+      <li><a on:click={closeNav(250)} class="{active_path === '/items' ? "nav-item nav-item--active" : "nav-item"}" href="/items">ITEMS</a></li>
+      <li><a on:click={closeNav(250)} class="{active_path === '/onmyodos' ? "nav-item nav-item--active" : "nav-item"}" href="/onmyodos">ONMYODOS</a></li>
+      <li><a on:click={closeNav(250)} class="{active_path === '/spells' ? "nav-item nav-item--active" : "nav-item"}" href="/spells">SPELLS</a></li>
     </ul>
   </div>
 {:else}
@@ -74,16 +74,12 @@
   }
 
   .mobile-nav {
-    display: none;
-  }
-
-  .mobile-nav {
-    display: none;
     z-index: 11;
     position: relative;
   }
 
   .mobile-nav-ul {
+    display: none;
     text-align: center;
     box-shadow: 0 8px #282a2f;
     border-radius: 20px;
