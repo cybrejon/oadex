@@ -10,6 +10,10 @@ import Icon from '@iconify/svelte';
 
   let state = { isOpened: false };
 
+  function toggle() {
+    state.isOpened = !state.isOpened;
+  }
+
 </script>
 
   <div class="toggles-wrapper">
@@ -20,12 +24,14 @@ import Icon from '@iconify/svelte';
     </div>
   </div>
   <div class="toggles-mobile-wrapper">
-    <button type="button"><Icon icon="{toggle_icon}" style="font-size: 24px;" /></button>
-    <div class="toggles-container-mobile {anchor_direction === 'left' ? 'anchor-left' : 'anchor-right'}">
-      {#each buttons as btn}
-        <button class="{btn.active_indicator === btn.active_value && 'active-toggle'}" on:click={btn.fn}>{btn.name}</button>
-      {/each}
-    </div>
+    <button on:click={toggle} type="button"><Icon icon="{toggle_icon}" style="font-size: 24px;" /></button>
+    {#if state.isOpened}
+      <div class="toggles-container-mobile {anchor_direction === 'left' ? 'anchor-left' : 'anchor-right'}">
+        {#each buttons as btn}
+          <button class="{btn.active_indicator === btn.active_value && 'active-toggle'}" on:click={btn.fn}>{btn.name}</button>
+        {/each}
+      </div>
+    {/if}
   </div>
     
 
@@ -61,7 +67,7 @@ import Icon from '@iconify/svelte';
 }
 
 .toggles-container-mobile {
-  min-width: 70px;
+  min-width: 90px;
   padding: 10px;
   background-color: #36393F;
   box-shadow: 0 8px #282A2F;
@@ -74,7 +80,7 @@ import Icon from '@iconify/svelte';
   justify-content: center;
   align-items: flex-start;
   row-gap: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 button {
