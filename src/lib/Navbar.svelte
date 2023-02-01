@@ -63,6 +63,8 @@
   }
 
   .mobile-nav-toggle {
+    transition: .1s;
+    display: none;
     margin-right: 10px;
     margin-top: 10px;
     border: 2px solid #70737b;
@@ -71,6 +73,20 @@
     box-shadow: 0 8px #282A2F;
     color: #fff;
     border-radius: 10px;
+  }
+
+  .mobile-nav-toggle:hover {
+    background-color: #CDFE05;
+    border-color: transparent;
+    color: #282A2F;
+  }
+
+  .mobile-nav-toggle:active {
+    color: #fff;
+    border-color: transparent;
+    background-color: #282A2F;
+    transform: translateY(8px);
+    box-shadow: none;
   }
 
   .mobile-nav {
@@ -86,9 +102,9 @@
     background-color: #3C3F46;
     border: 4px solid #585A5F;
     padding: 10px 10px 15px 10px;
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: fixed;
+    top: 20px;
+    right: 10px;
     row-gap: 15px;
     flex-direction: column;
   }
@@ -132,7 +148,7 @@
   }
 
   @media only screen and (max-width: 800px) {
-    .mobile-nav {
+    .mobile-nav-toggle {
       display: block;
     }
     .desktop-nav {
