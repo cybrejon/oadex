@@ -28,7 +28,7 @@ import Icon from '@iconify/svelte';
     {#if state.isOpened}
       <div class="toggles-container-mobile {anchor_direction === 'left' ? 'anchor-left' : 'anchor-right'}">
         {#each buttons as btn}
-          <button class="{btn.active_indicator === btn.active_value && 'active-toggle'}" on:click={btn.fn}>{btn.name}</button>
+          <button class="{btn.active_indicator === btn.active_value && 'active-toggle'}" on:click={btn.fn} on:click={toggle}>{btn.name}</button>
         {/each}
       </div>
     {/if}
