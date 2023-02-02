@@ -58,4 +58,19 @@
     align-content: center;
     flex-wrap: wrap;
   }
+
+  @media only screen and (max-width: 700px) {
+    .container {
+      grid-template-areas: 
+        "basic basic gallery gallery"
+        ". . . .";
+    }
+  }
+  @media only screen and (max-width: 620px) {
+    .container {
+      grid-template-areas: 
+        "basic basic basic basic"
+        "gallery gallery gallery gallery";
+    }
+  }
 </style>
