@@ -28,7 +28,7 @@ body {
   overflow-y: scroll;
   font-family: 'Montserrat', sans-serif;
   background-color: #36393F;
-  background-image: linear-gradient(to bottom, #36393F, #36393F, #2d323b);
+  /* background-image: linear-gradient(to bottom, #36393F, #36393F, #2d323b); */
   background-repeat: no-repeat;
   background-position: center;
   color: #ffffffe6;

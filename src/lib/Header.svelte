@@ -24,7 +24,6 @@
 
   img {
     width: 250px;
-    filter: drop-shadow(-60px 0 60px #ccfe0516);
   }
 
   .main-header {
