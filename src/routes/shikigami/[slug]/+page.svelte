@@ -8,6 +8,7 @@
 
   // components
   import Basic from '$lib/components/shikigami/Basic.svelte';
+  import Basic2 from '$lib/components/shikigami/Basic2.svelte';
   import Gallery from '$lib/components/shikigami/Gallery.svelte';
 
   // import data
@@ -18,6 +19,7 @@
   const shiki_names = Object.keys($shikiga_data);  
   const selected_shiki_name = shiki_names.filter(name => $shikiga_data[name].式神ID.toString() === shiki_id);
   const curr_shiki_obj = $shikiga_data[selected_shiki_name];
+  const scores = curr_shiki_obj.评分;
 
 </script>
 
@@ -27,6 +29,11 @@
 
 <div class="container">
 
+  <Gallery link={$images[curr_shiki_obj.式神全身像]} area_name='gallery' data={{
+    image_url: $images[curr_shiki_obj.式神全身像],
+    image_alt: curr_shiki_obj.式神名称
+  }} />
+
   <Basic area_name='basic' data={{
     name: curr_shiki_obj.式神名称,
     classification: curr_shiki_obj.式神定位.map(role => dictionary.roles[role]),
@@ -35,9 +42,12 @@
     specialty: curr_shiki_obj.式神标签
   }} />
 
-  <Gallery link={$images[curr_shiki_obj.式神全身像]} area_name='gallery' data={{
-    image_url: $images[curr_shiki_obj.式神全身像],
-    image_alt: curr_shiki_obj.式神名称
+  <Basic2 area_name='basic2' data={{
+    dps: dictionary.scores[scores.输出],
+    cc: dictionary.scores[scores.控制],
+    sustain: dictionary.scores[scores.生存],
+    buffs: dictionary.scores[scores.增益],
+    agility: dictionary.scores[scores.敏捷],
   }} />
 
 </div>
@@ -52,25 +62,19 @@
     grid-template-rows: repeat(3, 1fr);
     justify-content: flex-start;
     grid-template-areas: 
-      "basic gallery . ."
+      "gallery basic basic2 ."
       ". . . .";
     gap: 20px;
     align-content: center;
     flex-wrap: wrap;
   }
 
-  @media only screen and (max-width: 700px) {
-    .container {
-      grid-template-areas: 
-        "basic basic gallery gallery"
-        ". . . .";
-    }
-  }
   @media only screen and (max-width: 620px) {
     .container {
       grid-template-areas: 
-        "basic basic basic basic"
-        "gallery gallery gallery gallery";
+      "gallery gallery gallery gallery"
+      "basic basic basic basic"
+      "basic2 basic2 basic2 basic2";
     }
   }
 </style>

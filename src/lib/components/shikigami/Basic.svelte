@@ -24,8 +24,18 @@
     <li class="c-li {role.toLowerCase()}">{role}</li>
     {/each}
   </ul>
-  <p class="lane">📍 {lane}</p>
-  <p class="lane">⚖️ {specialty}</p>
+  <div class="vas">
+    <p class="vas-title">📍 LANE POSITION</p>
+    <ul class="vas-ul">
+        <li class="vas-li">{lane}</li>
+    </ul>
+  </div>
+  <div class="vas">
+    <p class="vas-title">⚖️ SPECIALTY</p>
+    <ul class="vas-ul">
+        <li class="vas-li">{specialty}</li>
+    </ul>
+  </div>
   <div class="vas">
     <p class="vas-title">Voice Actors</p>
     <ul class="vas-ul">
