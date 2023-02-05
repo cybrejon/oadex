@@ -16,10 +16,10 @@
 
 <Container area_name={area_name}>
   <div class="name-container">
-    <p class="name {classification[0].toLowerCase()}-name">🪪 {name}</p>
+    <p class="name {classification[0].toLowerCase()}-name">📝 {name}</p>
   </div>
   <ul class="classification-ul">
-    🏛️
+    🏷
     {#each classification as role}
     <li class="c-li {role.toLowerCase()}">{role}</li>
     {/each}

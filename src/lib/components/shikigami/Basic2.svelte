@@ -24,7 +24,7 @@
   <div class="vas">
     <p class="vas-title">{cc}</p>
     <ul class="vas-ul">
-        <li class="vas-li">🪝 CC Rating</li>
+        <li class="vas-li">⚓ CC Rating</li>
     </ul>
   </div>
   <div class="vas">
@@ -48,7 +48,7 @@
 </Container>
 
 <style>
-  
+
   .vas {
     background-color: #3C3F46;
     border-radius: 6px;
