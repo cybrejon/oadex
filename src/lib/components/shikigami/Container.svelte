@@ -9,7 +9,7 @@
 <style>
   .container {
     background-color: #40444B;
-    padding: 20px 15px 15px 15px;
+    padding: 15px;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;

@@ -59,7 +59,7 @@
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: auto;
     justify-content: flex-start;
     grid-template-areas: 
       "gallery basic basic2 ."
