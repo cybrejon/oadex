@@ -1,5 +1,6 @@
 <script>
   /** @type {import('./$types').PageData} */
+  /** @type {import('./$types').Snapshot<string>} */
 
   // import stores
   import {

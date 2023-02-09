@@ -12,6 +12,7 @@
   } = data;
 
   import Container from "$lib/components/shikigami/Container.svelte";
+  import Card from "$lib/components/shikigami/Card.svelte";
 </script>
 
 <Container area_name={area_name}>
@@ -24,35 +25,26 @@
     <li class="c-li {role.toLowerCase()}">{role}</li>
     {/each}
   </ul>
-  <div class="vas">
-    <p class="vas-title">📍 LANE POSITION</p>
-    <ul class="vas-ul">
-        <li class="vas-li">{lane}</li>
-    </ul>
-  </div>
-  <div class="vas">
-    <p class="vas-title">⚖️ SPECIALTY</p>
-    <ul class="vas-ul">
-        <li class="vas-li">{specialty}</li>
-    </ul>
-  </div>
-  <div class="vas">
-    <p class="vas-title">Voice Actors</p>
-    <ul class="vas-ul">
-      {#if voices[0]}
-        <li class="vas-li">🇯🇵 {voices[0]}</li>
-      {/if}
-      {#if voices[1]}
-        <li class="vas-li">🇨🇳 {voices[1]}</li>
-      {/if}
-      {#if voices[2]}
-        <li class="vas-li">🇺🇸 {voices[2]}</li>
-      {/if}
-      {#if voices[3]}
-        <li class="vas-li">🇰🇷 {voices[3]}</li>
-      {/if}
-    </ul>
-  </div>
+  <Card title="📍 LANE POSITION" content={[
+    lane
+  ]} />
+  <Card title="⚖️ SPECIALTY" content={[
+    specialty
+  ]} />
+  <Card title="Voice Actors">
+    {#if voices[0]}
+      <li class="vas-li">🇯🇵 {voices[0]}</li>
+    {/if}
+    {#if voices[1]}
+      <li class="vas-li">🇨🇳 {voices[1]}</li>
+    {/if}
+    {#if voices[2]}
+      <li class="vas-li">🇺🇸 {voices[2]}</li>
+    {/if}
+    {#if voices[3]}
+      <li class="vas-li">🇰🇷 {voices[3]}</li>
+    {/if}
+  </Card>
 </Container>
 
 <style>
