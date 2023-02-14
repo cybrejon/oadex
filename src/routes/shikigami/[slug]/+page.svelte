@@ -60,10 +60,9 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    justify-content: flex-start;
+    /* align-items: center; */
     grid-template-areas: 
-      "gallery basic basic2 ."
-      ". . . .";
+    "gallery basic basic2 .";
     gap: 20px;
     align-content: center;
     flex-wrap: wrap;
@@ -77,4 +76,5 @@
       "basic2 basic2 basic2 basic2";
     }
   }
+
 </style>

@@ -22,7 +22,7 @@
   <ul class="classification-ul">
     🏷
     {#each classification as role}
-    <li class="c-li {role.toLowerCase()}">{role}</li>
+      <li class="c-li {role.toLowerCase()}">{role}</li>
     {/each}
   </ul>
   <Card title="📍 LANE POSITION" content={[

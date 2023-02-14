@@ -1,5 +1,5 @@
 <script>
-  import banner from '$lib/assets/banner4.png'
+  import banner from '$lib/assets/banner4.webp'
   import Navbar from '$lib/Navbar.svelte';
   export let active_path;
 </script>

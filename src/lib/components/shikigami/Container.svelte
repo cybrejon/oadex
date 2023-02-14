@@ -1,8 +1,9 @@
 <script>
   export let area_name;
+  export let style;
 </script>
 
-<div class="container" style:grid-area={area_name}>
+<div class={style === 'transparent' ? 'container container--alt' : 'container'} style:grid-area={area_name}>
   <slot></slot>
 </div>
 
@@ -19,5 +20,12 @@
       0 10px 10px #282a2f52,
       0 30px 30px #282a2f52,
       0 80px 60px #282a2f52;
+  }
+
+  .container--alt {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    filter: drop-shadow(0 10px 10px #282a2f52) drop-shadow(0 30px 30px #282a2f52) drop-shadow(0 80px 60px #282a2f52);
   }
 </style>

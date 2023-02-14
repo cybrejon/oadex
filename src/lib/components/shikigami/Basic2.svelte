@@ -3,6 +3,8 @@
 
   export let area_name;
 
+  export let style;
+
   let { 
     dps: dps,
     cc: cc,
@@ -15,8 +17,8 @@
   import Card from "$lib/components/shikigami/Card.svelte";
 </script>
 
-<Container area_name={area_name}>
-  <Card title="Scores" content={[
+<Container area_name={area_name} style={style}>
+  <Card title="📊 Scores" content={[
     `${dps} - ⚔️ DPS Rating`,
     `${cc} - ⚓ CC Rating`,
     `${sustain} - 💪🏽 SUSTAIN Rating`,
