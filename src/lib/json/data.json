@@ -17152,6 +17152,14 @@
           "皮肤全身像": "gui/res/hero_quan/108103.png",
           "皮肤头像": "gui/res/head_fang/108103.png",
           "皮肤头像_新": "gui2/res/head_fang/108103.png"
+        },
+        {
+          "皮肤名称": "Geisha Poetry",
+          "皮肤全身像_新": "gui/res/hero_quan2/108104.png",
+          "皮肤ID": 108104,
+          "皮肤全身像": "gui/res/hero_quan/108104.png",
+          "皮肤头像": "gui/res/head_fang/108104.png",
+          "皮肤头像_新": "gui2/res/head_fang/108104.png"
         }
       ],
       "推荐加点顺序": [
