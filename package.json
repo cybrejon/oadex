@@ -19,6 +19,7 @@
 		"svelte": "^3.58.0",
 		"vite": "^4.2.1"
 	},
+	"type": "module",
 	"dependencies": {
 		"@inqling/svelte-icons": "^2.4.0",
 		"@tanstack/svelte-query": "^4.27.0",
