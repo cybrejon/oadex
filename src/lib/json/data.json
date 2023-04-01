@@ -262,7 +262,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1067.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1067.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Support #rRecommended route: Bot #rStrategy: Harass enemies and heal allies with Ability 1. Use Ability 2 to make the sunshine doll follow your allies along with Ability 3 to swiftly blind incoming attackers. When an ally is under fire and about to be defeated, timely use of your ultimate ability can provide protection.",
       "前五级推荐加点": [
         1,
@@ -382,8 +382,8 @@
         "敏捷": 1,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Shuten Doji": {
       "式神定位": [
@@ -675,7 +675,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1011.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1011.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Samurai#rRecommended route: Top#rAbilities: Using ability 1 (Lament) increases the range of Basic Attacks and increases the rate of recovery of Madness. It also allows you to enter the Rage state sooner. Under the effect of Rage, ability 2 (Demonic Punch) can slow down the enemy, which increases the control effect of ability 3 (Rampage), and steadily increases the hit rate. Activating its ultimate ability, New Boss in Town, can reverse the situation when you are in danger.",
       "前五级推荐加点": [
         1,
@@ -797,8 +797,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Onikiri": {
       "式神定位": [
@@ -1070,7 +1070,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1074.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1074.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Samurai/Ninja#rRecommended route: Jungle#rStrategy: Use the displacement of Ability 3 to charge forward, followed by the Stage 1's control of Ability 2 to slow, and combine with Stage 2 of Ability 2 to deal heavy damage. When the enemy's HP is less than 50%, use the ultimate to deal true damage. Follow up with basic attacks between the different abilities to gain additional buffs.",
       "前五级推荐加点": [
         2,
@@ -1194,8 +1194,8 @@
         "敏捷": 4,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Yamawaro": {
       "式神定位": [
@@ -1441,7 +1441,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1032.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1032.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Tank #rRecommended route: Top #rStrategy: Use Ability 1's wall wisely to protect allies or limit the movement of enemies. Engaging in battle around the wall increases Yamawaro's survivability. During battle, Yamawaro can navigate the battlefield using Ability 3 together with Abilities 2 and 4 for output.",
       "前五级推荐加点": [
         2,
@@ -1562,8 +1562,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Ebisu": {
       "式神定位": [
@@ -1814,7 +1814,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1009.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1009.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Support #rRecommended route: Bottom #rStrategy: When Ability 2 hits an enemy, tap the ability again to pull the enemy back. Using Ultimate Ability can dispel Control for enemies under effect within the range once.",
       "前五级推荐加点": [
         1,
@@ -1934,8 +1934,8 @@
         "敏捷": 1,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Takiyasha Hime": {
       "式神定位": [
@@ -2180,7 +2180,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1100.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1100.png",
-      "限免开始时间": "2022-12-12 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Samurai#rRecommended route: Top#rStrategy: Use Ability 2 to get close to enemies and knock them back, and take advantage of when they are rigid to hit them with Ability 3. This is when you should cast Ability 1 as you can easily hit the enemies with the blade. Following which, use the enhancement effect of the Natural Passive to fight against the enemy.#rUse your ultimate ability at the right time under different circumstances for better results.",
       "前五级推荐加点": [
         1,
@@ -2303,8 +2303,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2022-12-19 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Aoandon": {
       "式神定位": [
@@ -2586,7 +2586,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1036.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1036.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage/Support#rRecommended route: Middle/bottom#rStrategy: After enhancing Ability 1, the basic attack will have high AoE damage. It can be used together with the MP Regen effect of Ability 3 for effective harass. Ability 2 inflicts Slow on the target, and Haste on allies at the same time. Ability 4's control effect has a longer delay time, and should be cast together with other control abilities when possible.",
       "前五级推荐加点": [
         1,
@@ -2704,8 +2704,8 @@
         "敏捷": 3,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kuro Mujou": {
       "式神定位": [
@@ -2965,7 +2965,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1006.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1006.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Samurai#rRecommended route: Top#rAbilities: Use abilities and attacks to stack the Soul Slayer state on the enemy shikigami. When there are 4 layers of the Soul Slayer state on the opponent's shikigami, Kuro Mujou will gain a powerful buff. Use the reap effect of ability 4 to finish off your opponent.",
       "前五级推荐加点": [
         2,
@@ -3087,8 +3087,8 @@
         "敏捷": 2,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Asura": {
       "式神定位": [
@@ -3325,7 +3325,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1117.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1117.png",
-      "限免开始时间": "2022-12-05 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "式神定位：侍#r推荐路线：上路#r使用技巧：对线时使用骨鞭（远程）形态进行持续消耗，抓住机会切换骨刃（近战）形态进场收割。阿修罗释放技能时会消耗[理性]，当其[理性]为零时将无法使用技能但普攻更为强力，合理控制[理性]是阿修罗输出最大化的关键。",
       "前五级推荐加点": [
         2,
@@ -3447,8 +3447,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2022-12-12 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Ootengu": {
       "式神定位": [
@@ -3728,7 +3728,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1003.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1003.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Middle#rStrategy: When possible, try to fight after you have activated Ability 1's shield. Use abilities continuously to trigger passive damage and inflict Slow to wear down your opponents. Cast control effects on your opponent to make it difficult for them to leave the range of your ultimate ability so you can deal heavy damage to them.",
       "前五级推荐加点": [
         2,
@@ -3847,8 +3847,8 @@
         "敏捷": 2,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Momiji": {
       "式神定位": [
@@ -4095,7 +4095,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1014.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1014.png",
-      "限免开始时间": "2017-12-06 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Middle#rStrategy: Try to hit the enemy shikigami 2 times with Ability 3. Trigger maple leaf doll 3 times to deal heavy damage. Use the ultimate ability to support all allies on the map in a team battle and acquire the enemy's vision.",
       "前五级推荐加点": [
         2,
@@ -4214,8 +4214,8 @@
         "敏捷": 2,
         "难度": 1
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Itsumade": {
       "式神定位": [
@@ -4311,19 +4311,19 @@
         }
       ],
       "推荐加点顺序": [
-        2,
         1,
+        2,
         3,
-        2,
-        2,
-        4,
-        2,
         1,
-        2,
         1,
         4,
         1,
+        2,
         1,
+        2,
+        4,
+        2,
+        2,
         3,
         3,
         4,
@@ -4347,14 +4347,14 @@
         "二技能": {
           "图标路径": "gui/res/skill/1041002.png",
           "技能ID": 104121,
-          "技能描述": "Itsumade fires feathers in the designated direction, inflicting 70#c9e45fa(+75%BonusAttack) #n  #Rphysical damage#n and inflicting 30% Slow on enemies in range for 2 seconds.",
+          "技能描述": "Itsumade fires feathers in the designated direction, inflicting 110#c9e45fa(+75%BonusAttack) #n  #Rphysical damage#n and inflicting 30% Slow on enemies in range for 2 seconds.",
           "技能名称": "Invisible Edge",
           "技能成长": {
             "Base Damage": [
-              "70",
-              "130",
-              "190",
-              "250",
+              "110",
+              "160",
+              "210",
+              "260",
               "310"
             ],
             "冷却": [
@@ -4366,10 +4366,10 @@
             ],
             "消耗": [
               30,
-              35,
-              40,
-              45,
-              50
+              30,
+              30,
+              30,
+              30
             ]
           }
         },
@@ -4404,10 +4404,10 @@
           "技能成长": {
             "Base Damage": [
               "85",
-              "130",
-              "175",
-              "220",
-              "265"
+              "140",
+              "195",
+              "250",
+              "305"
             ],
             "冷却": [
               5,
@@ -4418,10 +4418,10 @@
             ],
             "消耗": [
               30,
-              30,
-              30,
-              30,
-              30
+              35,
+              40,
+              45,
+              50
             ]
           }
         },
@@ -4459,20 +4459,20 @@
       "式神圆头像_新": "gui2/res/head_circle/1041.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1041.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Ninja#rRecommended route: Jungle/top#rAbilities: After using her ability, Golden Feather will increase the Crit Damage of the next Basic Attack. The CD of ability 3 is refreshed when an opposing shikigami is killed. There will be some delay when the ultimate ability is used. It is best to match this ability with control abilities of teammates.",
       "前五级推荐加点": [
-        2,
         1,
-        3,
         2,
-        2
+        3,
+        1,
+        1
       ],
       "新式神": false,
       "推荐加点优先级": [
         4,
-        2,
         1,
+        2,
         3
       ],
       "式神标签": "Burst/Charge",
@@ -4583,8 +4583,8 @@
         "敏捷": 4,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Enmusubi": {
       "式神定位": [
@@ -4811,7 +4811,7 @@
         "三技能": {
           "图标路径": "gui/res/skill/1112003.png",
           "技能ID": 111231,
-          "技能描述": "Enmusubi bestows a blessing to herself and the designated teammate, increasing their Armor by 8 and Magic Resist by 8 for 4 second(s). She also grants immunity to control effects once, and the blessing prematurely ends once this is triggered. When the blessing ends, it restores 40#c39b54a(+20%Ability Power) #n #cffba35(+1%TargetHP Lost ) #n  #GHP#n to the targets and casts Flower Moon with the targets as the center.",
+          "技能描述": "Enmusubi bestows a blessing to herself and the designated teammate, increasing their Armor by 8 and Magic Resist by 8 for 2.5 second(s). She also grants immunity to control effects once, and the blessing prematurely ends once this is triggered. When the blessing ends, it restores 40#c39b54a(+20%Ability Power) #n #cffba35(+1%TargetHP Lost ) #n  #GHP#n to the targets and casts Flower Moon with the targets as the center.",
           "技能名称": "Soul Mate",
           "技能成长": {
             "冷却": [
@@ -4842,7 +4842,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1112.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1112.png",
-      "限免开始时间": "2023-02-13 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Support#rRecommended route: Bottom#rStrategy: Use Ability 1 to repeatedly hit the same shikigami to increase damage or gain ally buffs. Get greater control bonuses if Ability 2 hits two units. Ultimate ability can be used to help teammates assemble quickly.",
       "前五级推荐加点": [
         1,
@@ -4963,8 +4963,8 @@
         "敏捷": 3,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2023-02-20 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Higanbana": {
       "式神定位": [
@@ -5092,7 +5092,7 @@
         "天生被动": {
           "图标路径": "gui/res/skill/1056000.png",
           "技能ID": 105651,
-          "技能描述": "Passive trigger: When Higanbana's abilities hit an enemy, she can restore 20#c39b54a(+35%Ability Power) #n #c0095cc(+10*Current Level) #n  #GHP#n.",
+          "技能描述": "Passive trigger: When Higanbana's abilities hit an enemy, she can restore 5#c39b54a(+35%Ability Power) #n #c0095cc(+10*Current Level) #n  #GHP#n.",
           "技能名称": "Blooming Earth",
           "技能成长": {
             "冷却": [
@@ -5102,7 +5102,7 @@
               null
             ],
             "Base Regen": [
-              "20"
+              "5"
             ]
           }
         },
@@ -5216,7 +5216,7 @@
         "三技能": {
           "图标路径": "gui/res/skill/1056003.png",
           "技能ID": 105631,
-          "技能描述": "Higanbana summons a sea of flowers lasting for 4 seconds in the specified area. Sea of flowers will expand gradually to inflict a 16% Slow effect and deal 15#c39b54a(+10%Ability Power) #n  #Umagic damage#n per second and add a Flower Seal mark on any enemy shikigami who haven't left the sea of flower within 1 seconds. During the duration of the mark, if she hits the target with Deadly Blooms or Bloom Shadow, the mark will be ignited and deal 70#c39b54a(+60%Ability Power) #n  #Umagic damage#n.#rIf an enemy shikigami within the sea of flower moves or uses different abilities, Higanbana will gain a number of flower souls.#rHiganbana can regen 1 layer of Blood-soaked Flowers every 7.5 seconds. Can store up to 3 layers.",
+          "技能描述": "Higanbana summons a sea of flowers lasting for 4 seconds in the specified area. Sea of flowers will expand gradually to inflict a 16% Slow effect and deal 15#c39b54a(+10%Ability Power) #n  #Umagic damage#n per second and add a Flower Seal mark on any enemy shikigami who haven't left the sea of flower within 1 seconds. During the duration of the mark, if she hits the target with Deadly Blooms or Bloom Shadow, the mark will be ignited and deal 70#c39b54a(+60%Ability Power) #n  #Umagic damage#n.#rIf an enemy shikigami within the sea of flower moves or uses different abilities, Higanbana will gain a number of flower souls.#rHiganbana can regen 1 layer of Blood-soaked Flowers every 9.5 seconds. Can store up to 3 layers.",
           "技能名称": "Blood-soaked Flowers",
           "技能成长": {
             "Base Damage": [
@@ -5228,10 +5228,10 @@
             ],
             "冷却": [],
             "Charge Time": [
-              "7.5",
+              "9.5",
+              "8",
               "6.5",
-              "5.5",
-              "4.5",
+              "5",
               "3.5"
             ],
             "消耗": [
@@ -5255,7 +5255,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1056.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1056.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage #rRecommended route: Mid#rStrategy: After marking an enemy with Ability 3, use Ability 1 and Ability 2 to trigger the mark and store flower souls. Use the Ultimate Ability after storing enough flower souls. The Ultimate Ability can trap enemies and deal great damage.",
       "前五级推荐加点": [
         3,
@@ -5374,8 +5374,8 @@
         "敏捷": 2,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Youko": {
       "式神定位": [
@@ -5684,7 +5684,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1008.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1008.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Marksman#rRecommended route: Bottom#rAbility: Find the opportunity to use ability 2 to wear down the enemy shikigami. Use Demon Force's Attack Speed buff to attack for a 3rd time and mow down your enemies, as well as reduce CD for all abilities. When Demon Force reaches 5 layers, use the ultimate ability to gain an additional chance to deal instant critical damage.",
       "前五级推荐加点": [
         2,
@@ -5805,8 +5805,8 @@
         "敏捷": 4,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Mouba": {
       "式神定位": [
@@ -6046,7 +6046,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1040.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1040.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Tank #rRecommended route: Top #rStrategy: Use Abilities 1 and 2 to continuously wear down laning opponents. Use your ultimate ability and Ability 3 to provide rapid support and ram opponents ahead of you. Enjoy the thrill of driving! You can also take a teammate along for the ride.",
       "前五级推荐加点": [
         1,
@@ -6165,8 +6165,8 @@
         "敏捷": 4,
         "难度": 4
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Zashiki": {
       "式神定位": [
@@ -6271,7 +6271,7 @@
         "天生被动": {
           "图标路径": "gui/res/skill/1082000.png",
           "技能ID": 108251,
-          "技能描述": "Passive effect:  1. Zashiki gains 0.02#c0095cc(+0.01*Current Level) #n  points of HP Regen upon losing every 1% HP 2. Zashiki gains 1 orb for every 15% of Max HP lost. She can hold a maximum of 6 at a time. After that, orbs will disappear after she leaves the battle, each orb lost will restore her #GHP#n by 5#c0095cc(+5*Current Level) #n .#r",
+          "技能描述": "Passive effect:#r1. Zashiki gains a 0.02#c0095cc(+0.01*Current Level) #n  HP Regen effect for every 1% of Max HP lost.#r2. Zashiki gains 1 orb for every 15% of Max HP lost. She can hold a maximum of 6 at a time. Each orb provides 4% Movement Speed bonus. Orbs will fade quickly after leaving the battle. Every orb that fades away restores 5#c0095cc(+5*Current Level) #n  #GHP#n.#r",
           "技能名称": "Soul Fire",
           "技能成长": {
             "冷却": [],
@@ -6319,7 +6319,7 @@
         "四技能": {
           "图标路径": "gui/res/skill/1082003.png",
           "技能ID": 108241,
-          "技能描述": "Zashiki consumes 40% of her current HP, gaining a 250#cffba35(+25%HP Lost ) #n  shield and entering the Fortune Guard state for 10 seconds. The shield will block a portion of the damage taken and restore an equal amount of HP for Zashiki. When in the Fortune Guard state, Zashiki will gain Slow immunity for 60% seconds.",
+          "技能描述": "Zashiki consumes 40% of her current HP, gaining a 250#cffba35(+20%HP Lost ) #n  shield and entering the Fortune Guard state for 5 seconds. The shield will block a portion of the damage taken and restore an equal amount of HP for Zashiki. When in the Fortune Guard state, Zashiki will gain Slow immunity for 60% seconds.",
           "技能名称": "Serendipity",
           "技能成长": {
             "Base Shield": [
@@ -6328,9 +6328,9 @@
               "350"
             ],
             "HP lost bonus": [
-              "0.25",
-              "0.3",
-              "0.35"
+              "0.2",
+              "0.225",
+              "0.25"
             ],
             "冷却": [
               75,
@@ -6347,20 +6347,20 @@
         "一技能": {
           "图标路径": "gui/res/skill/1082001_2.png",
           "技能ID": 108211,
-          "技能描述": "Zashiki consumes 3% of her current HP, dealing 50#c39b54a(+25%Ability Power) #n #c0095cc(+10*Current Level) #n  #Umagic damage#n to nearby enemies after a short delay. 10#c39b54a(+5%Ability Power) #n #c0095cc(+2.5*Current Level) #n  more #Umagic damage#n is dealt for every orb she has. When she has 6 orbs, this will additionally slow the enemies by 30% for 1.2 seconds.#rZashiki will gain 1 orb when this ability hits enemy shikigami, and restores 12% HP according to the damage dealt to the target hit. HP restored by hitting an enemy shikigami or monsters is increased to 40%, and a single ability can restore up to 88#c39b54a(+44%Ability Power) #n #c0095cc(+20*Current Level) #n  #GHP#n).",
+          "技能描述": "Zashiki consumes 3% of her current HP, dealing 50#c39b54a(+25%Ability Power) #n #c0095cc(+10*Current Level) #n  #Umagic damage#n to nearby enemies after a short delay. 6#c39b54a(+2.5%Ability Power) #n #c0095cc(+1.5*Current Level) #n  more #Umagic damage#n is dealt for every orb she has. When she has 6 orbs, this will additionally slow the enemies by 30% for 1.2 seconds.#rZashiki will gain 1 orb when this ability hits enemy shikigami, and restores 12% HP according to the damage dealt to the target hit. HP restored by hitting an enemy shikigami or monsters is increased to 40%, and a single ability can restore up to 48.16#c39b54a(+22.4%Ability Power) #n #c0095cc(+10.6*Current Level) #n  #GHP#n).",
           "技能名称": "Indoor Cleansing",
           "技能成长": {
             "Base Damage": [
               "50",
-              "10",
+              "6",
               "75",
-              "16",
+              "11",
               "100",
-              "22",
+              "16",
               "125",
-              "28",
+              "21",
               "150",
-              "34"
+              "26"
             ],
             "冷却": [
               3,
@@ -6426,7 +6426,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1082.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1082.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Tank#rRecommended route: Top#rStrategy: Try to ensure that you keep a high stack of orbs. First, use Ability 1 to harass enemies, and try to find a good time to use the shield of Ability 3. Finally, use the two-stage damage of the ultimate to damage and finish off your opponent.",
       "前五级推荐加点": [
         1,
@@ -6545,8 +6545,8 @@
         "敏捷": 2,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Bakekujira": {
       "式神定位": [
@@ -6623,6 +6623,14 @@
           "皮肤全身像": "gui/res/hero_quan/109304.png",
           "皮肤头像": "gui/res/head_fang/109304.png",
           "皮肤头像_新": "gui2/res/head_fang/109304.png"
+        },
+        {
+          "皮肤名称": "Homecoming Beacon",
+          "皮肤全身像_新": "gui/res/hero_quan2/109305.png",
+          "皮肤ID": 109305,
+          "皮肤全身像": "gui/res/hero_quan/109305.png",
+          "皮肤头像": "gui/res/head_fang/109305.png",
+          "皮肤头像_新": "gui2/res/head_fang/109305.png"
         }
       ],
       "推荐加点顺序": [
@@ -6814,7 +6822,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1093.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1093.png",
-      "限免开始时间": "2023-02-20 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Support#rRecommended route: Bottom#rStrategy: Switch between the two types of Whale Armor at suitable times to help teammates wear the enemy down on the lanes. When you find weaknesses in the enemy's positioning, use Whale Spout to strike the enemy first and close the distance, then use Water Strike to deal damage or Ability 4 to control enemy shikigami and assist teammates in completing the seal.",
       "前五级推荐加点": [
         1,
@@ -6934,8 +6942,8 @@
         "敏捷": 1,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2023-02-27 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Izaya": {
       "式神定位": [
@@ -7155,7 +7163,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1115.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1115.png",
-      "限免开始时间": "2023-02-13 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Middle#rStrategy: Try to aim the multiple small shuttles from Ability 1 at the same target, or hit multiple targets by controlling the cast range.#rIncrease Ability 1's hit rate by combining it with Ability 2's control effect.#rUsing Ability 3's space changing capability to change the positions of different units can achieve surprising effects on the battlefield.",
       "前五级推荐加点": [
         2,
@@ -7274,8 +7282,8 @@
         "敏捷": 2,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2023-02-20 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kidomaru": {
       "式神定位": [
@@ -7454,7 +7462,7 @@
         "一技能": {
           "图标路径": "gui/res/skill/1110001.png",
           "技能ID": 111011,
-          "技能描述": "When Kidomaru has 4 imps bound at the same time, he can select an area as his hunting ground. After a short delay, he deals 15#c9e45fa(+20%BonusAttack) #n  #Rphysical damage#n to enemies in range and releases all imps in that area. Each imp deals 15#c9e45fa(+20%BonusAttack) #n  #Rphysical damage#n to enemies in the area upon landing before turning into Imp Scouts. The Imp Scouts will automatically chase nearby enemies for the next 4 seconds, dealing #c9e45fa(+18%Attack) #n #cffba35(+1%TargetMax HP) #n  #Rphysical damage#n with each attack.",
+          "技能描述": "When Kidomaru has 4 imps bound at the same time, he can select an area as his hunting ground. After a short delay, he deals 15#c9e45fa(+20%BonusAttack) #n  #Rphysical damage#n to enemies in range and releases all imps in that area. Each imp deals 15#c9e45fa(+20%BonusAttack) #n  #Rphysical damage#n to enemies in the area upon landing before turning into Imp Scouts. The Imp Scouts will automatically chase nearby enemies for the next 4 seconds, dealing 3#c9e45fa(+18%Attack) #n #cffba35(+1%TargetMax HP) #n  #Rphysical damage#n with each attack.",
           "技能名称": "Killing Satisfaction",
           "技能成长": {
             "Base Damage ": [
@@ -7519,7 +7527,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1110.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1110.png",
-      "限免开始时间": "2023-02-13 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Marksman/Ninja#rRecommended route: Bottom/Jungle#rStrategy: Use basic attacks to accumulate four imps, then use Ability 2 to control enemies. Use with Ability 1 to deal damage, ensuring that there are enough Imp Scouts on the battlefield to pursue and attack enemies. In teamfights, use your ultimate ability to gain an Attack Speed bonus and quickly gain imps.",
       "前五级推荐加点": [
         1,
@@ -7639,8 +7647,8 @@
         "敏捷": 4,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2023-02-20 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kubinashi": {
       "式神定位": [
@@ -7895,7 +7903,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1028.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1028.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Marksman #rRecommended route: Bottom #rStrategy: Use Ability 2 to frequently adjust your position and create space for DPS. Use Ability 4 to rapidly decrease the enemy's HP, followed by Ability 3 to inhibit the enemy's regeneration. In a Team Battle, Ability 1 can cause high AoE damage.",
       "前五级推荐加点": [
         2,
@@ -8015,8 +8023,8 @@
         "敏捷": 4,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kosodenote": {
       "式神定位": [
@@ -8301,7 +8309,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1070.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1070.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Ninja#rRecommended route: Jungle #rStrategy: Use Ability 1 to spot the weaknesses of the target, use Ability 3 to adjust positions and use basic attack and Ability 2 to refresh weak spot and then use Ultimate Ability to slay target.",
       "前五级推荐加点": [
         1,
@@ -8426,8 +8434,8 @@
         "敏捷": 4,
         "难度": 4
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Hannya": {
       "式神定位": [
@@ -8705,7 +8713,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1022.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1022.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Samurai #rRecommended route: Top/Middle #rStrategy: In long-range mode, use the abilities Ghoul Mask and Blood Grenade to wear down the opponent, and then use Inner Demon to charge into your foes before switching to your melee mode to finish off your opponent.",
       "前五级推荐加点": [
         2,
@@ -8828,8 +8836,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Hakuro": {
       "式神定位": [
@@ -9088,7 +9096,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1007.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1007.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Marksman#rRecommended route: Bottom#rAbilities: Hakuro's range is short so you must keep her safe when attacking. Try channeling her energy for a super long-range ultimate attack. Hakuro's ability 1 is suitable for quick battles, but be careful not to get interrupted midway.",
       "前五级推荐加点": [
         2,
@@ -9209,8 +9217,8 @@
         "敏捷": 3,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Shiro Mujou": {
       "式神定位": [
@@ -9440,7 +9448,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1047.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1047.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Middle#rStrategy: After Ability 1 (Soul Lure) hits an enemy, use Ability 2 (Hellfire) and the natural passive (Soul Hunt) to wear them down. In team battle, use the ultimate ability (Vitality Sap) when the opportunity arises to place a soul-sapping banner, which deals DoT to enemies as you chase after them. When in danger, Ability 3 (Spirit Form) can be used to increase flexibility and shake off enemies or escape from battle.",
       "前五级推荐加点": [
         2,
@@ -9559,8 +9567,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Shiranui": {
       "式神定位": [
@@ -9813,7 +9821,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1089.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1089.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage/Ninja#rRecommended route: Middle#rStrategy: Use Ability 1 and Ability 4 to spawn butterflies near enemies and use Ability 3 to move to the butterflies to deal damage to nearby enemies.",
       "前五级推荐加点": [
         1,
@@ -9932,8 +9940,8 @@
         "敏捷": 5,
         "难度": 4
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Aobozu": {
       "式神定位": [
@@ -10174,7 +10182,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1053.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1053.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Samurai#rRecommended route: Top#rStrategy: Use Ability 3 to control the enemy and Ability 2 to deal damage and gain a regen effect. Used along with Ability 1, which increases other abilities' damage or Corruption regen, you can gank in the center of the battlefield. Aobozu will gain either higher control ability or finishing ability depending on whether you choose Buddha's Heart Form or Demonbane Form.",
       "前五级推荐加点": [
         2,
@@ -10296,8 +10304,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Tamamonomae": {
       "式神定位": [
@@ -10547,7 +10555,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1060.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1060.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage #rRecommended route: Mid #rStrategy: Use Ability 1 to harass the enemy. After hitting a target with Ability 2, use Ability 1 to quickly trigger the effect of Ability 2 to deal burst damage. Ability 3 can help you survive. When an enemy closes in, you can escape using Ability 3. The ultimate ability requires you to judge the enemy position properly and take advantage of the cast range of the ultimate to hit targets from afar. After the ultimate ability hits a shikigami, its cooldown will be refreshed instantly. Be sure to practice more to increase the hit rate of the ultimate ability.",
       "前五级推荐加点": [
         1,
@@ -10666,8 +10674,8 @@
         "敏捷": 1,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Hououga": {
       "式神定位": [
@@ -10927,7 +10935,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1025.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1025.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Tank#rRecommended route: Top#rStrategy: Continually wear down your opponents in the lane with Ability 2. Use Ability 1 to enter battles when the right opportunity presents itself. Use Abilities 3 and 4's powerful control and survivability to make Hououga more intimidating in teamfights.",
       "前五级推荐加点": [
         2,
@@ -11046,8 +11054,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Satori": {
       "式神定位": [
@@ -11315,7 +11323,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1042.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1042.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "God positioning: Shi #r Recommended route: Shanglu #r Tips: After hitting the enemy with the second skill, you can use four skills to hit a baseball bomb. Each time you use the four skills, you will superimpose 1 layer of [Blasting] mark, and the highest layer is 2 . When you have 1 layer of [Blasting] mark, the damage caused by using [Home Run] will increase; when you have 2 layers of [Blasting] mark, using [Home Run] will trigger the mark to cause more damage earlier. Each hit can reduce the cooling time of three skills.",
       "前五级推荐加点": [
         2,
@@ -11436,8 +11444,8 @@
         "敏捷": 3,
         "难度": 5
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kanko": {
       "式神定位": [
@@ -11712,7 +11720,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1019.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1019.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Marksman#rRecommended route: Bottom#rAbilities: Use abilities 2 and 3 to clear monsters and wear down your opponent. In team battles, adjust the angle and use ability 4 to deal heavy damage.",
       "前五级推荐加点": [
         3,
@@ -11833,8 +11841,8 @@
         "敏捷": 1,
         "难度": 1
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kikyo": {
       "式神定位": [
@@ -12446,7 +12454,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1065.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1065.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Ninja#rRecommended route: Jungle#rStrategy: When receiving great damage, he can use Ability 1: Violent to get away from his enemy's vision and restore a great amount of HP. Try to use Ability 3: Slash while in the jungle or the thorn bush to quickly reduce its cooldown. After possessing the ultimate ability: King of the Forest, using Ability 3: Slash when entering the jungle or thorn bush to enable you to instantly refresh the cooldown of Slash and make target lose vision to trigger his natural passive, Haze on his enemies.",
       "前五级推荐加点": [
         3,
@@ -12571,8 +12579,8 @@
         "敏捷": 5,
         "难度": 5
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kaguya": {
       "式神定位": [
@@ -12842,7 +12850,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1030.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1030.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Support#rRecommended route: Bottom#rAbility: Wear down opponents by using ability 2. Ability 3 can be used to attack first or for defense later. Use her ultimate ability to protect your allies and greatly reduce the damage taken.",
       "前五级推荐加点": [
         2,
@@ -12962,8 +12970,8 @@
         "敏捷": 1,
         "难度": 1
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Hako Shoujo": {
       "式神定位": [
@@ -13229,7 +13237,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1079.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1079.png",
-      "限免开始时间": "2023-01-09 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Support#rRecommended route: Bottom#rStrategy: Look for a chance to use Ability 2: Glittering Shield to stay near the enemy, then cast Ability 3: Retrace to increase Movement Speed and prevent the target from escaping. When the enemy enters the Infatuated state, use her Ultimate Ability: Treasure Box to collect the target and take them to your team to seal them.",
       "前五级推荐加点": [
         1,
@@ -13350,8 +13358,8 @@
         "敏捷": 2,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2023-01-16 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Miketsu": {
       "式神定位": [
@@ -13622,7 +13630,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1061.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1061.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Marksman #rRecommended route: Bottom #rStrategy: Stack marks on enemies with basic attack and abilities to certain layers to deal high damage and unlock the ultimate ability. Due to Miketsu's extreme flexibility, she can attack while moving to keep a distance from enemies.",
       "前五级推荐加点": [
         3,
@@ -13744,8 +13752,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Yato no Kami": {
       "式神定位": [
@@ -13859,7 +13867,7 @@
         "四技能": {
           "图标路径": "gui/res/skill/1136004.png",
           "技能ID": 113641,
-          "技能描述": "Yato no Kami flies to the sky and begins to charge, during which he will gain a 60% Haste effect and ignore terrain while moving. Yato no Kami will deal 100#c9e45fa(+100%BonusAttack) #n  #RPhysical Damage#n to the enemies around him and add the mark of [Evil Play] when the charge ends, then he'll enter a enhanced state for 12 seconds. During the strengthening state,gaining 50 /45Armor and Magic Resist, Yato no Kami will deal 10#c9e45fa(+50%BonusAttack) #n  #RPhysical Damage#n to the surrounding enemies with the mark of [Evil Play] every 0.5s and refresh the duration of the mark. every time damage is dealt to an enemy shikigami, 17.5#c9e45fa(+15%BonusAttack) #n  points of #GHP#n can be recovered. When damage is dealt to non-shikigami units, the recovery effect is reduced to 30%. Participating in sealing enemy shikigami can extend the duration of the enhanced state by 7  seconds.",
+          "技能描述": "Yato no Kami flies to the sky and begins to charge, during which he will gain a 60% Haste effect and ignore terrain while moving. Yato no Kami will deal 100#c9e45fa(+100%BonusAttack) #n  #RPhysical Damage#n to the enemies around him and add the mark of [Evil Play] when the charge ends, then he'll enter a enhanced state for 10 seconds. During the strengthening state,gaining 50 /45Armor and Magic Resist, Yato no Kami will deal 10#c9e45fa(+50%BonusAttack) #n  #RPhysical Damage#n to the surrounding enemies with the mark of [Evil Play] every 0.5s and refresh the duration of the mark. every time damage is dealt to an enemy shikigami, 15#c9e45fa(+12%BonusAttack) #n  points of #GHP#n can be recovered. When damage is dealt to non-shikigami units, the recovery effect is reduced to 30%. Participating in sealing enemy shikigami can extend the duration of the enhanced state by 4  seconds.",
           "技能名称": "Finale",
           "技能成长": {
             "Base Damage": [
@@ -13883,9 +13891,9 @@
               60
             ],
             "Base Regen": [
-              "17.5",
-              "22.5",
-              "27.5"
+              "15",
+              "19",
+              "23"
             ]
           }
         },
@@ -14375,7 +14383,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1026.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1026.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Samurai/Ninja#rRecommended route: Jungle/Top#rAbilities: After using an ability, Basic Attacks become Heart Strike, greatly increasing Attack Speed. The True Damage dealt when this is combined with ability 1 is Inugami's main damage output. Achieve continuous damage output by staying close to your opponent and using Heart Strike again and again.",
       "前五级推荐加点": [
         2,
@@ -14498,8 +14506,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Jikikaeru": {
       "式神定位": [
@@ -14732,7 +14740,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1029.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1029.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Marksman#rRecommended route: Bottom#rAbilities: True Damage dealt by Jikikaeru is fearsome indeed. If it's his lucky day, he can even carry the whole match.",
       "前五级推荐加点": [
         1,
@@ -14853,8 +14861,8 @@
         "敏捷": 2,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Shiro": {
       "式神定位": [
@@ -15109,7 +15117,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1066.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1066.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Mid#rStrategy: Use Ability 1 and Ability 3 to harass enemy shikigami, enter a fight with Ability 2 and use a combination of Ability 1 and Ability 4 to reap targets with low HP. Use Ability 3 to stack damage effect and deal high damage to targets. ",
       "前五级推荐加点": [
         1,
@@ -15228,8 +15236,8 @@
         "敏捷": 4,
         "难度": 4
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kyonshi Imoto": {
       "式神定位": [
@@ -15349,7 +15357,7 @@
         "天生被动": {
           "图标路径": "gui/res/skill/1031000.png",
           "技能ID": 103151,
-          "技能描述": "Passive effect: Kyonshi Imoto does a little jump whenever she uses an ability or her beloved pet Tomato returns to her side, dealing 60#c39b54a(+35%Ability Power) #n #c0095cc(+16*Current Level) #n  #UMagic Damage#n to nearby enemies when she lands. (Dealing 130% damage to monsters)",
+          "技能描述": "Passive effect: Kyonshi Imoto does a little jump whenever she uses an ability or her beloved pet Tomato returns to her side, dealing 60#c39b54a(+35%Ability Power) #n #c0095cc(+16*Current Level) #n  #UMagic Damage#n to nearby enemies when she lands. (Dealing 150% damage to monsters)",
           "技能名称": "Let's Play",
           "技能成长": {
             "冷却": [],
@@ -15481,7 +15489,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1031.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1031.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Ninja #rRecommended route: Middle #rStrategy: Use Ability 2 to wear down opponents and Ability 3 to charge into opponents. Use this together with the passive jump ability to deal explosive damage. In battle, her ultimate ability will deal heavy damage to opponents with her frequent jumping.",
       "前五级推荐加点": [
         2,
@@ -15602,8 +15610,8 @@
         "敏捷": 4,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Jorogumo": {
       "式神定位": [
@@ -15785,22 +15793,22 @@
         "一技能": {
           "图标路径": "gui/res/skill/1048001.png",
           "技能ID": 104811,
-          "技能描述": "Jorogumo pounces in the designated direction, dealing 100#c9e45fa(+70%BonusAttack) #n #cffba35(+3% (Every 60BonusAttack increases 1%)TargetHP Lost ) #n  #Rphysical damage#n to enemies she hits. Also immediately resets basic attack. (Maximum of 500 damage to monsters).#rIf the enemy is sealed within 4 seconds, a tarantula is upgraded to a poisonous tarantula, which inflicts an additional stackable 3% Slow for 2 second on enemies when it attacks. Stacks up to 25 layers.",
+          "技能描述": "Jorogumo pounces in the designated direction, dealing 80#c9e45fa(+70%BonusAttack) #n #cffba35(+3% (Every 60BonusAttack increases 1%)TargetHP Lost ) #n  #Rphysical damage#n to enemies she hits. Also immediately resets basic attack. (Maximum of 500 damage to monsters).#rIf the enemy is sealed within 5 seconds, a tarantula is upgraded to a poisonous tarantula, which inflicts an additional stackable 3% Slow for 2 second on enemies when it attacks. Stacks up to 25 layers.",
           "技能名称": "Venom Claw",
           "技能成长": {
             "Base Damage": [
-              "100",
-              "140",
-              "180",
-              "220",
-              "260"
+              "80",
+              "120",
+              "160",
+              "200",
+              "240"
             ],
             "冷却": [
-              4,
-              4,
-              4,
-              4,
-              4
+              5,
+              5,
+              5,
+              5,
+              5
             ],
             "消耗": [
               15,
@@ -15859,7 +15867,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1048.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1048.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Samurai/Ninja#rRecommended route: Top/jungle#rStrategy: Use Ability 1 to kill minions so that tarantula servants can evolve into poisonous tarantulas that have the ability to inflict continuous Slow on enemies. Fighting within the range of Ability 2 increases Movement Speed and Attack Speed. Poisonous tarantulas give control effects to the ultimate ability.",
       "前五级推荐加点": [
         1,
@@ -15981,8 +15989,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Ichigo Kurosaki": {
       "式神定位": [
@@ -16593,7 +16601,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1033.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1033.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Samurai #rRecommended route: Top #rAbilities: Use Ability 2 to wear down your opponent then use Ability 1 to escape or pursue the enemy together with the shield provided by Ability 3 to deal physical damage to surrounding enemies when the shield expires. The Ultimate Ability can be used to knock up enemies in your path,  which is helpful when entering a team fight as it can break the enemy team's formation.",
       "前五级推荐加点": [
         2,
@@ -16715,8 +16723,8 @@
         "敏捷": 5,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Yamausagi": {
       "式神定位": [
@@ -16962,7 +16970,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1010.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1010.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Support#rRecommended route: Bottom#rAbilities: Yamausagi's spells are all movement related, so put them to good use. When the halo lights up on Yamausagi, her next ability won't consume any MP. Her ultimate ability deals more damage if it hits more enemies.",
       "前五级推荐加点": [
         2,
@@ -17082,8 +17090,8 @@
         "敏捷": 3,
         "难度": 1
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Nekomata": {
       "式神定位": [
@@ -17331,7 +17339,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1081.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1081.png",
-      "限免开始时间": "2023-01-30 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Marksman#rRecommended route: Bottom#rStrategy: Use Kuronosuke's abilities to harass the enemy at long range before switching to Chacha's abilities to deal continuous damage. When the enemy's HP is low, switch to Yuki Hime's abilities to quickly charge forward and finish them off.",
       "前五级推荐加点": [
         1,
@@ -17451,8 +17459,8 @@
         "敏捷": 3,
         "难度": 4
       },
-      "是否限免": true,
-      "限免结束时间": "2023-02-06 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Yumekui": {
       "式神定位": [
@@ -17713,7 +17721,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1054.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1054.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Samurai #rRecommended route: Top #rStrategy: Use abilities and attacks to control the opponent. Use Haste abilities to adjust your position and control even more enemies.",
       "前五级推荐加点": [
         2,
@@ -17835,8 +17843,8 @@
         "敏捷": 4,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kamaitachi": {
       "式神定位": [
@@ -18126,7 +18134,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1052.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1052.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Samurai #rRecommended route: Jungle #rStrategy: Use Ability 2 to travel underground to frequently assist teammates or give enemies surprise attacks. And then use Ability 2 to control enemies and ultimate ability to deal burst damage.",
       "前五级推荐加点": [
         2,
@@ -18250,8 +18258,8 @@
         "敏捷": 4,
         "难度": 4
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Yuki": {
       "式神定位": [
@@ -18519,7 +18527,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1059.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1059.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Samurai#rRecommended route: Top #rStrategy: Use abilities and attack to stack [Frost] on enemy shikigami. When 4 layers of [Frost] has been stacked on a single enemy shikigami, the target will enter the Freeze state. Yuki will deal extra damage to target under Freeze state. Use the Ultimate Ability to quickly approach and freeze targets.",
       "前五级推荐加点": [
         1,
@@ -18641,8 +18649,8 @@
         "敏捷": 4,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Ibaraki Doji": {
       "式神定位": [
@@ -18900,7 +18908,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1004.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1004.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Samurai#rRecommended route: Top#rAbilities: Powerful critical hits and survivability. Use ability 2 to approach and control opponents, then use ability 3 to deal continuous damage before using Infernal Hand to defeat the opponent.",
       "前五级推荐加点": [
         3,
@@ -19023,8 +19031,8 @@
         "敏捷": 3,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Karasu Tengu": {
       "式神定位": [
@@ -19261,7 +19269,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1023.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1023.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Tank/Samurai#rRecommended route: Top#rAbilities: After using ability 4, charge into the enemy with ability 3 and use ability 2 to restrain your opponent and force them to fight. Use the crows to deal damage and create opportunities for your team.",
       "前五级推荐加点": [
         2,
@@ -19382,8 +19390,8 @@
         "敏捷": 2,
         "难度": 1
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kamimai": {
       "式神定位": [
@@ -19436,6 +19444,14 @@
           "皮肤全身像": "gui/res/hero_quan/110501.png",
           "皮肤头像": "gui/res/head_fang/110501.png",
           "皮肤头像_新": "gui2/res/head_fang/110501.png"
+        },
+        {
+          "皮肤名称": "Solitary Gala",
+          "皮肤全身像_新": "gui/res/hero_quan2/110502.png",
+          "皮肤ID": 110502,
+          "皮肤全身像": "gui/res/hero_quan/110502.png",
+          "皮肤头像": "gui/res/head_fang/110502.png",
+          "皮肤头像_新": "gui2/res/head_fang/110502.png"
         }
       ],
       "推荐加点顺序": [
@@ -19532,17 +19548,17 @@
           }
         },
         "一技能": {
-          "图标路径": "gui/res/skill/1105001_1.png",
+          "图标路径": "gui/res/skill/1105001_2.png",
           "技能ID": 110511,
-          "技能描述": "Kamimai cuts nearby enemies with a paper blade, dealing 40#c9e45fa(+80%BonusAttack) #n #cffba35(+10%TargetHP Lost ) #n  #Rphysical damage#n. When there are no enemy shikigami or monsters near Kamimai, the ability will automatically switch to Paper Fan.",
+          "技能描述": "Kamimai throws her paper fan, dealing 55#c9e45fa(+40%BonusAttack) #n  #Rphysical damage#n to the first target hit and the enemies behind them, and inflicting a 30% Slow effect for 1.5 seconds. This ability will automatically switch to Paper Blade after casting.",
           "技能名称": "Paper Blade",
           "技能成长": {
             "Base Damage": [
-              "40",
-              "95",
-              "150",
+              "55",
+              "105",
+              "155",
               "205",
-              "260"
+              "255"
             ],
             "冷却": [
               8,
@@ -19601,7 +19617,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1105.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1105.png",
-      "限免开始时间": "2023-02-13 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Ninja#rRecommended route: Jungle#rStrategy: Kamimai's Ability 1 can switch freely between Paper Blade and Paper Fan, which do not share cooldown. Use Paper Fan to slow down the enemy, use Paper Edge to approach the target, and then immediately use Paper Blade to deal high damage.",
       "前五级推荐加点": [
         1,
@@ -19725,8 +19741,8 @@
         "敏捷": 4,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2023-02-20 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Dodomeki": {
       "式神定位": [
@@ -19980,7 +19996,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1077.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1077.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Marksman#rRecommended route: Bot#rStrategy: Use Ability 1, Ability 2 and basic attacks to stack layers of passive effect and deal burst damage to enemy shikigami when entering the Evil Light state. ",
       "前五级推荐加点": [
         2,
@@ -20101,8 +20117,8 @@
         "敏捷": 3,
         "难度": 4
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Yasha": {
       "式神定位": [
@@ -20356,7 +20372,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1017.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1017.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Ninja#rRecommended route: Jungle#rStrategy: Use Ability 1 and 3 to add marks and trigger mark to refresh dash of Ability 2 and decreases the cooldown of Ability 1. Ability 4 can knock up enemy shikigami and deal huge damage. ",
       "前五级推荐加点": [
         1,
@@ -20480,8 +20496,8 @@
         "敏捷": 5,
         "难度": 4
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Chin": {
       "式神定位": [
@@ -20748,7 +20764,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1039.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1039.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Marksman#rRecommended route: Bottom#rStrategy: Chin's Passive Ability 1 can be triggered by Basic Attacks to stack Chin Poison on enemies, dealing extra damage when Chin Poison stacks to 4 layers. Chin's Ability 2 can be used to increase her Attack Speed and deal extra damage to targets. Chin's ultimate ability both deals damage and protects herself.",
       "前五级推荐加点": [
         3,
@@ -20870,8 +20886,8 @@
         "敏捷": 2,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Enenra": {
       "式神定位": [
@@ -21116,7 +21132,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1024.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1024.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Mage#rRecommended route: Middle#rAbilities: Use the long-range attack of Naughty Spirit to wear down your opponent. Use Shadow Maze to control the movement of your opponent. Use Irritable Spirit to finish off your opponent. Use Greedy Spirit to hold back opponents that are running away, or to control your opponents from a distance.",
       "前五级推荐加点": [
         2,
@@ -21235,8 +21251,8 @@
         "敏捷": 1,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Yoto Hime": {
       "式神定位": [
@@ -21551,7 +21567,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1005.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1005.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Samurai/Ninja#rRecommended route: Top#rAbilities: Use ability 3 to defeat the enemy and refresh the ability CD to deal multi-stage damage or change positions. Use ability 2 to control the opponent for better damage output. Use ability 1 cleverly to avoid lethal damage or to counterattack. Use the ultimate ability to deal heavy damage to the enemy shikigami.",
       "前五级推荐加点": [
         2,
@@ -21674,8 +21690,8 @@
         "敏捷": 4,
         "难度": 4
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Ungaikyo": {
       "式神定位": [
@@ -21893,7 +21909,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1111.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1111.png",
-      "限免开始时间": "2022-12-12 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Top/Middle#rStrategy: Use abilities and basic attacks to deal damage and stack layers of his Trait's passive to deal enhanced basic attack damage. You can use the different effects of his ultimate ability flexibly depending on the current situation.",
       "前五级推荐加点": [
         2,
@@ -22012,8 +22028,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2022-12-19 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kani Hime": {
       "式神定位": [
@@ -22271,7 +22287,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1092.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1092.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Tank#rRecommended route: Top#rStrategy: Use Ability 1: Conch Hammer to deal damage to enemies and ensure survivability, use Ability 2: Vice Grip! to restrict enemies' displacement, followed by Ability 3: Crab Pounce! to push them into the terrain and stun them.",
       "前五级推荐加点": [
         1,
@@ -22390,8 +22406,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Tanuki": {
       "式神定位": [
@@ -22657,7 +22673,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1043.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1043.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Tank#rRecommended route: Top#rAbilities: Use Tanuki's survivability and crowd control advantages. Powering up different abilities according to the flow of battle is the key to victory.",
       "前五级推荐加点": [
         2,
@@ -22773,8 +22789,8 @@
         "敏捷": 3,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kusa": {
       "式神定位": [
@@ -23032,7 +23048,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1050.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1050.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Support #rRecommended route: Bottom #rStrategy: Use Ability 1's transmissive healing ability coupled with the long-range HP absorption of Ability 2 to gain an advantage when Laning. When in team battles, use the crowd control effects of Ability 3 to immobilize the enemy. Then use the Ultimate to provide healing support to all allies on the map.",
       "前五级推荐加点": [
         2,
@@ -23152,8 +23168,8 @@
         "敏捷": 1,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kingyo": {
       "式神定位": [
@@ -23419,7 +23435,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1045.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1045.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Middle#rStrategy: When playing Kingyo, use Ability 2 “Fan Dance: Water Wave” to restrict enemy movement. Then, use Ability 1 “Fan Dance: Water Blast” to deal damage to enemies. During teamfights, use her ultimate ability “Goldfish Sentinel” to deal damage. She will be a nightmare for the enemy if she is always actively attacking her enemies.",
       "前五级推荐加点": [
         1,
@@ -23538,8 +23554,8 @@
         "敏捷": 3,
         "难度": 1
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Yuki Onna": {
       "式神定位": [
@@ -23810,7 +23826,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1015.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1015.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Middle#rStrategy: Crowd control and wearing down the opponent are Yuki Onna's specialties. Use her minor abilities' Slow effect to make it easier to hit your opponent with her ultimate ability.",
       "前五级推荐加点": [
         2,
@@ -23929,8 +23945,8 @@
         "敏捷": 2,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Inryo": {
       "式神定位": [
@@ -23946,12 +23962,12 @@
         "魔法上限": 360,
         "魔抗": 64,
         "攻速加成": 0.37,
-        "物理伤害": 76,
+        "物理伤害": 68,
         "生命恢复": 10,
         "攻击后摇": 21,
         "护甲": 55,
         "移动速度": 34,
-        "生命值": 860
+        "生命值": 820
       },
       "推荐分路": "中",
       "式神传记": "\"You actually have the audacity to think of commanding gods?\"",
@@ -24528,7 +24544,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1051.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1051.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Tank#rRecommended route: Top#rStrategy: Use Ability 3 to penetrate as many enemies as possible with chains and accumulate Kyonshi Force. Use Ability 1 with full Kyonshi Force to obtain a healing and damage bonus, and deal burst damage.",
       "前五级推荐加点": [
         3,
@@ -24650,8 +24666,8 @@
         "敏捷": 2,
         "难度": 4
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Hana": {
       "式神定位": [
@@ -24904,7 +24920,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1062.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1062.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Support/Mage#rRecommended route: Bot/Mid#rStrategy: Use Ability 1 to stack layers of the flying bird effect, then use Ability 1 and special basic attack to quickly trigger the control effect of Ability 3. When the flying bird effect is stacked to the max, you can use Ability 2 to harass or heal or use the haste of Ability 2 to control more enemies with the Ultimate Ability and protect your teammates.",
       "前五级推荐加点": [
         2,
@@ -25024,8 +25040,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kyuumei Neko": {
       "式神定位": [
@@ -25285,7 +25301,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1049.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1049.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Ninja#rRecommended route: Jungle#rAbility: Kyuumei Neko's high critical damage is a major advantage. She also has an extremely high DPS ability, which can be used to pursue enemies that are scattered after the use of your ultimate ability.",
       "前五级推荐加点": [
         2,
@@ -25410,8 +25426,8 @@
         "敏捷": 3,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Ittan-momen": {
       "式神定位": [
@@ -25676,7 +25692,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1085.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1085.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage/Ninja#rRecommended route: Middle#rStrategy: Use Ability 1 and Ability 3 to go around your enemy. Attacking their back 3 times will trigger a huge amount of damage.",
       "前五级推荐加点": [
         1,
@@ -25798,8 +25814,8 @@
         "敏捷": 4,
         "难度": 4
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Samurai X": {
       "式神定位": [
@@ -26041,7 +26057,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1002.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1002.png",
-      "限免开始时间": "2017-12-06 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Tank #rRecommended route: Top/bottom #rStrategy: Use Ability 3 and trigger 2 layers of Harden as soon as possible. Use the ultimate ability as early as possible in a Team Battle and move into the middle of the fight to taunt as many opponents as possible. After using Ability 3, make the most of basic attacks.",
       "前五级推荐加点": [
         1,
@@ -26163,8 +26179,8 @@
         "敏捷": 2,
         "难度": 1
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Oitsuki": {
       "式神定位": [
@@ -26414,7 +26430,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1068.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1068.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Mid#rStrategy: Use Ability 2 to hit enemies. Generate and pick up Rabbit Souls to form Light Chains which can deal damage and inflict a Silence effect to your target after a short delay. Enter a team fight with Ability 3 and quickly pick up Rabbit Souls in the battlefield with the Ultimate Ability for Crowd Control. ",
       "前五级推荐加点": [
         2,
@@ -26533,8 +26549,8 @@
         "敏捷": 4,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kujira": {
       "式神定位": [
@@ -27144,7 +27160,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1027.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1027.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Tank/Samurai#rRecommended route: Top#rAbilities: You can counterattack various attacks by learning to use his passive ability.",
       "前五级推荐加点": [
         2,
@@ -27265,8 +27281,8 @@
         "敏捷": 2,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Lord Arakawa": {
       "式神定位": [
@@ -27540,7 +27556,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1057.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1057.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Middle#rStrategy: Reasonably use Ability 1 and Natural Passive to creative water sphere, then use Ability 3 for retracting the spheres. Try to hit the opponent with as many water sphere as possible. As for the Ultimate Ability, the cost of energy is related to the range of distance, which means you can choose either move very far once or relatively short multiple times.",
       "前五级推荐加点": [
         1,
@@ -27659,8 +27675,8 @@
         "敏捷": 5,
         "难度": 4
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Ryomen": {
       "式神定位": [
@@ -27874,7 +27890,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1044.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1044.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Samurai #rRecommended route: Top #rStrategy: Use the special attack after using abilities to damage and control enemy shikigami. Use the passive of Ability 1 to increase your own survivability. Use Ability 3 to rush enemies and Ability 2 to inflict Slow upon enemies and damage them at the same time. In a Team Battle, use the ultimate ability to control enemies and heal yourself.",
       "前五级推荐加点": [
         2,
@@ -27996,8 +28012,8 @@
         "敏捷": 3,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Ootakemaru": {
       "式神定位": [
@@ -28266,7 +28282,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1090.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1090.png",
-      "限免开始时间": "2022-12-26 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Samurai#rRecommended route: Top#rStrategy: Use Ability 1: Hillcry: Thunder's end stage to deal damage to the enemy, then use the MSPD Bonus and Ability 2: Hillcry: Heavenly Drum's slow effect to quickly get close to the target. Once Energy is full, use Ability 1: Hillcry: Thunder's second stage effect to deal significant damage to the enemy. Ultimate Ability: Unlimited Blade Prison can banish enemies, allowing you to focus your attacks and seal them.",
       "前五级推荐加点": [
         1,
@@ -28388,8 +28404,8 @@
         "敏捷": 4,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2023-01-02 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Puppeteer": {
       "式神定位": [
@@ -28635,7 +28651,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1037.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1037.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Samurai#rRecommended route: Jungle#rStrategy: When in ranged mode, use Ability 2 and Ability 3 to escape or deal damage when suitable. When you find a suitable opportunity to switch to melee mode, use Ability 3 to quickly dash to targets for the killing blow.",
       "前五级推荐加点": [
         2,
@@ -28758,8 +28774,8 @@
         "敏捷": 3,
         "难度": 4
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Hone Onna": {
       "式神定位": [
@@ -29003,7 +29019,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1016.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1016.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Ninja#rRecommended route: Jungle#rAbilities: Each time her ability is used, Hone Onna's next attack deals 3-stage damage, so remember to use her Basic Attacks at the right time. Hone Onna has a special reaping ability, but this doesn't have much of an advantage against enemies with high HP. Try to ensure that it kills the target.",
       "前五级推荐加点": [
         2,
@@ -29128,8 +29144,8 @@
         "敏捷": 4,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kinnara": {
       "式神定位": [
@@ -29357,7 +29373,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1114.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1114.png",
-      "限免开始时间": "2022-07-04 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Marksman#rRecommended route: Bottom#rStrategy: Kinnara plays one of five tones at random. The different effects triggered by her special basic attack and Ability 2 when she plays different tones are the key to using her in battle. Use Ability 1 to switch out of unsuitable tones and use Ability 3 to enhance survivability; lastly, use her ultimate's high mobility and burst damage to complete the kill.",
       "前五级推荐加点": [
         2,
@@ -29477,8 +29493,8 @@
         "敏捷": 4,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2022-07-11 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Tenjo Kudari": {
       "式神定位": [
@@ -29718,7 +29734,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1098.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1098.png",
-      "限免开始时间": "2023-02-06 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Support#rRecommended route: Bottom#rStrategy: When Tenjo Kudari's Ability 1 hits units or obstacles, the rock will bounce, dealing damage in a larger range and inflicting Slow. Take advantage of the battlefield environment during laning and teamfights to land hits on enemy shikigami from a safe distance. Using Ability 4 at the right time can also help your teammates to enter the battlefield or escape.",
       "前五级推荐加点": [
         1,
@@ -29727,7 +29743,7 @@
         3,
         1
       ],
-      "新式神": true,
+      "新式神": false,
       "推荐加点优先级": [
         4,
         1,
@@ -29837,8 +29853,8 @@
         "敏捷": 2,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2023-02-13 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Senhime": {
       "式神定位": [
@@ -30063,7 +30079,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1116.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1116.png",
-      "限免开始时间": "2023-01-30 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Middle#rStrategy: After abilities hit the enemy, a Tidal Echo mark will be inflicted upon them. Basic attacks will pass between targets inflicted by the mark. Triggering the marks grants Blessings and restores HP. Blessings can be used to enhance abilities so carefully choose the ability enhancements based on the state of the battle. The second stage of the ultimate ability gathers enemies that are hit, making it more convenient to deal AoE damage and damage through her passive.",
       "前五级推荐加点": [
         1,
@@ -30181,8 +30197,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2023-02-06 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Ichimokuren": {
       "式神定位": [
@@ -30441,7 +30457,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1020.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1020.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Support#rRecommended route: Bottom#rStrategy: Use ability 1 and 3 to cripple enemies. Ability 2 can Knock Up enemies and protect allies. Make good use of the Ultimate during team battles to withstand a lot of damage.",
       "前五级推荐加点": [
         3,
@@ -30561,8 +30577,8 @@
         "敏捷": 2,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Tesso": {
       "式神定位": [
@@ -30823,7 +30839,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1088.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1088.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Marksman#rRecommended route: Bottom#rStrategy: In the early game, try to keep a low profile and farm to collect Incense Money. Using Ability 1 uses up Incense Money, so use Ability 2 to steal enough, then use Ability 3 and your ultimate ability to deal heavy damage.",
       "前五级推荐加点": [
         1,
@@ -30944,8 +30960,8 @@
         "敏捷": 3,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kisei": {
       "式神定位": [
@@ -31175,7 +31191,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1064.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1064.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Mid#rStrategy: Use Ability 3's white stone to slow enemies, then use Ability 1's black stone twice in a row to form a grid and continuously explode to deal damage. According to the situation of the battle, use Ability 2 and choose to enhance Ability 1's damage or Ability 3's control effect. Kisei's ultimate can place a chessboard covering a great distance and provide support in key teamfights or laning.",
       "前五级推荐加点": [
         1,
@@ -31294,8 +31310,8 @@
         "敏捷": 1,
         "难度": 4
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Ubume": {
       "式神定位": [
@@ -31557,7 +31573,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1001.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1001.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Jungle#rAbility: Wear down your opponent with ability 2 and use ability 3 to escape or deal damage when suitable. Use ability 1's recovery effect to heal during battle. When under the control effects of your opponent, use the ultimate ability to deal heavy damage to the target.",
       "前五级推荐加点": [
         2,
@@ -31681,8 +31697,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Susabi": {
       "式神定位": [
@@ -31926,7 +31942,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1013.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1013.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage #rRecommended route: Middle #rStrategy: Use Ability 2 to restrain the enemy shikigami, then use Ability 1 to stack the passive effect. Finally, use Ability 3 to fill the field with celestial energy and use Astronomical Boundary to eliminate all of the opponent's shikigami.",
       "前五级推荐加点": [
         1,
@@ -32045,8 +32061,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Bukkuman": {
       "式神定位": [
@@ -32634,7 +32650,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1075.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1075.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Mid#rStrategy: Use Ability 1 to harass enemies, then use the Control effect of Ability 2 to trigger more Natural Passive and thus increase the burst damage of Ability 3. Ability 4 can enhance all of Menreiki's abilities, using it wisely can turn the tide of the battle.",
       "前五级推荐加点": [
         1,
@@ -32753,8 +32769,8 @@
         "敏捷": 2,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Vampira": {
       "式神定位": [
@@ -33022,7 +33038,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1012.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1012.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Tank #rRecommended route: Top #rStrategy: Vampira is able to restore HP. Use her ultimate ability at the right time to benefit from additional Spell Vampire, then use other abilities to maintain continuous damage output and accelerate. She has the ability to deal and absorb damage at the same time, so the key is choosing the right time to use her.",
       "前五级推荐加点": [
         2,
@@ -33141,8 +33157,8 @@
         "敏捷": 3,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Taishakuten": {
       "式神定位": [
@@ -33375,7 +33391,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1118.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1118.png",
-      "限免开始时间": "2022-12-26 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Middle#rStrategy: Consecutively hit enemies with abilities to continuously stack seals from Trait: Golden Lotus and inflict powerful control effects.#rAdept use of Ability 3: Ten Great Virtues' clones and the Invisibility effect can confuse enemies and deal damage with recovery abilities or allow a safe escape.",
       "前五级推荐加点": [
         1,
@@ -33493,8 +33509,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2023-01-02 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Dai Shimei": {
       "式神定位": [
@@ -33513,7 +33529,7 @@
         "物理伤害": 70,
         "生命恢复": 9,
         "攻击后摇": 21,
-        "护甲": 64,
+        "护甲": 54,
         "移动速度": 34.5,
         "生命值": 820
       },
@@ -33539,6 +33555,14 @@
           "皮肤全身像": "gui/res/hero_quan/109602.png",
           "皮肤头像": "gui/res/head_fang/109602.png",
           "皮肤头像_新": "gui2/res/head_fang/109602.png"
+        },
+        {
+          "皮肤名称": "Raven's Chime",
+          "皮肤全身像_新": "gui/res/hero_quan2/109603.png",
+          "皮肤ID": 109603,
+          "皮肤全身像": "gui/res/hero_quan/109603.png",
+          "皮肤头像": "gui/res/head_fang/109603.png",
+          "皮肤头像_新": "gui2/res/head_fang/109603.png"
         }
       ],
       "推荐加点顺序": [
@@ -33711,7 +33735,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1096.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1096.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Middle#rStrategy: Dai Shimei can use combos of his abilities to trigger additional buffs and refresh the cooldown of his abilities to frequently deal damage. When his ultimate ability hits lesser targets, the damage effect is more significant.",
       "前五级推荐加点": [
         1,
@@ -33830,8 +33854,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Maestro": {
       "式神定位": [
@@ -34066,7 +34090,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1046.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1046.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Mage #rRecommended route: Middle #rAbilities: Ability 1 can be coupled with ability 2 to hit target multiple times and inflict more damage. Ability 4's initial damage is quite low, charge it by hitting targets with other abilities or basic attacks to increase its output.",
       "前五级推荐加点": [
         1,
@@ -34185,8 +34209,8 @@
         "敏捷": 3,
         "难度": 4
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Kiyohime": {
       "式神定位": [
@@ -34455,7 +34479,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1034.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1034.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Mage#rRecommended route: Middle#rAbilities: First use ability 2 to hit the opponent in solo combat, then move while using ability 3 to deal continuous damage to your opponent. When fighting groups, use her ultimate ability to increase Resilience while damaging more opponents with the 2 bullets.",
       "前五级推荐加点": [
         1,
@@ -34574,8 +34598,8 @@
         "敏捷": 2,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Momo": {
       "式神定位": [
@@ -34833,7 +34857,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1058.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1058.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Support #rRecommended route: Bot #rStrategy: Harass with Ability 2 and use Ability 1 upon allies that might attack enemies before battle. Increase damage with Ability 3. Place Ultimate Ability in the possible team battle area.",
       "前五级推荐加点": [
         2,
@@ -34953,8 +34977,346 @@
         "敏捷": 1,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
+    },
+    "Akaname": {
+      "式神定位": [
+        "祝"
+      ],
+      "式神钻石头像_新": "gui2/res/head_diamond/1121.png",
+      "式神名称": "Akaname",
+      "式神全身像_新": "gui/res/hero_quan2/1121.png",
+      "式神新卡片": "",
+      "式神基础属性": {
+        "攻击速度": 0.4,
+        "魔法回复": 10,
+        "魔法上限": 300,
+        "魔抗": 64,
+        "攻速加成": 1.08,
+        "物理伤害": 72,
+        "生命恢复": 10,
+        "攻击后摇": 21,
+        "护甲": 65,
+        "移动速度": 34,
+        "生命值": 860
+      },
+      "推荐分路": "辅",
+      "式神传记": "Everyone needs to do such things as sweeping the court, but not everyone can do them",
+      "式神全身像": "gui/res/hero_quan/1121.png",
+      "式神钻石头像": "gui/res/head_diamond/1121.png",
+      "式神属性成长": {
+        "魔法回复": 0.8,
+        "魔法上限": 50,
+        "魔抗": 1.5,
+        "攻速加成": 0.012,
+        "物理伤害": 5,
+        "生命恢复": 1,
+        "护甲": 6.5,
+        "生命值": 155
+      },
+      "皮肤": [
+        {
+          "皮肤名称": "Scarlet Sun",
+          "皮肤全身像_新": "gui/res/hero_quan2/1121.png",
+          "皮肤ID": 112109,
+          "皮肤全身像": "gui/res/hero_quan/1121.png",
+          "皮肤头像": "gui/res/head_fang/1121.png",
+          "皮肤头像_新": "gui2/res/head_fang/1121.png"
+        },
+        {
+          "皮肤名称": "Evolved Form",
+          "皮肤全身像_新": "gui/res/hero_quan2/112101.png",
+          "皮肤ID": 112101,
+          "皮肤全身像": "gui/res/hero_quan/112101.png",
+          "皮肤头像": "gui/res/head_fang/112101.png",
+          "皮肤头像_新": "gui2/res/head_fang/112101.png"
+        }
+      ],
+      "推荐加点顺序": [
+        2,
+        3,
+        1,
+        1,
+        1,
+        4,
+        1,
+        2,
+        1,
+        2,
+        4,
+        2,
+        2,
+        3,
+        3,
+        4,
+        3,
+        3
+      ],
+      "式神圆头像": "gui/res/head_circle/1121.png",
+      "式神技能": {
+        "天生被动": {
+          "图标路径": "gui/res/skill/112100.png",
+          "技能ID": 112151,
+          "技能描述": "Akaname's initial Crit Damage is 150%. When Akaname and nearby ally shikigami are affected by any debuffs, they gain a Stain. This effect has a 6-second cooldown. At specific intervals, a random enemy minion near Akaname will be inflicted with Stain. Each time Akaname removes a Stain, he will provide ally shikigami with a 40#c9e45fa(+30%BonusAttack) #n  Shield that lasts 2 second(s) and also deal 30#c9e45fa(+30%BonusAttack) #n  #Rphysical damage#n to enemies. When Akaname cleans up Stains, he will gain Dirt, and provide himself with a 2% Crit Damage buff. When Akaname collects 10 Dirt, he gains a 5% Crit Rate buff and 50 Coins. The limit for Dirt collection increases by 5 every minute, up to a maximum of 50. Any Dirt that exceeds the limit will be converted to Grime.#r#GIf Akaname defeats minions before purchasing support items, he cannot gain Dirt for the next 10 second(s).#n",
+          "技能名称": "Master Cleaner",
+          "技能成长": {
+            "冷却": [],
+            "消耗": [
+              null
+            ]
+          }
+        },
+        "二技能": {
+          "图标路径": "gui/res/skill/112102.png",
+          "技能ID": 112121,
+          "技能描述": "Akaname pours water to wash the area ahead, creating a water flow that lasts 3 second(s) and cleaning all Stains within the area. The Movement Speed of ally units who pass through the washing area is increased by 35%. If the water hits an enemy unit, deals 50#c9e45fa(+70%Attack) #n  physical damage. If it hits an enemy shikigami, Akaname gains 1 Grime.",
+          "技能名称": "Rinse Out",
+          "技能成长": {
+            "Base Damage": [
+              "50",
+              "90",
+              "130",
+              "170",
+              "210"
+            ],
+            "冷却": [
+              10,
+              9,
+              8,
+              7,
+              6
+            ],
+            "消耗": [
+              30,
+              35,
+              40,
+              45,
+              50
+            ]
+          }
+        },
+        "四技能": {
+          "图标路径": "gui/res/skill/112104.png",
+          "技能ID": 112141,
+          "技能描述": "Akaname selects an ally shikigami and grants them a 150#c9e45fa(+30%BonusAttack) #n  Shield (each Dirt increases the Shield by 1%) that lasts 1.5 second(s) and generates a clean area near them that lasts 2 second(s). While the clean area is active, ally shikigami gain a 20% Reduce Control. When the clean area disappears, grants a 240#c9e45fa(+60%BonusAttack) #n #c0095cc(+10*Current Level) #n  Shield (each Dirt increases the Shield by 1%) that lasts 2 second(s) to ally shikigami within range and removes their Stains.",
+          "技能名称": "Nice and Clean",
+          "技能成长": {
+            "Shield Base": [
+              "150",
+              "250",
+              "350"
+            ],
+            "冷却": [
+              70,
+              65,
+              60
+            ],
+            "消耗": [
+              80,
+              90,
+              100
+            ],
+            "Delayed Shield Base": [
+              "240",
+              "420",
+              "600"
+            ]
+          }
+        },
+        "一技能": {
+          "图标路径": "gui/res/skill/112101.png",
+          "技能ID": 112116,
+          "技能描述": "Akaname gains Grime when his basic attacks or abilities hit enemy shikigami. After collecting 3 Grime, this ability will be unlocked. Select between the effects of Dirty Up and Rub Down:#rDirty Up: Akaname's next basic attack will be enhanced, increasing his Attack Range, dealing 120#c9e45fa(+130%BonusAttack) #n  #Rphysical damage#n, and inflicting 50% Slow that lasts 1 second(s). When Akaname has 50 Dirt, his basic attack will be enhanced. He will throw three dirt balls that deal 120#c9e45fa(+160%BonusAttack) #n  #Rphysical damage#n, and inflict a 50% Slow that lasts 1 second(s).#rRub Down: Akaname restores 45#c9e45fa(+15%Attack) #n #cffba35(+1%HP Lost ) #n  #GHP#n to ally shikigami within range (each Dirt increases the HP restored by 1%) and dispels all Stains on them.",
+          "技能名称": "Sweeping Time",
+          "技能成长": {
+            "Base Damage": [
+              "120",
+              "150",
+              "180",
+              "210",
+              "240"
+            ],
+            "冷却": [],
+            "Base Damage After Enhancement": [
+              "120",
+              "150",
+              "180",
+              "210",
+              "240"
+            ],
+            "Base Regen": [
+              "45",
+              "75",
+              "105",
+              "135",
+              "165"
+            ],
+            "消耗": [
+              45,
+              45,
+              45,
+              45,
+              45
+            ]
+          }
+        },
+        "三技能": {
+          "图标路径": "gui/res/skill/112103.png",
+          "技能ID": 112131,
+          "技能描述": "Akaname throws three dirt balls to inflict a 50% Slow effect on enemies within range that lasts 1 second(s). Dirt balls will kick up dust at the designated area 3 times, the range of the dust kicked up expanding each time. The dust deals 17#c9e45fa(+23%Attack) #n  #Rphysical damage#n. Enemies hit by the dust twice in a row will be inflicted with a Stun effect that lasts 0.8 second(s). When this ability hits an enemy shikigami, adds a Stain on them and grants 1 Grime to Akaname.",
+          "技能名称": "Dirt Begone",
+          "技能成长": {
+            "Base Damage": [
+              "17",
+              "30",
+              "43",
+              "56",
+              "69"
+            ],
+            "冷却": [
+              13,
+              13,
+              13,
+              13,
+              13
+            ],
+            "消耗": [
+              50,
+              50,
+              50,
+              50,
+              50
+            ]
+          }
+        }
+      },
+      "是否长期限免": false,
+      "式神圆头像_新": "gui2/res/head_circle/1121.png",
+      "式神新全身像": "",
+      "式神卡片_新": "gui/res/hero_new/1121.png",
+      "限免开始时间": null,
+      "式神攻略": "Positioning of style god: Zhu # rRecommended route: assist # rUse skill: seize the opportunity, use three skills [one basket to kill] to add dizziness effect to the enemy's style god, and then use two skills [wash and brush] to attack. Finally, release a general attack, unlock the active release effect of a skill [Sweeping Moment], and select [Dirty] to release the enhanced general attack, causing a lot of damage!",
+      "前五级推荐加点": [
+        2,
+        3,
+        1,
+        1,
+        1
+      ],
+      "新式神": true,
+      "推荐加点优先级": [
+        4,
+        1,
+        2,
+        3
+      ],
+      "式神标签": "Auxiliary/continuous output",
+      "cv名字": [
+        "Maple",
+        "Akaname",
+        "Shelby Young"
+      ],
+      "式神方头像_新": "gui2/res/head_fang/1121.png",
+      "式神卡片": "gui/res/hero/1121.png",
+      "推荐阴阳术": [
+        46,
+        41,
+        40,
+        1,
+        14,
+        27,
+        50
+      ],
+      "式神ID": 1121,
+      "推荐灵咒": [
+        10005,
+        10004
+      ],
+      "推荐装备": {
+        "推荐装备-出门装": [
+          "Swift Boots",
+          "Tachi",
+          "Redmark Katar",
+          "Dragon Gun"
+        ],
+        "推荐装备-默认方案1-说明": "Burst, continuous output",
+        "推荐装备-默认方案1": [
+          "Asakusa Glow",
+          "Flexible Kogake",
+          "Omoikane's Bow",
+          "Otenta",
+          "Juzumaru",
+          "Tsurumaru",
+          "Gates of Amanoiwato",
+          "Onimaru"
+        ],
+        "推荐装备-防御": [
+          "Sessho-seki Do",
+          "Vaisravana Drum",
+          "Soul Grabber",
+          "Tsukuyomi Do",
+          "Hoko Do",
+          "Gold Hachiman Do",
+          "Ninth Heaven Wing",
+          "Sanzu River Lantern",
+          "Lucky Parasol",
+          "Yata no Kagami",
+          "Demon Mask"
+        ],
+        "推荐装备-默认方案2": [
+          "Asakusa Glow",
+          "Flexible Kogake",
+          "Omoikane's Bow",
+          "Otenta",
+          "Chidori Twin Swords",
+          "Tsurumaru",
+          "Gates of Amanoiwato",
+          "Juzumaru"
+        ],
+        "推荐装备-默认方案3-说明": "Explosion and consumption",
+        "推荐装备-默认方案2-说明": "Crit, Continuous DPS",
+        "推荐装备-默认方案3": [
+          "Asakusa Glow",
+          "Flexible Kogake",
+          "Omoikane's Bow",
+          "Nature's Glory",
+          "Grass-cutting Sword",
+          "Otenta",
+          "Gates of Amanoiwato",
+          "Tsurumaru"
+        ],
+        "推荐装备-进攻": [
+          "Onimaru",
+          "Otenta",
+          "Juzumaru",
+          "Heaven's Thunder",
+          "Omoikane's Bow",
+          "Hawk Bow",
+          "Amanozako's Bow",
+          "Chidori Twin Swords",
+          "Kusarigama",
+          "Nature's Glory",
+          "Grass-cutting Sword",
+          "Mikazuki",
+          "Tsurumaru",
+          "Bonerotter",
+          "Greater Devourer Ball",
+          "Raja Warhammer",
+          "Eye of Orochi"
+        ]
+      },
+      "式神方头像": "gui/res/head_fang/1121.png",
+      "评分": {
+        "输出": 4,
+        "控制": 3,
+        "生存": 2,
+        "增益": 4,
+        "敏捷": 1,
+        "难度": 3
+      },
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Mannendake": {
       "式神定位": [
@@ -35209,7 +35571,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1038.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1038.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Ninja #rRecommended route: Jungle  #rStrategy: When Mannendake's Ability 2 reaches 3 layers, you can control and damage targets by approaching them. After using his ultimate ability, you will need to use a wall to provide quick support in battle.",
       "前五级推荐加点": [
         2,
@@ -35333,8 +35695,8 @@
         "敏捷": 4,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Inuyasha": {
       "式神定位": [
@@ -35693,6 +36055,14 @@
           "皮肤全身像": "gui/res/hero_quan/109502.png",
           "皮肤头像": "gui/res/head_fang/109502.png",
           "皮肤头像_新": "gui2/res/head_fang/109502.png"
+        },
+        {
+          "皮肤名称": "Moon: The Twilight",
+          "皮肤全身像_新": "gui/res/hero_quan2/109503.png",
+          "皮肤ID": 109503,
+          "皮肤全身像": "gui/res/hero_quan/109503.png",
+          "皮肤头像": "gui/res/head_fang/109503.png",
+          "皮肤头像_新": "gui2/res/head_fang/109503.png"
         }
       ],
       "推荐加点顺序": [
@@ -35768,13 +36138,13 @@
         "四技能": {
           "图标路径": "gui/res/skill/1095004.png",
           "技能ID": 109541,
-          "技能描述": "Aori releases a Red Star in the designated direction. When it hits an enemy shikigami or reaches maximum distance, it creates a Final Illusion that lasts for 6 seconds. When the illusion manifests, it deals 90#c39b54a(+24%Ability Power) #n  #Umagic damage#n to enemies within range, and subsequently deals 45#c39b54a(+12%Ability Power) #n  #Umagic damage#n every 0.5 seconds. At the same time, enemy shikigami within range are prohibited from using displacement abilities.#rThis ability can be used again while the illusion exists, and it will cause the magic circle to move in the designated direction.",
+          "技能描述": "Aori releases a Red Star in the designated direction. When it hits an enemy shikigami or reaches maximum distance, it creates a Final Illusion that lasts for 6 seconds. When the illusion manifests, it deals 105#c39b54a(+24%Ability Power) #n  #Umagic damage#n to enemies within range, and subsequently deals 52.5#c39b54a(+12%Ability Power) #n  #Umagic damage#n every 0.5 seconds. At the same time, enemy shikigami within range are prohibited from using displacement abilities.#rThis ability can be used again while the illusion exists, and it will cause the magic circle to move in the designated direction.",
           "技能名称": "Final Red Star",
           "技能成长": {
             "Base Damage": [
-              "90",
-              "165",
-              "240"
+              "105",
+              "180",
+              "255"
             ],
             "冷却": [
               80,
@@ -35787,9 +36157,9 @@
               100
             ],
             "DoT": [
-              "45",
-              "82.5",
-              "120"
+              "52.5",
+              "90",
+              "127.5"
             ]
           }
         },
@@ -35811,7 +36181,7 @@
               4,
               3,
               3,
-              3
+              2
             ],
             "消耗": [
               28,
@@ -35863,7 +36233,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1095.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1095.png",
-      "限免开始时间": "2023-02-06 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Middle#rStrategy: Use Ability 2: Meteor Spider and Ultimate Ability: Final Red Star to limit the enemy's movement. Ability 3: Arachnean Circle will deal additional delayed calculated damage to enemies within the magic circle. In battle, Aori needs to stay around her magic circles and the area of her ultimate ability to deal continuous damage.",
       "前五级推荐加点": [
         1,
@@ -35982,8 +36352,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2023-02-13 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Shouzu": {
       "式神定位": [
@@ -36215,7 +36585,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1069.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1069.png",
-      "限免开始时间": "2022-12-12 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Support#rRecommended route: Bottom#rStrategy: Use terrain wisely to increase the attack range of Ability 1 and increase the ability's hit rate. At the same time, you can use the water walls created by Ability 3 together with Ability 1 and 2 to deal even higher damage.",
       "前五级推荐加点": [
         1,
@@ -36335,8 +36705,8 @@
         "敏捷": 2,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2022-12-19 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Komatsu": {
       "式神定位": [
@@ -36620,7 +36990,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1055.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1055.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami position: Marksman. #rSuggested Lane: Bot#r. Strategy: Use Ability 1 to deal AOE damage to enemies and use Ability 2 to enable vision in the jungle. Use Ability 3 to increase attack speed for yourself and dependent allied shikigami and quickly escape to an ally shikigami when in danger. Use Ability 4 to deal burst damage to enemies within a wide range and inflict a slow effect.",
       "前五级推荐加点": [
         2,
@@ -36741,8 +37111,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Umibozu": {
       "式神定位": [
@@ -36995,7 +37365,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1021.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1021.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami Positioning: Tank/Support#rRecommended route: Bottom#rAbilities: When your ability hits an enemy shikigami, it will drop fish. Picking them up restores Umibozu's HP. Make good use of this characteristic to wear down the opponent. The more HP lost when ability 1 is used, the greater the amount restored.",
       "前五级推荐加点": [
         3,
@@ -37114,8 +37484,8 @@
         "敏捷": 1,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Enma": {
       "式神定位": [
@@ -37381,7 +37751,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1063.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1063.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Marksman/Mage#rRecommend route: Bottom/Middle#rStrategy: Use her minor abilities during the laning phase to wear down opponents and gain Spirit counts. When the conditions are met, use her ultimate ability to enter the Pressured state and use basic attacks to wear down opponents from a distance. Consecutive basic attacks on the enemy while in the Pressured state will deal a huge amount of damage.",
       "前五级推荐加点": [
         2,
@@ -37501,8 +37871,8 @@
         "敏捷": 2,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Hangan": {
       "式神定位": [
@@ -37726,7 +38096,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1035.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1035.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Mage#rRecommended route: Mid#rStrategy: Hangan needs to pay more attention to the last hit and quickly stack the max layers of the passive effect of Ability 1. Hangan's Ability 2 possesses powerful straight-line controlling power. You can try to use it to control more enemies.",
       "前五级推荐加点": [
         3,
@@ -37845,8 +38215,8 @@
         "敏捷": 1,
         "难度": 2
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Hakuzosu": {
       "式神定位": [
@@ -37954,7 +38324,7 @@
         "二技能": {
           "图标路径": "gui/res/skill/1076002_1.png",
           "技能ID": 107621,
-          "技能描述": "Hakuzosu deals 90#c39b54a(+50%Ability Power) #n  #Umagic damage#n to enemies in the designated area and slows them by 30% for 1.5 seconds while also inflicting hit enemy shikigami and monsters with Burning Shadow marks.",
+          "技能描述": "Hakuzosu deals 90#c39b54a(+70%Ability Power) #n  #Umagic damage#n to enemies in the designated area and slows them by 30% for 1.5 seconds while also inflicting hit enemy shikigami and monsters with Burning Shadow marks.",
           "技能名称": "Mt. Dream: Binding Seal",
           "技能成长": {
             "Base Damage": [
@@ -38038,7 +38408,7 @@
         "三技能": {
           "图标路径": "gui/res/skill/1076003_1.png",
           "技能ID": 107631,
-          "技能描述": "Active effect: Hakuzosu consumes all of his current Dream Fire and for 2 seconds, continuously recovers #O(10+current Dream Fire*50%) HP#n.#rPassive trigger: While in white fox form, damage dealt by Hakuzosu is converted into Dream Fire up to a maximum of 100+(25*current level) Dream Fire. Dream Fire will gradually decrease over time if Hakuzosu does not deal damage within a certain period.",
+          "技能描述": "Active effect: Hakuzosu consumes all of his current Dream Fire and for 2 seconds, continuously recovers #O(10+current Dream Fire*50%) HP#n.#rPassive trigger: While in white fox form, damage dealt by Hakuzosu is converted into Dream Fire up to a maximum of 100+(40*current level) Dream Fire. Dream Fire will gradually decrease over time if Hakuzosu does not deal damage within a certain period.",
           "技能名称": "Mt. Dream: Eyes of Fire",
           "技能成长": {
             "冷却": [
@@ -38062,7 +38432,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1076.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1076.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Ninja#rRecommended route: Jungle#rStrategy: When in human form, use Ability 1 and Ability 2 to mark the target, then transform into white fox form and use the displacement of Ability 1 to get close to the enemy and stack marks. Afterwards, use Ability 2 to deal high burst damage. Regularly use your ultimate ability for displacement.",
       "前五级推荐加点": [
         1,
@@ -38183,8 +38553,8 @@
         "敏捷": 5,
         "难度": 4
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Futakuchi": {
       "式神定位": [
@@ -38296,7 +38666,7 @@
         "天生被动": {
           "图标路径": "gui/res/skill/1018000.png",
           "技能ID": 101851,
-          "技能描述": "Passive trigger: Futakuchi adds a mark to enemy shikigami or monsters with basic attacks every 6 seconds, up to a maximum of 5 times. When her abilities hit marked targets, all marks will detonate, dealing #c9e45fa(+15%(+1.0%*Current Level)Attack) #n  #Umagic damage#n per stack. This ability's damage will increase along with Futakuchi's Crit Rate, multiplying up to 1 times.",
+          "技能描述": "Passive trigger: Futakuchi adds a mark to enemy shikigami or monsters with basic attacks every 6 seconds, up to a maximum of 5 times. When her abilities hit marked targets, all marks will detonate, dealing #c9e45fa(+18%(+1.0%*Current Level)Attack) #n  #Umagic damage#n per stack. This ability's damage will increase along with Futakuchi's Crit Rate, multiplying up to 1 times.",
           "技能名称": "Gonna Blow",
           "技能成长": {
             "冷却": [],
@@ -38365,7 +38735,7 @@
         "一技能": {
           "图标路径": "gui/res/skill/1018001.png",
           "技能ID": 101811,
-          "技能描述": "Passive trigger: Each time Futakuchi hits an enemy shikigami or monster with abilities or basic attacks every 20 seconds, her Attack Speed will be increased by 30% and Armor and Magic Penetration by 8% for 3 seconds. Effects cannot be stacked. Multiple effects will refresh the duration.",
+          "技能描述": "Passive trigger: Each time Futakuchi hits an enemy shikigami or monster with abilities or basic attacks every 20 seconds, her Attack Speed will be increased by 40% and Armor and Magic Penetration by 8% for 3 seconds. Effects cannot be stacked. Multiple effects will refresh the duration.",
           "技能名称": "Scary",
           "技能成长": {
             "冷却": [
@@ -38376,10 +38746,10 @@
               12
             ],
             "ASPD bonus": [
-              "30%",
-              "42.5%",
-              "67.5%",
-              "80%"
+              "40%",
+              "52.5%",
+              "77.5%",
+              "90%"
             ],
             "Armor and Magic Penetration Boost": [
               "8%",
@@ -38396,7 +38766,7 @@
               null
             ],
             "Attack speed bonus": [
-              "55%"
+              "65%"
             ]
           }
         },
@@ -38441,7 +38811,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1018.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1018.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Marksman#rRecommended route: Bottom#rStrategy: Use Ability 2 or 3 to refresh Ability 1’s passive effect, which increases your Armor and Magic Penetration and Attack Speed. In fights, use basic attacks first to generate stacks for your Natural Passive: Gonna Blow, then use Ability 2: Surprise! and Ability 3: Don't Go! to detonate the stacks and deal high damage. When your target's HP is low, you can stand in a safe place and use your ultimate ability to attack them from far away.",
       "前五级推荐加点": [
         2,
@@ -38562,8 +38932,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Sesshomaru": {
       "式神定位": [
@@ -39117,7 +39487,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1097.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1097.png",
-      "限免开始时间": "2023-01-09 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Ninja#rRecommended route: Jungle#rStrategy: Kainin's trait can grant a large amount of bonus damage to her abilities. She can use positioning, Ability 1's Slow, her ultimate ability's knockback, and displacement from Ability 2 to trigger her trait multiple times to deal a lot of damage to the target. She can also nimbly enter battles with her Ability 3.",
       "前五级推荐加点": [
         2,
@@ -39241,8 +39611,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2023-01-16 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Mushishi": {
       "式神定位": [
@@ -39457,7 +39827,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1083.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1083.png",
-      "限免开始时间": "2023-01-09 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Support#rRecommended route: Bottom#rStrategy: Mushishi can switch between the Butterfly Dream and Self-actualization states. The Butterfly Dream state is more suitable for damage dealing, whereas the Self-actualization is better for chasing down the enemies. Time your attack or defense in battle and flexibly switch between the states to make the most use of Mushishi.",
       "前五级推荐加点": [
         2,
@@ -39577,8 +39947,8 @@
         "敏捷": 4,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2023-01-16 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Furi": {
       "式神定位": [
@@ -39822,7 +40192,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1103.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1103.png",
-      "限免开始时间": "2023-01-30 04:59:59",
+      "限免开始时间": null,
       "式神攻略": "Type God positioning: forbearance / waiting #r recommended route: wild area / on the road #r use skills: use the displacement of one skill and three skills to help pick up the hand sword thrown by two skills and quickly play the enhanced general attack effect; Use the ultimate skills and three skill company recruitment to cut into the battlefield from a long distance.",
       "前五级推荐加点": [
         2,
@@ -39946,8 +40316,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2023-02-06 04:59:59"
+      "是否限免": false,
+      "限免结束时间": null
     },
     "Rukia Kuchiki": {
       "式神定位": [
@@ -40495,7 +40865,7 @@
       "式神圆头像_新": "gui2/res/head_circle/1107.png",
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1107.png",
-      "限免开始时间": "2018-02-23 12:00:00",
+      "限免开始时间": null,
       "式神攻略": "Shikigami positioning: Marksman#rRecommended route: Bottom#rStrategy: Suzuka Gozen needs to cast abilities to greatly enhance her basic attacks with her Natural Passive. Players need to master the tempo of alternating abilities and basic attacks to deal optimal damage. Use Ability 2 well in solo battles to prevent the opponent from using basic attacks.",
       "前五级推荐加点": [
         2,
@@ -40616,8 +40986,8 @@
         "敏捷": 3,
         "难度": 3
       },
-      "是否限免": true,
-      "限免结束时间": "2028-12-10 00:00:00"
+      "是否限免": false,
+      "限免结束时间": null
     }
   }
 }
