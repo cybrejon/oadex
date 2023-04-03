@@ -32567,7 +32567,7 @@
         "四技能": {
           "图标路径": "gui/res/skill/1075007.png",
           "技能ID": 107541,
-          "技能描述": "Menreiki absorbs strength from all of her masks to enhance her abilities for 12 seconds. #rThe damage of Spirit of Kawakatsu is enhanced to penetrating continuous damage. #rFalse Face inflicts an extra Slow effect on targets. #rWhen the Passive of Forbidden Face is triggered, Menreiki can charge up to 7 masks and the cast distance is increased.",
+          "技能描述": "Menreiki absorbs strength from all of her masks to enhance her abilities for 12 seconds. During this period, participating in sealing enemy shikigami extends the duration of the enhanced state by 3 seconds.#rThe damage of Spirit of Kawakatsu is enhanced to penetrating continuous damage.#rFalse Face inflicts an extra Slow effect on targets.#rWhen the Passive of Forbidden Face is triggered, Menreiki can charge up to 7 masks and the cast distance is increased.",
           "技能名称": "Seven Masks",
           "技能成长": {
             "Enhance Time ": [
@@ -35031,6 +35031,14 @@
           "皮肤全身像": "gui/res/hero_quan/112101.png",
           "皮肤头像": "gui/res/head_fang/112101.png",
           "皮肤头像_新": "gui2/res/head_fang/112101.png"
+        },
+        {
+          "皮肤名称": "Forager's Guide",
+          "皮肤全身像_新": "gui/res/hero_quan2/112102.png",
+          "皮肤ID": 112102,
+          "皮肤全身像": "gui/res/hero_quan/112102.png",
+          "皮肤头像": "gui/res/head_fang/112102.png",
+          "皮肤头像_新": "gui2/res/head_fang/112102.png"
         }
       ],
       "推荐加点顺序": [
