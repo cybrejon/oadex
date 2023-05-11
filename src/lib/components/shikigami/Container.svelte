@@ -10,16 +10,20 @@
 <style>
   .container {
     background-color: #40444B;
+    /* background-image: url('$lib/assets/00000031.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100px; */
     padding: 15px;
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-direction: column;
     row-gap: 10px;
-    box-shadow:
+    /* box-shadow:
       0 10px 10px #282a2f52,
       0 30px 30px #282a2f52,
-      0 80px 60px #282a2f52;
+      0 80px 60px #282a2f52; */
   }
 
   .container--alt {

@@ -4,7 +4,9 @@
 </script>
 
 <div class="card">
-  <p class="card-title">{title}</p>
+  {#if title}
+    <p class="card-title">{title}</p>
+  {/if}
   <ul class="card-ul">
     {#each content as item}
       {#if item}
@@ -23,7 +25,6 @@
   }
 
   .card-ul {
-    margin-top: 10px;
     list-style-type: none;
     display: flex;
     flex-direction: column;

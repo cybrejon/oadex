@@ -23,6 +23,7 @@
 	"dependencies": {
 		"@inqling/svelte-icons": "^2.4.0",
 		"@tanstack/svelte-query": "^4.27.0",
+		"axios": "^1.4.0",
 		"fuse.js": "^6.6.2",
 		"fuzzy-search": "^3.2.1",
 		"svelte-lazy-image": "^0.5.1"

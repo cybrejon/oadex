@@ -5,7 +5,7 @@
   import Container from "$lib/components/shikigami/Container.svelte";
   import Button from "$lib/components/Button.svelte";
   export let area_name;
-export let data;
+  export let data;
   export let link;
 
   let {

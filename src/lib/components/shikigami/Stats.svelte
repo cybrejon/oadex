@@ -1,7 +1,8 @@
 <script>
-  import Container from '$lib/components/shikigami/Container.svelte'
+  import Container from '$lib/components/shikigami/Container.svelte';
+  export let area_name;
 </script>
 
-<Container grid-area="stats1">
-  
+<Container area_name={area_name}>
+  <slot></slot>
 </Container>
