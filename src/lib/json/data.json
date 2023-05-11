@@ -2039,7 +2039,7 @@
         "天生被动": {
           "图标路径": "gui/res/skill/1100000.png",
           "技能ID": 110051,
-          "技能描述": "Passive Effect: When Takiyasha Hime hits enemy shikigami or large monsters with abilities or basic attacks, she will gain 1 stack of New Moon Blessing. At maximum of 5 stacks, she will recover #cffba35(+1%(+0.1%*Current Level)Max HP) #n #c9e45fa(+18%BonusAttack) #n  HP and gain a 7.5% Attack Damage Bonus. At the same time, her Attack Range will be increased, and she will recover #cffba35(+0.5%(+0.05%*Current Level)Max HP) #n #c9e45fa(+9%BonusAttack) #n  HP every second for 5 seconds. Dealing damage to enemy shikigami and large monsters will extend the duration of New Moon Blessing by 1.5 seconds.",
+          "技能描述": "Passive effect: When Takiyasha Hime hits enemy shikigami or large monsters with abilities or basic attacks, she will gain 1 stack of New Moon Blessing. At the maximum of 5 stacks, she will gain 15% Life Steal and a 10%#c0095cc(+1%*Current Level) #n  Attack Damage Bonus. At the same time, her Attack Range will be increased. Dealing damage to enemy shikigami and large monsters will extend the duration of New Moon Blessing by 2.5 seconds.",
           "技能名称": "Moon Slash",
           "技能成长": {
             "冷却": [],
@@ -2051,7 +2051,7 @@
         "二技能": {
           "图标路径": "gui/res/skill/1100002.png",
           "技能ID": 110021,
-          "技能描述": "Takiyasha Hime charges in the designated direction, dealing 30#c9e45fa(+20%BonusAttack) #n  #Rphysical damage#n to enemies in her path. At the end of the charge, she will perform a horizontal slash in the direction of the joystick which will knock up enemies, deal 90#c9e45fa(+60%BonusAttack) #n  #Rphysical damage#n, and inflict a 50% Slow effect for 1 seconds.",
+          "技能描述": "Takiyasha Hime charges in the designated direction, dealing 30#c9e45fa(+20%BonusAttack) #n  #Rphysical damage#n to enemies in her path. At the end of the charge, she will perform a horizontal slash against the closest enemy in the direction of the left joystick and knock up the target, dealing 90#c9e45fa(+60%BonusAttack) #n  #Rphysical damage#n and inflicting a 50% Slow effect for 1 seconds.",
           "技能名称": "Mountain Fog",
           "技能成长": {
             "Base Damage ": [
@@ -2085,9 +2085,14 @@
         "四技能": {
           "图标路径": "gui/res/skill/1100004.png",
           "技能ID": 110041,
-          "技能描述": "Takiyasha Hime invokes the Profound Moon and summons 5 Demon Riders who attack, dealing 60#c9e45fa(+30%BonusAttack) #n  #Rphysical damage#n and inflicting a 50% Slow effect for 2.5 seconds to surrounding enemies within 600 yards, after which a Demon Rider will charge at a randomly selected enemy within range every 0.6 seconds, dealing 120#c9e45fa(+60%BonusAttack) #n  #Rphysical damage#n and inflicting a 30% Slow effect for 0.5 seconds to targets in their path.#rProfound Moon may have 4 effects, which can be selected by dragging the ability icon. The effects last for 10 seconds.#r#cb82a2fInvade#n: The ability deals an additional 120#c9e45fa(+50%BonusAttack) #n  #Ytrue damage#n when enemies are hit with Shadowless Sundown. Her Attack Damage is increased by 50 for the duration.#r#c35c6e7Cascade#n: Dispels control effects on herself when the ability is used. Her Control Reduction is increased by 30% for the duration.#r#ce7ad2fTempest#n: Slows enemies by 95% for 2.5 seconds when they are hit with the ability. Her Movement Speed is increased by 20% for the duration.#r#ca61fe4Immovable#n: Adds a shield that can block #cffba35(+12%Max HP) #n  damage which lasts 4 seconds to herself every time an enemy shikigami is hit by the ability. The shield can stack 3 times. Her Armor is increased by 30#c0095cc(+3*Current Level) #n  and Magic Resist is increased by 20#c0095cc(+2*Current Level) #n  for the duration.",
+          "技能描述": "Takiyasha Hime invokes the Profound Moon and summons 5 Demon Riders who attack, dealing 60#c9e45fa(+30%BonusAttack) #n  #Rphysical damage#n and inflicting a 50% Slow effect for 2.5 seconds to surrounding enemies within 600 yards, after which a Demon Rider will charge at a randomly selected enemy within range every 0.6 seconds, dealing 120#c9e45fa(+60%BonusAttack) #n  #Rphysical damage#n and inflicting a 30% Slow effect for 0.5 seconds to targets in their path.#rProfound Moon may have 4 effects, which can be selected by dragging the ability icon. The effects last for 10 seconds.#r#cb82a2fInvade#n: The ability deals an additional 120#c9e45fa(+50%BonusAttack) #n  #Ytrue damage#n when enemies are hit. 15% of the damage dealt for the duration will be converted into #Ytrue damage#n.#r#c35c6e7Cascade#n: Dispels control effects on herself when the ability is used. Her Reduce Control effect is increased by 30% for the duration.#r#ce7ad2fTempest#n: Inflicts a 95% Slow for 2.5 seconds on enemies when they are hit with the ability. Her Movement Speed is increased by 20% for the duration.#r#ca61fe4Immovable#n: Adds a shield that can block #cffba35(+3%Max HP) #n #c9e45fa(+140%BonusAttack) #n  damage which lasts 4 seconds to herself every time an enemy shikigami is hit by the ability. The shield can stack 3 times. Her Armor is increased by 30#c0095cc(+3*Current Level) #n  and Magic Resist is increased by 20#c0095cc(+2*Current Level) #n  for the duration.",
           "技能名称": "Shadowless Sundown",
           "技能成长": {
+            "Corrode Bonus Attack Damage": [
+              "0",
+              "0",
+              "0"
+            ],
             "Base Damage ": [
               "60",
               "100",
@@ -2097,6 +2102,11 @@
               70,
               70,
               70
+            ],
+            "Corrode True Damage Conversion Ratio": [
+              "15%",
+              "15%",
+              "15%"
             ],
             "消耗": [
               80,
@@ -2108,7 +2118,7 @@
         "一技能": {
           "图标路径": "gui/res/skill/1100001.png",
           "技能ID": 110011,
-          "技能描述": "Takiyasha Hime swings her Lunar Blade, slashing at nearby enemies after a short delay, dealing 35#c9e45fa(+55%Attack) #n #c0095cc(+4*Current Level) #n  physical damage to enemies on the inner circle within range of the hilt, and 70#c9e45fa(+110%Attack) #n #c0095cc(+8*Current Level) #n  #Rphysical damage#n to enemies on the outer circle within range of the blade.#rIf an enemy shikigami is hit by the blade, Takiyasha Hime will additionally gain 1 stack of New Moon Blessing. When at maximum stacks, the damage dealt by Whirlwind Moon is increased by 60%.",
+          "技能描述": "Takiyasha Hime swings her Lunar Blade, slashing at nearby enemies after a short delay, dealing 35#c9e45fa(+65%Attack) #n #c0095cc(+4*Current Level) #n  physical damage to enemies on the inner circle within range of the hilt, and 70#c9e45fa(+130%Attack) #n #c0095cc(+8*Current Level) #n  #Rphysical damage#n to enemies on the outer circle within range of the blade.#rIf an enemy shikigami is hit by the blade, Takiyasha Hime will additionally gain 1 stack of New Moon Blessing. When at maximum stacks, the damage dealt by Whirlwind Moon is increased by 60%.",
           "技能名称": "Whirlwind Moon",
           "技能成长": {
             "Base Damage ": [
@@ -2142,9 +2152,16 @@
         "三技能": {
           "图标路径": "gui/res/skill/1100003.png",
           "技能ID": 110031,
-          "技能描述": "Takiyasha Hime brandishes a Moonrise Slash in the designated direction, dealing 50#c9e45fa(+30%BonusAttack) #n  #Rphysical damage#n to the first enemy hit, and adding a Lunar mark to them for 4 seconds. Dealing damage to the target again within the duration will trigger the mark, dealing 100#c9e45fa(+70%BonusAttack) #n  #Rphysical damage#n and immobilizing them for 1.2 seconds.",
+          "技能描述": "Takiyasha Hime brandishes a Moonrise Slash in the designated direction, dealing 50#c9e45fa(+30%BonusAttack) #n  #Rphysical damage#n to the first enemy hit and adding a Lunar mark to them for 4 seconds. Dealing damage to the target again within the duration will trigger the mark, dealing 100#c9e45fa(+70%BonusAttack) #n  #Rphysical damage#n and inflicting Immobilize on them for 1.2 seconds. At the same time, grants herself a shield that blocks 100#c9e45fa(+100%BonusAttack) #n  damage (triggering marks on non-shikigami units reduces the Shield value to 50%).",
           "技能名称": "Sleepless Moonrise",
           "技能成长": {
+            "Base Shield": [
+              "100",
+              "125",
+              "150",
+              "175",
+              "200"
+            ],
             "Base Damage ": [
               "50",
               "75",
@@ -2232,11 +2249,11 @@
           "Yin Yang Wheel",
           "Hagakure Boots",
           "Shadow Blade",
-          "Soul Grabber",
-          "Moonlight Meditation",
+          "Mikazuki",
           "Yata no Kagami",
+          "Hoko Do",
           "Gates of Amanoiwato",
-          "Sessho-seki Do"
+          "Demon Mask"
         ],
         "推荐装备-防御": [
           "Sessho-seki Do",
@@ -2252,27 +2269,27 @@
           "Demon Mask"
         ],
         "推荐装备-默认方案2": [
-          "Mikazuki",
+          "Blank Lance",
+          "Earth Jade Echo",
           "Hagakure Boots",
           "Kusarigama",
-          "Nature's Glory",
+          "Yin Yang Wheel",
           "Shadow Blade",
-          "Tsurumaru",
+          "Demon Mask",
           "Gates of Amanoiwato",
-          "Demon Mask"
+          "Yata no Kagami"
         ],
         "推荐装备-默认方案3-说明": "Jungle/DPS",
         "推荐装备-默认方案2-说明": "Top solo, Survive",
         "推荐装备-默认方案3": [
-          "Blank Lance",
-          "Ice Jade Echo",
+          "Yin Yang Wheel",
           "Hagakure Boots",
-          "Mikazuki",
-          "Kusarigama",
+          "Shadow Blade",
           "Nature's Glory",
-          "Demon Mask",
+          "Dark Fang Yomotsu",
+          "Mikazuki",
           "Gates of Amanoiwato",
-          "Shadow Blade"
+          "Demon Mask"
         ],
         "推荐装备-进攻": [
           "Onimaru",
@@ -3549,6 +3566,14 @@
           "皮肤全身像": "gui/res/hero_quan/100307.png",
           "皮肤头像": "gui/res/head_fang/100307.png",
           "皮肤头像_新": "gui2/res/head_fang/100307.png"
+        },
+        {
+          "皮肤名称": "Finale of Divine Birth",
+          "皮肤全身像_新": "gui/res/hero_quan2/100308.png",
+          "皮肤ID": 100308,
+          "皮肤全身像": "gui/res/hero_quan/100308.png",
+          "皮肤头像": "gui/res/head_fang/100308.png",
+          "皮肤头像_新": "gui2/res/head_fang/100308.png"
         }
       ],
       "推荐加点顺序": [
@@ -3626,13 +3651,13 @@
         "四技能": {
           "图标路径": "gui/res/skill/1003004.png",
           "技能ID": 100341,
-          "技能描述": "Ootengu casts a 3-second Blade Storm in the designated area. Blade Storm deals 90#c39b54a(+40%Ability Power) #n  #Umagic damage#n to enemies once every 0.5 seconds and at the same time slows them by 20%. #rThe Blade Storm expands over the duration of the effect and gradually moves in the direction it was cast in.",
+          "技能描述": "Ootengu casts a 3-second Blade Storm in the designated area. Blade Storm deals 90#c39b54a(+45%Ability Power) #n  #Umagic damage#n to enemies once every 0.5 seconds and at the same time slows them by 20%. #rThe Blade Storm expands over the duration of the effect and gradually moves in the direction it was cast in.",
           "技能名称": "Blade Storm",
           "技能成长": {
             "Base Damage": [
               "90",
-              "150",
-              "210"
+              "170",
+              "250"
             ],
             "冷却": [
               50,
@@ -4422,6 +4447,13 @@
               40,
               45,
               50
+            ],
+            "Damage Bonus": [
+              "",
+              "",
+              "",
+              "",
+              ""
             ]
           }
         },
@@ -4811,7 +4843,7 @@
         "三技能": {
           "图标路径": "gui/res/skill/1112003.png",
           "技能ID": 111231,
-          "技能描述": "Enmusubi bestows a blessing to herself and the designated teammate, increasing their Armor by 8 and Magic Resist by 8 for 2.5 second(s). She also grants immunity to control effects once, and the blessing prematurely ends once this is triggered. When the blessing ends, it restores 40#c39b54a(+20%Ability Power) #n #cffba35(+1%TargetHP Lost ) #n  #GHP#n to the targets and casts Flower Moon with the targets as the center.",
+          "技能描述": "Enmusubi bestows a blessing to herself and the designated teammate, increasing their Armor by 8 and Magic Resist by 8 for 3 second(s). She also grants immunity to control effects once, and the blessing prematurely ends once this is triggered. When the blessing ends, it restores 40#c39b54a(+20%Ability Power) #n #cffba35(+1%TargetHP Lost ) #n  #GHP#n to the targets and casts Flower Moon with the targets as the center.",
           "技能名称": "Soul Mate",
           "技能成长": {
             "冷却": [
@@ -5478,7 +5510,7 @@
           "皮肤头像_新": "gui2/res/head_fang/100807.png"
         },
         {
-          "皮肤名称": "Dazzling Splendor",
+          "皮肤名称": "珑景明辉",
           "皮肤全身像_新": "gui/res/hero_quan2/100808.png",
           "皮肤ID": 100808,
           "皮肤全身像": "gui/res/hero_quan/100808.png",
@@ -5951,7 +5983,7 @@
         "四技能": {
           "图标路径": "gui/res/skill/1040004.png",
           "技能ID": 104041,
-          "技能描述": "Mouba shifts Bitey the bowl spirit into overdrive, increasing Movement Speed continuously for 13 seconds. Once Movement Speed reaches 200, Bitey will inflict 260#c39b54a(+35%Ability Power) #n  #Umagic damage #n on enemies it hits along the way. Every collision thereafter inflicts 100#c39b54a(+20%Ability Power) #n  #Umagic damage #n on enemies and knocks them up for 0.5 seconds (effective every 6 seconds per target). #rWhile in overdrive, Mouba cannot use basic attacks and is immune to control abilities. Friendly shikigami can hitch a ride on Bitey.",
+          "技能描述": "Mouba shifts Bitey the bowl spirit into overdrive, increasing Movement Speed for 13 second(s). Once Movement Speed reaches 200, Bitey will deal 260#c39b54a(+35%Ability Power) #n  #Umagic damage#n to enemies it collides into on its path. Every collision thereafter deals 100#c39b54a(+20%Ability Power) #n  #Umagic damage#n and inflicts a Knockup effect for 0.5 second(s) (effective every 6 second(s) per target).#rWhile in overdrive, Mouba cannot use basic attacks and gains 60% Control Reduction. Ally shikigami can take a ride on Bitey.",
           "技能名称": "Bowl Barrage",
           "技能成长": {
             "Subsequent DMG": [
@@ -6347,19 +6379,19 @@
         "一技能": {
           "图标路径": "gui/res/skill/1082001_2.png",
           "技能ID": 108211,
-          "技能描述": "Zashiki consumes 3% of her current HP, dealing 50#c39b54a(+25%Ability Power) #n #c0095cc(+10*Current Level) #n  #Umagic damage#n to nearby enemies after a short delay. 6#c39b54a(+2.5%Ability Power) #n #c0095cc(+1.5*Current Level) #n  more #Umagic damage#n is dealt for every orb she has. When she has 6 orbs, this will additionally slow the enemies by 30% for 1.2 seconds.#rZashiki will gain 1 orb when this ability hits enemy shikigami, and restores 12% HP according to the damage dealt to the target hit. HP restored by hitting an enemy shikigami or monsters is increased to 40%, and a single ability can restore up to 48.16#c39b54a(+22.4%Ability Power) #n #c0095cc(+10.6*Current Level) #n  #GHP#n).",
+          "技能描述": "Zashiki consumes 3% of her current HP, dealing 60#c39b54a(+30%Ability Power) #n #c0095cc(+12*Current Level) #n  #Umagic damage#n to nearby enemies after a short delay. 6#c39b54a(+2.5%Ability Power) #n #c0095cc(+1.5*Current Level) #n  more #Umagic damage#n is dealt for every orb she has. When she has 6 orbs, this will additionally slow the enemies by 30% for 1.2 seconds.#rZashiki will gain 1 orb when this ability hits enemy shikigami, and restores 12% HP according to the damage dealt to the target hit. HP restored by hitting an enemy shikigami or monsters is increased to 40%, and a single ability can restore up to 53.76#c39b54a(+25.2%Ability Power) #n #c0095cc(+11.76*Current Level) #n  #GHP#n).",
           "技能名称": "Indoor Cleansing",
           "技能成长": {
             "Base Damage": [
-              "50",
+              "60",
               "6",
-              "75",
+              "90",
               "11",
-              "100",
+              "120",
               "16",
-              "125",
-              "21",
               "150",
+              "21",
+              "180",
               "26"
             ],
             "冷却": [
@@ -7103,7 +7135,7 @@
         "一技能": {
           "图标路径": "gui/res/skill/1115001.png",
           "技能ID": 111511,
-          "技能描述": "Izaya shoots out three small shuttles at the designated position. An explosion occurs when a small shuttle hits the first enemy in its path, dealing 60#c39b54a(+35%Ability Power) #n #c0095cc#n  #Umagic damage#n to the enemy hit. If multiple small shuttles hit the same target, subsequent damage will be decreased to 30%.#rAt the same time, the small shuttles add a Seal of Corrosion to the enemies hit, which lasts for 5 second(s). Seal of Corrosion will be triggered by damage dealt by Izaya, dealing 20#c39b54a(+15%Ability Power) #n #c0095cc(+8*Current Level) #n  #Umagic damage#n and inflicting a 30% Slow on targets.",
+          "技能描述": "Izaya shoots out three small shuttles at the designated position. An explosion occurs when a small shuttle hits the first enemy in its path, dealing 60#c39b54a(+40%Ability Power) #n #c0095cc#n  #Umagic damage#n to the enemy hit. If multiple small shuttles hit the same target, subsequent damage will be decreased to 30%.#rAt the same time, the small shuttles add a Seal of Corrosion to the enemies hit, which lasts for 5 second(s). Seal of Corrosion will be triggered by damage dealt by Izaya, dealing 20#c39b54a(+20%Ability Power) #n #c0095cc(+8*Current Level) #n  #Umagic damage#n and inflicting a 30% Slow on targets.",
           "技能名称": "Shrill Shuttle",
           "技能成长": {
             "Base Damage": [
@@ -7132,7 +7164,7 @@
         "三技能": {
           "图标路径": "gui/res/skill/1115003_1.png",
           "技能ID": 111531,
-          "技能描述": "Izaya creates two circles of shuttles at the designated positions. After a short delay, both magic circles will be activated, transporting all units except monsters from one magic circle to the other. If ally shikigami are transported, they will gain a 40% Haste effect and 150#c39b54a(+50%Ability Power) #n  Shield. If enemy shikigami are transported, they will take 80#c39b54a(+20%Ability Power) #n  #Umagic damage#n and their Movement Speed will be decreased by 50%.#rThe larger the distance between the two shuttles, the longer the time needed for activation, up to a maximum of 1.5 seconds.",
+          "技能描述": "Izaya creates two circles of shuttles at the designated positions. After a short delay, both magic circles will be activated, transporting all units except monsters from one magic circle to the other. If ally shikigami are transported, they will gain a 40% Haste effect and 150#c39b54a(+50%Ability Power) #n  Shield. If enemy shikigami are transported, they will take 80#c39b54a(+20%Ability Power) #n  #Umagic damage#n and their Movement Speed will be decreased by 50%.#rThe larger the distance between the two shuttles, the longer the time needed for activation, up to a maximum of 0.9 seconds.",
           "技能名称": "Different Paths",
           "技能成长": {
             "Base Damage": [
@@ -7144,10 +7176,10 @@
             ],
             "冷却": [
               25,
-              25,
-              25,
-              25,
-              25
+              24,
+              23,
+              22,
+              21
             ],
             "消耗": [
               60,
@@ -8199,16 +8231,16 @@
         "四技能": {
           "图标路径": "gui/res/skill/1070005.png",
           "技能ID": 107041,
-          "技能描述": "Passive trigger: If this ability seals an enemy shikigami, the ability will be refreshed instantly. #rPassive effect: Every time Kosodenote refreshes the weakness direction, she will add a layer of Thread mark. The mark can be stacked up to 3 layers. #rActive: Kosodenote selects a specific direction and teleports to the position to inflict a Stun effect on the target for 0.7 seconds and launches (2 + amount of target's mark layers) continuous attacks with each attack dealing 60#c9e45fa(+25%BonusAttack) #n  #Rphysical damage#n. The last attack will deal 120#c9e45fa(+50%BonusAttack) #n  #Rphysical damage#n to all surrounding enemies when landing. If it hits a target who has the max layers of Thread, she will form an extra shield that can absorb 500#c9e45fa(+150%BonusAttack) #n  damage. Kosodenote will take 75% less damage when she is casting abilities.",
+          "技能描述": "Passive trigger: If this ability seals an enemy shikigami, the ability will be refreshed instantly. #rPassive effect: Every time Kosodenote refreshes the weakness direction, she will add a layer of Thread mark. The mark can be stacked up to 3 layers. #rActive: Kosodenote selects a specific direction and teleports to the position to inflict a Stun effect on the target for 0.7 seconds and launches (2 + amount of target's mark layers) continuous attacks with each attack dealing 60#c9e45fa(+30%BonusAttack) #n  #Rphysical damage#n. The last attack will deal 120#c9e45fa(+50%BonusAttack) #n  #Rphysical damage to all surrounding enemies when landing. She will also form an extra shield that can absorb 200#c9e45fa(+50%BonusAttack) #n  damage. Kosodenote will take 75% less damage when she is casting abilities.",
           "技能名称": "Flawless Sting",
           "技能成长": {
             "Base Damage": [
               "60",
               "120",
-              "110",
-              "220",
-              "160",
-              "320"
+              "120",
+              "240",
+              "180",
+              "360"
             ],
             "冷却": [
               80,
@@ -8221,16 +8253,16 @@
               100
             ],
             "Base Shield": [
-              "500",
-              "1000",
-              "1500"
+              "200",
+              "400",
+              "600"
             ]
           }
         },
         "一技能": {
           "图标路径": "gui/res/skill/1070001.png",
           "技能ID": 107011,
-          "技能描述": "Passive trigger: During the duration time of Thread, if Kosodenote seals her target while connected via the thread, the ability will be refreshed.#rActive: Kosodenote shoots a needle in the specified direction to deal 30#c9e45fa(+35%BonusAttack) #n #c0095cc#n #cffba35#n  #Rphysical damage#n to enemies hit along the way. If it hits an enemy shikigami or monster, they will be connected by the thread and their weakness of a random direction will be revealed. While connected via the thread, her Movement Speed will be increased by 25%.#rKosodenote launches a basic attack at the target's weakness to deal 10#c9e45fa(+35%BonusAttack) #n #c0095cc#n #cffba35(+2% (Every 160BonusAttack increases 1%)TargetMax HP) #n  additional #Rphysical damage#n and inflicts a 70% Slow effect for 0.5 seconds to target. She also restores 8#c9e45fa(+10%BonusAttack) #n #c0095cc(+3*Current Level) #n #cffba35#n  HP (only 35% HP is restored against monsters) and increases Movement Speed by 45% for 1.2 seconds.#rThe thread will last for 12 seconds. Enemies will break out of the thread when Kosodenote taps again or when the enemy moves a certain distance away. Cooldown time will be returned according to time remaining (up to a maximum of 70%).",
+          "技能描述": "Passive trigger: During the duration time of Thread, if Kosodenote seals her target while connected via the thread, the ability will be refreshed.#rActive: Kosodenote shoots a needle in the specified direction to deal 30#c9e45fa(+35%BonusAttack) #n #c0095cc#n #cffba35#n  #Rphysical damage#n to enemies hit along the way. If it hits an enemy shikigami or monster, they will be connected by the thread and their weakness of a random direction will be revealed. While connected via the thread, her Movement Speed will be increased by 25%.#rKosodenote launches a basic attack at the target's weakness to deal 10#c9e45fa(+50%BonusAttack) #n #c0095cc#n #cffba35(+2% (Every 80BonusAttack increases 1%)TargetMax HP) #n  additional #Rphysical damage#n and inflicts a 70% Slow effect for 0.5 seconds to target. She also restores 8#c9e45fa(+10%BonusAttack) #n #c0095cc(+3*Current Level) #n #cffba35#n  HP (only 35% HP is restored against monsters) and increases Movement Speed by 45% for 1.2 seconds.#rThe thread will last for 16 seconds. Enemies will break out of the thread when Kosodenote taps again or when the enemy moves a certain distance away. Cooldown time will be returned according to time remaining (up to a maximum of 70%).",
           "技能名称": "Hidden Sting",
           "技能成长": {
             "Base Damage": [
@@ -8944,21 +8976,21 @@
         2,
         3,
         1,
-        3,
-        3,
-        4,
-        3,
-        1,
-        3,
-        1,
-        4,
-        1,
-        1,
         2,
         2,
         4,
+        3,
+        3,
+        3,
+        3,
+        4,
         2,
-        2
+        2,
+        1,
+        1,
+        4,
+        1,
+        1
       ],
       "式神圆头像": "gui/res/head_circle/1007.png",
       "式神技能": {
@@ -8977,7 +9009,7 @@
         "二技能": {
           "图标路径": "gui/res/skill/1007002.png",
           "技能ID": 100721,
-          "技能描述": "Hakuro shoots multiple arrows in the designated direction, dealing 100#c9e45fa(+100%BonusAttack) #n  #Rphysical damage#n to enemies they hit.",
+          "技能描述": "Hakuro shoots multiple arrows in the designated direction, dealing 100#c9e45fa(+100%BonusAttack) #n  #Rphysical damage#n and inflicting a 25% Slow effect for 1.5 seconds to enemies hit.",
           "技能名称": "Scatter",
           "技能成长": {
             "Base Damage": [
@@ -9029,15 +9061,15 @@
         "一技能": {
           "图标路径": "gui/res/skill/1007001.png",
           "技能ID": 100711,
-          "技能描述": "Hakuro stops attacking and enters Swift state, gradually gaining a Movement Speed bonus of 20%. This state is ended when damage is taken or dealt.#rPassive trigger: Hakuro's Attack Speed is increased by 30%.",
+          "技能描述": "Hakuro stops attacking and enters Swift state, gradually gaining a Movement Speed bonus of 20%. This state is ended when damage is taken or dealt.#rPassive trigger: Hakuro's Attack Speed is increased by 22%.",
           "技能名称": "Swift",
           "技能成长": {
             "Attack Speed": [
-              "30%",
-              "35%",
-              "40%",
-              "45%",
-              "50%"
+              "22%",
+              "24%",
+              "26%",
+              "28%",
+              "30%"
             ],
             "冷却": [
               18,
@@ -9065,7 +9097,7 @@
         "三技能": {
           "图标路径": "gui/res/skill/1007003.png",
           "技能ID": 100731,
-          "技能描述": "Active effect: Hakuro focuses her ki. Each basic attack in the 8 seconds that follows deals an additional #cffba35(+4%TargetMax HP) #n  #Umagic damage#n. Deals a maximum of 60 damage to monsters.",
+          "技能描述": "Active effect: Hakuro focuses her ki. Each basic attack in the 8 seconds that follows deals an additional #cffba35(+5%TargetMax HP) #n  #Umagic damage#n. Deals a maximum of 60 damage to monsters.",
           "技能名称": "Mind's Eye",
           "技能成长": {
             "冷却": [
@@ -9083,11 +9115,11 @@
               40
             ],
             "Max HP Bonus": [
-              "4%",
-              "4.5%",
               "5%",
-              "5.5%",
-              "6%"
+              "5.75%",
+              "6.5%",
+              "7.25%",
+              "8%"
             ]
           }
         }
@@ -9102,15 +9134,15 @@
         2,
         3,
         1,
-        3,
-        3
+        2,
+        2
       ],
       "新式神": false,
       "推荐加点优先级": [
         4,
         3,
-        1,
-        2
+        2,
+        1
       ],
       "式神标签": "DPS",
       "cv名字": [
@@ -14054,7 +14086,7 @@
           "Gates of Amanoiwato",
           "God-killing Halberd"
         ],
-        "推荐装备-默认方案3-说明": "DPS",
+        "推荐装备-默认方案3-说明": "Jungle",
         "推荐装备-默认方案2-说明": "Carry",
         "推荐装备-默认方案3": [
           "Blank Lance",
@@ -14345,7 +14377,7 @@
         "三技能": {
           "图标路径": "gui/res/skill/1026002.png",
           "技能ID": 102621,
-          "技能描述": "Holding down the ability button makes Inugami enter a continuous Charge state, which greatly increases his Movement Speed and gives him a Control-immune effect. The Charge state can be lifted at any time. When the state is lifted, Inugami slashes at the space in front of him, dealing 60#c9e45fa(+80%BonusAttack) #n  #Rphysical damage#n to all enemies within range. These targets are knocked up and their Movement Speed is reduced by 10% for 1.5 seconds. This Slow effect gradually decreases over time.",
+          "技能描述": "Holding down the ability button makes Inugami enter a continuous Charge state, which greatly increases his Movement Speed and gives him a Control-immune effect. The Charge state can be lifted at any time. When the state is lifted, Inugami slashes at the space in the selected direction, dealing 60#c9e45fa(+80%BonusAttack) #n  #Rphysical damage#n to all enemies within range. These targets are knocked up and their Movement Speed is reduced by 10% for 1.5 seconds. This Slow effect gradually decreases over time.",
           "技能名称": "Rising Wind",
           "技能成长": {
             "Base Damage": [
@@ -14947,6 +14979,14 @@
           "皮肤全身像": "gui/res/hero_quan/106606.png",
           "皮肤头像": "gui/res/head_fang/106606.png",
           "皮肤头像_新": "gui2/res/head_fang/106606.png"
+        },
+        {
+          "皮肤名称": "Merciful Oracle",
+          "皮肤全身像_新": "gui/res/hero_quan2/106607.png",
+          "皮肤ID": 106607,
+          "皮肤全身像": "gui/res/hero_quan/106607.png",
+          "皮肤头像": "gui/res/head_fang/106607.png",
+          "皮肤头像_新": "gui2/res/head_fang/106607.png"
         }
       ],
       "推荐加点顺序": [
@@ -15681,6 +15721,14 @@
           "皮肤全身像": "gui/res/hero_quan/104803.png",
           "皮肤头像": "gui/res/head_fang/104803.png",
           "皮肤头像_新": "gui2/res/head_fang/104803.png"
+        },
+        {
+          "皮肤名称": "Ugly Amber Beauty",
+          "皮肤全身像_新": "gui/res/hero_quan2/104804.png",
+          "皮肤ID": 104804,
+          "皮肤全身像": "gui/res/hero_quan/104804.png",
+          "皮肤头像": "gui/res/head_fang/104804.png",
+          "皮肤头像_新": "gui2/res/head_fang/104804.png"
         }
       ],
       "推荐加点顺序": [
@@ -15720,7 +15768,7 @@
         "二技能": {
           "图标路径": "gui/res/skill/1048002.png",
           "技能ID": 104821,
-          "技能描述": "Jorogumo creates a spider web in the designated position. She is healed by 200%, Attack Speed is increased by 15% and Movement Speed by 10% when inside the web. There can be a maximum of 350 spider webs on the battlefield at the same time.#rOne spider web can be stored every None seconds, up to None.",
+          "技能描述": "Jorogumo shoots 4 spider webs in the designated direction. She is healed by 200%, her Attack Speed is increased by 15% and her Movement Speed is increased by 10% when inside the web.",
           "技能名称": "Web Coil",
           "技能成长": {
             "HP Regen": [
@@ -19415,7 +19463,7 @@
         "生命值": 920
       },
       "推荐分路": "野",
-      "式神传记": "Temporary",
+      "式神传记": "This is the place I love the most.",
       "式神全身像": "gui/res/hero_quan/1105.png",
       "式神钻石头像": "gui/res/head_diamond/1105.png",
       "式神属性成长": {
@@ -19438,7 +19486,7 @@
           "皮肤头像_新": "gui2/res/head_fang/1105.png"
         },
         {
-          "皮肤名称": "觉醒之妖",
+          "皮肤名称": "Evolved Form",
           "皮肤全身像_新": "gui/res/hero_quan2/110501.png",
           "皮肤ID": 110501,
           "皮肤全身像": "gui/res/hero_quan/110501.png",
@@ -19479,7 +19527,7 @@
         "天生被动": {
           "图标路径": "gui/res/skill/1105000.png",
           "技能ID": 110551,
-          "技能描述": "After Kamimai casts any ability, her next basic attack will be enhanced as ranged, dealing an additional #c9e45fa(+20%BonusAttack) #n #c0095cc(+2*Current Level) #n  #Rphysical damage#n to the target and #c9e45fa(+30%Attack) #n #c0095cc#n  #Rphysical damage#n to another enemy near the target. When Kamimai's enhanced basic attack hits an enemy shikigami or a monster, adds a layer of mark onto the target. Detonates an explosion at 3 layers, dealing 15#c9e45fa(+80%BonusAttack) #n #c0095cc(+8*Current Level) #n  #Rphysical damage#n to the target.",
+          "技能描述": "After Kamimai casts any ability, her next basic attack will be enhanced as ranged, dealing an additional #c9e45fa(+20%BonusAttack) #n #c0095cc(+2*Current Level) #n  #Rphysical damage#n to the target and #c9e45fa(+30%Attack) #n #c0095cc#n  #Rphysical damage#n to another enemy near the target. When Kamimai's enhanced basic attack hits an enemy shikigami or a monster, adds a layer of mark onto the target. Detonates an explosion at 3 layers, dealing 15#c9e45fa(+60%BonusAttack) #n #c0095cc(+8*Current Level) #n  #Rphysical damage#n to the target.",
           "技能名称": "Falling Paper",
           "技能成长": {
             "冷却": [],
@@ -19582,13 +19630,6 @@
           "技能描述": "Kamimai charges in the designated direction. This ability grants 1 stack of recharging every 7 seconds, up to 2 stacks. When Kamimai's enhanced basic attack hits the target, decreases the recharging time by 15%.#rPassive effect: Kamimai gains 5% Armor Penetration.",
           "技能名称": "Paper Edge",
           "技能成长": {
-            "Recharge Time": [
-              "7",
-              "6.5",
-              "6",
-              "5.5",
-              "5"
-            ],
             "冷却": [
               0,
               0,
@@ -19603,12 +19644,19 @@
               0,
               0
             ],
-            "ArPen": [
+            "物理穿透": [
               "5%",
               "7.5%",
               "10%",
               "12.5%",
               "15%"
+            ],
+            "Recharge Time": [
+              "7",
+              "6.5",
+              "6",
+              "5.5",
+              "5"
             ]
           }
         }
@@ -19664,7 +19712,7 @@
           "Hermit Kariginu",
           "Straw Hat"
         ],
-        "推荐装备-默认方案1-说明": "Carry",
+        "推荐装备-默认方案1-说明": "Jungle, Burst",
         "推荐装备-默认方案1": [
           "Blank Lance",
           "Ice Jade Echo",
@@ -19700,8 +19748,8 @@
           "Gates of Amanoiwato",
           "Tsurumaru"
         ],
-        "推荐装备-默认方案3-说明": "Carry",
-        "推荐装备-默认方案2-说明": "Carry",
+        "推荐装备-默认方案3-说明": "Top solo, Carry",
+        "推荐装备-默认方案2-说明": "Jungle, Crit",
         "推荐装备-默认方案3": [
           "Grass-cutting Sword",
           "Hagakure Boots",
@@ -21386,6 +21434,14 @@
           "皮肤全身像": "gui/res/hero_quan/100506.png",
           "皮肤头像": "gui/res/head_fang/100506.png",
           "皮肤头像_新": "gui2/res/head_fang/100506.png"
+        },
+        {
+          "皮肤名称": "Moon Among Holy Thorns",
+          "皮肤全身像_新": "gui/res/hero_quan2/100507.png",
+          "皮肤ID": 100507,
+          "皮肤全身像": "gui/res/hero_quan/100507.png",
+          "皮肤头像": "gui/res/head_fang/100507.png",
+          "皮肤头像_新": "gui2/res/head_fang/100507.png"
         }
       ],
       "推荐加点顺序": [
@@ -22031,6 +22087,350 @@
       "是否限免": false,
       "限免结束时间": null
     },
+    "Jinmenju": {
+      "式神定位": [
+        "守",
+        "侍"
+      ],
+      "式神钻石头像_新": "gui2/res/head_diamond/1087.png",
+      "式神名称": "Jinmenju",
+      "式神全身像_新": "gui/res/hero_quan2/1087.png",
+      "式神新卡片": "",
+      "式神基础属性": {
+        "攻击速度": 0.35,
+        "魔法回复": 10,
+        "魔法上限": 350,
+        "魔抗": 60,
+        "攻速加成": 1.2,
+        "物理伤害": 68,
+        "生命恢复": 15,
+        "攻击后摇": 21,
+        "护甲": 70,
+        "移动速度": 33,
+        "生命值": 1125
+      },
+      "推荐分路": "上",
+      "式神传记": "A long, long time ago, a great tree once stood here.",
+      "式神全身像": "gui/res/hero_quan/1087.png",
+      "式神钻石头像": "gui/res/head_diamond/1087.png",
+      "式神属性成长": {
+        "魔法回复": 0.6,
+        "魔法上限": 36,
+        "魔抗": 1.5,
+        "攻速加成": 0.006,
+        "物理伤害": 3.64,
+        "生命恢复": 0.9,
+        "护甲": 7.25,
+        "生命值": 153
+      },
+      "皮肤": [
+        {
+          "皮肤名称": "Vine Tea",
+          "皮肤全身像_新": "gui/res/hero_quan2/1087.png",
+          "皮肤ID": 108709,
+          "皮肤全身像": "gui/res/hero_quan/1087.png",
+          "皮肤头像": "gui/res/head_fang/1087.png",
+          "皮肤头像_新": "gui2/res/head_fang/1087.png"
+        },
+        {
+          "皮肤名称": "Evolved Form",
+          "皮肤全身像_新": "gui/res/hero_quan2/108701.png",
+          "皮肤ID": 108701,
+          "皮肤全身像": "gui/res/hero_quan/108701.png",
+          "皮肤头像": "gui/res/head_fang/108701.png",
+          "皮肤头像_新": "gui2/res/head_fang/108701.png"
+        }
+      ],
+      "推荐加点顺序": [
+        2,
+        1,
+        3,
+        2,
+        2,
+        4,
+        2,
+        1,
+        2,
+        1,
+        4,
+        1,
+        1,
+        3,
+        3,
+        4,
+        3,
+        3
+      ],
+      "式神圆头像": "gui/res/head_circle/1087.png",
+      "式神技能": {
+        "天生被动": {
+          "图标路径": "gui/res/skill/1087000.png",
+          "技能ID": 108751,
+          "技能描述": "When \"Human-Faced Tree\" attacks an enemy deity or wild monster with a normal attack, it will summon a \"Calamity Flower\" that blooms in place under the target's feet and leaves a flower seed on the target's body. When the \"Calamity Flower\" appears, it will slow down enemies in the area by 40%, and when it fully blooms, it will cause 40#c0095cc(+10*Current Level) #n #cffba35(+2%(+0.2%*Current Level)TargetMax HP) #n  points of #Rphysical damage#n. The same target cannot be damaged repeatedly in a short period of time. When \"Human-Faced Tree\" attacks a target with a flower seed, it will not produce a \"Calamity Flower,\" but it will pick off the flower seed and restore 20#cffba35(+2%Max HP) #n #c0095cc#n  points of #Ghealth#n. When \"Human-Faced Tree\" is sealed by an enemy deity, it will bloom a \"Calamity Flower\" under the sealer's feet.",
+          "技能名称": "Foreboding Flower",
+          "技能成长": {
+            "冷却": [],
+            "消耗": [
+              null
+            ]
+          }
+        },
+        "二技能": {
+          "图标路径": "gui/res/skill/1087002.png",
+          "技能ID": 108721,
+          "技能描述": "Jinmenju sweeps his branches across the area in front, dealing 140#c9e45fa(+30%BonusAttack) #n #cffba35(+3%TargetMax HP) #n  #Rphysical damage#n to enemies hit and linking up with enemy shikigami. If any links remain intact for 2 second(s), they will deal 30#c9e45fa(+50%BonusAttack) #n #cffba35(+5%TargetMax HP) #n  #Rphysical damage#n to the linked target(s), restrain them for 1 second(s), and pull them toward Jinmenju a certain distance.",
+          "技能名称": "Entangled Roots",
+          "技能成长": {
+            "Base Damage": [
+              "140",
+              "170",
+              "200",
+              "230",
+              "260"
+            ],
+            "冷却": [
+              12,
+              11,
+              10,
+              9,
+              8
+            ],
+            "Two-stage Base Damage": [
+              "30",
+              "70",
+              "110",
+              "150",
+              "190"
+            ],
+            "消耗": [
+              35,
+              35,
+              35,
+              35,
+              35
+            ]
+          }
+        },
+        "四技能": {
+          "图标路径": "gui/res/skill/1087004.png",
+          "技能ID": 108741,
+          "技能描述": "Jinmenju transforms into Cursed Roots, decreasing his Movement Speed by 50 and increasing his damage reduction by 20% during this period. While in the Cursed Roots state, Jinmenju will automatically lock onto and use basic attacks on targets around himself, dealing 120#cffba35(+50%BonusArmor) #n #c9e45fa(+130%Attack) #n #cffba35(+4%TargetMax HP) #n  #Rphysical damage#n to them and the enemies in their direction. This attack deals only 40% damage to turrets. The Cursed Roots state lasts up to 8 seconds (recasting the ability will prematurely remove the state), during which Jinmenju will not be able to cast Ability 1. When the state ends, Jinmenju gains a 60% Haste that gradually diminishes over 2 second(s).",
+          "技能名称": "Cursed Roots",
+          "技能成长": {
+            "Base Damage": [
+              "120",
+              "160",
+              "200"
+            ],
+            "冷却": [
+              10,
+              7,
+              4
+            ],
+            "消耗": [
+              null,
+              null,
+              null
+            ],
+            "Duration ": [
+              "8",
+              "12",
+              "16"
+            ]
+          }
+        },
+        "一技能": {
+          "图标路径": "gui/res/skill/1087001.png",
+          "技能ID": 108711,
+          "技能描述": "Jinmenju throws a tree claw in a designated direction, dealing 140#c9e45fa(+40%BonusAttack) #n  #Rphysical damage#n to enemies along the way. If the tree claw hits terrain while in flight, Jinmenju will pull himself to that position, dealing 40#c9e45fa(+40%BonusAttack) #n  #Rphysical damage#n to enemies he hits along the way and knocking them back in the direction he is headed toward. In addition, he also inflicts a 40% Slow on the target(s) for 0.8 second(s).",
+          "技能名称": "Twisting Vines",
+          "技能成长": {
+            "Base Damage": [
+              "140",
+              "170",
+              "200",
+              "230",
+              "260"
+            ],
+            "冷却": [
+              10,
+              9,
+              9,
+              8,
+              8
+            ],
+            "消耗": [
+              40,
+              40,
+              40,
+              40,
+              40
+            ],
+            "Collision Base Damage": [
+              "40",
+              "70",
+              "100",
+              "130",
+              "160"
+            ]
+          }
+        },
+        "三技能": {
+          "图标路径": "gui/res/skill/1087003.png",
+          "技能ID": 108731,
+          "技能描述": "Jinmenju selects an area and summons a Divine Tree that cannot move or be passed through. The Divine Tree lasts 5 second(s), during which it inflicts a 20% Slow on enemies around itself. When the Divine Tree reaches the end of its duration, or when Jinmenju casts Ability 1 and pulls himself to it, it will disappear, dealing 70#c9e45fa(+70%BonusAttack) #n  #Rphysical damage#n to enemies in range and inflicting a 55% Slow for 3 second(s).",
+          "技能名称": "Divine Tree",
+          "技能成长": {
+            "冷却": [
+              14,
+              13,
+              13,
+              12,
+              12
+            ],
+            "Inflicts Slow after the Divine Tree disappears.": [
+              "55%",
+              "60%",
+              "65%",
+              "70%",
+              "75%"
+            ],
+            "消耗": [
+              45,
+              50,
+              55,
+              60,
+              65
+            ]
+          }
+        }
+      },
+      "是否长期限免": false,
+      "式神圆头像_新": "gui2/res/head_circle/1087.png",
+      "式神新全身像": "",
+      "式神卡片_新": "gui/res/hero_new/1087.png",
+      "限免开始时间": null,
+      "式神攻略": "Shikigami positioning: Tank#rRecommended route: Top#rStrategy: Casting Ability 1: Twisting Vines to select the divine tree planted by Ability 3 allows for more flexible displacement. The Ultimate Ability's Cursed Roots state reduces own Movement Speed. After enemies have left the attack range, casting again promptly removes the Cursed Roots state.",
+      "前五级推荐加点": [
+        2,
+        1,
+        3,
+        2,
+        2
+      ],
+      "新式神": true,
+      "推荐加点优先级": [
+        4,
+        2,
+        1,
+        3
+      ],
+      "式神标签": "DPS",
+      "cv名字": [
+        "Natsuki Hanae",
+        "Zheng Wu Wen Jie",
+        "Nicholas Roye"
+      ],
+      "式神方头像_新": "gui2/res/head_fang/1087.png",
+      "式神卡片": "gui/res/hero/1087.png",
+      "推荐阴阳术": [
+        47,
+        44,
+        39,
+        4,
+        13,
+        28,
+        53
+      ],
+      "式神ID": 1087,
+      "推荐灵咒": [
+        10005,
+        10009
+      ],
+      "推荐装备": {
+        "推荐装备-出门装": [
+          "Swift Boots",
+          "Bronze Scale",
+          "Hermit Kariginu",
+          "Straw Hat"
+        ],
+        "推荐装备-默认方案1-说明": "Top solo, Carry",
+        "推荐装备-默认方案1": [
+          "Vaisravana Drum",
+          "Hagakure Boots",
+          "Soul Grabber",
+          "Mikazuki",
+          "Yata no Kagami",
+          "Demon Mask",
+          "Gates of Amanoiwato",
+          "Hoko Do"
+        ],
+        "推荐装备-防御": [
+          "Sessho-seki Do",
+          "Vaisravana Drum",
+          "Soul Grabber",
+          "Tsukuyomi Do",
+          "Hoko Do",
+          "Gold Hachiman Do",
+          "Ninth Heaven Wing",
+          "Sanzu River Lantern",
+          "Lucky Parasol",
+          "Yata no Kagami"
+        ],
+        "推荐装备-默认方案2": [
+          "Vaisravana Drum",
+          "Hagakure Boots",
+          "Soul Grabber",
+          "Hoko Do",
+          "Yata no Kagami",
+          "Gold Hachiman Do",
+          "Gates of Amanoiwato",
+          "God-killing Halberd"
+        ],
+        "推荐装备-默认方案3-说明": "Burst",
+        "推荐装备-默认方案2-说明": "Survivability",
+        "推荐装备-默认方案3": [
+          "Vaisravana Drum",
+          "Takemikazuchi Boots",
+          "Ninth Heaven Wing",
+          "Yata no Kagami",
+          "Sanzu River Lantern",
+          "Gold Hachiman Do",
+          "Gates of Amanoiwato",
+          "God-killing Halberd"
+        ],
+        "推荐装备-进攻": [
+          "Onimaru",
+          "Otenta",
+          "Juzumaru",
+          "Heaven's Thunder",
+          "Omoikane's Bow",
+          "Hawk Bow",
+          "Amanozako's Bow",
+          "Chidori Twin Swords",
+          "Kusarigama",
+          "Nature's Glory",
+          "Grass-cutting Sword",
+          "Mikazuki",
+          "Tsurumaru",
+          "Bonerotter",
+          "Greater Devourer Ball",
+          "Raja Warhammer",
+          "Eye of Orochi"
+        ]
+      },
+      "式神方头像": "gui/res/head_fang/1087.png",
+      "评分": {
+        "输出": 3,
+        "控制": 4,
+        "生存": 4,
+        "增益": 2,
+        "敏捷": 2,
+        "难度": 3
+      },
+      "是否限免": false,
+      "限免结束时间": null
+    },
     "Kani Hime": {
       "式神定位": [
         "守"
@@ -22147,7 +22547,7 @@
         "二技能": {
           "图标路径": "gui/res/skill/1092002.png",
           "技能ID": 109221,
-          "技能描述": "Kani Hime focuses her power in her crab claw for a 4.5 seconds, during which she gains a 30% Movement Speed bonus, and her next basic attack will grip the enemy tightly to deal 80#c9e45fa(+130%Attack) #n  #Rphysical damage#n. If she grips an enemy shikigami, she will be linked to them by a water current, making them unable to use displacement abilities.",
+          "技能描述": "Kani Hime focuses her power in her crab claw for a 3 seconds, during which she gains a 30% Movement Speed bonus, and her next basic attack will grip the enemy tightly to deal 80#c9e45fa(+130%Attack) #n  #Rphysical damage#n. If she grips an enemy shikigami, she will be linked to them by a water current, making them unable to use displacement abilities.",
           "技能名称": "Vice Grip!",
           "技能成长": {
             "Base Damage": [
@@ -22519,7 +22919,7 @@
         "天生被动": {
           "图标路径": "gui/res/skill/1043000.png",
           "技能ID": 104351,
-          "技能描述": "Passive effect: Tanuki will jump towards the location of the target with the next basic attack, dealing 15#c9e45fa(+100%Attack) #n #c0095cc(+15*Current Level) #n  #Rphysical damage#n and inflicting a 45% Slow effect for 2 seconds on enemies within range when he lands. #rThis effect has a cooldown of 12 seconds, which will reduce by 3 seconds for every 6 shikigami levels, to a minimum of 6 seconds.",
+          "技能描述": "Passive effect: Tanuki will jump towards the location of the target with the next basic attack, dealing 15#c9e45fa(+100%Attack) #n #c0095cc(+15*Current Level) #n  #Rphysical damage#n and inflicting a 50% Slow effect for 2 seconds on enemies within range when he lands. #rThis effect has a cooldown of 12 seconds, which will reduce by 3 seconds for every 6 shikigami levels, to a minimum of 6 seconds.",
           "技能名称": "Wine Power",
           "技能成长": {
             "冷却": [
@@ -22533,15 +22933,15 @@
         "二技能": {
           "图标路径": "gui/res/skill/1043001.png",
           "技能ID": 104311,
-          "技能描述": "Tanuki spits fire in the designated direction after drinking alcohol, dealing 60#c39b54a(+40%Ability Power) #n #cffba35(+6%TargetMax HP) #n  #Umagic damage#n to all enemies in an arc area. Damage dealt to monsters will be increased to 115%. #rWhen under the effect of #OCentury Brew#n, the fire he spits will continue to burn on the ground, dealing 5#c39b54a(+10%Ability Power) #n #cffba35(+1.2%TargetMax HP) #n  #Umagic damage#n per second and inflicting a 35% Slow effect on enemies in the fire. The damage dealt will have a limit on monsters.",
+          "技能描述": "Tanuki spits fire in the designated direction after drinking alcohol, dealing 70#c39b54a(+40%Ability Power) #n #c0095cc(+25*Current Level) #n  #Umagic damage#n to all enemies in an arc area. Damage dealt to monsters will be increased to 115%. #rWhen under the effect of #OCentury Brew#n, the fire he spits will continue to burn on the ground, dealing 5#c39b54a(+10%Ability Power) #n #c0095cc(+10*Current Level) #n  #Umagic damage#n per second and inflicting a 35% Slow effect on enemies in the fire. The damage dealt will have a limit on monsters.",
           "技能名称": "Fiery Moonshine",
           "技能成长": {
             "Burn damage": [
               "5",
-              "10",
               "15",
-              "20",
-              "25"
+              "25",
+              "35",
+              "45"
             ],
             "冷却": [
               7,
@@ -22551,11 +22951,11 @@
               5
             ],
             "HP Percent": [
-              "6%",
-              "7%",
-              "8%",
-              "9%",
-              "10%"
+              "25",
+              "25",
+              "25",
+              "25",
+              "25"
             ],
             "消耗": [
               40,
@@ -22565,11 +22965,11 @@
               60
             ],
             "Base Damage": [
-              "60",
-              "95",
-              "130",
-              "165",
-              "200"
+              "70",
+              "120",
+              "170",
+              "220",
+              "270"
             ]
           }
         },
@@ -22599,7 +22999,7 @@
         "一技能": {
           "图标路径": "gui/res/skill/1043002.png",
           "技能ID": 104321,
-          "技能描述": "Tanuki guzzles strong liquor, continuously enhancing his defensive capabilities, increasing his Armor and Magic Resist by 16 for each layer, to a maximum of 5 layers. Tanuki falls to the ground in a drunken stupor after using the ability a second time or after 2 seconds, dealing 140#c39b54a(+40%Ability Power) #n  #Umagic damage#n and inflicting a 1.5 seconds Stun on nearby enemies. #rWhen under the effect of #OCentury Brew#n, the resistance increase is tripled, and Movement Speed is increased by 35%.",
+          "技能描述": "Tanuki guzzles strong liquor, continuously enhancing his defensive capabilities, increasing his Armor and Magic Resist by 16 for each layer, to a maximum of 5 layers. Tanuki falls to the ground in a drunken stupor after using the ability a second time or after 2 seconds, dealing 140#c39b54a(+40%Ability Power) #n  #Umagic damage#n and inflicting a 1.5-second Stun on nearby enemies. #rWhen under the effect of #OCentury Brew#n, the Armor and Magic Resist increase is 2.5 times, and Movement Speed is increased by 35%.",
           "技能名称": "Drunken Stupor",
           "技能成长": {
             "Increase Resist": [
@@ -22922,7 +23322,7 @@
         "二技能": {
           "图标路径": "gui/res/skill/1050002.png",
           "技能ID": 105021,
-          "技能描述": "Active effect: Kusa casts in the designated direction, dealing 30#c39b54a(+60%Ability Power) #n #cffba35(+5%TargetMax HP) #n  #Umagic damage#n to a maximum of 3 enemies within range, with a maximum of 500 #Umagic damage#n to monsters.#rFor each enemy shikigami hit, Kusa gains a stack of Demon Force, which increases her Magic Damage by 10% and Armor and Magic Resist by 4#c0095cc(+0.4*Current Level) #n  for 10 seconds. This can be stacked up to 6 times.#rThe ability will restore 40#c39b54a(+20%Ability Power) #n #c39b54a#n  #GHP#n to Kusa every time it hits an enemy shikigami, and 15%*40#c39b54a(+20%Ability Power) #n #c39b54a#n  HP will be restored if it hits a non-shikigami unit, up to a maximum of 200%*40#c39b54a(+20%Ability Power) #n #c39b54a#n  HP in total.#r",
+          "技能描述": "Active: Kusa casts in a designated direction, dealing 30#c39b54a(+60%Ability Power) #n #cffba35(+5%TargetMax HP) #n  #Umagic damage#n to a maximum of 3 enemies within range and up to 500 #Umagic damage#n to monsters. If the skill hits an enemy shikigami, Kusa gains a stack of Demon Force, increasing magic damage by 20% and Armor and Magic Resist by 8#c0095cc(+0.8*Current Level) #n  for 10 seconds, up to 3 layers. Each time the skill hits an enemy shikigami, Kusa restores 40#c39b54a(+20%Ability Power) #n #c39b54a#n  HP, and 15%*40#c39b54a(+20%Ability Power) #n #c39b54a#n  HP for non-Shikigami units, a maximum of 200%*40#c39b54a(+20%Ability Power) #n #c39b54a#n  HP can be restored.",
           "技能名称": "Absorb",
           "技能成长": {
             "Base Damage": [
@@ -22981,7 +23381,7 @@
         "一技能": {
           "图标路径": "gui/res/skill/1050001.png",
           "技能ID": 105011,
-          "技能描述": "Kusa adds a Seed of Life for 4 seconds to the designated ally shikigami. During this period, the Seed of Life will bloom when the target receives damage or deals damage to enemy shikigami, restoring 45#c39b54a(+27.5%Ability Power) #n  #GHP#n to the target. Afterward, the seed will be passed to the nearest ally shikigami within 725 yards, up to a maximum of 3 times.",
+          "技能描述": "Kusa adds a Seed of Life to the designated ally shikigami for 4 seconds. During this period, the Seed of Life will bloom when the target receives damage or uses basic attacks to deal damage to enemy shikigami, restoring 60#c39b54a(+40%Ability Power) #n  #GHP#n to the target. Afterward, the seed will be passed to the nearest ally shikigami within 725 yards, up to a maximum of 2 times.#rIf Kusa adds a Seed of Life to herself, dealing damage to enemy shikigami can also make her Seed of Life bloom.",
           "技能名称": "Flower Power",
           "技能成长": {
             "冷却": [
@@ -22999,18 +23399,18 @@
               100
             ],
             "Base Regen": [
-              "45",
-              "65",
+              "60",
               "85",
-              "105",
-              "125"
+              "110",
+              "135",
+              "160"
             ]
           }
         },
         "三技能": {
           "图标路径": "gui/res/skill/1050003.png",
           "技能ID": 105031,
-          "技能描述": "Kusa summons a vine from the ground at the designated position that deals 100#c39b54a(+50%Ability Power) #n  #Umagic damage#n, immobilizes them and reduces their damage by 35% for 0.75 seconds.",
+          "技能描述": "Kusa summons a vine from the ground at the designated position that deals 100#c39b54a(+50%Ability Power) #n  #Umagic damage#n, immobilizes them for 0.75 seconds.",
           "技能名称": "Tangle Root",
           "技能成长": {
             "Base Damage": [
@@ -23270,6 +23670,14 @@
           "皮肤全身像": "gui/res/hero_quan/104507.png",
           "皮肤头像": "gui/res/head_fang/104507.png",
           "皮肤头像_新": "gui2/res/head_fang/104507.png"
+        },
+        {
+          "皮肤名称": "A Dream of Stars",
+          "皮肤全身像_新": "gui/res/hero_quan2/104508.png",
+          "皮肤ID": 104508,
+          "皮肤全身像": "gui/res/hero_quan/104508.png",
+          "皮肤头像": "gui/res/head_fang/104508.png",
+          "皮肤头像_新": "gui2/res/head_fang/104508.png"
         }
       ],
       "推荐加点顺序": [
@@ -23695,7 +24103,7 @@
         "二技能": {
           "图标路径": "gui/res/skill/1015002.png",
           "技能ID": 101521,
-          "技能描述": "Yuki Onna throws a snowball in the designated direction. The snowball deals 100#c39b54a(+50%Ability Power) #n  #Umagic damage#n to enemies it hits. When an enemy shikigami is hit or the snowball has traveled the maximum distance, it explodes, dealing up to 120#c39b54a(+85%Ability Power) #n  #Umagic damage#n to the target and nearby enemies.",
+          "技能描述": "Yuki Onna throws a snowball in the designated direction. The snowball deals 100#c39b54a(+50%Ability Power) #n  #Umagic damage#n to enemies it hits. When an enemy shikigami is hit or the snowball has traveled the maximum distance, it explodes, dealing up to 120#c39b54a(+100%Ability Power) #n  #Umagic damage#n to the target and nearby enemies.",
           "技能名称": "Marshmallow",
           "技能成长": {
             "Base Damage": [
@@ -23754,7 +24162,7 @@
         "一技能": {
           "图标路径": "gui/res/skill/1015001.png",
           "技能ID": 101511,
-          "技能描述": "Yuki Onna creates ice crystals that fall on the designated area, dealing 60#c39b54a(+25%Ability Power) #n  #Umagic damage#n and inflicting a 0.35-second Stun effect to enemies in range. After a short delay, the ice crystals will explode, dealing 90#c39b54a(+45%Ability Power) #n  #Umagic damage#n and inflicting a 1.2-second Freeze effect to enemies in range. #rThe duration of Freeze will decrease if Yuki Onna consecutively freezes the same target.",
+          "技能描述": "Yuki Onna creates ice crystals that fall on the designated area, dealing 60#c39b54a(+25%Ability Power) #n  #Umagic damage#n and inflicting a 0.35-second Stun effect to enemies in range. After a short delay, the ice crystals will explode, dealing 90#c39b54a(+55%Ability Power) #n  #Umagic damage#n and inflicting a 1.2-second Freeze effect to enemies in range. #rThe duration of Freeze will decrease if Yuki Onna consecutively freezes the same target.",
           "技能名称": "Dusk Snows",
           "技能成长": {
             "Base Damage": [
@@ -24035,7 +24443,7 @@
           "图标路径": "gui/res/skill/112600.png",
           "技能ID": 112651,
           "技能描述": "Inryo sets a law with his words, gaining 1 point of Discipline Power every 6 seconds (the interval is decreased by 0.1 seconds for each level-up) or when a nearby enemy shikigami casts a displacement ability, and gaining 2 points of Discipline Power when he controls an enemy shikigami. Upon reaching 6 points of Discipline Power, Inryo's next attack deals 15#c39b54a(+50%Ability Power) #n #cffba35(+4% (Every 125Ability Power increases 1%)TargetMax HP) #n  bonus magic damage and he gains a 15% Haste effect for 4 seconds, 15#c0095cc(+6.5*Current Level) #n  Armor Resist, and 30#c0095cc(+5*Current Level) #n  Magic Resist.",
-          "技能名称": "Decree",
+          "技能名称": "Inryo's Trait",
           "技能成长": {
             "冷却": [],
             "消耗": [
@@ -24115,8 +24523,8 @@
         "一技能": {
           "图标路径": "gui/res/skill/112601.png",
           "技能ID": 112611,
-          "技能描述": "Inryo throws a bamboo scroll in the designated direction, dealing 65#c39b54a(+45%Ability Power) #n  magic damage and inflicting a 1.5 Slow effect for 50% second(s) on all enemies hit(Decays with distance, causing 20% ​​slow at the farthest end). Also, inflicts a Decorum mark on enemy shikigami hit. If the enemy target marked with Decorum is still near Inryo within 1.8 second(s), the Decorum mark enters the Punishment state. When there is a mark under the Punishment state nearby, Inryo's next basic attack will trigger all nearby Decorum marks, dealing 65#c39b54a(+60%Ability Power) #n  magic damage to targets inflicted with the mark and gaining a 70#c0095cc(+15*Current Level) #n #c39b54a(+35%Ability Power) #n  shield.#rWhen an enemy shikigami marked with Decorum casts a displacement ability, the mark will immediately enter the Punishment state.#rThis ability deals 140% damage to minions.",
-          "技能名称": "Rule",
+          "技能描述": "Inryo throws a bamboo scroll in the designated direction, dealing 65#c39b54a(+45%Ability Power) #n  magic damage and inflicting a 1.5 Slow effect for 50% second(s) on all enemies hit(Decays with distance, causing 20% ​​slow at the farthest end). Also, inflicts a Decorum mark on enemy shikigami hit. If the enemy target marked with Decorum is still within 85 yards of Inryo within 1.8 second(s), the Decorum mark enters the Punishment state. When there is a mark under the Punishment state nearby, Inryo's next basic attack will trigger all nearby Decorum marks, dealing 65#c39b54a(+60%Ability Power) #n  magic damage to targets inflicted with the mark and gaining a 70#c0095cc(+15*Current Level) #n #c39b54a(+35%Ability Power) #n  shield.#rWhen an enemy shikigami marked with Decorum casts a displacement ability, the mark will immediately enter the Punishment state.#rThis ability deals 140% damage to minions.",
+          "技能名称": "Mandate",
           "技能成长": {
             "Base Damage": [
               "65",
@@ -24152,7 +24560,7 @@
           "图标路径": "gui/res/skill/112603.png",
           "技能ID": 112631,
           "技能描述": "Inryo releases Martial Law in the designated direction, dealing 80#c39b54a(+40%Ability Power) #n  magic damage and inflicting an 90%slow effect to enemy targets hit for 0.2 seconds. Upon hitting an enemy shikigami, cast this ability again within 3 seconds to control the enemy shikigami to move in the designated direction a certain distance. When controlling the enemy shikigami to move in the direction of the Realm, increases the displacement distance.",
-          "技能名称": "Mandate",
+          "技能名称": "Rule",
           "技能成长": {
             "Base Damage": [
               "80",
@@ -24191,7 +24599,7 @@
         1,
         1
       ],
-      "新式神": true,
+      "新式神": false,
       "推荐加点优先级": [
         4,
         1,
@@ -25155,7 +25563,7 @@
         "天生被动": {
           "图标路径": "gui/res/skill/1049000.png",
           "技能ID": 104951,
-          "技能描述": "Passive effect: Kyuumei Neko's Crit Rate is increased by 3% each time she levels up, up to a maximum of 50% Crit Rate. However, her crits will deal 155% of damage (Crits normally deal 200% damage). Furthermore, the additional damage when the Seductress equipment effect is triggered will be reduced to the original 40%.#rEvery time she crits, she gains 1 Tail mark, which can be stacked up to 6 times. Each stack increases Movement Speed by 1.5%. In the event that Kyuumei Neko sustains fatal damage, if she has more than 4 stacks of Tail mark, all Tail marks will be consumed and she will resurrect on the same spot a short time later with [#cffba35(+6%Max HP) #n  x number of Tail marks] HP. Effect has a cooldown of 200 seconds.",
+          "技能描述": "Passive effect: Kyuumei Neko's Crit Rate is increased by 3% each time she levels up, up to a maximum of 50% Crit Rate. However, her crits will deal 155% of damage (Crits normally deal 200% damage). Furthermore, the additional damage when the Seductress equipment effect is triggered will be reduced to the original 40%.#rEvery time she uses a basic attack or Ability 1's enhanced basic attack, she gains 1 Tail mark, which can be stacked up to 6 times. Each stack increases Movement Speed by 1%. In the event that Kyuumei Neko sustains fatal damage, if she has more than 4 stacks of Tail mark, all Tail marks will be consumed and she will resurrect on the same spot a short time later with [#cffba35(+6%Max HP) #n  x number of Tail marks] HP. Effect has a cooldown of 200 seconds.",
           "技能名称": "Nine Lives",
           "技能成长": {
             "冷却": [],
@@ -25167,7 +25575,7 @@
         "二技能": {
           "图标路径": "gui/res/skill/1049001.png",
           "技能ID": 104921,
-          "技能描述": "Kyuumei Neko summons a phantom to strike with its claw in the designated direction 3 times. The 1st claw deals 25#c9e45fa(+20%Attack) #n  #Rphysical damage#n, the 2nd claw deals 25#c9e45fa(+20%Attack) #n  #Rphysical damage#n, and the 3rd claw deals 50#c9e45fa(+40%Attack) #n  #Rphysical damage#n. Claws have basic attack effects and can crit.#r#GUnder Explosive Fur state, Attack Speed  will increase. The 3rd claw will crit.",
+          "技能描述": "Kyuumei Neko summons a phantom to strike with its claw in the designated direction 3 times. The 1st claw deals 35#c9e45fa(+20%Attack) #n  #Rphysical damage#n, the 2nd claw deals 35#c9e45fa(+20%Attack) #n  #Rphysical damage#n, and the 3rd claw deals 70#c9e45fa(+40%Attack) #n  #Rphysical damage#n. Claws have basic attack effects and can crit.#r#GUnder Explosive Fur state, Attack Speed  will increase. The 3rd claw will crit.",
           "技能名称": "Razor Claws",
           "技能成长": {
             "冷却": [
@@ -25185,17 +25593,17 @@
               50
             ],
             "3rd Claw Damage": [
-              "50",
-              "90",
-              "130",
-              "170",
+              "70",
+              "105",
+              "140",
+              "175",
               "210"
             ],
             "1st 2 Claws Damage": [
-              "25",
-              "45",
-              "65",
-              "85",
+              "35",
+              "52.5",
+              "70",
+              "87.5",
               "105"
             ]
           }
@@ -25241,7 +25649,7 @@
         "一技能": {
           "图标路径": "gui/res/skill/1049003.png",
           "技能ID": 104911,
-          "技能描述": "Kyuumei Neko enhances herself so that her next basic attack deals an additional 40#c9e45fa(+130%Attack) #n  #Rphysical damage#n and inflicts a 80% Slow effect to the enemy for 1 seconds.#r#GUnder Explosive Fur state, the Slow effect will become Immobilize.",
+          "技能描述": "Kyuumei Neko enhances herself so that her next basic attack becomes a two-hit combo that deals a total of 40#c9e45fa(+130%Attack) #n  #Rphysical damage#n and inflicts a Immobilize effect to the enemy for 0.5 seconds.#r#GUnder the [Explosive Fur] state, the duration of Immobilize increases to 0.85 seconds.",
           "技能名称": "Revenge",
           "技能成长": {
             "Base Damage ": [
@@ -25540,7 +25948,7 @@
         "天生被动": {
           "图标路径": "gui/res/skill/1085000.png",
           "技能ID": 108551,
-          "技能描述": "Passive effect: When attacking the enemy from behind, Ittan-momen's attacks ignore (10 + 2 x Level) Magic Resist and add 1 Wrap mark. Once the marks reach 3 stacks, they will immediately explode, dealing 30#c0095cc(+16*Current Level) #n #c39b54a(+30%Ability Power) #n #cffba35(+12% (Every 150Ability Power increases 1%)TargetHP Lost ) #n  #UMagic Damage#n to the target. #rIf an enemy shikigami's Wrap marks explode, Ittan-momen will receive 1 Cotton Rope. If this damage results in a seal, then a short period of time later, enemies surrounding the target will be inflicted with Fear for 1.2 seconds.",
+          "技能描述": "Passive effect: When attacking the enemy from behind, Ittan-momen's attacks ignore (10 + 2 x Level) Magic Resist and add 1 Wrap mark. Once the marks reach 3 stacks, they will immediately explode, dealing 30#c0095cc(+16*Current Level) #n #c39b54a(+30%Ability Power) #n #cffba35(+12% (Every 150Ability Power increases 1%)TargetHP Lost ) #n  #Umagic damage#n to the target. This can take effect without having to attack monsters from behind.#rIf an enemy shikigami's Wrap marks explode, Ittan-momen will receive 1 Cotton Rope. If this damage results in a seal, then a short period of time later, enemies surrounding the target will be inflicted with Fear for 1.2 seconds.",
           "技能名称": "Entanglement",
           "技能成长": {
             "冷却": [],
@@ -26988,6 +27396,14 @@
           "皮肤全身像": "gui/res/hero_quan/102704.png",
           "皮肤头像": "gui/res/head_fang/102704.png",
           "皮肤头像_新": "gui2/res/head_fang/102704.png"
+        },
+        {
+          "皮肤名称": "Fallen Relict",
+          "皮肤全身像_新": "gui/res/hero_quan2/102705.png",
+          "皮肤ID": 102705,
+          "皮肤全身像": "gui/res/hero_quan/102705.png",
+          "皮肤头像": "gui/res/head_fang/102705.png",
+          "皮肤头像_新": "gui2/res/head_fang/102705.png"
         }
       ],
       "推荐加点顺序": [
@@ -27086,7 +27502,7 @@
         "一技能": {
           "图标路径": "gui/res/skill/1027001.png",
           "技能ID": 102711,
-          "技能描述": "Passive trigger: Kuro is obsessed with taking revenge, and has at least a 40% chance of countering after taking damage. Counters deal 60#cffba35(+2.75%BonusMax HP) #n #c9e45fa(+60%BonusAttack) #n  #Rphysical damage#n to all enemies in a 325-yard radius. #rEvery 1% HP Kuro loses increases the chance of countering by 0.5%, up to a maximum of 40%.",
+          "技能描述": "Passive trigger: Kuro is obsessed with taking revenge, and has at least a 40% chance of countering after taking damage. Counters deal 60#cffba35(+2.25%BonusMax HP) #n #c9e45fa(+60%BonusAttack) #n  #Rphysical damage#n to all enemies in a 325-yard radius. #rEvery 1% HP Kuro loses increases the chance of countering by 0.5%, up to a maximum of 40%.",
           "技能名称": "Vengeful Cut",
           "技能成长": {
             "Base Damage": [
@@ -28927,7 +29343,7 @@
         "四技能": {
           "图标路径": "gui/res/skill/1016000.png",
           "技能ID": 101641,
-          "技能描述": "Active effect: Hone Onna performs a powerful thrust in the designated direction. When the thrust ends or upon hitting an enemy shikigami or monster, she deals 240#c9e45fa(+130%BonusAttack) #n  #Rphysical damage#n to enemies within range. Damage dealt varies according to the target's ratio of lost HP, up to a maximum of 1.5x base damage.#rPassive trigger: Defeating or assisting to defeat an enemy shikigami resets the cooldown of Hone Onna's other abilities.",
+          "技能描述": "Active effect: Hone Onna performs a powerful thrust in the designated direction, during which she can't be selected. When the thrust ends, she deals 240#c9e45fa(+130%BonusAttack) #n  #Rphysical damage#n to enemies within range. Damage dealt varies according to the target's percentage of lost HP, up to a maximum of 1.5x base damage.#rPassive trigger: Defeating or assisting to defeat an enemy shikigami resets the cooldown of Hone Onna's other abilities.",
           "技能名称": "Resentment",
           "技能成长": {
             "冷却": [
@@ -29632,13 +30048,13 @@
         "四技能": {
           "图标路径": "gui/res/skill/1098004_1.png",
           "技能ID": 109841,
-          "技能描述": "Tenjo Kudari summons a spirit house that can be attacked. Ally shikigami can enter it. Once an ally shikigami enters the spirit house, their abilities will be locked and they will become untargetable. When the shikigami chooses to leave the spirit house, they displace a certain distance in the designated direction, gaining 150#c39b54a(+70%Ability Power) #n  Shield for 3 second(s) and a 30% Haste effect that lasts 2 second(s).#rThe spirit house has 1000 Base HP. Every 1 Ability Power increases the HP of the spirit house by an additional 8.",
+          "技能描述": "Tenjo Kudari summons a spirit house that can be attacked. Ally shikigami can enter it. Once an ally shikigami enters the spirit house, their abilities will be locked and they will become untargetable. When the shikigami chooses to leave the spirit house, they displace a certain distance in the designated direction, gaining 250#c39b54a(+100%Ability Power) #n  Shield for 3 second(s) and a 30% Haste effect that lasts 2 second(s).#rThe spirit house has 1000 Base HP. Every 1 Ability Power increases the HP of the spirit house by an additional 8.",
           "技能名称": "Rain Shelter",
           "技能成长": {
             "Base Shield": [
-              "150",
               "250",
-              "350"
+              "350",
+              "450"
             ],
             "Spirit House HP": [
               "1000",
@@ -29660,15 +30076,15 @@
         "一技能": {
           "图标路径": "gui/res/skill/1098001.png",
           "技能ID": 109811,
-          "技能描述": "Tenjo Kudari throws a rock at the designated position. If there are any units or terrain in the area where the rock lands, the rock will bounce in the thrown direction up to 2 times. Each bounce increases the damage radius of the rock. The rock deals 90#c39b54a(+60%Ability Power) #n #Umagic damage#n and inflicts a 35%#c39b54a(+0.05%Ability Power) #n  Slow for 1.5 second(s). Repeatedly hitting the same target causes the Slow effect to stack but reduces the subsequent damage dealt by the rock by 90%.",
+          "技能描述": "Tenjo Kudari throws a rock at the designated position. If there are any units or terrain in the area where the rock lands, the rock will bounce in the thrown direction up to 2 times. Each bounce increases the damage radius of the rock. The rock deals 100#c39b54a(+60%Ability Power) #n #Umagic damage#n and inflicts a 35%#c39b54a(+0.05%Ability Power) #n  Slow for 1.5 second(s). Repeatedly hitting the same target causes the Slow effect to stack but reduces the subsequent damage dealt by the rock by 90%.",
           "技能名称": "Rock Throw",
           "技能成长": {
             "Base Damage": [
-              "90",
-              "135",
-              "180",
-              "225",
-              "270"
+              "100",
+              "145",
+              "190",
+              "235",
+              "280"
             ],
             "冷却": [
               10,
@@ -29696,7 +30112,7 @@
         "三技能": {
           "图标路径": "gui/res/skill/1098003.png",
           "技能ID": 109831,
-          "技能描述": "Applies the Joy mark to the selected ally shikigami for 4 second(s). When a shikigami bearing this mark takes damage, 50% of the damage taken will only be calculated after the Joy mark disappears. Damage calculation will not cause the shikigami to be sealed.#rWhile the Joy mark is still applied, if there is a delay in damage calculation, the ally shikigami bearing the mark restores 40#c39b54a(+30%Ability Power) #n #c0095cc(+2.5*Current Level) #n  #GHP#n when dealing damage to enemy shikigami. This effect triggers up to a maximum of 4 time(s) and has a 0.5 second(s) built-in cooldown.#r",
+          "技能描述": "Applies the Joy mark to the selected ally shikigami for 5 second(s). When a shikigami bearing this mark takes damage, 50% of the damage taken will only be calculated after the Joy mark disappears. Damage calculation will not cause the shikigami to be sealed.#rWhile the Joy mark is still applied, if there is a delay in damage calculation, the ally shikigami bearing the mark restores 60#c39b54a(+45%Ability Power) #n #c0095cc(+4*Current Level) #n  #GHP#n when dealing damage to enemy shikigami. This effect triggers up to a maximum of 4 time(s) and has a 0.5 second(s) built-in cooldown.#r",
           "技能名称": "Joy",
           "技能成长": {
             "冷却": [
@@ -29714,11 +30130,11 @@
               50
             ],
             "HP Regen": [
-              "40",
-              "45",
-              "50",
-              "55",
-              "60"
+              "60",
+              "65",
+              "70",
+              "75",
+              "80"
             ],
             "Delayed Calculation Ratio": [
               "50%",
@@ -29750,10 +30166,10 @@
         2,
         3
       ],
-      "式神标签": "Support/control",
+      "式神标签": "辅助/控制",
       "cv名字": [
         "Yui Ogura",
-        "Liu Wen",
+        "刘雯",
         "Suzie Yeung"
       ],
       "式神方头像_新": "gui2/res/head_fang/1098.png",
@@ -29781,7 +30197,7 @@
           "Stamp of Seimei",
           "Wealth Amulet"
         ],
-        "推荐装备-默认方案1-说明": "Support, Harass",
+        "推荐装备-默认方案1-说明": "辅助、消耗",
         "推荐装备-默认方案1": [
           "Asakusa Glow",
           "Boots of Purity",
@@ -30655,6 +31071,14 @@
           "皮肤全身像": "gui/res/hero_quan/108804.png",
           "皮肤头像": "gui/res/head_fang/108804.png",
           "皮肤头像_新": "gui2/res/head_fang/108804.png"
+        },
+        {
+          "皮肤名称": "Takoyaki Fun",
+          "皮肤全身像_新": "gui/res/hero_quan2/108805.png",
+          "皮肤ID": 108805,
+          "皮肤全身像": "gui/res/hero_quan/108805.png",
+          "皮肤头像": "gui/res/head_fang/108805.png",
+          "皮肤头像_新": "gui2/res/head_fang/108805.png"
         }
       ],
       "推荐加点顺序": [
@@ -30727,10 +31151,10 @@
             ],
             "Break Extent": [
               "5%",
-              "11.25%",
-              "17.5%",
-              "23.75%",
-              "30%"
+              "12.5%",
+              "20%",
+              "27.5%",
+              "35%"
             ]
           }
         },
@@ -30741,8 +31165,7 @@
           "技能名称": "Insurance Policy",
           "技能成长": {
             "钱币上限": [
-              "12",
-              "14"
+              "12"
             ],
             "Base Damage ": [
               "35",
@@ -30750,7 +31173,8 @@
               "65"
             ],
             "Coin Limit": [
-              "13"
+              "13",
+              "14"
             ],
             "消耗": [
               60,
@@ -31404,6 +31828,14 @@
           "皮肤全身像": "gui/res/hero_quan/100107.png",
           "皮肤头像": "gui/res/head_fang/100107.png",
           "皮肤头像_新": "gui2/res/head_fang/100107.png"
+        },
+        {
+          "皮肤名称": "Hope: Homeward Flight",
+          "皮肤全身像_新": "gui/res/hero_quan2/100108.png",
+          "皮肤ID": 100108,
+          "皮肤全身像": "gui/res/hero_quan/100108.png",
+          "皮肤头像": "gui/res/head_fang/100108.png",
+          "皮肤头像_新": "gui2/res/head_fang/100108.png"
         }
       ],
       "推荐加点顺序": [
@@ -31859,7 +32291,7 @@
         "四技能": {
           "图标路径": "gui/res/skill/1013004.png",
           "技能ID": 101341,
-          "技能描述": "Susabi obtains a shield that absorbs 125#c39b54a(+30%Ability Power) #n  damage and summons the Heavenly Punishment to make the meteors continue to attack nearby enemies. When using the skill, every layer of the power of the star and the moon will increase the shield value 6%. Each attack of the meteor causes 90#c39b54a(+25%Ability Power) #n #Umagic damage#n, and each enemy can withstand the maximum ( 3+[Xing Yue Power] number) attacks, the falling speed of meteors increases with the number of [Xing Yue Power], up to twice. #rIf you summon the Heaven Punishment at 5 [Star and Moon Force], it will trigger the Star Realm and increase the shortage of 30% Movement speed.",
+          "技能描述": "Susabi gains a shield that can absorb 125#c39b54a(+30%Ability Power) #n  damage and summons divine justice, raining asteroids down on enemies in his vicinity. Each attack from the asteroids deals 90#c39b54a(+25%Ability Power) #n  #Umagic damage#n.#rIf he has not reached 5 Stellar Energy during Retribution, each Stellar Energy Susabi gains additionally increases the shield by 6%, as well as the entry speed and quantity of asteroids. The entry speed of asteroids increases up to two times and each enemy can be hit up to (3 + number of celestial energy) times. Reaching 5 Stellar Energy triggers Astronomical Boundary and increases Susabi's Movement Speed by 30%.",
           "技能名称": "Stellar Justice",
           "技能成长": {
             "Base Damage": [
@@ -32902,7 +33334,7 @@
         "二技能": {
           "图标路径": "gui/res/skill/1012002.png",
           "技能ID": 101221,
-          "技能描述": "Vampire bats summoned by Vampira fly in the designated direction, dealing 90#c39b54a(+60%Ability Power) #n  #Umagic damage#n to enemies in their path. 10#c39b54a(+7.5%Ability Power) #n  HP is recovered for each hit on an enemy. This effect is multiplied by 3 if an enemy shikigami is hit.",
+          "技能描述": "Vampire bats summoned by Vampira fly in the designated direction, dealing 90#c39b54a(+45%Ability Power) #n  #Umagic damage#n to enemies in their path. 10#c39b54a(+15%Ability Power) #n  HP is recovered for each hit on an enemy. This effect is multiplied by 3 if an enemy shikigami is hit.",
           "技能名称": "Blood Boost",
           "技能成长": {
             "Base Damage": [
@@ -32938,7 +33370,7 @@
         "四技能": {
           "图标路径": "gui/res/skill/1012004.png",
           "技能ID": 101241,
-          "技能描述": "The vampire avatar, a vampire bat, instantly appears at the target location, inflicting 350#c39b54a(+65%Ability Power) #n #UMagic Damage#n on enemies within the range. At the same time, the cooldown of the skill [Blood Boost] is halved within 12 seconds. , And gain 35% movement speed bonus when moving towards the enemy god.",
+          "技能描述": "Vampira transforms into a swarm of vampire bats at the target's position, dealing 350#c39b54a(+65%Ability Power) #n  #Umagic damage#n to enemies within range. The cooldown of Blood Boost is halved for the next 12 seconds and when she moves toward enemy shikigami, she will gain a Movement Speed bonus of 35%.",
           "技能名称": "Blood Embrace",
           "技能成长": {
             "Base Damage": [
@@ -32956,11 +33388,6 @@
               "40%",
               "45%"
             ],
-            "冷却缩减秒数": [
-              "1",
-              "4",
-              "7"
-            ],
             "消耗": [
               0,
               0,
@@ -32971,7 +33398,7 @@
         "一技能": {
           "图标路径": "gui/res/skill/1012001.png",
           "技能ID": 101211,
-          "技能描述": "Vampira summons bats to continuously attack the target. When the target takes damage from Vampira's basic attacks or abilities, the bats attacking them will become enhanced. Blood Boost and Blood Embrace provide the bats with additional enhancement stacks on hit.#rSubsequent use: Vampira summons the bats attacking the target back, dealing #Umagic damage#n equal to number of enhancement stacks of the bats*10#c0095cc(+3*Current Level) #n #c39b54a(+10%Ability Power) #n  to the target and recovering #GHP#n equal to number of enhancement stacks of the bats*5#cffba35(+0.9%(+0.05%*Current Level)BonusMax HP) #n #c39b54a(+8%Ability Power) #n .",
+          "技能描述": "Passive: When Vampira's basic attacks or abilities deal damage to enemy shikigami or large monsters, she summons a bat to continuously attack the target. Attacking the target again afterwards enhances the bat. Blood Boost and Blood Embrace provide the bat with additional enhancement stacks on hit. Active: Vampira recalls all bats attached to targets in range, dealing #Umagic damage#n equal to the number of enhancement stacks on the bats*10#c0095cc(+3*Current Level) #n #c39b54a(+10%Ability Power) #n  to the targets and recovering #GHP#n equal to the number of enhancement stacks on the bats*5#cffba35(+0.55%(+0.015%*Current Level)BonusMax HP) #n #c39b54a(+4%Ability Power) #n .",
           "技能名称": "Blood Bats",
           "技能成长": {
             "Base Damage": [
@@ -32986,7 +33413,7 @@
               11,
               10,
               9,
-              8
+              9
             ],
             "消耗": [
               null,
@@ -33182,7 +33609,7 @@
         "生命值": 860
       },
       "推荐分路": "中",
-      "式神传记": "Being a Deva nobility, this wasn't my first time stepping into the royal hall.",
+      "式神传记": "身为天人贵族，我并非第一次进入王殿。",
       "式神全身像": "gui/res/hero_quan/1118.png",
       "式神钻石头像": "gui/res/head_diamond/1118.png",
       "式神属性成长": {
@@ -33392,7 +33819,7 @@
       "式神新全身像": "",
       "式神卡片_新": "gui/res/hero_new/1118.png",
       "限免开始时间": null,
-      "式神攻略": "Shikigami positioning: Mage#rRecommended route: Middle#rStrategy: Consecutively hit enemies with abilities to continuously stack seals from Trait: Golden Lotus and inflict powerful control effects.#rAdept use of Ability 3: Ten Great Virtues' clones and the Invisibility effect can confuse enemies and deal damage with recovery abilities or allow a safe escape.",
+      "式神攻略": "式神定位：巫#r推荐路线：中路#r使用技巧：连续的技能命中会不断叠加特质中[金莲]印记的层数，以打出强力的控制效果。#r灵活使用三技能[十善业道]制作的分身和隐身效果，可以用于迷惑对手，并造成复数技能伤害或是逃生。",
       "前五级推荐加点": [
         1,
         2,
@@ -33409,8 +33836,8 @@
       ],
       "式神标签": "DPS/Control",
       "cv名字": [
-        "Hiroshi Kamiya",
-        "Lu Lifeng",
+        "神谷浩史",
+        "卢力峰",
         "Jason Spisak"
       ],
       "式神方头像_新": "gui2/res/head_fang/1118.png",
@@ -34767,7 +35194,7 @@
         "四技能": {
           "图标路径": "gui/res/skill/1058004.png",
           "技能ID": 105841,
-          "技能描述": "Momo creates a realm in a specified location for 6 seconds and forms blossom seals in  0, 2, 4 seconds after the realm is created. During the realm duration, if ally shikigami in the realm is sealed, 1 seal will be used to revive the sealed ally instantly with restoring 200#c39b54a(+60%Ability Power) #n #cffba35(+15% (Every 40Ability Power increases 1%)TargetMax HP) #n  #GHP#n.",
+          "技能描述": "Momo creates a realm in a specified location for 6 seconds and instantly forms a three blossom seal. While the realm is active, if an ally shikigami in the realm is sealed, 1 seal will be used to revive the sealed ally instantly, restoring 200#c39b54a(+60%Ability Power) #n #cffba35(+15% (Every 40Ability Power increases 1%)TargetMax HP) #n  #GHP#n to them.",
           "技能名称": "Revival Blossom",
           "技能成长": {
             "冷却": [
@@ -34989,11 +35416,11 @@
       "式神全身像_新": "gui/res/hero_quan2/1121.png",
       "式神新卡片": "",
       "式神基础属性": {
-        "攻击速度": 0.4,
+        "攻击速度": 0.5,
         "魔法回复": 10,
         "魔法上限": 300,
         "魔抗": 64,
-        "攻速加成": 1.08,
+        "攻速加成": 0.667,
         "物理伤害": 72,
         "生命恢复": 10,
         "攻击后摇": 21,
@@ -35066,7 +35493,7 @@
         "天生被动": {
           "图标路径": "gui/res/skill/112100.png",
           "技能ID": 112151,
-          "技能描述": "Akaname's initial Crit Damage is 150%. When Akaname and nearby ally shikigami are affected by any debuffs, they gain a Stain. This effect has a 6-second cooldown. At specific intervals, a random enemy minion near Akaname will be inflicted with Stain. Each time Akaname removes a Stain, he will provide ally shikigami with a 40#c9e45fa(+30%BonusAttack) #n  Shield that lasts 2 second(s) and also deal 30#c9e45fa(+30%BonusAttack) #n  #Rphysical damage#n to enemies. When Akaname cleans up Stains, he will gain Dirt, and provide himself with a 2% Crit Damage buff. When Akaname collects 10 Dirt, he gains a 5% Crit Rate buff and 50 Coins. The limit for Dirt collection increases by 5 every minute, up to a maximum of 50. Any Dirt that exceeds the limit will be converted to Grime.#r#GIf Akaname defeats minions before purchasing support items, he cannot gain Dirt for the next 10 second(s).#n",
+          "技能描述": "Akaname's initial Crit Damage is 150%. When Akaname and nearby ally shikigami are affected by any debuffs, they gain a Stain. This effect has a 6-second cooldown. At specific intervals, a random enemy minion near Akaname will be inflicted with Stain. Once this enemy minion has been defeated, Akaname gains a Dirt. When Akaname cleans up Stains, he gains Dirt and provides himself with a 2% Crit Damage buff and increases his Attack Range by 1. When Akaname collects 10 Dirt, he gains a 5% Crit Rate buff and 100 Coins. The limit on Dirt collection increases by 5 every minute. Once 50 Dirt is collected, it no longer provides Attack Range, Crit Damage, and Crit Rate buffs or Coins. Past this limit, every 10 Dirt collected will permanently increase Akaname's Attack Speed by 10%.#r#GIf Akaname defeats minions before purchasing support items, he cannot gain Dirt for the next 10 second(s).#n",
           "技能名称": "Master Cleaner",
           "技能成长": {
             "冷却": [],
@@ -35078,7 +35505,7 @@
         "二技能": {
           "图标路径": "gui/res/skill/112102.png",
           "技能ID": 112121,
-          "技能描述": "Akaname pours water to wash the area ahead, creating a water flow that lasts 3 second(s) and cleaning all Stains within the area. The Movement Speed of ally units who pass through the washing area is increased by 35%. If the water hits an enemy unit, deals 50#c9e45fa(+70%Attack) #n  physical damage. If it hits an enemy shikigami, Akaname gains 1 Grime.",
+          "技能描述": "Akaname pours water to wash the area ahead, creating a water flow that lasts 3 second(s) and cleaning all Stains within the area. The Movement Speed of ally units who pass through the washing area is increased by 20%. If the water hits an enemy unit, it deals 50#c9e45fa(+70%Attack) #n  physical damage and inflicts a 35% Slow that lasts 2 second(s). If it hits an enemy shikigami, Akaname gains 1 Grime.",
           "技能名称": "Rinse Out",
           "技能成长": {
             "Base Damage": [
@@ -35107,7 +35534,7 @@
         "四技能": {
           "图标路径": "gui/res/skill/112104.png",
           "技能ID": 112141,
-          "技能描述": "Akaname selects an ally shikigami and grants them a 150#c9e45fa(+30%BonusAttack) #n  Shield (each Dirt increases the Shield by 1%) that lasts 1.5 second(s) and generates a clean area near them that lasts 2 second(s). While the clean area is active, ally shikigami gain a 20% Reduce Control. When the clean area disappears, grants a 240#c9e45fa(+60%BonusAttack) #n #c0095cc(+10*Current Level) #n  Shield (each Dirt increases the Shield by 1%) that lasts 2 second(s) to ally shikigami within range and removes their Stains.",
+          "技能描述": "Akaname selects an ally shikigami and grants them a 150#c9e45fa(+30%BonusAttack) #n  Shield that lasts 2 second(s) and generates a clean area near them that lasts 2 second(s). While the clean area is active, ally shikigami gain a 20% Reduce Control. When the clean area disappears, grants a 240#c9e45fa(+160%BonusAttack) #n  Shield  that lasts 2 second(s) to ally shikigami within range and removes their Stains. This ability's Shield will be increased as Crit Rate increases, up to a maximum increase of 60%.",
           "技能名称": "Nice and Clean",
           "技能成长": {
             "Shield Base": [
@@ -35135,30 +35562,36 @@
         "一技能": {
           "图标路径": "gui/res/skill/112101.png",
           "技能ID": 112116,
-          "技能描述": "Akaname gains Grime when his basic attacks or abilities hit enemy shikigami. After collecting 3 Grime, this ability will be unlocked. Select between the effects of Dirty Up and Rub Down:#rDirty Up: Akaname's next basic attack will be enhanced, increasing his Attack Range, dealing 120#c9e45fa(+130%BonusAttack) #n  #Rphysical damage#n, and inflicting 50% Slow that lasts 1 second(s). When Akaname has 50 Dirt, his basic attack will be enhanced. He will throw three dirt balls that deal 120#c9e45fa(+160%BonusAttack) #n  #Rphysical damage#n, and inflict a 50% Slow that lasts 1 second(s).#rRub Down: Akaname restores 45#c9e45fa(+15%Attack) #n #cffba35(+1%HP Lost ) #n  #GHP#n to ally shikigami within range (each Dirt increases the HP restored by 1%) and dispels all Stains on them.",
+          "技能描述": "Active effect: Akaname restores 25#c9e45fa(+30%Attack) #n #cffba35(+2% (Every 200Attack increases 1%)TargetHP Lost ) #n  #GHP#n to ally shikigami within range and dispels all Stains on them.#rPassive effect: Akaname gains Grime when his basic attacks or abilities hit enemy shikigami. Collecting 3 Grime enhances his next basic attack and increases his Attack Range, dealing 30#c9e45fa(+102%Attack) #n  #Rphysical damage#n to the enemies he hits. Susabi also gains a 50% Movement Speed Bonus that gradually diminishes over 2 second(s). HP restored by this ability will be increased as Crit Rate increases, up to a maximum increase of 100%.",
           "技能名称": "Sweeping Time",
           "技能成长": {
             "Base Damage": [
-              "120",
-              "150",
-              "180",
-              "210",
-              "240"
+              "30",
+              "51",
+              "72",
+              "93",
+              "114"
             ],
-            "冷却": [],
+            "冷却": [
+              17,
+              16,
+              15,
+              14,
+              13
+            ],
             "Base Damage After Enhancement": [
-              "120",
-              "150",
-              "180",
-              "210",
-              "240"
+              "",
+              "",
+              "",
+              "",
+              ""
             ],
             "Base Regen": [
+              "25",
+              "35",
               "45",
-              "75",
-              "105",
-              "135",
-              "165"
+              "55",
+              "65"
             ],
             "消耗": [
               45,
@@ -35172,7 +35605,7 @@
         "三技能": {
           "图标路径": "gui/res/skill/112103.png",
           "技能ID": 112131,
-          "技能描述": "Akaname throws three dirt balls to inflict a 50% Slow effect on enemies within range that lasts 1 second(s). Dirt balls will kick up dust at the designated area 3 times, the range of the dust kicked up expanding each time. The dust deals 17#c9e45fa(+23%Attack) #n  #Rphysical damage#n. Enemies hit by the dust twice in a row will be inflicted with a Stun effect that lasts 0.8 second(s). When this ability hits an enemy shikigami, adds a Stain on them and grants 1 Grime to Akaname.",
+          "技能描述": "Akaname throws three dirt balls to inflict a 50% Slow effect on enemies within range that lasts 1 second(s). Dirt balls will kick up dust at the designated area 3 times, the range of the dust kicked up expanding each time. The dust deals 17#c9e45fa(+20%Attack) #n  #Rphysical damage#n. Enemies hit by the dust twice in a row will be inflicted with a Stun effect that lasts 0.8 second(s). When this ability hits an enemy shikigami, adds a Stain on them and grants 1 Grime to Akaname.",
           "技能名称": "Dirt Begone",
           "技能成长": {
             "Base Damage": [
@@ -36430,6 +36863,14 @@
           "皮肤全身像": "gui/res/hero_quan/106904.png",
           "皮肤头像": "gui/res/head_fang/106904.png",
           "皮肤头像_新": "gui2/res/head_fang/106904.png"
+        },
+        {
+          "皮肤名称": "Nap in the Dusk",
+          "皮肤全身像_新": "gui/res/hero_quan2/106905.png",
+          "皮肤ID": 106905,
+          "皮肤全身像": "gui/res/hero_quan/106905.png",
+          "皮肤头像": "gui/res/head_fang/106905.png",
+          "皮肤头像_新": "gui2/res/head_fang/106905.png"
         }
       ],
       "推荐加点顺序": [
@@ -37610,7 +38051,7 @@
         "二技能": {
           "图标路径": "gui/res/skill/1063002.png",
           "技能ID": 106321,
-          "技能描述": "Enma summons a Demon Realm at the designated position that inflicts a Silence effect on enemies within range for 0.5 second. The Demon Realm lasts for 3 seconds, inflicting20#c9e45fa(+20%BonusAttack) #n #c39b54a(+20%Ability Power) #n  #Umagic damage#n every 0.6 second(s) and a 25% Slow effect on all enemies within range.",
+          "技能描述": "Enma summons a Demon Realm at the designated position that inflicts a Silence effect on enemies within range for 0.5 second. The Demon Realm lasts for 3 seconds, inflicting20#c9e45fa(+20%BonusAttack) #n #c39b54a(+20%Ability Power) #n  #Umagic damage#n every 0.6 second(s) and a 35% Slow effect on all enemies within range.",
           "技能名称": "Demon Realm",
           "技能成长": {
             "Silent time": [
@@ -37642,10 +38083,10 @@
               55
             ],
             "Slow effect": [
-              "25%",
-              "32.5%",
+              "35%",
               "40%",
-              "47.5%",
+              "45%",
+              "50%",
               "55%"
             ]
           }
@@ -37685,7 +38126,7 @@
         "一技能": {
           "图标路径": "gui/res/skill/1063001.png",
           "技能ID": 106311,
-          "技能描述": "Enma commands a soul to fly in the designated direction, dealing 90#c9e45fa(+60%BonusAttack) #n #c39b54a(+65%Ability Power) #n #cffba35(+6% (Every 100Ability Power increases 1%)TargetHP Lost ) #n   #Umagic Damage#n to enemies caught in its path. If an enemy shikigami is hit, the soul will scatter in all directions, dealing 90#c9e45fa(+60%BonusAttack) #n #c39b54a(+65%Ability Power) #n #cffba35(+6% (Every 100Ability Power increases 1%)TargetHP Lost ) #n  #Umagic Damage#n to other enemies within range.",
+          "技能描述": "Enma commands a soul to fly in the designated direction, dealing 90#c9e45fa(+60%BonusAttack) #n #c39b54a(+65%Ability Power) #n #cffba35(+6% (Every 100Ability Power increases 1%)TargetHP Lost ) #n #UMagic Damage#nand inflicting 10% Slow for 1 seconds to enemies caught in its path. If an enemy shikigami is hit, the soul will scatter in all directions, dealing 90#c9e45fa(+60%BonusAttack) #n #c39b54a(+65%Ability Power) #n #cffba35(+6% (Every 100Ability Power increases 1%)TargetHP Lost ) #n  #UPhysical Damage#n to other enemies within range.",
           "技能名称": "Spirit Command",
           "技能成长": {
             "Percentage HP Lost": [
@@ -38027,7 +38468,7 @@
         "四技能": {
           "图标路径": "gui/res/skill/1035004.png",
           "技能ID": 103541,
-          "技能描述": "Brandishing his brush, Hangan hands down judgement in the designated direction, dealing300#c39b54a(+60%Ability Power) #n  #Umagic damage#n to all enemies caught in his path. Damage dealt will be increased according to the ratio of the target's lost HP. Can be increased up to 1.3 times of base damage.",
+          "技能描述": "Brandishing his brush, Hangan hands down judgement in the designated direction, dealing300#c39b54a(+75%Ability Power) #n  #Umagic damage#n to all enemies caught in his path. Damage dealt will be increased according to the ratio of the target's lost HP. Can be increased up to 1.3 times of base damage.",
           "技能名称": "Death Penalty",
           "技能成长": {
             "Base Damage": [
@@ -38073,15 +38514,15 @@
         "三技能": {
           "图标路径": "gui/res/skill/1035003.png",
           "技能ID": 103531,
-          "技能描述": "Brush in hand, Hangan marks the passage from life to death. After a short delay, all enemy units in the designated area take 90#c39b54a(+45%Ability Power) #n  #Umagic damage#n, and are slowed by 30% for 1 seconds.",
+          "技能描述": "Brush in hand, Hangan marks the passage from life to death. After a short delay, all enemy units in the designated area take 140#c39b54a(+60%Ability Power) #n  #Umagic damage#n, and are slowed by 30% for 1 seconds.",
           "技能名称": "Death Writ",
           "技能成长": {
             "Base Damage": [
-              "90",
-              "150",
-              "210",
+              "140",
+              "205",
               "270",
-              "330"
+              "335",
+              "400"
             ],
             "冷却": [
               7,
@@ -38432,6 +38873,13 @@
               40,
               45,
               50
+            ],
+            "Base Maximum Dream Fire": [
+              "100",
+              "180",
+              "260",
+              "340",
+              "420"
             ]
           }
         }
@@ -38674,7 +39122,7 @@
         "天生被动": {
           "图标路径": "gui/res/skill/1018000.png",
           "技能ID": 101851,
-          "技能描述": "Passive trigger: Futakuchi adds a mark to enemy shikigami or monsters with basic attacks every 6 seconds, up to a maximum of 5 times. When her abilities hit marked targets, all marks will detonate, dealing #c9e45fa(+18%(+1.0%*Current Level)Attack) #n  #Umagic damage#n per stack. This ability's damage will increase along with Futakuchi's Crit Rate, multiplying up to 1 times.",
+          "技能描述": "Passive trigger: Futakuchi adds a mark to enemy shikigami or monsters with basic attacks every 6 seconds, up to a maximum of 5 times. When her abilities hit marked targets, all marks will detonate, dealing 8#c9e45fa(+18%(+1.0%*Current Level)Attack) #n #c0095cc(+3*Current Level) #n  #Umagic damage#n per stack. This ability's damage will increase along with Futakuchi's Crit Rate, multiplying up to 1 times.",
           "技能名称": "Gonna Blow",
           "技能成长": {
             "冷却": [],
@@ -39354,7 +39802,7 @@
         "天生被动": {
           "图标路径": "gui/res/skill/1097000.png",
           "技能ID": 109751,
-          "技能描述": "Passive trigger: When there are no monsters or enemy shikigami within 300 yards of Kainin, she gains Solo Power, which increases the damage dealt by her next ability to monsters and enemy shikigami by 1.2 times. When Solo Power is triggered and there are monsters or enemy shikigami within range, Kainin will also gain a 70% Movement Speed Bonus for the next 0.8 seconds.",
+          "技能描述": "Passive trigger: When there are no enemy shikigami within 300 yards of Kainin, she gains Solo Power, which increases the damage dealt by her next ability to monsters and enemy shikigami by 1.2 times. When Solo Power is triggered and there are enemy shikigami within range, Kainin will also gain a 70% Movement Speed Bonus for the next 0.8 seconds.",
           "技能名称": "Solo Ninja Scroll",
           "技能成长": {
             "冷却": [],
@@ -39366,20 +39814,20 @@
         "二技能": {
           "图标路径": "gui/res/skill/1097002_2.png",
           "技能ID": 109721,
-          "技能描述": "Kainin charges in the designated direction, dealing 35#c9e45fa(+42.5%BonusAttack) #n  physical damage to enemies along the way. She can charge again within 4 seconds of hitting an enemy. If an enemy is hit at the end of her path, she deals 70#c9e45fa(+85%BonusAttack) #n  physical damage to them, inflicts an attack effect, and recovers 10#c9e45fa(+30%BonusAttack) #n  HP.#rThe second charge will deal 35#c9e45fa(+42.5%BonusAttack) #n #cffba35#n  physical damage to enemies along the way. If an enemy is hit at the end of her path, she deals 70#c9e45fa(+85%BonusAttack) #n #cffba35(+8% (Every 80BonusAttack increases 1%)TargetHP Lost ) #n  physical damage to them, inflicts an attack effect, and recovers 10 HP.",
+          "技能描述": "Kainin charges in the designated direction, dealing 35#c9e45fa(+42.5%BonusAttack) #n  physical damage to enemies along the way. She can charge again within 4 seconds of hitting an enemy. If she hits a monster or an enemy is hit at the end of her path, she deals 70#c9e45fa(+85%BonusAttack) #n  physical damage to them, inflicts an attack effect, and recovers 10#c9e45fa(+30%BonusAttack) #n  HP.#rThe second charge will deal 35#c9e45fa(+42.5%BonusAttack) #n #cffba35#n  physical damage to enemies along the way. If she hits a monster or an enemy is hit at the end of her path, she deals 70#c9e45fa(+85%BonusAttack) #n #cffba35(+8% (Every 80BonusAttack increases 1%)TargetHP Lost ) #n  physical damage to them, inflicts an attack effect, and recovers 10 HP.",
           "技能名称": "Shadow Strike",
           "技能成长": {
             "Base Damage": [
               "35",
               "70",
-              "50",
-              "100",
-              "65",
-              "130",
+              "57.5",
+              "115",
               "80",
               "160",
-              "95",
-              "190"
+              "102.5",
+              "205",
+              "125",
+              "250"
             ],
             "冷却": [
               8,
@@ -39435,15 +39883,15 @@
         "一技能": {
           "图标路径": "gui/res/skill/1097001.png",
           "技能ID": 109711,
-          "技能描述": "Kainin throws three shurikens in the designated direction. Each shuriken deals 40#c9e45fa(+27.5%BonusAttack) #n  physical damage to the enemy hit and inflicts a 22% Slow effect for 0.8 seconds.#r",
+          "技能描述": "Kainin throws three shurikens in the designated direction. Each shuriken deals 60#c9e45fa(+27.5%BonusAttack) #n  physical damage to the enemy hit and inflicts a 22% Slow effect for 0.8 seconds.#r",
           "技能名称": "Flying Leaves",
           "技能成长": {
             "Base Damage": [
-              "40",
-              "65",
-              "90",
-              "115",
-              "140"
+              "60",
+              "85",
+              "110",
+              "135",
+              "160"
             ],
             "冷却": [
               7,
@@ -39728,7 +40176,7 @@
         "二技能": {
           "图标路径": "gui/res/skill/1083002_1.png",
           "技能ID": 108321,
-          "技能描述": "Mushishi rushes in the designated direction for a short distance, leaving a trail of pollen along the way. After a short delay, the pollen deals 50#cffba35(+5%BonusMax HP) #n  #Umagic damage#n to enemies within range and inflicts Sleep for 1 seconds.#r",
+          "技能描述": "Mushishi rushes in the designated direction for a short distance, leaving a trail of pollen along the way. After a short delay, the pollen deals 50#cffba35(+5%BonusMax HP) #n  #Umagic damage#n to enemies within range and inflicts Immobilize on them for 1 second(s).#r",
           "技能名称": "Among Flowers",
           "技能成长": {
             "Base Damage": [
@@ -39757,7 +40205,7 @@
         "四技能": {
           "图标路径": "gui/res/skill/1083004.png",
           "技能ID": 108341,
-          "技能描述": "Mushishi removes any debuffs from nearby ally shikigami, and generates a dim light to illuminate the surrounding area for 5 seconds, continuously granting a 50% Haste effect to ally shikigami within range.",
+          "技能描述": "Mushishi removes any debuffs from nearby ally shikigami, and generates a dim light to illuminate the surrounding area for 5 seconds, continuously granting a 30% Haste effect to ally shikigami within range.",
           "技能名称": "Cleansing Dream",
           "技能成长": {
             "冷却": [
@@ -39771,9 +40219,9 @@
               100
             ],
             "Movement Speed Bonus": [
-              "50%",
-              "60%",
-              "70%"
+              "30%",
+              "40%",
+              "50%"
             ]
           }
         },
@@ -39804,7 +40252,7 @@
         "三技能": {
           "图标路径": "gui/res/skill/1083003_1.png",
           "技能ID": 108331,
-          "技能描述": "Mushishi gains a 40% Movement Speed bonus, deals 60#cffba35(+8%BonusMax HP) #n  #Umagic damage#n to enemies she touches, and inflicts a 30% Slow effect for 2 seconds. For each enemy unit she touches, she gains 20#cffba35(+3%BonusMax HP) #n  Shield. If she touches an enemy shikigami, Shield gained is multiplied by 3. The damage-dealing and shield-granting effects can only be triggered once per enemy unit.",
+          "技能描述": "Mushishi gains a 40% Movement Speed bonus, deals 60#cffba35(+8%BonusMax HP) #n  #Umagic damage#n to enemies she touches, and inflicts a 50% Slow effect for 2 seconds. For each enemy unit she touches, she gains 20#cffba35(+3%BonusMax HP) #n  Shield. If she touches an enemy shikigami, Shield gained is multiplied by 3. The damage-dealing and shield-granting effects can only be triggered once per enemy unit.",
           "技能名称": "Insect Dance",
           "技能成长": {
             "Base Shield": [
@@ -40018,6 +40466,22 @@
           "皮肤全身像": "gui/res/hero_quan/110302.png",
           "皮肤头像": "gui/res/head_fang/110302.png",
           "皮肤头像_新": "gui2/res/head_fang/110302.png"
+        },
+        {
+          "皮肤名称": "Hidden Wind",
+          "皮肤全身像_新": "gui/res/hero_quan2/110303.png",
+          "皮肤ID": 110303,
+          "皮肤全身像": "gui/res/hero_quan/110303.png",
+          "皮肤头像": "gui/res/head_fang/110303.png",
+          "皮肤头像_新": "gui2/res/head_fang/110303.png"
+        },
+        {
+          "皮肤名称": "Slashing Wind",
+          "皮肤全身像_新": "gui/res/hero_quan2/110304.png",
+          "皮肤ID": 110304,
+          "皮肤全身像": "gui/res/hero_quan/110304.png",
+          "皮肤头像": "gui/res/head_fang/110304.png",
+          "皮肤头像_新": "gui2/res/head_fang/110304.png"
         }
       ],
       "推荐加点顺序": [
@@ -40135,20 +40599,20 @@
         "一技能": {
           "图标路径": "gui/res/skill/1103001.png",
           "技能ID": 110311,
-          "技能描述": "Furi attaches Spark Bomb to enemies within an arc. 10#c9e45fa(+60%Attack) #n #cffba35#n  #Rphysical damage#nSpark Bomb detonates after 1.2 second(s), dealing 10#c9e45fa(+60%Attack) #n #cffba35(+6% (Every 50BonusAttack increases 1%)TargetMax HP) #n  #Rphysical damage#n to targeted enemies and stunning them for 0.9 second(s). He also deals 50% damage to remaining enemy unit(s) in range. While casting the ability, Furi will roll in the direction of the left joystick.",
+          "技能描述": "Furi attaches Spark Bomb to enemies within an arc. 10#c9e45fa(+60%Attack) #n #cffba35#n  #Rphysical damage#nSpark Bomb detonates after 1.2 second(s), dealing 30#c9e45fa(+65%Attack) #n #cffba35(+7% (Every 50BonusAttack increases 1%)TargetMax HP) #n  #Rphysical damage#n to targeted enemies and stunning them for 0.9 second(s). He also deals 50% damage to remaining enemy unit(s) in range. While casting the ability, Furi will roll in the direction of the left joystick.",
           "技能名称": "Sticky Bombs",
           "技能成长": {
             "Base Damage": [
               "10",
-              "10",
-              "40",
+              "30",
               "40",
               "70",
               "70",
+              "110",
               "100",
-              "100",
+              "150",
               "130",
-              "130"
+              "190"
             ],
             "冷却": [
               9,
