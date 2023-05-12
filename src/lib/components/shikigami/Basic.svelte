@@ -45,6 +45,7 @@
       <li class="vas-li">🇰🇷 {voices[3]}</li>
     {/if}
   </Card>
+  <slot />
 </Container>
 
 <style>

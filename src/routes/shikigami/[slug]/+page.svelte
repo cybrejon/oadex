@@ -38,6 +38,8 @@
     ? base_movement_speed = curr_shiki_obj.式神基础属性.移动速度.toString().slice(0, 2) + curr_shiki_obj.式神基础属性.移动速度.toString().slice(1, 2)
     : base_movement_speed = `${curr_shiki_obj.式神基础属性.移动速度.toString()}0`;
 
+  const atk_speed = curr_shiki_obj.式神基础属性.攻击速度 * (1 + curr_shiki_obj.式神基础属性.攻速加成);
+  const base_atk_speed = atk_speed.toString().slice(0, 4);
   const _growth_atk_speed = curr_shiki_obj.式神基础属性.攻速加成 + curr_shiki_obj.式神属性成长.攻速加成;
   const growth_atk_speed = _growth_atk_speed.toString().slice(0, 4);
 
@@ -47,7 +49,7 @@
       growth: curr_shiki_obj.式神属性成长.物理伤害
     },
     atk_speed: {
-      base: curr_shiki_obj.式神基础属性.攻击速度,
+      base: base_atk_speed,
       growth: growth_atk_speed
     },
     mana: {
@@ -76,14 +78,45 @@
     },
   }
 
-  let wrPrData;
-  let win_rate = '⏳';
-  let pick_rate = '⏳';
+  // let wrPrData;
+  let win_rate = {
+    all: "⏳",
+    noban: "⏳",
+    ban: "⏳",
+    fogban: "⏳",
+  };
+  let pick_rate = {
+    all: "⏳",
+    noban: "⏳",
+    ban: "⏳",
+    fogban: "⏳",
+  };
+  const urls = [
+      `/api/wr-pr/?shiki_id=${shiki_id}&game_mode=all`,
+      `/api/wr-pr/?shiki_id=${shiki_id}&game_mode=noban`,
+      `/api/wr-pr/?shiki_id=${shiki_id}&game_mode=ban`,
+      `/api/wr-pr/?shiki_id=${shiki_id}&game_mode=fogban`
+    ];
   async function getWrPrData() {
-    const res = await fetch(`/api/wr-pr/?shiki_id=${shiki_id}`);
-    wrPrData = await res.json();
-    win_rate = (wrPrData.win_rate * 100).toFixed(2)
-    pick_rate = (wrPrData.battle_rate * 100).toFixed(2)
+    await Promise.all(urls.map(url =>
+      fetch(url)
+        .then(response => response.json())
+    )).then(data => {
+      win_rate = {
+        all: (data[0].win_rate * 100).toFixed(2),
+        noban: (data[1].win_rate * 100).toFixed(2),
+        ban: (data[2].win_rate * 100).toFixed(2),
+        fogban: (data[3].win_rate * 100).toFixed(2),
+      }
+      pick_rate = {
+        all: (data[0].battle_rate * 100).toFixed(2),
+        noban: (data[1].battle_rate * 100).toFixed(2),
+        ban: (data[2].battle_rate * 100).toFixed(2),
+        fogban: (data[3].battle_rate * 100).toFixed(2),
+      }
+    }).catch(error => {
+      console.error(error);
+    });
   };
 
   onMount(async () => {
@@ -108,32 +141,84 @@
     voices: curr_shiki_obj.cv名字,
     lane: dictionary.lanes[curr_shiki_obj.推荐分路],
     specialty: curr_shiki_obj.式神标签
-  }} />
+  }} >
 
-  <Container area_name="basic2">
-    <h3 class="stats-header">📊 Scores</h3>
     <Basic2 data={{
       dps: dictionary.scores[scores.输出],
       cc: dictionary.scores[scores.控制],
       sustain: dictionary.scores[scores.生存],
       buffs: dictionary.scores[scores.增益],
       agility: dictionary.scores[scores.敏捷],
-    }} />
+    }} />  
+
+  </Basic>
+
+  <Container area_name="basic2">
+
     <h3 class="stats-header">🏋🏼 Performance</h3>
+
     <div class="grid-container">
+      <Note area_name="1 / 1 / 2 / 5" text="ALL MODES" styles="font-size: .8rem; text-align: center;" noIcon="True" />
       <StatCard data={{
         property: "🏆 Win-rate",
-        value: `${win_rate}%`,
-        grid_area: "1 / 1 / 2 / 3"
+        value: `${win_rate.all}%`,
+        grid_area: "2 / 1 / 3 / 3"
       }} />
       <StatCard data={{
         property: "🏅 Pick-rate",
-        value: `${pick_rate}%`,
-        grid_area: "1 / 3 / 2 / 5"
+        value: `${pick_rate.all}%`,
+        grid_area: "2 / 3 / 3 / 5"
       }} />
-      <Note area_name="2 / 1 / 2 / 5" text="Data is from CN server and includes all the game modes" styles="font-size: .8rem; color: rgba(255, 255, 255, .7); text-align: center;" noIcon="True" />
       <!-- grid-area: [row-start] / [column-start] / [row-end] / [column-end]; -->
     </div>
+
+    <div class="grid-container">
+      <Note area_name="1 / 1 / 2 / 5" text="PRE-ELITE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
+      <StatCard data={{
+        property: "🏆 Win-rate",
+        value: `${win_rate.noban}%`,
+        grid_area: "2 / 1 / 3 / 3"
+      }} />
+      <StatCard data={{
+        property: "🏅 Pick-rate",
+        value: `${pick_rate.noban}%`,
+        grid_area: "2 / 3 / 3 / 5"
+      }} />
+      <!-- grid-area: [row-start] / [column-start] / [row-end] / [column-end]; -->
+    </div>
+
+    <div class="grid-container">
+      <Note area_name="1 / 1 / 2 / 5" text="BAN MODE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
+      <StatCard data={{
+        property: "🏆 Win-rate",
+        value: `${win_rate.ban}%`,
+        grid_area: "2 / 1 / 3 / 3"
+      }} />
+      <StatCard data={{
+        property: "🏅 Pick-rate",
+        value: `${pick_rate.ban}%`,
+        grid_area: "2 / 3 / 3 / 5"
+      }} />
+      <!-- grid-area: [row-start] / [column-start] / [row-end] / [column-end]; -->
+    </div>
+
+    <div class="grid-container">
+      <Note area_name="1 / 1 / 2 / 5" text="FOG BAN MODE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
+      <StatCard data={{
+        property: "🏆 Win-rate",
+        value: `${win_rate.fogban}%`,
+        grid_area: "2 / 1 / 3 / 3"
+      }} />
+      <StatCard data={{
+        property: "🏅 Pick-rate",
+        value: `${pick_rate.fogban}%`,
+        grid_area: "2 / 3 / 3 / 5"
+      }} />
+      <!-- grid-area: [row-start] / [column-start] / [row-end] / [column-end]; -->
+    </div>
+
+    <Note text="Source: China server" styles="font-size: .8rem; color: rgba(255, 255, 255, .7); text-align: center;" noIcon="True" />
+  
   </Container>
 
   <Stats area_name="stats-1" >
@@ -142,7 +227,7 @@
       <tr>
         <th>📄 Property</th>
         <th>📝 Value</th>
-        <th>⬆️ Growth</th>
+        <th>⏫ Growth</th>
       </tr>
       <tr>
         <td class="stat-property">⚔️ Attack damage</td>
@@ -225,7 +310,7 @@
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 30px;
+    grid-template-rows: 20px 1fr;
   }
 
   @media only screen and (max-width: 620px) {
