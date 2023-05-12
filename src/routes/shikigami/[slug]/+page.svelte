@@ -38,34 +38,37 @@
     ? base_movement_speed = curr_shiki_obj.式神基础属性.移动速度.toString().slice(0, 2) + curr_shiki_obj.式神基础属性.移动速度.toString().slice(1, 2)
     : base_movement_speed = `${curr_shiki_obj.式神基础属性.移动速度.toString()}0`;
 
+  const _growth_atk_speed = curr_shiki_obj.式神基础属性.攻速加成 + curr_shiki_obj.式神属性成长.攻速加成;
+  const growth_atk_speed = _growth_atk_speed.toString().slice(0, 4);
+
   const stats = {
     atk: {
       base: curr_shiki_obj.式神基础属性.物理伤害,
-      growth: ''
+      growth: curr_shiki_obj.式神属性成长.物理伤害
     },
     atk_speed: {
       base: curr_shiki_obj.式神基础属性.攻击速度,
-      growth: ''
+      growth: growth_atk_speed
     },
     mana: {
       base: curr_shiki_obj.式神基础属性.魔法上限,
-      growth: ''
+      growth: curr_shiki_obj.式神属性成长.魔法上限
     },
     magic_armor: {
       base: curr_shiki_obj.式神基础属性.魔抗,
-      growth: ''
+      growth: curr_shiki_obj.式神属性成长.魔抗
     },
     hp: {
       base: curr_shiki_obj.式神基础属性.生命值,
-      growth: ''
+      growth: curr_shiki_obj.式神属性成长.生命值
     },
     hp_regen: {
       base: curr_shiki_obj.式神基础属性.生命恢复,
-      growth: ''
+      growth: curr_shiki_obj.式神属性成长.生命恢复
     },
     physical_armor: {
       base: curr_shiki_obj.式神基础属性.护甲,
-      growth: ''
+      growth: curr_shiki_obj.式神属性成长.护甲
     },
     movespeed: {
       base: base_movement_speed,
@@ -84,8 +87,8 @@
   };
 
   onMount(async () => {
-    getWrPrData();
-  })
+    await getWrPrData();
+  });
 </script>
 
 <svelte:head>
@@ -144,42 +147,41 @@
       <tr>
         <td class="stat-property">⚔️ Attack damage</td>
         <td class="stat-value">{stats.atk.base}</td>
-        <td class="stat-growth">0</td>
+        <td class="stat-growth">+ {stats.atk.growth} /lvl</td>
       </tr>
       <tr>
         <td class="stat-property">⚔️ Attack speed</td>
         <td class="stat-value">{stats.atk_speed.base} aa/s</td>
-        <td class="stat-growth">0</td>
+        <td class="stat-growth">+ {stats.atk_speed.growth} /lvl</td>
       </tr>
       <tr>
         <td class="stat-property">💫 Mana points</td>
         <td class="stat-value">{stats.mana.base}</td>
-        <td class="stat-growth">0</td>
+        <td class="stat-growth">+ {stats.mana.growth} /lvl</td>
       </tr>
       <tr>
         <td class="stat-property">💫 Magic armor</td>
         <td class="stat-value">{stats.magic_armor.base}</td>
-        <td class="stat-growth">0</td>
+        <td class="stat-growth">+ {stats.magic_armor.growth} /lvl</td>
       </tr>
       <tr>
         <td class="stat-property">⚕️ Health points</td>
         <td class="stat-value">{stats.hp.base} hp</td>
-        <td class="stat-growth">0</td>
+        <td class="stat-growth">+ {stats.hp.growth} /lvl</td>
       </tr>
       <tr>
         <td class="stat-property">⚕️ HP regeneration</td>
         <td class="stat-value">{stats.hp_regen.base} hp/s</td>
-        <td class="stat-growth">0</td>
+        <td class="stat-growth">+ {stats.hp_regen.growth} /lvl</td>
       </tr>
       <tr>
         <td class="stat-property">⚕️ Physical armor</td>
         <td class="stat-value">{stats.physical_armor.base}</td>
-        <td class="stat-growth">0</td>
+        <td class="stat-growth">+ {stats.physical_armor.growth} /lvl</td>
       </tr>
       <tr>
         <td class="stat-property">🏃 Movement speed</td>
         <td class="stat-value">{stats.movespeed.base}</td>
-        <td class="stat-growth">0</td>
       </tr>
     </table>
   </Stats>
