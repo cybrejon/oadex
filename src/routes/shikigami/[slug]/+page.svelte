@@ -16,6 +16,7 @@
   import Stats from '$lib/components/shikigami/Stats.svelte';
   import StatCard from '$lib/components/shikigami/StatCard.svelte';
   import Container from "$lib/components/shikigami/Container.svelte";
+  import Toggles from '$lib/Toggles.svelte';
   import { onMount } from 'svelte';
 
   // import data
@@ -116,6 +117,18 @@
       }
     }).catch(error => {
       console.error(error);
+      win_rate = {
+        all: "🔄",
+        noban: "🔄",
+        ban: "🔄",
+        fogban: "🔄",
+      };
+      pick_rate = {
+        all: "🔄",
+        noban: "🔄",
+        ban: "🔄",
+        fogban: "🔄",
+      };
     });
   };
 
@@ -271,11 +284,25 @@
     </table>
   </Stats>
 
+  <Container area_name="skills">
+    <div class="skill-tab-container">
+      <Toggles toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
+        { name: "TRAIT", active_indicator: 'a', active_value: true },
+        { name: "S1 / PASSIVE", active_indicator: 'a', active_value: false },
+        { name: "S2", active_indicator: 'a', active_value: false },
+        { name: "S3", active_indicator: 'a', active_value: false },
+        { name: "ULT", active_indicator: 'a', active_value: false },
+      ]} />
+    </div>
+    
+  </Container>
+
 </div>
 
 
 
 <style>
+
   .container {
     margin: 30px 0 60px 0;
     display: grid;
@@ -284,7 +311,7 @@
     /* align-items: center; */
     grid-template-areas: 
     "gallery gallery basic basic2"
-    "stats-1 stats-1 . .";
+    "stats-1 stats-1 skills skills";
     gap: 20px;
     align-content: center;
     flex-wrap: wrap;
@@ -315,11 +342,13 @@
 
   @media only screen and (max-width: 620px) {
     .container {
+      grid-template-columns: 1fr;
       grid-template-areas: 
-      "gallery gallery gallery gallery"
-      "basic basic basic basic"
-      "basic2 basic2 basic2 basic2"
-      "stats-1 stats-1 stats-1 stats-1"
+      "gallery"
+      "basic"
+      "basic2"
+      "stats-1"
+      "skills";
     }
   }
 

@@ -4,9 +4,10 @@
   export let area_name;
   export let styles;
   export let noIcon;
+  export let container_margin;
 </script>
 
-<div class="container" style:grid-area={area_name}>
+<div class="container" style:grid-area={area_name} style:margin={container_margin}>
   {#if !noIcon}
     <Icon icon="ic:round-warning" style="font-size: 24px;" />
   {/if}

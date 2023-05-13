@@ -16,6 +16,7 @@
   import Fuse from 'fuse.js';
 
   // import components
+  import Note from "$lib/components/Note.svelte";
   import Toggles from '$lib/Toggles.svelte';
   import ShikiCard from '$lib/ShikiCard.svelte';
   import "$lib/styles/shikis.css";
@@ -88,7 +89,7 @@
 	<title>OADex</title>
 </svelte:head>
 
-
+<Note text="This website is under active devlopment, expect bugs and other issues!" />
   <div class="shiki-selection-header">
     <Toggles toggle_icon="gridicons:dropdown" anchor_direction="left" buttons={[
       { name: "ALL", active_indicator: $active_role, active_value: 'all', fn: toggleRole('all') },
@@ -132,3 +133,4 @@
     {/each}
   {/if}
 </div>
+<Note noIcon=True text={`Number of shikigamis shown - ${$role_config.length === 0 ? role.length : $role_config.length}.`} styles="font-size: .8rem; text-align: center;" container_margin='50px 0 0 0' />

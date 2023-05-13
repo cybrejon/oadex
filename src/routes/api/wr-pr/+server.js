@@ -2,8 +2,6 @@
 
 export async function GET({ url }) {
 
-  console.log(url.searchParams);
-
   const shiki_id = url.searchParams.get('shiki_id');
   const game_mode = url.searchParams.get('game_mode');
 
