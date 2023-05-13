@@ -32,7 +32,6 @@
   const scores = curr_shiki_obj.评分;
 
   // shikigami stats
-
   const mvsc_count = curr_shiki_obj.式神基础属性.移动速度.toString().split("").length;
     let base_movement_speed;
     mvsc_count >= 3
@@ -117,20 +116,42 @@
       }
     }).catch(error => {
       console.error(error);
-      win_rate = {
-        all: "🔄",
-        noban: "🔄",
-        ban: "🔄",
-        fogban: "🔄",
-      };
-      pick_rate = {
-        all: "🔄",
-        noban: "🔄",
-        ban: "🔄",
-        fogban: "🔄",
-      };
     });
   };
+
+  // skills
+  let skills_data = [
+    {
+      skill_name: curr_shiki_obj.式神技能.天生被动.技能名称,
+      image: $images[curr_shiki_obj.式神技能.天生被动.图标路径]
+    },
+    {
+      skill_name: curr_shiki_obj.式神技能.一技能.技能名称,
+      image: $images[curr_shiki_obj.式神技能.一技能.图标路径]
+    },
+    {
+      skill_name: curr_shiki_obj.式神技能.二技能.技能名称,
+      image: $images[curr_shiki_obj.式神技能.二技能.图标路径]
+    },
+    {
+      skill_name: curr_shiki_obj.式神技能.三技能.技能名称,
+      image: $images[curr_shiki_obj.式神技能.三技能.图标路径]
+    },
+    {
+      skill_name: curr_shiki_obj.式神技能.四技能.技能名称,
+      image: $images[curr_shiki_obj.式神技能.四技能.图标路径]
+    }
+  ];
+
+  let skill_name = curr_shiki_obj.式神技能.天生被动.技能名称;
+  let skill_image = $images[curr_shiki_obj.式神技能.天生被动.图标路径];
+
+  let skill_tab_indicator = 0;
+  const changeSkillDisplayed = (i) => () => {
+    skill_tab_indicator = i;
+    skill_name = skills_data[i].skill_name;
+    skill_image = skills_data[i].image;
+  }
 
   onMount(async () => {
     await getWrPrData();
@@ -286,15 +307,18 @@
 
   <Container area_name="skills">
     <div class="skill-tab-container">
-      <Toggles toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
-        { name: "TRAIT", active_indicator: 'a', active_value: true },
-        { name: "S1 / PASSIVE", active_indicator: 'a', active_value: false },
-        { name: "S2", active_indicator: 'a', active_value: false },
-        { name: "S3", active_indicator: 'a', active_value: false },
-        { name: "ULT", active_indicator: 'a', active_value: false },
+      <h3 class="stats-header"> 🔨 Skills</h3>
+      <Toggles toggle_icon="ic:round-sort" anchor_direction="right" buttons={[
+        { name: "TRAIT", active_indicator: skill_tab_indicator, active_value: 0, fn: changeSkillDisplayed(0) },
+        { name: "S1 / PASSIVE", active_indicator: skill_tab_indicator, active_value: 1, fn: changeSkillDisplayed(1) },
+        { name: "S2", active_indicator: skill_tab_indicator, active_value: 2, fn: changeSkillDisplayed(2) },
+        { name: "S3", active_indicator: skill_tab_indicator, active_value: 3, fn: changeSkillDisplayed(3) },
+        { name: "ULT", active_indicator: skill_tab_indicator, active_value: 4, fn: changeSkillDisplayed(4) },
       ]} />
     </div>
-    
+    <div class="skill-container">
+      <img src={skill_image} alt="skill" />
+    </div>
   </Container>
 
 </div>
@@ -338,6 +362,18 @@
     gap: 10px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 20px 1fr;
+  }
+
+  .skill-tab-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .skill-container {
+    background-color: #3C3F46;
+    border-radius: 6px;
+    padding: 5px 15px;
   }
 
   @media only screen and (max-width: 620px) {
