@@ -369,7 +369,7 @@
             <p class="skill-property-name">{skill_prop.name}</p>
             <div class="skill-property-values-container">
               {#each skill_prop.value as prop_value}
-                <p class="skill-property-value"><span class="skill-property-value-lvl">Lvl {skill_prop.value.indexOf(prop_value) + 1}</span> - <span class="skill-property-value-digit">{prop_value}</span></p>
+                <p class="skill-property-value"><span class="skill-property-value-lvl">Lvl {skill_prop.value.indexOf(prop_value) + 1}</span> <span class="skill-property-value-digit">{prop_value}</span></p>
               {/each}
             </div>
           </div>
