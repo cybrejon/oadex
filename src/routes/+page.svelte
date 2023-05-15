@@ -89,7 +89,7 @@
 	<title>OADex</title>
 </svelte:head>
 
-<Note text="This website is under active devlopment, expect bugs and other issues!" />
+<Note text="This website is under active development, expect bugs and other issues!" />
   <div class="shiki-selection-header">
     <Toggles toggle_icon="gridicons:dropdown" anchor_direction="left" buttons={[
       { name: "ALL", active_indicator: $active_role, active_value: 'all', fn: toggleRole('all') },

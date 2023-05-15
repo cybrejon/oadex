@@ -1,0 +1,21 @@
+<script>
+
+
+  // import components
+
+  // reference data
+
+
+</script>
+
+<div class="item-gallery">
+  <p>I am currently split between showing the default builds (which no one is really a fan of) or manually fetching the top builds in game. If you wish to influence my decision on this, please consider joining my Discord, the link is below.</p>
+</div>
+
+<style>
+  .item-gallery {
+    background-color: #3C3F46;
+    padding: 10px;
+    border-radius: 6px;
+  }
+</style>

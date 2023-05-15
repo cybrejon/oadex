@@ -24,6 +24,15 @@
   padding: 0;
 }
 
+a {
+  color: #CDFE05;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 body {
   overflow-y: scroll;
   font-family: 'Montserrat', sans-serif;

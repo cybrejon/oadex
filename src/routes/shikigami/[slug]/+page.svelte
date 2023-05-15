@@ -17,6 +17,7 @@
   import StatCard from '$lib/components/shikigami/StatCard.svelte';
   import Container from "$lib/components/shikigami/Container.svelte";
   import Skills from '$lib/components/shikigami/Skills.svelte';
+  import ItemGallery from '$lib/components/shikigami/ItemGallery.svelte';
   import { onMount } from 'svelte';
 
   // import data
@@ -113,7 +114,7 @@
         fogban: (data[3].battle_rate * 100).toFixed(2),
       }
     }).catch(error => {
-      console.error(error);
+      console.error('[win-rates pick rates] could not complete fetch');
     });
   };
 
@@ -220,7 +221,7 @@
   </Container>
 
   <Stats area_name="stats-1" >
-    <h3 class="stats-header">📉 Base Stats</h3>
+    <h3 class="stats-header">🧬 Base Stats</h3>
     <table class="stats-table">
       <tr>
         <th>📄 Property</th>
@@ -275,6 +276,16 @@
     />
   </Container>
 
+  <Container area_name="item-gallery">
+    <h3>📚 Default Builds</h3>
+    <ItemGallery />
+  </Container>
+
+  <Container area_name="information">
+    <h3>⚠️ Data availability</h3>
+    <p>Information you see in this page is subject to change every Monday, Beijing Time. If you have any questions, please contact me at <a href="http://discord.gg/KGsaAet">OADex</a> Discord.</p>
+  </Container>
+
 </div>
 
 <Note text="TODO: default builds section" styles="font-size: .8rem; text-align: center;" noIcon="True" />
@@ -291,7 +302,9 @@
     /* align-items: center; */
     grid-template-areas: 
     "gallery gallery basic basic2"
-    "stats-1 stats-1 skills skills";
+    "stats-1 stats-1 skills skills"
+    ". item-gallery item-gallery ."
+    "information information information information";
     gap: 20px;
     align-content: center;
     flex-wrap: wrap;
@@ -328,7 +341,9 @@
       "basic"
       "basic2"
       "stats-1"
-      "skills";
+      "skills"
+      "item-gallery"
+      "information";
     }
   }
 

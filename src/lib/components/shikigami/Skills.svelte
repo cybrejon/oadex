@@ -160,6 +160,7 @@
     display: flex;
     column-gap: 10px;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: left;
     font-size: .8rem;
   }
