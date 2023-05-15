@@ -3,8 +3,7 @@
   // import components
   import Toggles from '$lib/Toggles.svelte';
 
-  // import stores
-  import { images } from '../../../routes/store.js';
+  export let images;
 
   // ANCHOR skills
   export let curr_shiki_obj;
@@ -34,7 +33,7 @@
   let skills_data = shikigami_skills.map(skill => {
     return {
       skill_name: curr_shiki_obj.式神技能[skill].技能名称,
-      image: $images[curr_shiki_obj.式神技能[skill].图标路径],
+      image: images[curr_shiki_obj.式神技能[skill].图标路径],
       description: curr_shiki_obj.式神技能[skill].技能描述,
       properties: curr_shiki_obj.式神技能[skill].技能成长
     };
@@ -44,7 +43,7 @@
   const color_regex = new RegExp(colors.join("|"), "gi");
 
   let skill_name = curr_shiki_obj.式神技能.天生被动.技能名称;
-  let skill_image = $images[curr_shiki_obj.式神技能.天生被动.图标路径];
+  let skill_image = images[curr_shiki_obj.式神技能.天生被动.图标路径];
   let skill_description = curr_shiki_obj.式神技能.天生被动.技能描述.replace(color_regex, "");
   let skill_properties = curr_shiki_obj.式神技能.天生被动.技能成长;
 

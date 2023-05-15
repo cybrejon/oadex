@@ -7,10 +7,13 @@
     active_role,
     isAscending,
     role_config,
-    shikiga_data,
-    hasBeenLeft,
-    images
+    hasBeenLeft
   } from './store.js';
+
+  // import data
+  export let data;
+  const shikiga_data = data.shikiga_data;
+  const images = data.images;
 
   import { onDestroy } from 'svelte';
   import Fuse from 'fuse.js';
@@ -21,14 +24,14 @@
   import ShikiCard from '$lib/ShikiCard.svelte';
   import "$lib/styles/shikis.css";
 
-  const shiki_names = Object.keys($shikiga_data).sort();
+  const shiki_names = Object.keys(shikiga_data).sort();
 
   $: role = shiki_names;
   const toggleRole = (r) => () => {
 
     r === 'all'
     ? role = shiki_names.sort()
-    : role = shiki_names.filter(shiki => $shikiga_data[shiki].式神定位[0] === r).sort();
+    : role = shiki_names.filter(shiki => shikiga_data[shiki].式神定位[0] === r).sort();
 
     active_role.update(role => role = r);
     search_value = '';
@@ -115,8 +118,8 @@
     {#each $role_config as shiki}
 
       <ShikiCard
-        slug = {$shikiga_data[shiki].式神ID}
-        src = {$images[$shikiga_data[shiki].式神方头像]}
+        slug = {shikiga_data[shiki].式神ID}
+        src = {images[shikiga_data[shiki].式神方头像]}
         shiki_name = {shiki}
       />
 
@@ -125,8 +128,8 @@
     {#each role as shiki}
 
       <ShikiCard
-        slug = {$shikiga_data[shiki].式神ID}
-        src = {$images[$shikiga_data[shiki].式神方头像]}
+        slug = {shikiga_data[shiki].式神ID}
+        src = {images[shikiga_data[shiki].式神方头像]}
         shiki_name = {shiki}
       />
       

@@ -5,9 +5,6 @@
 
   console.log(shiki_id);
 
-  // import stores
-  import { shikiga_data, images } from '../../store.js';
-
   // components
   import Note from "$lib/components/Note.svelte";
   import Basic from '$lib/components/shikigami/Basic.svelte';
@@ -23,11 +20,13 @@
   // import data
   export let data;
   const { dictionary } = data;
+  const shikiga_data = data.shikiga_data;
+  const images = data.images;
 
   // define information
-  const shiki_names = Object.keys($shikiga_data);  
-  const selected_shiki_name = shiki_names.filter(name => $shikiga_data[name].式神ID.toString() === shiki_id);
-  const curr_shiki_obj = $shikiga_data[selected_shiki_name];
+  const shiki_names = Object.keys(shikiga_data);  
+  const selected_shiki_name = shiki_names.filter(name => shikiga_data[name].式神ID.toString() === shiki_id);
+  const curr_shiki_obj = shikiga_data[selected_shiki_name];
   const scores = curr_shiki_obj.评分;
 
   // shikigami stats
@@ -129,8 +128,8 @@
 
 <div class="container">
 
-  <Gallery area_name='gallery' link={$images[curr_shiki_obj.式神全身像]} data={{
-    image_url: $images[curr_shiki_obj.式神全身像],
+  <Gallery area_name='gallery' link={images[curr_shiki_obj.式神全身像]} data={{
+    image_url: images[curr_shiki_obj.式神全身像],
     image_alt: curr_shiki_obj.式神名称
   }} />
 
@@ -273,6 +272,7 @@
   <Container area_name="skills">
     <Skills
       curr_shiki_obj={curr_shiki_obj}
+      images={images}
     />
   </Container>
 
