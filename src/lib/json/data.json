@@ -14015,7 +14015,7 @@
         1,
         1
       ],
-      "新式神": true,
+      "新式神": false,
       "推荐加点优先级": [
         4,
         1,
@@ -38012,6 +38012,14 @@
           "皮肤全身像": "gui/res/hero_quan/106303.png",
           "皮肤头像": "gui/res/head_fang/106303.png",
           "皮肤头像_新": "gui2/res/head_fang/106303.png"
+        },
+        {
+          "皮肤名称": "Red Bramble Mistress",
+          "皮肤全身像_新": "gui/res/hero_quan2/106305.png",
+          "皮肤ID": 106305,
+          "皮肤全身像": "gui/res/hero_quan/106305.png",
+          "皮肤头像": "gui/res/head_fang/106305.png",
+          "皮肤头像_新": "gui2/res/head_fang/106305.png"
         }
       ],
       "推荐加点顺序": [
