@@ -1,6 +1,6 @@
 /** @type {import('./$types').PageServerLoad} */
 
-export async function load() {
+export async function load({ fetch }) {
 
   let shikiga_data;
   let images;
@@ -11,6 +11,24 @@ export async function load() {
   ])
   .then(responses => Promise.all(responses.map(response => response.json())))
   .then(data => {
+    const shiki_names = Object.keys(data[0].data);
+    function deleteKeys(keys) {
+      shiki_names.forEach(shiki => {
+        for (const key of keys) {
+          delete data[0].data[shiki][key];
+        }
+      })
+      
+    }
+    deleteKeys([
+      "式神新卡片",
+      "式神传记",
+      "皮肤",
+      "推荐加点顺序",
+      "式神圆头像",
+      "是否长期限免",
+      "式神卡片"
+    ])
     shikiga_data = data[0].data;
     images = data[1].path_dict;
   })

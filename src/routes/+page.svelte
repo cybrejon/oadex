@@ -121,6 +121,8 @@
         slug = {shikiga_data[shiki].式神ID}
         src = {images[shikiga_data[shiki].式神方头像]}
         shiki_name = {shiki}
+        new_shiki = {shikiga_data[shiki].新式神}
+        in_rotation = {shikiga_data[shiki].是否长期限免}
       />
 
     {/each}
@@ -131,6 +133,8 @@
         slug = {shikiga_data[shiki].式神ID}
         src = {images[shikiga_data[shiki].式神方头像]}
         shiki_name = {shiki}
+        new_shiki = {shikiga_data[shiki].新式神}
+        in_rotation = {shikiga_data[shiki].是否长期限免}
       />
       
     {/each}

@@ -5,6 +5,8 @@
   export let slug;
   export let src;
   export let shiki_name;
+  export let new_shiki;
+  export let in_rotation;
 
 </script>
 
@@ -17,6 +19,12 @@
     <div class="sc-text-container">
       <p class="shikigami-name">{shiki_name}</p>
     </div>
+    {#if new_shiki}
+      <p class="new-tag">NEW</p>
+    {/if}
+    {#if in_rotation}
+      <p class="free-tag">FREE</p>
+    {/if}
   </div>
 </a>
 
@@ -39,15 +47,44 @@
 }
 
 .shiki-card {
+  position: relative;
   overflow: hidden;
   border: 4px solid #585A5F;
   background-color: #42444A;
   box-shadow: 0 8px #282A2F;
   border-radius: 10px;
   width: 100px;
-  height: 140px;
+  height: 150px;
   transition: .1s;
   animation: fade .3s;
+}
+
+.new-tag {
+  text-align: center;
+  font-weight: 800;
+  font-size: .6rem;
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  left: 10px;
+  background-color: red;
+  color: #fff;
+  padding: 3px 5px 2px 5px;
+  border-radius: 3px;
+}
+
+.free-tag {
+  text-align: center;
+  font-weight: 800;
+  font-size: .6rem;
+  position: absolute;
+  bottom: 39px;
+  right: 5px;
+  left: 5px;
+  background-color: #CDFE05;
+  color: #282A2F;
+  padding: 3px 5px 2px 5px;
+  border-radius: 3px;
 }
 
 .shiki-card:hover {
@@ -73,7 +110,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 45px;
+  height: 55px;
 }
 
 .shikigami-name {

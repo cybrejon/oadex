@@ -1,5 +1,9 @@
 <script>
 
+  // NOTE add these properties
+  // 是否长期限免 free shiki of the week
+  // 新式神 recent shikigami 
+
   import { page } from '$app/stores'
   let shiki_id = $page.url.pathname.slice(11);
 
@@ -28,6 +32,7 @@
   const selected_shiki_name = shiki_names.filter(name => shikiga_data[name].式神ID.toString() === shiki_id);
   const curr_shiki_obj = shikiga_data[selected_shiki_name];
   const scores = curr_shiki_obj.评分;
+  const usage = curr_shiki_obj.式神攻略.replace(/#r/gi, '\n');
 
   // shikigami stats
   const mvsc_count = curr_shiki_obj.式神基础属性.移动速度.toString().split("").length;
@@ -276,19 +281,20 @@
     />
   </Container>
 
+  <Container area_name="usage">
+    <h3>💡 How to use</h3>
+    <p class="usage-text">{usage}</p>
+  </Container>
+
   <Container area_name="item-gallery">
     <h3>📚 Default Builds</h3>
     <ItemGallery />
   </Container>
 
-  <Container area_name="information">
-    <h3>⚠️ Data availability</h3>
-    <p>Information you see in this page is subject to change every Monday, Beijing Time. If you have any questions, please contact me at <a href="http://discord.gg/KGsaAet">OADex</a> Discord.</p>
-  </Container>
 
 </div>
 
-<Note text="TODO: default builds section" styles="font-size: .8rem; text-align: center;" noIcon="True" />
+<Note text="Information you see in this page is subject to change every Monday, Beijing Time. If you have any questions, please contact me at http://discord.gg/KGsaAet." styles="font-size: .8rem; text-align: center;" />
 
 
 
@@ -303,8 +309,7 @@
     grid-template-areas: 
     "gallery gallery basic basic2"
     "stats-1 stats-1 skills skills"
-    ". item-gallery item-gallery ."
-    "information information information information";
+    "usage usage item-gallery item-gallery";
     gap: 20px;
     align-content: center;
     flex-wrap: wrap;
@@ -333,6 +338,11 @@
     grid-template-rows: 20px 1fr;
   }
 
+  .usage-text {
+    font-size: .8rem;
+    line-height: 24px;
+  }
+
   @media only screen and (max-width: 620px) {
     .container {
       grid-template-columns: 1fr;
@@ -342,8 +352,8 @@
       "basic2"
       "stats-1"
       "skills"
-      "item-gallery"
-      "information";
+      "usage"
+      "item-gallery";
     }
   }
 
