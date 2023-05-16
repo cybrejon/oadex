@@ -452,6 +452,7 @@
       "gallery"
       "basic"
       "basic2"
+      "more-scores"
       "stats-1"
       "skills"
       "usage"
