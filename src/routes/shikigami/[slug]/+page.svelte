@@ -82,43 +82,82 @@
   }
 
   // let wrPrData;
+
+  let kda = {
+    all: "⏳",
+    noban: "⏳",
+    ban: "⏳",
+    fogban: "⏳",
+  };
+
+  let avg_kills = {
+    all: "⏳",
+    noban: "⏳",
+    ban: "⏳",
+    fogban: "⏳",
+  };
+
   let win_rate = {
     all: "⏳",
     noban: "⏳",
     ban: "⏳",
     fogban: "⏳",
   };
+
   let pick_rate = {
     all: "⏳",
     noban: "⏳",
     ban: "⏳",
     fogban: "⏳",
   };
+
   const urls = [
       `/api/wr-pr/?shiki_id=${shiki_id}&game_mode=all`,
       `/api/wr-pr/?shiki_id=${shiki_id}&game_mode=noban`,
       `/api/wr-pr/?shiki_id=${shiki_id}&game_mode=ban`,
       `/api/wr-pr/?shiki_id=${shiki_id}&game_mode=fogban`
     ];
+
   async function getWrPrData() {
+    
     await Promise.all(urls.map(url =>
       fetch(url)
         .then(response => response.json())
+
     )).then(data => {
+
+      kda = {
+        all: data[0].kda,
+        noban: data[1].kda,
+        ban: data[2].kda,
+        fogban: data[3].kda,
+      }
+
+      avg_kills = {
+        all: data[0].avg_kill_cnt,
+        noban: data[1].avg_kill_cnt,
+        ban: data[2].avg_kill_cnt,
+        fogban: data[3].avg_kill_cnt,
+      }
+
       win_rate = {
         all: (data[0].win_rate * 100).toFixed(2),
         noban: (data[1].win_rate * 100).toFixed(2),
         ban: (data[2].win_rate * 100).toFixed(2),
         fogban: (data[3].win_rate * 100).toFixed(2),
       }
+
       pick_rate = {
         all: (data[0].battle_rate * 100).toFixed(2),
         noban: (data[1].battle_rate * 100).toFixed(2),
         ban: (data[2].battle_rate * 100).toFixed(2),
         fogban: (data[3].battle_rate * 100).toFixed(2),
       }
+
     }).catch(error => {
+
       console.error('[win-rates pick rates] could not complete fetch');
+
     });
   };
 
@@ -146,15 +185,15 @@
     specialty: curr_shiki_obj.式神标签
   }} >
 
-    <Basic2 data={{
-      dps: dictionary.scores[scores.输出],
-      cc: dictionary.scores[scores.控制],
-      sustain: dictionary.scores[scores.生存],
-      buffs: dictionary.scores[scores.增益],
-      agility: dictionary.scores[scores.敏捷],
-    }} />  
+  <Basic2 data={{
+    dps: dictionary.scores[scores.输出],
+    cc: dictionary.scores[scores.控制],
+    sustain: dictionary.scores[scores.生存],
+    buffs: dictionary.scores[scores.增益],
+    agility: dictionary.scores[scores.敏捷],
+  }} />  
 
-  </Basic>
+</Basic>
 
   <Container area_name="basic2">
 
@@ -222,6 +261,69 @@
 
     <Note text="Source: China server" styles="font-size: .8rem; color: rgba(255, 255, 255, .7); text-align: center;" noIcon="True" />
   
+  </Container>
+
+  <Container area_name="more-scores">
+    <h3>🗡️ KDA</h3>
+
+    <div class="grid-container">
+      <Note area_name="1 / 1 / 2 / 5" text="ALL MODES" styles="font-size: .8rem; text-align: center;" noIcon="True" />
+      <StatCard data={{
+        property: "AVG K/D/A",
+        value: `${kda.all}`,
+        grid_area: "2 / 1 / 3 / 3"
+      }} />
+      <StatCard data={{
+        property: "AVG KILLS",
+        value: `${avg_kills.all}`,
+        grid_area: "2 / 3 / 3 / 5"
+      }} />
+    </div>
+
+    <div class="grid-container">
+      <Note area_name="1 / 1 / 2 / 5" text="PRE-ELITE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
+      <StatCard data={{
+        property: "AVG K/D/A",
+        value: `${kda.noban}`,
+        grid_area: "2 / 1 / 3 / 3"
+      }} />
+      <StatCard data={{
+        property: "AVG KILLS",
+        value: `${avg_kills.noban}`,
+        grid_area: "2 / 3 / 3 / 5"
+      }} />
+    </div>
+
+    <div class="grid-container">
+      <Note area_name="1 / 1 / 2 / 5" text="BAN MODE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
+      <StatCard data={{
+        property: "AVG K/D/A",
+        value: `${kda.ban}`,
+        grid_area: "2 / 1 / 3 / 3"
+      }} />
+      <StatCard data={{
+        property: "AVG KILLS",
+        value: `${avg_kills.ban}`,
+        grid_area: "2 / 3 / 3 / 5"
+      }} />
+    </div>
+
+    <div class="grid-container">
+      <Note area_name="1 / 1 / 2 / 5" text="FOG BAN MODE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
+      <StatCard data={{
+        property: "AVG K/D/A",
+        value: `${kda.fogban}`,
+        grid_area: "2 / 1 / 3 / 3"
+      }} />
+      <StatCard data={{
+        property: "AVG KILLS",
+        value: `${avg_kills.fogban}`,
+        grid_area: "2 / 3 / 3 / 5"
+      }} />
+    </div>
+
+    <Note text="Source: China server" styles="font-size: .8rem; color: rgba(255, 255, 255, .7); text-align: center;" noIcon="True" />
+
   </Container>
 
   <Stats area_name="stats-1" >
@@ -307,7 +409,7 @@
     grid-template-rows: auto;
     /* align-items: center; */
     grid-template-areas: 
-    "gallery gallery basic basic2"
+    "gallery basic basic2 more-scores"
     "stats-1 stats-1 skills skills"
     "usage usage item-gallery item-gallery";
     gap: 20px;
