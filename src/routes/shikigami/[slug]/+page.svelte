@@ -186,6 +186,7 @@
   }} >
 
   <Basic2 data={{
+    difficulty: dictionary.difficulty[scores.难度],
     dps: dictionary.scores[scores.输出],
     cc: dictionary.scores[scores.控制],
     sustain: dictionary.scores[scores.生存],
@@ -193,7 +194,7 @@
     agility: dictionary.scores[scores.敏捷],
   }} />  
 
-</Basic>
+  </Basic>
 
   <Container area_name="basic2">
 

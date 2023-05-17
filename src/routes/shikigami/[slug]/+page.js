@@ -1,6 +1,6 @@
 /** @type {import('./$types').PageLoad} */
 
-import { scores, roles, roles_numeral, lanes } from '$lib/json/dictionary.json';
+import { scores, roles, roles_numeral, lanes, difficulty } from '$lib/json/dictionary.json';
 
 export async function load() {
 
@@ -9,7 +9,8 @@ export async function load() {
       scores,
       roles,
       roles_numeral,
-      lanes
+      lanes,
+      difficulty
     }
   }
 

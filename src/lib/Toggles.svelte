@@ -89,7 +89,7 @@ button {
   font-weight: 800;
   color: #ffffffad;
   border-radius: 6px;
-  padding: 7px 7px 5px 7px;
+  padding: 7px;
   border: 3px solid transparent;
   transition: .1s;
 }

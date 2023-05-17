@@ -36,5 +36,12 @@
     "1125",
     "1101",
     "1102"
-  ]
+  ],
+  "difficulty" : {
+    "1" : "Very Easy",
+    "2" : "Easy",
+    "3" : "Normal",
+    "4" : "Hard",
+    "5" : "Extreme"
+  }
 }

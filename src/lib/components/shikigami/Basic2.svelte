@@ -2,6 +2,7 @@
   export let data;
 
   let { 
+    difficulty: difficulty,
     dps: dps,
     cc: cc,
     sustain: sustain,
@@ -9,11 +10,11 @@
     agility: agility,
   } = data;
 
-  import Container from "$lib/components/shikigami/Container.svelte";
   import Card from "$lib/components/shikigami/Card.svelte";
 </script>
 
 <Card content={[
+  `${difficulty} - 🪜 Difficulty`,
   `${dps} - ⚔️ DPS Rating`,
   `${cc} - ⚓ CC Rating`,
   `${sustain} - 💪🏽 SUSTAIN Rating`,
