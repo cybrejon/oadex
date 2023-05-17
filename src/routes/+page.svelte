@@ -94,14 +94,14 @@
 
 <Note text="This website is under active development, expect bugs and other issues!" />
   <div class="shiki-selection-header">
-    <Toggles toggle_icon="ic:round-sort" anchor_direction="right" buttons={[
+    <Toggles toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
       { name: "A-Z", active_indicator: $isAscending, active_value: true, fn: sortAscend },
       { name: "Z-A", active_indicator: $isAscending, active_value: false, fn: sortDescend },
     ]} />
     <div class="filter-container">
       <input id="filter-input" on:keypress={filterShiki} class="filter-input" type="text" placeholder="Filter" bind:value={search_value} >
     </div>
-    <Toggles toggle_icon="gridicons:dropdown" anchor_direction="left" buttons={[
+    <Toggles toggle_icon="gridicons:dropdown" anchor_direction="right" buttons={[
       { name: "ALL", active_indicator: $active_role, active_value: 'all', fn: toggleRole('all') },
       { name: "SAMURAI", active_indicator: $active_role, active_value: '侍', fn: toggleRole('侍') },
       { name: "NINJA", active_indicator: $active_role, active_value: '忍', fn: toggleRole('忍') },
