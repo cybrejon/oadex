@@ -206,10 +206,13 @@
 
   <Container area_name="basic2">
 
-    <Toggles toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
-      { name: "PERFORMANCE", active_indicator: current_page, active_value: 1, fn: pager(1) },
-      { name: "KDA/KILLS", active_indicator: current_page, active_value: 2, fn: pager(2) },
-    ]} />
+    <div class="performance-pager-container">
+      <Toggles toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
+        { name: "PERFORMANCE", active_indicator: current_page, active_value: 1, fn: pager(1) },
+        { name: "KDA/KILLS", active_indicator: current_page, active_value: 2, fn: pager(2) },
+      ]} />
+    </div>
+    
     
     {#if current_page === 1}
       <div class="grid-container">
@@ -538,6 +541,12 @@
   .skill-order table .tr-skill-image-cell {
     width: 50px;
     text-align: center;
+  }
+
+  .performance-pager-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   @media only screen and (max-width: 620px) {
