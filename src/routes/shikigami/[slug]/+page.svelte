@@ -7,8 +7,6 @@
   import { page } from '$app/stores'
   let shiki_id = $page.url.pathname.slice(11);
 
-  console.log(shiki_id);
-
   // components
   import Note from "$lib/components/Note.svelte";
   import Basic from '$lib/components/shikigami/Basic.svelte';
@@ -19,6 +17,7 @@
   import Container from "$lib/components/shikigami/Container.svelte";
   import Skills from '$lib/components/shikigami/Skills.svelte';
   import ItemGallery from '$lib/components/shikigami/ItemGallery.svelte';
+  import Toggles from '$lib/Toggles.svelte';
   import { onMount } from 'svelte';
 
   // import data
@@ -161,6 +160,15 @@
     });
   };
 
+  // skill order
+  const skill_order_data = curr_shiki_obj.推荐加点顺序;
+
+  // perf / kda pager
+  let current_page = 1;
+  const pager = (page) => () => {
+    current_page = page;
+  }
+
   onMount(async () => {
     await getWrPrData();
   });
@@ -198,133 +206,133 @@
 
   <Container area_name="basic2">
 
-    <h3 class="stats-header">🏋🏼 Performance</h3>
+    <Toggles toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
+      { name: "PERFORMANCE", active_indicator: current_page, active_value: 1, fn: pager(1) },
+      { name: "KDA/KILLS", active_indicator: current_page, active_value: 2, fn: pager(2) },
+    ]} />
+    
+    {#if current_page === 1}
+      <div class="grid-container">
+        <Note area_name="1 / 1 / 2 / 5" text="ALL MODES" styles="font-size: .8rem; text-align: center;" noIcon="True" />
+        <StatCard data={{
+          property: "🏆 Win-rate",
+          value: `${win_rate.all}%`,
+          grid_area: "2 / 1 / 3 / 3"
+        }} />
+        <StatCard data={{
+          property: "🏅 Pick-rate",
+          value: `${pick_rate.all}%`,
+          grid_area: "2 / 3 / 3 / 5"
+        }} />
+        <!-- grid-area: [row-start] / [column-start] / [row-end] / [column-end]; -->
+      </div>
 
-    <div class="grid-container">
-      <Note area_name="1 / 1 / 2 / 5" text="ALL MODES" styles="font-size: .8rem; text-align: center;" noIcon="True" />
-      <StatCard data={{
-        property: "🏆 Win-rate",
-        value: `${win_rate.all}%`,
-        grid_area: "2 / 1 / 3 / 3"
-      }} />
-      <StatCard data={{
-        property: "🏅 Pick-rate",
-        value: `${pick_rate.all}%`,
-        grid_area: "2 / 3 / 3 / 5"
-      }} />
-      <!-- grid-area: [row-start] / [column-start] / [row-end] / [column-end]; -->
-    </div>
+      <div class="grid-container">
+        <Note area_name="1 / 1 / 2 / 5" text="PRE-ELITE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
+        <StatCard data={{
+          property: "🏆 Win-rate",
+          value: `${win_rate.noban}%`,
+          grid_area: "2 / 1 / 3 / 3"
+        }} />
+        <StatCard data={{
+          property: "🏅 Pick-rate",
+          value: `${pick_rate.noban}%`,
+          grid_area: "2 / 3 / 3 / 5"
+        }} />
+        <!-- grid-area: [row-start] / [column-start] / [row-end] / [column-end]; -->
+      </div>
 
-    <div class="grid-container">
-      <Note area_name="1 / 1 / 2 / 5" text="PRE-ELITE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
-      <StatCard data={{
-        property: "🏆 Win-rate",
-        value: `${win_rate.noban}%`,
-        grid_area: "2 / 1 / 3 / 3"
-      }} />
-      <StatCard data={{
-        property: "🏅 Pick-rate",
-        value: `${pick_rate.noban}%`,
-        grid_area: "2 / 3 / 3 / 5"
-      }} />
-      <!-- grid-area: [row-start] / [column-start] / [row-end] / [column-end]; -->
-    </div>
+      <div class="grid-container">
+        <Note area_name="1 / 1 / 2 / 5" text="BAN MODE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
+        <StatCard data={{
+          property: "🏆 Win-rate",
+          value: `${win_rate.ban}%`,
+          grid_area: "2 / 1 / 3 / 3"
+        }} />
+        <StatCard data={{
+          property: "🏅 Pick-rate",
+          value: `${pick_rate.ban}%`,
+          grid_area: "2 / 3 / 3 / 5"
+        }} />
+        <!-- grid-area: [row-start] / [column-start] / [row-end] / [column-end]; -->
+      </div>
 
-    <div class="grid-container">
-      <Note area_name="1 / 1 / 2 / 5" text="BAN MODE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
-      <StatCard data={{
-        property: "🏆 Win-rate",
-        value: `${win_rate.ban}%`,
-        grid_area: "2 / 1 / 3 / 3"
-      }} />
-      <StatCard data={{
-        property: "🏅 Pick-rate",
-        value: `${pick_rate.ban}%`,
-        grid_area: "2 / 3 / 3 / 5"
-      }} />
-      <!-- grid-area: [row-start] / [column-start] / [row-end] / [column-end]; -->
-    </div>
+      <div class="grid-container">
+        <Note area_name="1 / 1 / 2 / 5" text="FOG BAN MODE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
+        <StatCard data={{
+          property: "🏆 Win-rate",
+          value: `${win_rate.fogban}%`,
+          grid_area: "2 / 1 / 3 / 3"
+        }} />
+        <StatCard data={{
+          property: "🏅 Pick-rate",
+          value: `${pick_rate.fogban}%`,
+          grid_area: "2 / 3 / 3 / 5"
+        }} />
+        <!-- grid-area: [row-start] / [column-start] / [row-end] / [column-end]; -->
+      </div>
+    {/if}
 
-    <div class="grid-container">
-      <Note area_name="1 / 1 / 2 / 5" text="FOG BAN MODE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
-      <StatCard data={{
-        property: "🏆 Win-rate",
-        value: `${win_rate.fogban}%`,
-        grid_area: "2 / 1 / 3 / 3"
-      }} />
-      <StatCard data={{
-        property: "🏅 Pick-rate",
-        value: `${pick_rate.fogban}%`,
-        grid_area: "2 / 3 / 3 / 5"
-      }} />
-      <!-- grid-area: [row-start] / [column-start] / [row-end] / [column-end]; -->
-    </div>
+    {#if current_page === 2}
+      <div class="grid-container">
+        <Note area_name="1 / 1 / 2 / 5" text="ALL MODES" styles="font-size: .8rem; text-align: center;" noIcon="True" />
+        <StatCard data={{
+          property: "AVG K/D/A",
+          value: `${kda.all}`,
+          grid_area: "2 / 1 / 3 / 3"
+        }} />
+        <StatCard data={{
+          property: "AVG KILLS",
+          value: `${avg_kills.all}`,
+          grid_area: "2 / 3 / 3 / 5"
+        }} />
+      </div>
+
+      <div class="grid-container">
+        <Note area_name="1 / 1 / 2 / 5" text="PRE-ELITE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
+        <StatCard data={{
+          property: "AVG K/D/A",
+          value: `${kda.noban}`,
+          grid_area: "2 / 1 / 3 / 3"
+        }} />
+        <StatCard data={{
+          property: "AVG KILLS",
+          value: `${avg_kills.noban}`,
+          grid_area: "2 / 3 / 3 / 5"
+        }} />
+      </div>
+
+      <div class="grid-container">
+        <Note area_name="1 / 1 / 2 / 5" text="BAN MODE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
+        <StatCard data={{
+          property: "AVG K/D/A",
+          value: `${kda.ban}`,
+          grid_area: "2 / 1 / 3 / 3"
+        }} />
+        <StatCard data={{
+          property: "AVG KILLS",
+          value: `${avg_kills.ban}`,
+          grid_area: "2 / 3 / 3 / 5"
+        }} />
+      </div>
+
+      <div class="grid-container">
+        <Note area_name="1 / 1 / 2 / 5" text="FOG BAN MODE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
+        <StatCard data={{
+          property: "AVG K/D/A",
+          value: `${kda.fogban}`,
+          grid_area: "2 / 1 / 3 / 3"
+        }} />
+        <StatCard data={{
+          property: "AVG KILLS",
+          value: `${avg_kills.fogban}`,
+          grid_area: "2 / 3 / 3 / 5"
+        }} />
+      </div>
+    {/if}
 
     <Note text="Source: China server" styles="font-size: .8rem; color: rgba(255, 255, 255, .7); text-align: center;" noIcon="True" />
   
-  </Container>
-
-  <Container area_name="more-scores">
-    <h3>🗡️ KDA</h3>
-
-    <div class="grid-container">
-      <Note area_name="1 / 1 / 2 / 5" text="ALL MODES" styles="font-size: .8rem; text-align: center;" noIcon="True" />
-      <StatCard data={{
-        property: "AVG K/D/A",
-        value: `${kda.all}`,
-        grid_area: "2 / 1 / 3 / 3"
-      }} />
-      <StatCard data={{
-        property: "AVG KILLS",
-        value: `${avg_kills.all}`,
-        grid_area: "2 / 3 / 3 / 5"
-      }} />
-    </div>
-
-    <div class="grid-container">
-      <Note area_name="1 / 1 / 2 / 5" text="PRE-ELITE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
-      <StatCard data={{
-        property: "AVG K/D/A",
-        value: `${kda.noban}`,
-        grid_area: "2 / 1 / 3 / 3"
-      }} />
-      <StatCard data={{
-        property: "AVG KILLS",
-        value: `${avg_kills.noban}`,
-        grid_area: "2 / 3 / 3 / 5"
-      }} />
-    </div>
-
-    <div class="grid-container">
-      <Note area_name="1 / 1 / 2 / 5" text="BAN MODE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
-      <StatCard data={{
-        property: "AVG K/D/A",
-        value: `${kda.ban}`,
-        grid_area: "2 / 1 / 3 / 3"
-      }} />
-      <StatCard data={{
-        property: "AVG KILLS",
-        value: `${avg_kills.ban}`,
-        grid_area: "2 / 3 / 3 / 5"
-      }} />
-    </div>
-
-    <div class="grid-container">
-      <Note area_name="1 / 1 / 2 / 5" text="FOG BAN MODE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
-      <StatCard data={{
-        property: "AVG K/D/A",
-        value: `${kda.fogban}`,
-        grid_area: "2 / 1 / 3 / 3"
-      }} />
-      <StatCard data={{
-        property: "AVG KILLS",
-        value: `${avg_kills.fogban}`,
-        grid_area: "2 / 3 / 3 / 5"
-      }} />
-    </div>
-
-    <Note text="Source: China server" styles="font-size: .8rem; color: rgba(255, 255, 255, .7); text-align: center;" noIcon="True" />
-
   </Container>
 
   <Stats area_name="stats-1" >
@@ -382,6 +390,56 @@
       curr_shiki_obj={curr_shiki_obj}
       images={images}
     />
+    <h3>🔢 Skill Order</h3>
+    <div class="skill-order">
+      <table>
+
+        <tr>
+          <td class="tr-skill-image-cell"><img loading="lazy" src={images[curr_shiki_obj.式神技能.一技能.图标路径]} alt="skill"></td>
+          {#each skill_order_data as order, i}
+            {#if order === 1}
+              <td class="active">{i+1}</td>
+            {:else}
+              <td>{i+1}</td>
+            {/if}
+          {/each}
+        </tr>
+
+        <tr>
+          <td class="tr-skill-image-cell"><img loading="lazy" src={images[curr_shiki_obj.式神技能.二技能.图标路径]} alt="skill"></td>
+          {#each skill_order_data as order, i}
+            {#if order === 2}
+              <td class="active">{i+1}</td>
+            {:else}
+              <td>{i+1}</td>
+            {/if}
+          {/each}
+        </tr>
+
+        <tr>
+          <td class="tr-skill-image-cell"><img loading="lazy" src={images[curr_shiki_obj.式神技能.三技能.图标路径]} alt="skill"></td>
+          {#each skill_order_data as order, i}
+            {#if order === 3}
+              <td class="active">{i+1}</td>
+            {:else}
+              <td>{i+1}</td>
+            {/if}
+          {/each}
+        </tr>
+
+        <tr>
+          <td class="tr-skill-image-cell"><img loading="lazy" src={images[curr_shiki_obj.式神技能.四技能.图标路径]} alt="skill"></td>
+          {#each skill_order_data as order, i}
+            {#if order === 4}
+              <td class="active">{i}</td>
+            {:else}
+              <td>{i+1}</td>
+            {/if}
+          {/each}
+        </tr>
+
+      </table>
+    </div>
   </Container>
 
   <Container area_name="usage">
@@ -410,9 +468,10 @@
     grid-template-rows: auto;
     /* align-items: center; */
     grid-template-areas: 
-    "gallery basic basic2 more-scores"
+    "gallery gallery basic basic2"
     "stats-1 stats-1 skills skills"
-    "usage usage item-gallery item-gallery";
+    "usage usage skills skills"
+    "item-gallery item-gallery . .";
     gap: 20px;
     align-content: center;
     flex-wrap: wrap;
@@ -446,6 +505,41 @@
     line-height: 24px;
   }
 
+  .skill-order {
+    background-color: #3C3F46;
+    border-radius: 6px;
+    padding: 5px;
+  }
+
+  .skill-order table {
+    border-collapse: separate;
+    table-layout: auto;
+    border-spacing: 0 5px;
+    width: 100%;
+  }
+
+  .skill-order table td {
+    color: #b6b6b6;
+    padding: 5px 0;
+    text-align: center;
+  }
+
+  .skill-order table td.active {
+    color: #CDFE05;
+    font-weight: 600;
+  }
+
+  .skill-order table img {
+    margin: auto;
+    width: 40px;
+    display: block;
+  }
+
+  .skill-order table .tr-skill-image-cell {
+    width: 50px;
+    text-align: center;
+  }
+
   @media only screen and (max-width: 620px) {
     .container {
       grid-template-columns: 1fr;
@@ -453,7 +547,6 @@
       "gallery"
       "basic"
       "basic2"
-      "more-scores"
       "stats-1"
       "skills"
       "usage"
