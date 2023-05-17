@@ -169,6 +169,12 @@
     current_page = page;
   }
 
+  // skill order visibility toggle
+  let is_order_visible = false;
+  const orderDisplayToggle = () => () => {
+    is_order_visible = !is_order_visible;
+  }
+
   onMount(async () => {
     await getWrPrData();
   });
@@ -207,7 +213,7 @@
   <Container area_name="basic2">
 
     <div class="performance-pager-container">
-      <Toggles toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
+      <Toggles no_collapse="True" toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
         { name: "PERFORMANCE", active_indicator: current_page, active_value: 1, fn: pager(1) },
         { name: "KDA/KILLS", active_indicator: current_page, active_value: 2, fn: pager(2) },
       ]} />
@@ -393,56 +399,70 @@
       curr_shiki_obj={curr_shiki_obj}
       images={images}
     />
-    <h3>🔢 Skill Order</h3>
-    <div class="skill-order">
-      <table>
-
-        <tr>
-          <td class="tr-skill-image-cell"><img loading="lazy" src={images[curr_shiki_obj.式神技能.一技能.图标路径]} alt="skill"></td>
-          {#each skill_order_data as order, i}
-            {#if order === 1}
-              <td class="active">{i+1}</td>
-            {:else}
-              <td>{i+1}</td>
-            {/if}
-          {/each}
-        </tr>
-
-        <tr>
-          <td class="tr-skill-image-cell"><img loading="lazy" src={images[curr_shiki_obj.式神技能.二技能.图标路径]} alt="skill"></td>
-          {#each skill_order_data as order, i}
-            {#if order === 2}
-              <td class="active">{i+1}</td>
-            {:else}
-              <td>{i+1}</td>
-            {/if}
-          {/each}
-        </tr>
-
-        <tr>
-          <td class="tr-skill-image-cell"><img loading="lazy" src={images[curr_shiki_obj.式神技能.三技能.图标路径]} alt="skill"></td>
-          {#each skill_order_data as order, i}
-            {#if order === 3}
-              <td class="active">{i+1}</td>
-            {:else}
-              <td>{i+1}</td>
-            {/if}
-          {/each}
-        </tr>
-
-        <tr>
-          <td class="tr-skill-image-cell"><img loading="lazy" src={images[curr_shiki_obj.式神技能.四技能.图标路径]} alt="skill"></td>
-          {#each skill_order_data as order, i}
-            {#if order === 4}
-              <td class="active">{i}</td>
-            {:else}
-              <td>{i+1}</td>
-            {/if}
-          {/each}
-        </tr>
-
-      </table>
+    <div class="skill-order-title-wrapper">
+      <h3>🔢 Skill Order</h3>
+      {#if is_order_visible}  
+        <Toggles no_collapse="True" toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
+          { name: "HIDE", active_indicator: "d", active_value: "", fn: orderDisplayToggle() },
+        ]} />
+      {:else}
+        <Toggles no_collapse="True" toggle_icon="mdi:menu-up" anchor_direction="right" buttons={[
+          { name: "SHOW", active_indicator: "d", active_value: "", fn: orderDisplayToggle() },
+        ]} />
+      {/if}
     </div>
+
+    {#if is_order_visible}
+      <div class="skill-order">
+        <table>
+
+          <tr>
+            <td class="tr-skill-image-cell"><img loading="lazy" src={images[curr_shiki_obj.式神技能.一技能.图标路径]} alt="skill"></td>
+            {#each skill_order_data as order, i}
+              {#if order === 1}
+                <td class="active">{i+1}</td>
+              {:else}
+                <td>{i+1}</td>
+              {/if}
+            {/each}
+          </tr>
+
+          <tr>
+            <td class="tr-skill-image-cell"><img loading="lazy" src={images[curr_shiki_obj.式神技能.二技能.图标路径]} alt="skill"></td>
+            {#each skill_order_data as order, i}
+              {#if order === 2}
+                <td class="active">{i+1}</td>
+              {:else}
+                <td>{i+1}</td>
+              {/if}
+            {/each}
+          </tr>
+
+          <tr>
+            <td class="tr-skill-image-cell"><img loading="lazy" src={images[curr_shiki_obj.式神技能.三技能.图标路径]} alt="skill"></td>
+            {#each skill_order_data as order, i}
+              {#if order === 3}
+                <td class="active">{i+1}</td>
+              {:else}
+                <td>{i+1}</td>
+              {/if}
+            {/each}
+          </tr>
+
+          <tr>
+            <td class="tr-skill-image-cell"><img loading="lazy" src={images[curr_shiki_obj.式神技能.四技能.图标路径]} alt="skill"></td>
+            {#each skill_order_data as order, i}
+              {#if order === 4}
+                <td class="active">{i}</td>
+              {:else}
+                <td>{i+1}</td>
+              {/if}
+            {/each}
+          </tr>
+
+        </table>
+      </div>
+    {/if}
   </Container>
 
   <Container area_name="usage">
@@ -546,6 +566,12 @@
   .performance-pager-container {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+  }
+
+  .skill-order-title-wrapper {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
   }
 

@@ -10,35 +10,46 @@ import Icon from '@iconify/svelte';
 
   let state = { isOpened: false };
 
+  export let no_collapse = false;
+
   function toggle() {
     state.isOpened = !state.isOpened;
   }
 
 </script>
 
-  <div class="toggles-wrapper">
+  <div class="{no_collapse ? 'toggles-wrapper--no-collapse' : 'toggles-wrapper'}">
     <div class="toggles-container">
       {#each buttons as btn}
         <button class="{btn.active_indicator === btn.active_value && 'active-toggle'}" on:click={btn.fn}>{btn.name}</button>
       {/each}
     </div>
   </div>
-  <div class="toggles-mobile-wrapper">
-    <button on:click={toggle} type="button"><Icon icon="{toggle_icon}" style="font-size: 24px;" /></button>
-    {#if state.isOpened}
-      <div class="toggles-container-mobile {anchor_direction === 'left' ? 'anchor-left' : 'anchor-right'}">
-        {#each buttons as btn}
-          <button class="{btn.active_indicator === btn.active_value && 'active-toggle'}" on:click={btn.fn} on:click={toggle}>{btn.name}</button>
-        {/each}
-      </div>
-    {/if}
-  </div>
+  {#if !no_collapse}
+    <div class="toggles-mobile-wrapper">
+      <button on:click={toggle} type="button"><Icon icon="{toggle_icon}" style="font-size: 24px;" /></button>
+      {#if state.isOpened}
+        <div class="toggles-container-mobile {anchor_direction === 'left' ? 'anchor-left' : 'anchor-right'}">
+          {#each buttons as btn}
+            <button class="{btn.active_indicator === btn.active_value && 'active-toggle'}" on:click={btn.fn} on:click={toggle}>{btn.name}</button>
+          {/each}
+        </div>
+      {/if}
+    </div>
+  {/if}
+  
     
 
 
 
 <style>
 .toggles-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.toggles-wrapper--no-collapse {
   display: flex;
   justify-content: flex-end;
   align-items: center;
