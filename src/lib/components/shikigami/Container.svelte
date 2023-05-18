@@ -17,6 +17,8 @@
     padding: 15px;
     border-radius: 10px;
     display: flex;
+    border: 2px solid rgba(255, 255, 255, 0.189);
+    box-shadow: 0 8px #282a2f;
     /* justify-content: space-between; */
     flex-direction: column;
     row-gap: 10px;

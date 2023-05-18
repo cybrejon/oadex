@@ -18,7 +18,6 @@ export async function load({ fetch }) {
           delete data[0].data[shiki][key];
         }
       })
-      
     }
     deleteKeys([
       "式神新卡片",
@@ -27,7 +26,7 @@ export async function load({ fetch }) {
       "式神圆头像",
       "是否长期限免",
       "式神卡片"
-    ])
+    ]);
     shikiga_data = data[0].data;
     images = data[1].path_dict;
   })
