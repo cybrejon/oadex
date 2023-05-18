@@ -17,5 +17,7 @@
     background-color: #3C3F46;
     padding: 10px;
     border-radius: 6px;
+    line-height: 24px;
+    font-size: 0.8rem;
   }
 </style>
