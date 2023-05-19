@@ -491,7 +491,7 @@
     grid-template-rows: auto;
     /* align-items: center; */
     grid-template-areas: 
-    "gallery gallery basic basic2"
+    "basic gallery gallery basic2"
     "stats-1 stats-1 skills skills"
     "usage usage skills skills"
     "item-gallery item-gallery . .";
@@ -575,7 +575,7 @@
     align-items: center;
   }
 
-  @media only screen and (max-width: 620px) {
+  @media only screen and (max-width: 845px) {
     .container {
       grid-template-columns: 1fr;
       grid-template-areas: 
