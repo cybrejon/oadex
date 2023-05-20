@@ -6,16 +6,16 @@ export async function load({ fetch }) {
   let images;
 
   await Promise.all([
-    fetch('https://comp-sync.webapp.163.com/g78na_hero/free_convey?lang=en'),
-    fetch('https://comp-sync.webapp.163.com/g78na_pics/api?lang=en')
+    fetch('http://150.230.58.91:3000/shiki'),
+    fetch('http://150.230.58.91:3000/images')
   ])
   .then(responses => Promise.all(responses.map(response => response.json())))
   .then(data => {
-    const shiki_names = Object.keys(data[0].data);
+    const shiki_names = Object.keys(data[0]);
     function deleteKeys(keys) {
       shiki_names.forEach(shiki => {
         for (const key of keys) {
-          delete data[0].data[shiki][key];
+          delete data[0][shiki][key];
         }
       })
     }
@@ -27,8 +27,8 @@ export async function load({ fetch }) {
       "是否长期限免",
       "式神卡片"
     ]);
-    shikiga_data = data[0].data;
-    images = data[1].path_dict;
+    shikiga_data = data[0];
+    images = data[1];
   })
   .catch(console.error);
 

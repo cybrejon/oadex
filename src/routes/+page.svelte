@@ -90,9 +90,9 @@
 
 <svelte:head>
 	<title>OADex</title>
+  <meta description="The unofficial wiki for Onmyoji Arena.">
 </svelte:head>
 
-<Note text="This website is under active development, expect bugs and other issues!" />
   <div class="shiki-selection-header">
     <Toggles toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
       { name: "A-Z", active_indicator: $isAscending, active_value: true, fn: sortAscend },
