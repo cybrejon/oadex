@@ -6,6 +6,7 @@ export async function load({ fetch }) {
   let images;
 
   await Promise.all([
+    // please don't try anything funny with these 👇
     fetch('http://150.230.58.91:3000/shiki'),
     fetch('http://150.230.58.91:3000/images')
   ])
