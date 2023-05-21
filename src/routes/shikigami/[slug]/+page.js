@@ -2,12 +2,9 @@
 
 import { scores, roles, roles_numeral, lanes, difficulty } from '$lib/json/dictionary.json';
 
-export async function load({ fetch, params }) {
+export async function load({ data }) {
 
-  console.log(params.slug);
-
-  const response = await fetch(`http://150.230.58.91:3000/shiki?mode=queryshiki&shiki_id=${params.slug}`);
-  const shikiga_data = await response.json();
+  const shikiga_data = data.sdata;
 
   return {
     shikiga_data,
