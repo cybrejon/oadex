@@ -2,7 +2,7 @@
 
 import { scores, roles, roles_numeral, lanes, difficulty } from '$lib/json/dictionary.json';
 
-export async function load({ params, fetch }) {
+export async function load({ fetch, params }) {
 
   console.log(params.slug);
 
