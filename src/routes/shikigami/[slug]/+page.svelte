@@ -27,9 +27,7 @@
   const images = data.images;
 
   // define information
-  const shiki_names = Object.keys(shikiga_data);  
-  const selected_shiki_name = shiki_names.filter(name => shikiga_data[name].式神ID.toString() === shiki_id);
-  const curr_shiki_obj = shikiga_data[selected_shiki_name];
+  const curr_shiki_obj = shikiga_data;
   const scores = curr_shiki_obj.评分;
   const usage = curr_shiki_obj.式神攻略.replace(/#r/gi, '\n');
 
