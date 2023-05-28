@@ -14,6 +14,14 @@
     "巫": "MAGE",
     "祝": "SUPPORT"
   },
+  "roles2": [
+    "射",
+    "忍",
+    "守",
+    "侍",
+    "巫",
+    "祝"
+  ],
   "roles_numeral": {
     "1": "SAMURAI",
     "2": "MAGE",

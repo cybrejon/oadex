@@ -18,15 +18,18 @@
   import Skills from '$lib/components/shikigami/Skills.svelte';
   import ItemGallery from '$lib/components/shikigami/ItemGallery.svelte';
   import Toggles from '$lib/Toggles.svelte';
+  import WinRates from '$lib/components/shikigami/WinRates.svelte';
   import { onMount } from 'svelte';
 
   // import data
   export let data;
   const { dictionary } = data;
   const shikiga_data = data.shikiga_data;
+  const bioData = data.bioData;
   const images = data.images;
+  const performance = data.performance;
+  let wrData = data.wrData;
 
-  // define information
   const curr_shiki_obj = shikiga_data;
   const scores = curr_shiki_obj.评分;
   const usage = curr_shiki_obj.式神攻略.replace(/#r/gi, '\n');
@@ -78,86 +81,6 @@
     },
   }
 
-  // let wrPrData;
-
-  let kda = {
-    all: "⏳",
-    noban: "⏳",
-    ban: "⏳",
-    fogban: "⏳",
-  };
-
-  let avg_kills = {
-    all: "⏳",
-    noban: "⏳",
-    ban: "⏳",
-    fogban: "⏳",
-  };
-
-  let win_rate = {
-    all: "⏳",
-    noban: "⏳",
-    ban: "⏳",
-    fogban: "⏳",
-  };
-
-  let pick_rate = {
-    all: "⏳",
-    noban: "⏳",
-    ban: "⏳",
-    fogban: "⏳",
-  };
-
-  const urls = [
-      `/api/wr-pr/?shiki_id=${shiki_id}&game_mode=all`,
-      `/api/wr-pr/?shiki_id=${shiki_id}&game_mode=noban`,
-      `/api/wr-pr/?shiki_id=${shiki_id}&game_mode=ban`,
-      `/api/wr-pr/?shiki_id=${shiki_id}&game_mode=fogban`
-    ];
-
-  async function getWrPrData() {
-    
-    await Promise.all(urls.map(url =>
-      fetch(url)
-        .then(response => response.json())
-
-    )).then(data => {
-
-      kda = {
-        all: data[0].kda,
-        noban: data[1].kda,
-        ban: data[2].kda,
-        fogban: data[3].kda,
-      }
-
-      avg_kills = {
-        all: data[0].avg_kill_cnt,
-        noban: data[1].avg_kill_cnt,
-        ban: data[2].avg_kill_cnt,
-        fogban: data[3].avg_kill_cnt,
-      }
-
-      win_rate = {
-        all: (data[0].win_rate * 100).toFixed(2),
-        noban: (data[1].win_rate * 100).toFixed(2),
-        ban: (data[2].win_rate * 100).toFixed(2),
-        fogban: (data[3].win_rate * 100).toFixed(2),
-      }
-
-      pick_rate = {
-        all: (data[0].battle_rate * 100).toFixed(2),
-        noban: (data[1].battle_rate * 100).toFixed(2),
-        ban: (data[2].battle_rate * 100).toFixed(2),
-        fogban: (data[3].battle_rate * 100).toFixed(2),
-      }
-
-    }).catch(error => {
-
-      console.error('[win-rates pick rates] could not complete fetch');
-
-    });
-  };
-
   // skill order
   const skill_order_data = curr_shiki_obj.推荐加点顺序;
 
@@ -166,47 +89,135 @@
   const pager = (page) => () => {
     current_page = page;
   }
+  
+  // basic info / bio pager
+  let basicPage = 1;
+  const basicPager = (page) => () => {
+    basicPage = page;
+  }
 
   // skill order visibility toggle
   let is_order_visible = false;
   const orderDisplayToggle = () => () => {
     is_order_visible = !is_order_visible;
   }
-
-  onMount(async () => {
-    await getWrPrData();
-  });
 </script>
 
 <svelte:head>
 	<title>OADex | {curr_shiki_obj.式神名称}</title>
 </svelte:head>
 
+<Note
+  text="Please bear with the very slow loading times. The win-rate data is fetched directly from mainland China and takes some time to load. Expect a fix in the future."
+  styles="font-size: .8rem; text-align: center;"
+  container_margin='50px 0 0 0'
+/>
+
 <div class="container">
+
+  <Container area_name="basic">
+
+    <div class="performance-pager-container">
+      <Toggles no_collapse="True" toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
+        { name: "BASIC INFO", active_indicator: basicPage, active_value: 1, fn: basicPager(1) },
+        { name: "BIO", active_indicator: basicPage, active_value: 2, fn: basicPager(2) },
+      ]} />
+    </div>
+
+    {#if basicPage === 1}
+      <Basic area_name='basic' data={{
+        name: curr_shiki_obj.式神名称,
+        classification: curr_shiki_obj.式神定位.map(role => dictionary.roles[role]),
+        voices: curr_shiki_obj.cv名字,
+        lane: dictionary.lanes[curr_shiki_obj.推荐分路],
+        specialty: curr_shiki_obj.式神标签
+      }} >
+    
+        <Basic2 data={{
+          difficulty: dictionary.difficulty[scores.难度],
+          dps: dictionary.scores[scores.输出],
+          cc: dictionary.scores[scores.控制],
+          sustain: dictionary.scores[scores.生存],
+          buffs: dictionary.scores[scores.增益],
+          agility: dictionary.scores[scores.敏捷],
+        }} />  
+    
+      </Basic>
+    {/if}
+
+    {#if basicPage === 2}
+      <div class="bio-container">
+
+        {#if bioData}
+
+          {#if bioData.bio1}
+            <div class="bio">
+              <h3 class="bio-header">📔 Bio 1</h3>
+              <p class="bio-text">{bioData.bio1}</p>
+              <div class="bio-contributor-container">
+                {#if bioData.bio1 === 'no bio yet'}
+                  <p class="bio-contributor">Join <a href="http://discord.gg/KGsaAet">my discord</a> to submit missing bios!</p>
+                {:else}
+                  <p class="bio-contributor">Submitter: {bioData.contributor}</p>
+                  <p class="bio-contributor">Source: <a href="https://onmyoji.fandom.com/wiki/Onmyoji_Wiki">onmyoji.fandom.com</a></p>
+                {/if}
+              </div>
+            </div>
+          {/if}
+
+          {#if bioData.bio2}
+            <div class="bio">
+              <h3 class="bio-header">📔 Bio 2</h3>
+              <p class="bio-text">{bioData.bio2}</p>
+              <div class="bio-contributor-container">
+                {#if bioData.bio2 === 'no bio yet'}
+                  <p class="bio-contributor">Join <a href="http://discord.gg/KGsaAet">my discord</a> to submit missing bios!</p>
+                {:else}
+                  <p class="bio-contributor">Submitter: {bioData.contributor}</p>
+                  <p class="bio-contributor">Source: <a href="https://onmyoji.fandom.com/wiki/Onmyoji_Wiki">onmyoji.fandom.com</a></p>
+                {/if}
+              </div>
+            </div>
+          {/if}
+
+          {#if bioData.bio3}
+            <div class="bio">
+              <h3 class="bio-header">📔 Bio 3</h3>
+              <p class="bio-text">{bioData.bio3}</p>
+              <div class="bio-contributor-container">
+                {#if bioData.bio3 === 'no bio yet'}
+                  <p class="bio-contributor">Join <a href="http://discord.gg/KGsaAet">my discord</a> to submit missing bios!</p>
+                {:else}
+                  <p class="bio-contributor">Submitter: {bioData.contributor}</p>
+                  <p class="bio-contributor">Source: <a href="https://onmyoji.fandom.com/wiki/Onmyoji_Wiki">onmyoji.fandom.com</a></p>
+                {/if}
+              </div>
+            </div>
+          {/if}
+
+        {:else}
+
+          <div class="bio">
+            <h3 class="bio-header">📔 Bio 1</h3>
+            <p class="bio-text">No bio yet.</p>
+            <div class="bio-contributor-container">
+              <p class="bio-contributor">Join <a href="http://discord.gg/KGsaAet">my discord</a> to submit missing bios!</p>
+            </div>
+          </div>
+
+        {/if}
+
+        
+
+      </div>
+    {/if}
+
+  </Container>
 
   <Gallery area_name='gallery' link={images[curr_shiki_obj.式神全身像]} data={{
     image_url: images[curr_shiki_obj.式神全身像],
     image_alt: curr_shiki_obj.式神名称
   }} />
-
-  <Basic area_name='basic' data={{
-    name: curr_shiki_obj.式神名称,
-    classification: curr_shiki_obj.式神定位.map(role => dictionary.roles[role]),
-    voices: curr_shiki_obj.cv名字,
-    lane: dictionary.lanes[curr_shiki_obj.推荐分路],
-    specialty: curr_shiki_obj.式神标签
-  }} >
-
-  <Basic2 data={{
-    difficulty: dictionary.difficulty[scores.难度],
-    dps: dictionary.scores[scores.输出],
-    cc: dictionary.scores[scores.控制],
-    sustain: dictionary.scores[scores.生存],
-    buffs: dictionary.scores[scores.增益],
-    agility: dictionary.scores[scores.敏捷],
-  }} />  
-
-  </Basic>
 
   <Container area_name="basic2">
 
@@ -223,12 +234,12 @@
         <Note area_name="1 / 1 / 2 / 5" text="ALL MODES" styles="font-size: .8rem; text-align: center;" noIcon="True" />
         <StatCard data={{
           property: "🏆 Win-rate",
-          value: `${win_rate.all}%`,
+          value: `${performance.win_rate.all}%`,
           grid_area: "2 / 1 / 3 / 3"
         }} />
         <StatCard data={{
           property: "🏅 Pick-rate",
-          value: `${pick_rate.all}%`,
+          value: `${performance.pick_rate.all}%`,
           grid_area: "2 / 3 / 3 / 5"
         }} />
         <!-- grid-area: [row-start] / [column-start] / [row-end] / [column-end]; -->
@@ -238,12 +249,12 @@
         <Note area_name="1 / 1 / 2 / 5" text="PRE-ELITE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
         <StatCard data={{
           property: "🏆 Win-rate",
-          value: `${win_rate.noban}%`,
+          value: `${performance.win_rate.noban}%`,
           grid_area: "2 / 1 / 3 / 3"
         }} />
         <StatCard data={{
           property: "🏅 Pick-rate",
-          value: `${pick_rate.noban}%`,
+          value: `${performance.pick_rate.noban}%`,
           grid_area: "2 / 3 / 3 / 5"
         }} />
         <!-- grid-area: [row-start] / [column-start] / [row-end] / [column-end]; -->
@@ -253,12 +264,12 @@
         <Note area_name="1 / 1 / 2 / 5" text="BAN MODE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
         <StatCard data={{
           property: "🏆 Win-rate",
-          value: `${win_rate.ban}%`,
+          value: `${performance.win_rate.ban}%`,
           grid_area: "2 / 1 / 3 / 3"
         }} />
         <StatCard data={{
           property: "🏅 Pick-rate",
-          value: `${pick_rate.ban}%`,
+          value: `${performance.pick_rate.ban}%`,
           grid_area: "2 / 3 / 3 / 5"
         }} />
         <!-- grid-area: [row-start] / [column-start] / [row-end] / [column-end]; -->
@@ -268,12 +279,12 @@
         <Note area_name="1 / 1 / 2 / 5" text="FOG BAN MODE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
         <StatCard data={{
           property: "🏆 Win-rate",
-          value: `${win_rate.fogban}%`,
+          value: `${performance.win_rate.fogban}%`,
           grid_area: "2 / 1 / 3 / 3"
         }} />
         <StatCard data={{
           property: "🏅 Pick-rate",
-          value: `${pick_rate.fogban}%`,
+          value: `${performance.pick_rate.fogban}%`,
           grid_area: "2 / 3 / 3 / 5"
         }} />
         <!-- grid-area: [row-start] / [column-start] / [row-end] / [column-end]; -->
@@ -285,12 +296,12 @@
         <Note area_name="1 / 1 / 2 / 5" text="ALL MODES" styles="font-size: .8rem; text-align: center;" noIcon="True" />
         <StatCard data={{
           property: "AVG K/D/A",
-          value: `${kda.all}`,
+          value: `${performance.kda.all}`,
           grid_area: "2 / 1 / 3 / 3"
         }} />
         <StatCard data={{
           property: "AVG KILLS",
-          value: `${avg_kills.all}`,
+          value: `${performance.avg_kills.all}`,
           grid_area: "2 / 3 / 3 / 5"
         }} />
       </div>
@@ -299,12 +310,12 @@
         <Note area_name="1 / 1 / 2 / 5" text="PRE-ELITE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
         <StatCard data={{
           property: "AVG K/D/A",
-          value: `${kda.noban}`,
+          value: `${performance.kda.noban}`,
           grid_area: "2 / 1 / 3 / 3"
         }} />
         <StatCard data={{
           property: "AVG KILLS",
-          value: `${avg_kills.noban}`,
+          value: `${performance.avg_kills.noban}`,
           grid_area: "2 / 3 / 3 / 5"
         }} />
       </div>
@@ -313,12 +324,12 @@
         <Note area_name="1 / 1 / 2 / 5" text="BAN MODE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
         <StatCard data={{
           property: "AVG K/D/A",
-          value: `${kda.ban}`,
+          value: `${performance.kda.ban}`,
           grid_area: "2 / 1 / 3 / 3"
         }} />
         <StatCard data={{
           property: "AVG KILLS",
-          value: `${avg_kills.ban}`,
+          value: `${performance.avg_kills.ban}`,
           grid_area: "2 / 3 / 3 / 5"
         }} />
       </div>
@@ -327,12 +338,12 @@
         <Note area_name="1 / 1 / 2 / 5" text="FOG BAN MODE" styles="font-size: .8rem; text-align: center;" noIcon="True" />
         <StatCard data={{
           property: "AVG K/D/A",
-          value: `${kda.fogban}`,
+          value: `${performance.kda.fogban}`,
           grid_area: "2 / 1 / 3 / 3"
         }} />
         <StatCard data={{
           property: "AVG KILLS",
-          value: `${avg_kills.fogban}`,
+          value: `${performance.avg_kills.fogban}`,
           grid_area: "2 / 3 / 3 / 5"
         }} />
       </div>
@@ -340,6 +351,15 @@
 
     <Note text="Source: China server" styles="font-size: .8rem; color: rgba(255, 255, 255, .7); text-align: center;" noIcon="True" />
   
+  </Container>
+
+  <Container area_name="chart">
+    <WinRates
+      shiki_id={shiki_id}
+      shikiName={curr_shiki_obj.式神名称}
+      wdata={wrData}
+      images={images}
+    />
   </Container>
 
   <Stats area_name="stats-1" >
@@ -358,7 +378,8 @@
       <tr>
         <td class="stat-property">⚔️ Attack speed</td>
         <td class="stat-value">{stats.atk_speed.base} aa/s</td>
-        <td class="stat-growth">+ {stats.atk_speed.growth} /lvl</td>
+        <!-- <td class="stat-growth">+ {stats.atk_speed.growth} /lvl</td> -->
+        <td class="stat-growth">revision needed</td>
       </tr>
       <tr>
         <td class="stat-property">💫 Mana points</td>
@@ -490,6 +511,7 @@
     /* align-items: center; */
     grid-template-areas: 
     "basic gallery gallery basic2"
+    "chart chart chart chart"
     "stats-1 stats-1 skills skills"
     "usage usage skills skills"
     "item-gallery item-gallery . .";
@@ -563,7 +585,7 @@
 
   .performance-pager-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
   }
 
@@ -573,6 +595,39 @@
     align-items: center;
   }
 
+  .bio-container {
+    overflow-y: auto;
+    max-height: 520px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .bio {
+    background-color: #3C3F46;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  .bio-header {
+    margin-bottom: 10px;
+  }
+
+  .bio-text {
+    font-size: 0.8rem;
+  }
+
+  .bio-contributor {
+    font-size: .7rem;
+    font-weight: 600;
+  }
+
+  .bio-contributor-container {
+    border-left: 3px solid #CDFE05;
+    padding-left: 10px;
+    margin-top: 10px;
+  }
+
   @media only screen and (max-width: 845px) {
     .container {
       grid-template-columns: 1fr;
@@ -580,10 +635,15 @@
       "gallery"
       "basic"
       "basic2"
+      "chart"
       "stats-1"
       "skills"
       "usage"
       "item-gallery";
+    }
+
+    .performance-pager-container {
+      justify-content: flex-end;
     }
   }
 

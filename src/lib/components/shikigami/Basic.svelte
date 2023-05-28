@@ -1,8 +1,6 @@
 <script>
   export let data;
 
-  export let area_name;
-
   let { 
     name: name,
     classification: classification,
@@ -11,11 +9,9 @@
     specialty: specialty
   } = data;
 
-  import Container from "$lib/components/shikigami/Container.svelte";
   import Card from "$lib/components/shikigami/Card.svelte";
 </script>
 
-<Container area_name={area_name}>
   <div class="name-container">
     <p class="name {classification[0].toLowerCase()}-name">📝 {name}</p>
   </div>
@@ -46,7 +42,6 @@
     {/if}
   </Card>
   <slot />
-</Container>
 
 <style>
 

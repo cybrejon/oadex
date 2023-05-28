@@ -28,6 +28,7 @@ import Icon from '@iconify/svelte';
   {#if !no_collapse}
     <div class="toggles-mobile-wrapper">
       <button on:click={toggle} type="button"><Icon icon="{toggle_icon}" style="font-size: 24px;" /></button>
+      
       {#if state.isOpened}
         <div class="toggles-container-mobile {anchor_direction === 'left' ? 'anchor-left' : 'anchor-right'}">
           {#each buttons as btn}
@@ -35,6 +36,7 @@ import Icon from '@iconify/svelte';
           {/each}
         </div>
       {/if}
+      
     </div>
   {/if}
   

@@ -7,7 +7,7 @@
     active_role,
     isAscending,
     role_config,
-    hasBeenLeft
+    hasBeenLeft,
   } from './store.js';
 
   // import data
@@ -22,6 +22,7 @@
   import Note from "$lib/components/Note.svelte";
   import Toggles from '$lib/Toggles.svelte';
   import ShikiCard from '$lib/ShikiCard.svelte';
+  import FilterInput from '$lib/components/FilterInput.svelte';
   import "$lib/styles/shikis.css";
 
   const shiki_names = Object.keys(shikiga_data).sort();
@@ -98,9 +99,10 @@
       { name: "A-Z", active_indicator: $isAscending, active_value: true, fn: sortAscend },
       { name: "Z-A", active_indicator: $isAscending, active_value: false, fn: sortDescend },
     ]} />
-    <div class="filter-container">
-      <input id="filter-input" on:keypress={filterShiki} class="filter-input" type="text" placeholder="Filter" bind:value={search_value} >
-    </div>
+    <FilterInput
+      fn={filterShiki}
+      bind:search_value={search_value}
+    />
     <Toggles toggle_icon="gridicons:dropdown" anchor_direction="right" buttons={[
       { name: "ALL", active_indicator: $active_role, active_value: 'all', fn: toggleRole('all') },
       { name: "SAMURAI", active_indicator: $active_role, active_value: '侍', fn: toggleRole('侍') },
@@ -110,7 +112,6 @@
       { name: "MAGE", active_indicator: $active_role, active_value: '巫', fn: toggleRole('巫') },
       { name: "SUPPORT", active_indicator: $active_role, active_value: '祝', fn: toggleRole('祝') },
     ]} />
-    
   </div>
 
 
