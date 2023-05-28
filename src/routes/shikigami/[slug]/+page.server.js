@@ -35,10 +35,13 @@ export async function load({ params, fetch, url }) {
     `https://oadex.vercel.app/api/wr-pr/?shiki_id=${params.slug}&game_mode=fogban`
   ];
 
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 1000 * 20);
+
   const getIndividualPerformance = async () => {
     
     await Promise.all(urls.map(url =>
-      fetch(url)
+      fetch(url, { signal: controller.signal })
         .then(response => response.json())
 
     )).then(data => {
@@ -81,6 +84,8 @@ export async function load({ params, fetch, url }) {
       win_rate = { all: "reload", noban: "reload", ban: "reload", fogban: "reload" };
 
 
+    }).finally(() => {
+      clearTimeout(timeoutId);
     });
   };
 
