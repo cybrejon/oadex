@@ -194,4 +194,16 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  @media only screen and (max-width: 850px) {
+    td:nth-child(6), td:nth-child(7), th:nth-child(6), th:nth-child(7) {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 490px) {
+    td a {
+      display: none;
+    }
+  }
 </style>
