@@ -73,6 +73,8 @@ export async function load({ params, fetch, url }) {
 
     }).catch(error => {
 
+      console.log(error);
+
       console.error('[win-rates pick rates] could not complete fetch');
 
       pick_rate = { all: "reload", noban: "reload", ban: "reload", fogban: "reload" };
