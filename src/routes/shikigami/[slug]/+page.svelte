@@ -108,7 +108,8 @@
 </svelte:head>
 
 <Note
-  text="Please bear with the very slow loading times. The win-rate data is fetched directly from mainland China and takes some time to load. Expect a fix in the future."
+  noIcon=true
+  text="You're currently seeing beta changes, please bear with the page until I fix things."
   styles="font-size: .8rem; text-align: center;"
   container_margin='50px 0 0 0'
 />
