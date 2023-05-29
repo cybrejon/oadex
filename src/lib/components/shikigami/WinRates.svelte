@@ -26,7 +26,7 @@
 
 
   let isDescending = false;
-  let thText_wr = '^ WR';
+  let thText_wr = '⬆️ WR';
   let isPrDescending = false;
   let thText_pr = 'PR';
   
@@ -42,14 +42,14 @@
 
     if (isDescending) {
 
-      thText_wr = '^ WR';
+      thText_wr = '⬆️ WR';
       _wdata.sort((a, b) => {
         return parseFloat(b.wr) - parseFloat(a.wr);
       });
       
     } else {
 
-      thText_wr = '˅ PR';
+      thText_wr = '⬇️ WR';
       _wdata.sort((a, b) => {
         return parseFloat(a.wr) - parseFloat(b.wr);
       });
@@ -74,14 +74,14 @@
 
     if (isPrDescending) {
 
-      thText_pr = '^ PR';
+      thText_pr = '⬆️ PR';
       _wdata.sort((a, b) => {
         return parseFloat(b.pickRate) - parseFloat(a.pickRate);
       });
       
     } else {
 
-      thText_pr = '˅ PR';
+      thText_pr = '⬇️ PR';
       _wdata.sort((a, b) => {
         return parseFloat(a.pickRate) - parseFloat(b.pickRate);
       });
@@ -110,8 +110,8 @@
       { name: "FOG-BAN", active_indicator: "d", active_value: "", fn: '' },
     ]} /> -->
     {#if isChartVisible}
-      <Toggles toggle_icon="mdi:menu-down" anchor_direction="left" buttons={[
-        { name: "HIDE CHART", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
+      <Toggles no_collapse=true toggle_icon="mdi:menu-down" anchor_direction="left" buttons={[
+        { name: "❎ HIDE CHART", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
       ]} />
       <Toggles toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
         { name: "ALL", active_indicator: currentTab, active_value: "all", fn: filterByClass('all') },
@@ -123,8 +123,8 @@
         { name: "SUPPORT", active_indicator: currentTab, active_value: "祝", fn: filterByClass('祝') },
       ]} />
     {:else}
-      <Toggles toggle_icon="mdi:menu-down" anchor_direction="left" buttons={[
-        { name: "SHOW FULL PERFORMANCE CHART", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
+      <Toggles no_collapse=true toggle_icon="mdi:menu-down" anchor_direction="left" buttons={[
+        { name: "🗿 SHOW FULL PERFORMANCE CHART", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
       ]} />
     {/if}
     
@@ -169,13 +169,19 @@
     font-weight: 800;
   }
 
+  td:nth-child(4), th:nth-child(4),
+  td:nth-child(5), th:nth-child(5),
+  td:nth-child(6), th:nth-child(6),
+  td:nth-child(7), th:nth-child(7) {
+    text-align: center;
+  }
+
   td:last-child {
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
   }
 
   .th-toggle {
-    color: #CDFE05;
     cursor: pointer;
     user-select: none;
   }
@@ -199,6 +205,10 @@
 
   tr {
     background-color: #3C3F46;
+  }
+
+  tr:hover {
+    background-color: #646d43;
   }
 
   .shiki-name-active {
