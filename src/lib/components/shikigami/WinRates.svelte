@@ -243,7 +243,8 @@
     thead th:nth-child(2) {
       width: 20px;
     }
-    td:nth-child(6), td:nth-child(7), th:nth-child(6), th:nth-child(7) {
+    td:nth-child(5), th:nth-child(5),
+    td:nth-child(6), th:nth-child(6) {
       display: none;
     }
   }
