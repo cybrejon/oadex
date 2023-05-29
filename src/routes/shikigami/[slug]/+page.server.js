@@ -28,11 +28,18 @@ export async function load({ params, fetch, url }) {
   let avg_kills = { all: "⏳", noban: "⏳", ban: "⏳", fogban: "⏳" };
   let win_rate = { all: "⏳", noban: "⏳", ban: "⏳", fogban: "⏳" };
 
+  // const urls = [
+  //   `https://oadex.vercel.app/api/wr-pr/?shiki_id=${params.slug}&game_mode=all`,
+  //   `https://oadex.vercel.app/api/wr-pr/?shiki_id=${params.slug}&game_mode=noban`,
+  //   `https://oadex.vercel.app/api/wr-pr/?shiki_id=${params.slug}&game_mode=ban`,
+  //   `https://oadex.vercel.app/api/wr-pr/?shiki_id=${params.slug}&game_mode=fogban`
+  // ];
+
   const urls = [
-    `https://oadex.vercel.app/api/wr-pr/?shiki_id=${params.slug}&game_mode=all`,
-    `https://oadex.vercel.app/api/wr-pr/?shiki_id=${params.slug}&game_mode=noban`,
-    `https://oadex.vercel.app/api/wr-pr/?shiki_id=${params.slug}&game_mode=ban`,
-    `https://oadex.vercel.app/api/wr-pr/?shiki_id=${params.slug}&game_mode=fogban`
+    `http://150.230.58.91:3000/performance?shiki_id=${params.slug}&game_mode=all`,
+    `http://150.230.58.91:3000/performance?shiki_id=${params.slug}&game_mode=noban`,
+    `http://150.230.58.91:3000/performance?shiki_id=${params.slug}&game_mode=ban`,
+    `http://150.230.58.91:3000/performance?shiki_id=${params.slug}&game_mode=fogban`
   ];
 
   const getIndividualPerformance = async () => {
@@ -81,7 +88,6 @@ export async function load({ params, fetch, url }) {
       kda = { all: "reload", noban: "reload", ban: "reload", fogban: "reload" };
       avg_kills = { all: "reload", noban: "reload", ban: "reload", fogban: "reload" };
       win_rate = { all: "reload", noban: "reload", ban: "reload", fogban: "reload" };
-
 
     });
   };
