@@ -4,8 +4,6 @@ export async function load({ params, fetch, url }) {
 
   const gameMode = url.searchParams.get('mode');
 
-  console.log(gameMode);
-
   const getShikigamiData = async () => {
     const response = await fetch(`http://150.230.58.91:3000/shiki?mode=queryshiki&shiki_id=${params.slug}`);
     return await response.json();
@@ -74,7 +72,6 @@ export async function load({ params, fetch, url }) {
     }).catch(error => {
 
       console.log(error);
-
       console.error('[win-rates pick rates] could not complete fetch');
 
       pick_rate = { all: "reload", noban: "reload", ban: "reload", fogban: "reload" };

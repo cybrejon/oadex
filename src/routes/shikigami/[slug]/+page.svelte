@@ -473,7 +473,7 @@
             <td class="tr-skill-image-cell"><img loading="lazy" src={images[curr_shiki_obj.式神技能.四技能.图标路径]} alt="skill"></td>
             {#each skill_order_data as order, i}
               {#if order === 4}
-                <td class="active">{i}</td>
+                <td class="active">{i+1}</td>
               {:else}
                 <td>{i+1}</td>
               {/if}
