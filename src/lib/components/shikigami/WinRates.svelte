@@ -2,7 +2,7 @@
   export let wdata;
   export let images;
   export let shikiName;
-  export let shiki_id;
+  // export let shiki_id;
 
   import { LazyImage } from 'svelte-lazy-image';
   import Toggles from '$lib/Toggles.svelte';
@@ -26,9 +26,9 @@
 
 
   let isDescending = false;
-  let thText_wr = '^ WIN-RATE';
+  let thText_wr = '^ WR';
   let isPrDescending = false;
-  let thText_pr = 'PICK-RATE';
+  let thText_pr = 'PR';
   
   const sortWr = (shikiClass) => () => {
 
@@ -42,14 +42,14 @@
 
     if (isDescending) {
 
-      thText_wr = '^ WIN-RATE';
+      thText_wr = '^ WR';
       _wdata.sort((a, b) => {
         return parseFloat(b.wr) - parseFloat(a.wr);
       });
       
     } else {
 
-      thText_wr = '˅ WIN-RATE';
+      thText_wr = '˅ PR';
       _wdata.sort((a, b) => {
         return parseFloat(a.wr) - parseFloat(b.wr);
       });
@@ -58,7 +58,7 @@
 
     isDescending = !isDescending;
 
-    thText_pr = 'PICK-RATE';
+    thText_pr = 'PR';
 
   };
   
@@ -74,14 +74,14 @@
 
     if (isPrDescending) {
 
-      thText_pr = '^ PICK-RATE';
+      thText_pr = '^ PR';
       _wdata.sort((a, b) => {
         return parseFloat(b.pickRate) - parseFloat(a.pickRate);
       });
       
     } else {
 
-      thText_pr = '˅ PICK-RATE';
+      thText_pr = '˅ PR';
       _wdata.sort((a, b) => {
         return parseFloat(a.pickRate) - parseFloat(b.pickRate);
       });
@@ -90,7 +90,7 @@
 
     isPrDescending = !isPrDescending;
 
-    thText_wr = 'WIN-RATE';
+    thText_wr = 'WR';
 
   };
 
@@ -133,18 +133,18 @@
       <table>
         <thead>
           <th style:padding-left="10px">#</th>
-          <th>RANK</th>
-          <th>SHIKI</th>
+          <th>🏅</th>
+          <th>📝</th>
           <th class="th-toggle" on:click={sortWr(currentTab)} >{thText_wr}</th>
           <th class="th-toggle" on:click={sortPr(currentTab)} >{thText_pr}</th>
-          <th>AVG KDA</th>
-          <th>AVG KILLS</th>
+          <th>KDA</th>
+          <th>KILLS</th>
         </thead>
         <tbody>
           {#each _wdata as data, i}
           <tr class={shikiName === data.name ? "shiki-name-active" : ""}>
             <td style:padding-left="10px">{i+1}.</td>
-            <td>{data.number == 1 ? '👑' : data.number}.</td>
+            <td>{data.number == 1 ? '🏆' : `${data.number}.`}</td>
             <td class="shiki-name"><LazyImage class="wr-shikigami-image" alt="shikigami portrait" src="{images[data.image]}"/><a href="/shikigami/{data.id}" target="_blank">{data.name}</a></td>
             <td>{data.wr}%</td>
             <td>{data.pickRate}%</td>
