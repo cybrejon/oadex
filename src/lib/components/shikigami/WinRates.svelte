@@ -94,6 +94,11 @@
 
   };
 
+  let isChartVisible = false;
+  const toggleChart = () => () => {
+    isChartVisible = !isChartVisible;
+  }
+
 </script>
 
 <div class="wr-main-container">
@@ -104,41 +109,52 @@
       { name: "BAN", active_indicator: "d", active_value: "", fn: '' },
       { name: "FOG-BAN", active_indicator: "d", active_value: "", fn: '' },
     ]} /> -->
-    <a href="/shikigami/{shiki_id}?mode=ban">BAN</a>
-    <Toggles toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
-      { name: "ALL", active_indicator: currentTab, active_value: "all", fn: filterByClass('all') },
-      { name: "SAMURAI", active_indicator: currentTab, active_value: "侍", fn: filterByClass('侍') },
-      { name: "NINJA", active_indicator: currentTab, active_value: "忍", fn: filterByClass('忍') },
-      { name: "MARKSMAN", active_indicator: currentTab, active_value: "射", fn: filterByClass('射') },
-      { name: "TANK", active_indicator: currentTab, active_value: "守", fn: filterByClass('守') },
-      { name: "MAGE", active_indicator: currentTab, active_value: "巫", fn: filterByClass('巫') },
-      { name: "SUPPORT", active_indicator: currentTab, active_value: "祝", fn: filterByClass('祝') },
-    ]} />
+    {#if isChartVisible}
+      <Toggles toggle_icon="mdi:menu-down" anchor_direction="left" buttons={[
+        { name: "HIDE CHART", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
+      ]} />
+      <Toggles toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
+        { name: "ALL", active_indicator: currentTab, active_value: "all", fn: filterByClass('all') },
+        { name: "SAMURAI", active_indicator: currentTab, active_value: "侍", fn: filterByClass('侍') },
+        { name: "NINJA", active_indicator: currentTab, active_value: "忍", fn: filterByClass('忍') },
+        { name: "MARKSMAN", active_indicator: currentTab, active_value: "射", fn: filterByClass('射') },
+        { name: "TANK", active_indicator: currentTab, active_value: "守", fn: filterByClass('守') },
+        { name: "MAGE", active_indicator: currentTab, active_value: "巫", fn: filterByClass('巫') },
+        { name: "SUPPORT", active_indicator: currentTab, active_value: "祝", fn: filterByClass('祝') },
+      ]} />
+    {:else}
+      <Toggles toggle_icon="mdi:menu-down" anchor_direction="left" buttons={[
+        { name: "SHOW FULL PERFORMANCE CHART", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
+      ]} />
+    {/if}
+    
   </div>
-    <table>
-      <thead>
-        <th style:padding-left="10px">#</th>
-        <th>RANK</th>
-        <th>SHIKI</th>
-        <th class="th-toggle" on:click={sortWr(currentTab)} >{thText_wr}</th>
-        <th class="th-toggle" on:click={sortPr(currentTab)} >{thText_pr}</th>
-        <th>AVG KDA</th>
-        <th>AVG KILLS</th>
-      </thead>
-      <tbody>
-        {#each _wdata as data, i}
-        <tr class={shikiName === data.name ? "shiki-name-active" : ""}>
-          <td style:padding-left="10px">{i+1}.</td>
-          <td>{data.number == 1 ? '👑' : data.number}.</td>
-          <td class="shiki-name"><LazyImage class="wr-shikigami-image" alt="shikigami portrait" src="{images[data.image]}"/><a href="/shikigami/{data.id}" target="_blank">{data.name}</a></td>
-          <td>{data.wr}%</td>
-          <td>{data.pickRate}%</td>
-          <td>{data.kda}</td>
-          <td>{data.kills}</td>
-        </tr>
-        {/each}
-      </tbody>
-    </table>
+    {#if isChartVisible}
+      <table>
+        <thead>
+          <th style:padding-left="10px">#</th>
+          <th>RANK</th>
+          <th>SHIKI</th>
+          <th class="th-toggle" on:click={sortWr(currentTab)} >{thText_wr}</th>
+          <th class="th-toggle" on:click={sortPr(currentTab)} >{thText_pr}</th>
+          <th>AVG KDA</th>
+          <th>AVG KILLS</th>
+        </thead>
+        <tbody>
+          {#each _wdata as data, i}
+          <tr class={shikiName === data.name ? "shiki-name-active" : ""}>
+            <td style:padding-left="10px">{i+1}.</td>
+            <td>{data.number == 1 ? '👑' : data.number}.</td>
+            <td class="shiki-name"><LazyImage class="wr-shikigami-image" alt="shikigami portrait" src="{images[data.image]}"/><a href="/shikigami/{data.id}" target="_blank">{data.name}</a></td>
+            <td>{data.wr}%</td>
+            <td>{data.pickRate}%</td>
+            <td>{data.kda}</td>
+            <td>{data.kills}</td>
+          </tr>
+          {/each}
+        </tbody>
+      </table>
+    {/if}
 </div>
 
 
@@ -175,6 +191,7 @@
   }
 
   table {
+    margin-top: 10px;
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 10px;
@@ -189,7 +206,6 @@
   }
 
   .main-header {
-    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
