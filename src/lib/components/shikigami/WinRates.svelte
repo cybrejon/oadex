@@ -133,9 +133,8 @@
       <table>
         <thead>
           <th style:padding-left="10px">#</th>
-          <th>🏅</th>
           <th>📝</th>
-          <th class="th-toggle" on:click={sortWr(currentTab)} >{thText_wr}</th>
+          <th class="th-toggle" on:click={sortWr(currentTab)} >{thText_wr} <span class="nth">- nth</span></th>
           <th class="th-toggle" on:click={sortPr(currentTab)} >{thText_pr}</th>
           <th>KDA</th>
           <th>KILLS</th>
@@ -144,9 +143,8 @@
           {#each _wdata as data, i}
           <tr class={shikiName === data.name ? "shiki-name-active" : ""}>
             <td style:padding-left="10px">{i+1}.</td>
-            <td>{data.number == 1 ? '🏆' : `${data.number}.`}</td>
             <td class="shiki-name"><LazyImage class="wr-shikigami-image" alt="shikigami portrait" src="{images[data.image]}"/><a href="/shikigami/{data.id}" target="_blank">{data.name}</a></td>
-            <td>{data.wr}%</td>
+            <td>{data.wr}% <span class="nth">- {data.number == 1 ? '🏆' : `${data.number}.`}</span></td>
             <td>{data.pickRate}%</td>
             <td>{data.kda}</td>
             <td>{data.kills}</td>
@@ -160,19 +158,37 @@
 
 <style>
 
+  td {
+    background-color: #3C3F46;
+  }
+
   td:first-child {
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
+    width: 50px;
   }
 
-  td:nth-child(2), td:nth-child(4) {
+  td:nth-child(3) {
+    background-color: rgb(58, 61, 66);
+  }
+
+  td:nth-child(3), td:nth-child(4) {
     font-weight: 800;
   }
 
+  thead th:nth-child(2) {
+    width: 200px;
+  }
+
+  td:nth-child(2) {
+    max-width: 200px;
+    
+  }
+
+  td:nth-child(3), th:nth-child(3),
   td:nth-child(4), th:nth-child(4),
   td:nth-child(5), th:nth-child(5),
-  td:nth-child(6), th:nth-child(6),
-  td:nth-child(7), th:nth-child(7) {
+  td:nth-child(6), th:nth-child(6) {
     text-align: center;
   }
 
@@ -203,10 +219,6 @@
     border-spacing: 0 10px;
   }
 
-  tr {
-    background-color: #3C3F46;
-  }
-
   tr:hover {
     background-color: #646d43;
   }
@@ -221,7 +233,16 @@
     align-items: center;
   }
 
+  .nth {
+    font-weight: normal;
+    font-size: 0.8rem;
+    color: rgb(182, 182, 182);
+  }
+
   @media only screen and (max-width: 850px) {
+    thead th:nth-child(2) {
+      width: 20px;
+    }
     td:nth-child(6), td:nth-child(7), th:nth-child(6), th:nth-child(7) {
       display: none;
     }
