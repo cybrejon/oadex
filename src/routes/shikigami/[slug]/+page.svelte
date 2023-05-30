@@ -59,6 +59,10 @@
       base: curr_shiki_obj.式神基础属性.魔法上限,
       growth: curr_shiki_obj.式神属性成长.魔法上限
     },
+    mana_regen: {
+      base: curr_shiki_obj.式神基础属性.魔法回复,
+      growth: curr_shiki_obj.式神属性成长.魔法回复
+    },
     magic_armor: {
       base: curr_shiki_obj.式神基础属性.魔抗,
       growth: curr_shiki_obj.式神属性成长.魔抗
@@ -386,6 +390,11 @@
         <td class="stat-property">💫 Mana points</td>
         <td class="stat-value">{stats.mana.base}</td>
         <td class="stat-growth">+ {stats.mana.growth} /lvl</td>
+      </tr>
+      <tr>
+        <td class="stat-property">💫 Mana Regen</td>
+        <td class="stat-value">{stats.mana_regen.base} mp/s</td>
+        <td class="stat-growth">+ {stats.mana_regen.growth} /lvl</td>
       </tr>
       <tr>
         <td class="stat-property">💫 Magic armor</td>
