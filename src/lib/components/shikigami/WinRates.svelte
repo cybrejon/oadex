@@ -223,7 +223,7 @@
     background-color: #646d43;
   }
 
-  .shiki-name-active {
+  .shiki-name-active td {
     background-color: #64676D;
   }
 
