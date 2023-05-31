@@ -102,7 +102,7 @@
 </script>
 
 <div class="wr-main-container">
-  <div class="main-header">
+  <div class={isChartVisible ? "main-header" : "main-header main-header--closed"}>
     <!-- <Toggles toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
       { name: "ALL", active_indicator: "d", active_value: "", fn: '' },
       { name: "PRE-ELITE", active_indicator: "d", active_value: "", fn: '' },
@@ -124,39 +124,47 @@
       ]} />
     {:else}
       <Toggles no_collapse=true toggle_icon="mdi:menu-down" anchor_direction="left" buttons={[
-        { name: "🗿 SHOW FULL PERFORMANCE CHART", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
+        { name: "🚀 SHOW FULL PERFORMANCE CHART", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
       ]} />
     {/if}
     
   </div>
-    {#if isChartVisible}
-      <table>
-        <thead>
-          <th style:padding-left="10px">#</th>
-          <th>📝</th>
-          <th class="th-toggle" on:click={sortWr(currentTab)} >{thText_wr} <span class="nth">- nth</span></th>
-          <th class="th-toggle" on:click={sortPr(currentTab)} >{thText_pr}</th>
-          <th>KDA</th>
-          <th>KILLS</th>
-        </thead>
-        <tbody>
-          {#each _wdata as data, i}
-          <tr class={shikiName === data.name ? "shiki-name-active" : ""}>
-            <td style:padding-left="10px">{i+1}.</td>
-            <td class="shiki-name"><LazyImage class="wr-shikigami-image" alt="shikigami portrait" src="{images[data.image]}"/><a href="/shikigami/{data.id}" target="_blank">{data.name}</a></td>
-            <td>{data.wr}% <span class="nth">- {data.number == 1 ? '🏆' : `${data.number}.`}</span></td>
-            <td>{data.pickRate}%</td>
-            <td>{data.kda}</td>
-            <td>{data.kills}</td>
-          </tr>
-          {/each}
-        </tbody>
-      </table>
-    {/if}
+  {#if isChartVisible}
+    <div class="content">
+      <h3 class="chart-mode-name">ALL MODES (OTHER MODES BEING WORKED ON)</h3>
+        <table>
+          <thead>
+            <th style:padding-left="10px">#</th>
+            <th>📝</th>
+            <th class="th-toggle" on:click={sortWr(currentTab)} >{thText_wr} <span class="nth">- nth</span></th>
+            <th class="th-toggle" on:click={sortPr(currentTab)} >{thText_pr}</th>
+            <th>KDA</th>
+            <th>KILLS</th>
+          </thead>
+          <tbody>
+            {#each _wdata as data, i}
+            <tr class={shikiName === data.name ? "shiki-name-active" : ""}>
+              <td style:padding-left="10px">{i+1}.</td>
+              <td class="shiki-name"><LazyImage class="wr-shikigami-image" alt="shikigami portrait" src="{images[data.image]}"/><a href="/shikigami/{data.id}" target="_blank">{data.name}</a></td>
+              <td>{data.wr}% <span class="nth">- {data.number == 1 ? '🏆' : `${data.number}.`}</span></td>
+              <td>{data.pickRate}%</td>
+              <td>{data.kda}</td>
+              <td>{data.kills}</td>
+            </tr>
+            {/each}
+          </tbody>
+        </table>
+    </div>
+  {/if}
 </div>
 
 
 <style>
+
+  .chart-mode-name {
+    padding: 20px 0 10px 0;
+    text-align: center;
+  }
 
   td {
     background-color: #3C3F46;
@@ -231,6 +239,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .main-header--closed {
+    justify-content: center;
   }
 
   .nth {
