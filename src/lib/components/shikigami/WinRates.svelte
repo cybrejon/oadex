@@ -140,8 +140,6 @@
     isChartVisible = !isChartVisible;
   }
 
-  $: console.log(_wdata);
-
 </script>
 
 <div class="wr-main-container">
@@ -219,7 +217,7 @@
     width: 50px;
   }
 
-  td:nth-child(3) {
+  td:nth-child(3), td:nth-child(5) {
     background-color: rgb(58, 61, 66);
   }
 

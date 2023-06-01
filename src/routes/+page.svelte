@@ -114,7 +114,6 @@
     ]} />
   </div>
 
-
 <div class="shiki-selection-container">
   {#if $hasBeenLeft}
     {#each $role_config as shiki}

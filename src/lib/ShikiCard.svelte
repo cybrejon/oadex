@@ -8,13 +8,20 @@
   export let new_shiki;
   export let in_rotation;
 
+  import placeholderImage from '$lib/assets/plat.png';
+
 </script>
 
 <a href="/shikigami/{slug}" class="shiki-card-anchor">
   <div class="shiki-card">
     <div class="sc-image-container">
       <!-- <img class="shikigami-image" alt="shikigami portrait" src="{images[shikiga_data[shiki].式神全身像]}"> -->
-      <LazyImage class="shikigami-image" alt="shikigami portrait" src="{src}"/>
+      <LazyImage
+        class="shikigami-image"
+        alt="shikigami portrait"
+        src="{src}"
+        placeholder={placeholderImage}
+      />
     </div>
     <div class="sc-text-container">
       <p class="shikigami-name">{shiki_name}</p>

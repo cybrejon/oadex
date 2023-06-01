@@ -22,7 +22,7 @@
 
 <style>
   .shiki-2d-art {
-    background-color: #3C3F46;
+    filter: drop-shadow(10px 10px #36393F);
     border-radius: 5px;
     width: 100%;
   }
