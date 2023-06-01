@@ -26,12 +26,16 @@
 
 
   let isDescending = false;
-  let thText_wr = '⬆️ WR';
   let isPrDescending = false;
+  let isKDADescending = false;
+  let isKillsDescending = false;
+
+  let thText_wr = '⬆️ WR';
   let thText_pr = 'PR';
+  let thText_kda = 'KDA';
+  let thText_kills = 'KILLS';
   
   const sortWr = (shikiClass) => () => {
-
       if (currentTab === 'all') {
         _wdata = wdata
       } else {
@@ -39,31 +43,24 @@
           return shiki.shikiClass === shikiClass;
         });
       }
-
     if (isDescending) {
-
       thText_wr = '⬆️ WR';
       _wdata.sort((a, b) => {
         return parseFloat(b.wr) - parseFloat(a.wr);
       });
-      
     } else {
-
       thText_wr = '⬇️ WR';
       _wdata.sort((a, b) => {
         return parseFloat(a.wr) - parseFloat(b.wr);
       });
-
     };
-
     isDescending = !isDescending;
-
     thText_pr = 'PR';
-
+    thText_kda = 'KDA';
+    thText_kills = 'KILLS';
   };
   
   const sortPr = (shikiClass) => () => {
-
       if (currentTab === 'all') {
         _wdata = wdata
       } else {
@@ -71,33 +68,79 @@
           return shiki.shikiClass === shikiClass;
         });
       }
-
     if (isPrDescending) {
-
       thText_pr = '⬆️ PR';
       _wdata.sort((a, b) => {
         return parseFloat(b.pickRate) - parseFloat(a.pickRate);
       });
-      
     } else {
-
       thText_pr = '⬇️ PR';
       _wdata.sort((a, b) => {
         return parseFloat(a.pickRate) - parseFloat(b.pickRate);
       });
-
     };
-
     isPrDescending = !isPrDescending;
-
     thText_wr = 'WR';
+    thText_kda = 'KDA';
+    thText_kills = 'KILLS';
+  };
+  
+  const sortKda = (shikiClass) => () => {
+      if (currentTab === 'all') {
+        _wdata = wdata
+      } else {
+        _wdata = wdata.filter((shiki) => {
+          return shiki.shikiClass === shikiClass;
+        });
+      }
+    if (isKDADescending) {
+      thText_kda = '⬆️ KDA';
+      _wdata.sort((a, b) => {
+        return b.kda - a.kda;
+      });
+    } else {
+      thText_kda = '⬇️ KDA';
+      _wdata.sort((a, b) => {
+        return a.kda - b.kda;
+      });
+    };
+    isKDADescending = !isKDADescending;
+    thText_wr = 'WR';
+    thText_pr = 'PR';
+    thText_kills = 'KILLS';
+  };
 
+  const sortKills = (shikiClass) => () => {
+      if (currentTab === 'all') {
+        _wdata = wdata
+      } else {
+        _wdata = wdata.filter((shiki) => {
+          return shiki.shikiClass === shikiClass;
+        });
+      }
+    if (isKillsDescending) {
+      thText_kills = '⬆️ KILLS';
+      _wdata.sort((a, b) => {
+        return b.kills - a.kills;
+      });
+    } else {
+      thText_kills = '⬇️ KILLS';
+      _wdata.sort((a, b) => {
+        return a.kills - b.kills;
+      });
+    };
+    isKillsDescending = !isKillsDescending;
+    thText_wr = 'WR';
+    thText_pr = 'PR';
+    thText_kda = 'KDA';
   };
 
   let isChartVisible = false;
   const toggleChart = () => () => {
     isChartVisible = !isChartVisible;
   }
+
+  $: console.log(_wdata);
 
 </script>
 
@@ -138,8 +181,8 @@
             <th>📝</th>
             <th class="th-toggle" on:click={sortWr(currentTab)} >{thText_wr} <span class="nth">- nth</span></th>
             <th class="th-toggle" on:click={sortPr(currentTab)} >{thText_pr}</th>
-            <th>KDA</th>
-            <th>KILLS</th>
+            <th class="th-toggle" on:click={sortKda(currentTab)} >{thText_kda}</th>
+            <th class="th-toggle" on:click={sortKills(currentTab)} >{thText_kills}</th>
           </thead>
           <tbody>
             {#each _wdata as data, i}
