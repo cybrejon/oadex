@@ -102,9 +102,8 @@ button {
   font-weight: 800;
   color: #ffffffad;
   border-radius: 6px;
-  padding: 7px;
-  border: 3px solid transparent;
-  transition: .1s;
+  padding: 10px;
+  border: none;
 }
 
 .toggles-container-mobile button {
@@ -112,15 +111,17 @@ button {
 }
 
 button:hover {
-  background-color: #ffffff46;
-  border-color: #ffffff31;
+  box-shadow: 0 3px #282A2F;
+    border-color: #ffffff31;
+  transform: translateY(-3px);
 }
 
 button:active {
-  background-color: #ccfe0533;
-  border-color: transparent;
-  color: #CDFE05;
-  /* transform: scale(90%); */
+  box-shadow: none;
+  outline-offset: 2px;
+  outline: 2px solid #ffffff3b;
+  outline-style: dashed;
+  transform: translateY(0);
 }
 
 .active-toggle {
