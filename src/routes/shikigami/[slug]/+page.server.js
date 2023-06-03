@@ -12,7 +12,7 @@ export async function load({ params, fetch, url }) {
   const sdata = await getShikigamiData();
 
   const getBioData = async () => {
-    const bdr = await fetch(`http://150.230.58.91:3000/bios/?queryshiki=${sdata.式神名称}`);
+    const bdr = await fetch(`http://150.230.58.91:3000/bios?queryshiki=${sdata.式神名称}`);
     return await bdr.json();
   }
 
