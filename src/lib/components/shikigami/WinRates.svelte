@@ -1,5 +1,9 @@
 <script>
   export let wdata;
+  export let wdata_ban;
+  export let wdata_noban;
+  export let wdata_fogban;
+
   export let images;
   export let shikiName;
   // export let shiki_id;
@@ -140,21 +144,36 @@
     isChartVisible = !isChartVisible;
   }
 
+  let buttonIndicator = 'all';
+  const selectMode = (mode, btn) => () => {
+    if (mode == 'all') {
+      _wdata = wdata;
+    } else {
+      _wdata = mode;
+    }
+    buttonIndicator = btn;
+    thText_wr = '⬆️ WR';
+    thText_pr = 'PR';
+    thText_kda = 'KDA';
+    thText_kills = 'KILLS';
+  }
+
 </script>
 
 <div class="wr-main-container">
+
   <div class={isChartVisible ? "main-header" : "main-header main-header--closed"}>
-    <!-- <Toggles toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
-      { name: "ALL", active_indicator: "d", active_value: "", fn: '' },
-      { name: "PRE-ELITE", active_indicator: "d", active_value: "", fn: '' },
-      { name: "BAN", active_indicator: "d", active_value: "", fn: '' },
-      { name: "FOG-BAN", active_indicator: "d", active_value: "", fn: '' },
-    ]} /> -->
     {#if isChartVisible}
       <Toggles no_collapse=true toggle_icon="mdi:menu-down" anchor_direction="left" buttons={[
         { name: "❎ HIDE CHART", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
       ]} />
       <Toggles toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
+        { name: "ALL MODES", active_indicator: buttonIndicator, active_value: 'all', fn: selectMode('all', 'all') },
+        { name: "NORMAL", active_indicator: buttonIndicator, active_value: 'normal', fn: selectMode(wdata_noban, 'normal') },
+        { name: "BAN", active_indicator: buttonIndicator, active_value: 'ban', fn: selectMode(wdata_ban, 'ban') },
+        { name: "FOGBAN", active_indicator: buttonIndicator, active_value: 'fogban', fn: selectMode(wdata_fogban, 'fogban') }
+      ]} />
+      <Toggles collapsed=true toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
         { name: "ALL", active_indicator: currentTab, active_value: "all", fn: filterByClass('all') },
         { name: "SAMURAI", active_indicator: currentTab, active_value: "侍", fn: filterByClass('侍') },
         { name: "NINJA", active_indicator: currentTab, active_value: "忍", fn: filterByClass('忍') },
@@ -168,11 +187,10 @@
         { name: "🚀 SHOW FULL PERFORMANCE CHART", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
       ]} />
     {/if}
-    
   </div>
+
   {#if isChartVisible}
     <div class="content">
-      <h3 class="chart-mode-name">ALL MODES (OTHER MODES BEING WORKED ON)</h3>
         <table>
           <thead>
             <th style:padding-left="10px">#</th>
@@ -201,11 +219,6 @@
 
 
 <style>
-
-  .chart-mode-name {
-    padding: 20px 0 10px 0;
-    text-align: center;
-  }
 
   td {
     background-color: #3C3F46;

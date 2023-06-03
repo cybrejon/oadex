@@ -1,9 +1,5 @@
 <script>
 
-  // NOTE add these properties
-  // 是否长期限免 free shiki of the week
-  // 新式神 recent shikigami 
-
   import { page } from '$app/stores'
   let shiki_id = $page.url.pathname.slice(11);
 
@@ -19,7 +15,6 @@
   import ItemGallery from '$lib/components/shikigami/ItemGallery.svelte';
   import Toggles from '$lib/Toggles.svelte';
   import WinRates from '$lib/components/shikigami/WinRates.svelte';
-  import { onMount } from 'svelte';
 
   // import data
   export let data;
@@ -28,7 +23,11 @@
   const bioData = data.bioData;
   const images = data.images;
   const performance = data.performance;
+
   let wrData = data.wrData;
+  let wrData_ban = data.wrData_ban;
+  let wrData_noban = data.wrData_noban;
+  let wrData_fogban = data.wrData_fogban;
 
   const curr_shiki_obj = shikiga_data;
   const scores = curr_shiki_obj.评分;
@@ -124,7 +123,7 @@
 
     <div class="performance-pager-container">
       <Toggles no_collapse="True" toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
-        { name: "BASIC INFO", active_indicator: basicPage, active_value: 1, fn: basicPager(1) },
+        { name: "BASIC", active_indicator: basicPage, active_value: 1, fn: basicPager(1) },
         { name: "BIO", active_indicator: basicPage, active_value: 2, fn: basicPager(2) },
       ]} />
     </div>
@@ -363,6 +362,9 @@
       shiki_id={shiki_id}
       shikiName={curr_shiki_obj.式神名称}
       wdata={wrData}
+      wdata_ban={wrData_ban}
+      wdata_noban={wrData_noban}
+      wdata_fogban={wrData_fogban}
       images={images}
     />
   </Container>
@@ -540,6 +542,10 @@
   .stats-table th {
     padding: 0 0 5px 0;
     text-align: left;
+  }
+
+  .stats-table td {
+    font-size: 0.9rem;
   }
 
   .stat-value {

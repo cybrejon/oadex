@@ -3,22 +3,34 @@
 import Icon from '@iconify/svelte';
 
   export let buttons = [];
-
   export let anchor_direction;
-
   export let toggle_icon;
+  export let no_collapse = false;
+  export let collapsed = false;
 
   let state = { isOpened: false };
-
-  export let no_collapse = false;
 
   function toggle() {
     state.isOpened = !state.isOpened;
   }
 
+  let rootClass = 'toggles-wrapper';
+  let mobileTogleClass = 'toggles-mobile-wrapper';
+
+  if (no_collapse) {
+    rootClass = 'toggles-wrapper--no-collapse'
+  };
+
+  if (collapsed) {
+    rootClass = 'toggles-wrapper--collapsed'
+    mobileTogleClass = 'toggles-mobile-wrapper toggles-mobile-wrapper--collapsed'
+  };
+
 </script>
 
-  <div class="{no_collapse ? 'toggles-wrapper--no-collapse' : 'toggles-wrapper'}">
+
+
+  <div class={rootClass}>
     <div class="toggles-container">
       {#each buttons as btn}
         <button class="{btn.active_indicator === btn.active_value && 'active-toggle'}" on:click={btn.fn}>{btn.name}</button>
@@ -26,8 +38,13 @@ import Icon from '@iconify/svelte';
     </div>
   </div>
   {#if !no_collapse}
-    <div class="toggles-mobile-wrapper">
-      <button on:click={toggle} type="button"><Icon icon="{toggle_icon}" style="font-size: 24px;" /></button>
+    <div class={mobileTogleClass}>
+      
+      {#each buttons as btn}
+        {#if btn.active_indicator === btn.active_value}
+          <button on:click={toggle} type="button"><Icon icon="{toggle_icon}" style="font-size: 24px; margin-right: 5px;" />{btn.name}</button>
+        {/if}
+      {/each}
       
       {#if state.isOpened}
         <div class="toggles-container-mobile {anchor_direction === 'left' ? 'anchor-left' : 'anchor-right'}">
@@ -57,6 +74,10 @@ import Icon from '@iconify/svelte';
   align-items: center;
 }
 
+.toggles-wrapper--collapsed {
+  display: none;
+}
+
 .toggles-container {
   transition: .2s;
   display: flex;
@@ -69,6 +90,17 @@ import Icon from '@iconify/svelte';
 .toggles-mobile-wrapper {
   display: none;
   position: relative;
+}
+
+.toggles-mobile-wrapper--collapsed {
+  display: block;
+}
+
+.toggles-mobile-wrapper--collapsed button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 15px;
 }
 
 .anchor-left {
@@ -134,9 +166,17 @@ button:active {
   .toggles-wrapper {
     display: none;
   }
+
   .toggles-mobile-wrapper {
     display: block;
     position: relative;
+  }
+
+  .toggles-mobile-wrapper button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
   }
 }
 </style>

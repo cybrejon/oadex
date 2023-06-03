@@ -4,6 +4,8 @@ export async function load({ params, fetch, url }) {
 
   const gameMode = url.searchParams.get('mode');
 
+  console.log(gameMode);
+
   const getShikigamiData = async () => {
     const response = await fetch(`http://150.230.58.91:3000/shiki?mode=queryshiki&shiki_id=${params.slug}`);
     return await response.json();
@@ -16,8 +18,14 @@ export async function load({ params, fetch, url }) {
     return await bdr.json();
   }
 
-  const getWrData = async () => {
-    const wrdr = await fetch('http://150.230.58.91:3000/wr');
+  const getWrData = async (mode) => {
+    let wrdr;
+    if (mode) {
+      wrdr = await fetch(`http://150.230.58.91:3000/wr?mode=${mode}`);
+    } else {
+      wrdr = await fetch('http://150.230.58.91:3000/wr');
+    }
+    
     return await wrdr.json();
   }
 
@@ -84,6 +92,10 @@ export async function load({ params, fetch, url }) {
   
   const bd = await getBioData();
   const wrData = await getWrData();
+  const wrData_noban = await getWrData('noban');
+  const wrData_ban = await getWrData('ban_3');
+  const wrData_fogban = await getWrData('ban_4');
+
   await getIndividualPerformance();
   
   let bioData;
@@ -105,6 +117,9 @@ export async function load({ params, fetch, url }) {
       pick_rate
     },
     wrData,
+    wrData_ban,
+    wrData_noban,
+    wrData_fogban,
     sdata,
     bioData
   }
