@@ -165,7 +165,7 @@
   <div class={isChartVisible ? "main-header" : "main-header main-header--closed"}>
     {#if isChartVisible}
       <Toggles no_collapse=true toggle_icon="mdi:menu-down" anchor_direction="left" buttons={[
-        { name: "❎ HIDE CHART", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
+        { name: "❎", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
       ]} />
       <Toggles toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
         { name: "ALL MODES", active_indicator: buttonIndicator, active_value: 'all', fn: selectMode('all', 'all') },
