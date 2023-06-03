@@ -22,6 +22,7 @@
   top: 0;
   margin: 30px auto;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
 }

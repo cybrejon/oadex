@@ -35,4 +35,11 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  @media only screen and (max-width: 500px) {
+    img {
+      padding-left: 20px;
+    }
+  }
+
 </style>

@@ -1,10 +1,6 @@
 /** @type {import('./$types').PageServerLoad} */
 
-export async function load({ params, fetch, url }) {
-
-  const gameMode = url.searchParams.get('mode');
-
-  console.log(gameMode);
+export async function load({ params, fetch }) {
 
   const getShikigamiData = async () => {
     const response = await fetch(`http://150.230.58.91:3000/shiki?mode=queryshiki&shiki_id=${params.slug}`);

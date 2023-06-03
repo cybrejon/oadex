@@ -156,6 +156,7 @@
     thText_pr = 'PR';
     thText_kda = 'KDA';
     thText_kills = 'KILLS';
+    currentTab = 'all';
   }
 
 </script>
