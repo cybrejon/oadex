@@ -42,7 +42,7 @@ import Icon from '@iconify/svelte';
       
       {#each buttons as btn}
         {#if btn.active_indicator === btn.active_value}
-          <button on:click={toggle} type="button"><Icon icon="{toggle_icon}" style="font-size: 24px; margin-right: 5px;" />{btn.name}</button>
+          <button class="mobile-toggle-button" on:click={toggle} type="button"><Icon icon="{toggle_icon}" style="font-size: 24px; margin-right: 5px;" />{btn.name}</button>
         {/if}
       {/each}
       
@@ -96,11 +96,11 @@ import Icon from '@iconify/svelte';
   display: block;
 }
 
-.toggles-mobile-wrapper--collapsed button {
+.mobile-toggle-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 15px;
+  padding: 7px 15px 7px 7px;
 }
 
 .anchor-left {
