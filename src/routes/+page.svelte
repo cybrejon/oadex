@@ -99,10 +99,12 @@
       { name: "A-Z", active_indicator: $isAscending, active_value: true, fn: sortAscend },
       { name: "Z-A", active_indicator: $isAscending, active_value: false, fn: sortDescend },
     ]} />
-    <FilterInput
-      fn={filterShiki}
-      bind:search_value={search_value}
-    />
+    <span class="desktop-filter-bar-visibility-wrapper">
+      <FilterInput
+        fn={filterShiki}
+        bind:search_value={search_value}
+      />
+    </span>
     <Toggles toggle_icon="gridicons:dropdown" anchor_direction="right" buttons={[
       { name: "ALL", active_indicator: $active_role, active_value: 'all', fn: toggleRole('all') },
       { name: "SAMURAI", active_indicator: $active_role, active_value: '侍', fn: toggleRole('侍') },
@@ -112,6 +114,13 @@
       { name: "MAGE", active_indicator: $active_role, active_value: '巫', fn: toggleRole('巫') },
       { name: "SUPPORT", active_indicator: $active_role, active_value: '祝', fn: toggleRole('祝') },
     ]} />
+  </div>
+
+  <div class="shiki-selection-header shiki-selection-header--mobile">
+    <FilterInput
+      fn={filterShiki}
+      bind:search_value={search_value}
+    />
   </div>
 
 <div class="shiki-selection-container">
@@ -140,3 +149,32 @@
   {/if}
 </div>
 <Note noIcon=True text={`Number of shikigamis shown - ${$role_config.length === 0 ? role.length : $role_config.length}.`} styles="font-size: .8rem; text-align: center;" container_margin='50px 0 0 0' />
+
+
+<style>
+  .shiki-selection-header--mobile {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 93%;
+  }
+
+  @media only screen and (max-width: 500px) {
+    .shiki-selection-header {
+      margin: 0 10px 10px 10px;
+      justify-content: flex-end;
+    }
+    .shiki-selection-header--mobile {
+      padding-top: 15px;
+      padding-left: 180px;
+      padding-right: 10px;
+      display: block;
+      margin: 0;
+    }
+    .desktop-filter-bar-visibility-wrapper {
+      display: none;
+    }
+  }
+</style>

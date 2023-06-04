@@ -38,7 +38,7 @@
 
   @media only screen and (max-width: 500px) {
     img {
-      padding-left: 20px;
+      padding-left: 10px;
     }
   }
 

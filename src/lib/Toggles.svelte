@@ -126,6 +126,7 @@ import Icon from '@iconify/svelte';
   align-items: flex-start;
   row-gap: 10px;
   border-radius: 20px;
+  z-index: 99999;
 }
 
 button {

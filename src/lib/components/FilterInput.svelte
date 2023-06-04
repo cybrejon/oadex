@@ -8,7 +8,7 @@
 </div>
 
 <style>
-  .filter-input {
+.filter-input {
   width: 400px;
   height: 36px;
   border-radius: 10px;
@@ -25,7 +25,7 @@
 
 @media only screen and (max-width: 1170px) {
   .filter-input {
-    width: 90%;
+    width: 100%;
   }
 }
 </style>
