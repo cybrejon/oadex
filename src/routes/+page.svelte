@@ -59,7 +59,7 @@
     } else {
       role = results.map((result) => result.item);
     }
-    active_role.update(role => role = 'clear current');
+    active_role.update(role => role = 'all');
     isAscending.update(bool => bool = true);
   }
 
@@ -80,6 +80,16 @@
     search_value = '';
   }
 
+  let mobileHeaderDisplayMode = 'normal';
+  const toggleMobileHeaderMode = (mode) => () => {
+    mobileHeaderDisplayMode = mode;
+    if (mode == 'normal') {
+      $hasBeenLeft
+      ? role_config.update(c => c = c.sort())
+      : role = role.sort();
+    }
+  };
+
   onDestroy(() => {
     // hasBeenLeft.update(bool => bool = true);
     !$role_config.length == 0
@@ -94,34 +104,49 @@
   <meta description="The unofficial wiki for Onmyoji Arena.">
 </svelte:head>
 
-  <div class="shiki-selection-header">
-    <Toggles toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
-      { name: "A-Z", active_indicator: $isAscending, active_value: true, fn: sortAscend },
-      { name: "Z-A", active_indicator: $isAscending, active_value: false, fn: sortDescend },
-    ]} />
-    <span class="desktop-filter-bar-visibility-wrapper">
+  {#if mobileHeaderDisplayMode === 'normal'}
+    <div class="shiki-selection-header">
+      <Toggles toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
+        { name: "A-Z", active_indicator: $isAscending, active_value: true, fn: sortAscend },
+        { name: "Z-A", active_indicator: $isAscending, active_value: false, fn: sortDescend },
+      ]} />
+      <span class="desktop-filter-bar-visibility-wrapper">
+        <FilterInput
+          fn={filterShiki}
+          bind:search_value={search_value}
+        />
+      </span>
+      <Toggles toggle_icon="gridicons:dropdown" anchor_direction="right" buttons={[
+        { name: "ALL", active_indicator: $active_role, active_value: 'all', fn: toggleRole('all') },
+        { name: "SAMURAI", active_indicator: $active_role, active_value: '侍', fn: toggleRole('侍') },
+        { name: "NINJA", active_indicator: $active_role, active_value: '忍', fn: toggleRole('忍') },
+        { name: "MARKSMAN", active_indicator: $active_role, active_value: '射', fn: toggleRole('射') },
+        { name: "TANK", active_indicator: $active_role, active_value: '守', fn: toggleRole('守') },
+        { name: "MAGE", active_indicator: $active_role, active_value: '巫', fn: toggleRole('巫') },
+        { name: "SUPPORT", active_indicator: $active_role, active_value: '祝', fn: toggleRole('祝') },
+      ]} />
+      <span class="mobile-header-mode-toggle">
+        <Toggles no_collapse=true toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
+          { name: "🔎", active_indicator: 'a', active_value: 'q', fn: toggleMobileHeaderMode('filter') },
+        ]} />
+      </span>
+    </div>
+  {/if}
+
+  {#if mobileHeaderDisplayMode === 'filter'}
+    <div class="shiki-selection-header">
       <FilterInput
         fn={filterShiki}
         bind:search_value={search_value}
       />
-    </span>
-    <Toggles toggle_icon="gridicons:dropdown" anchor_direction="right" buttons={[
-      { name: "ALL", active_indicator: $active_role, active_value: 'all', fn: toggleRole('all') },
-      { name: "SAMURAI", active_indicator: $active_role, active_value: '侍', fn: toggleRole('侍') },
-      { name: "NINJA", active_indicator: $active_role, active_value: '忍', fn: toggleRole('忍') },
-      { name: "MARKSMAN", active_indicator: $active_role, active_value: '射', fn: toggleRole('射') },
-      { name: "TANK", active_indicator: $active_role, active_value: '守', fn: toggleRole('守') },
-      { name: "MAGE", active_indicator: $active_role, active_value: '巫', fn: toggleRole('巫') },
-      { name: "SUPPORT", active_indicator: $active_role, active_value: '祝', fn: toggleRole('祝') },
-    ]} />
-  </div>
+      <Toggles no_collapse=true toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
+        { name: "❌", active_indicator: 'a', active_value: 'a', fn: toggleMobileHeaderMode('normal') },
+      ]} />
+    </div>
+  {/if}
+  
 
-  <div class="shiki-selection-header shiki-selection-header--mobile">
-    <FilterInput
-      fn={filterShiki}
-      bind:search_value={search_value}
-    />
-  </div>
+  
 
 <div class="shiki-selection-container">
   {#if $hasBeenLeft}
@@ -152,13 +177,9 @@
 
 
 <style>
-  .shiki-selection-header--mobile {
+
+  .mobile-header-mode-toggle {
     display: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 93%;
   }
 
   @media only screen and (max-width: 500px) {
@@ -166,15 +187,12 @@
       margin: 0 10px 10px 10px;
       justify-content: flex-end;
     }
-    .shiki-selection-header--mobile {
-      padding-top: 15px;
-      padding-left: 180px;
-      padding-right: 10px;
-      display: block;
-      margin: 0;
-    }
     .desktop-filter-bar-visibility-wrapper {
       display: none;
     }
+    .mobile-header-mode-toggle {
+      display: block;
+    }
   }
+
 </style>

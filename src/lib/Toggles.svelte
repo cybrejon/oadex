@@ -160,7 +160,6 @@ button:active {
 .active-toggle {
   background-color: #CDFE05;
   color: #282A2F;
-  pointer-events: none;
 }
 
 @media only screen and (max-width: 620px) {
