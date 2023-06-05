@@ -1,5 +1,8 @@
 <script>
 
+  // import components
+  import Note from "$lib/components/Note.svelte";
+
   export let data;
   const itemNames = data.itemNames;
   const itemData = data.itemData;
@@ -59,6 +62,10 @@
   import FilterInput from '$lib/components/FilterInput.svelte';
 
 </script>
+
+<Note noIcon=True
+  text='WORK IN PROGRESS'
+  styles="color: red; text-align: center;" container_margin='50px 0 0 0' />
 
 <div class="shiki-selection-header">
   <Toggles collapsed=true toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
