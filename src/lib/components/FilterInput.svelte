@@ -9,7 +9,7 @@
 
 <style>
 .filter-input {
-  width: 400px;
+  width: 320px;
   height: 36px;
   border-radius: 10px;
   border: none;
