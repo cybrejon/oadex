@@ -3,22 +3,50 @@
   export let data;
   const itemNames = data.itemNames;
   const itemData = data.itemData;
+
+  // import stores
+  //NOTE these shouldnt really need to be writeables;
+  import { currentTier, currentType } from './items.stores';
   
   itemData.sort((a, b) => {
     return a.name.localeCompare(b.name);
   });
 
-  // pre-filter the items into variables
-  const advancedAllItems = itemData.filter(item => item.tier == "Advanced");
-  const weapons = {
-    advanced: itemData.filter(item => item.tier == "Advanced" && item.type == "Weapon"),
-    intermediate: itemData.filter(item => item.tier == "Intermediate" && item.type == "Weapon"),
-    basic: itemData.filter(item => item.tier == "Basic" && item.type == "Weapon")
+  let mainIterable = itemData;
+  const filterItemsByType = (type, cTier) => () => {
+    if (cTier == 'All') {
+      mainIterable = itemData.filter(item => item.type == type);
+    } else {
+      mainIterable = itemData.filter(item => item.type == type && item.tier == cTier);
+    }
+    currentType.update(t => t = type);
   };
-  const magicWeapons = {
-    advanced: itemData.filter(item => item.tier == "Advanced" && item.type == "Magic"),
-    intermediate: itemData.filter(item => item.tier == "Intermediate" && item.type == "Magic"),
-    basic: itemData.filter(item => item.tier == "Basic" && item.type == "Magic")
+
+  const resetTypeToAll = () => () => {
+    if ($currentTier == 'All') {
+      mainIterable = itemData;
+    } else {
+      mainIterable = itemData.filter(item => ['Weapon', 'Magic', 'Defense', 'Jungle', 'Movement', 'Support'].includes(item.type) && item.tier == $currentTier);
+    }
+    currentType.update(t => t = 'All');
+  };
+
+  const filterItemsByTier = (tier, cType) => () => {
+    if (cType == 'All') {
+      mainIterable = itemData.filter(item => item.tier == tier);
+    } else {
+      mainIterable = itemData.filter(item => item.tier == tier && item.type == cType);
+    }
+      currentTier.update(t => t = tier);
+  };
+
+  const resetTierToAll = () => () => {
+    if ($currentType == 'All') {
+      mainIterable = itemData;
+    } else {
+      mainIterable = itemData.filter(item => ['Advanced', 'Intermediate', 'Basic'].includes(item.tier) && item.type == $currentType);
+    }
+    currentTier.update(t => t = 'All');
   };
 
   // import external css
@@ -33,17 +61,26 @@
 </script>
 
 <div class="shiki-selection-header">
-  <Toggles toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
-    { name: "Advanced", active_indicator: '', active_value: '', fn: '' },
-    { name: "Intermediate", active_indicator: '', active_value: '', fn: '' },
-    { name: "Basic", active_indicator: '', active_value: '', fn: '' },
+  <Toggles collapsed=true toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
+    { name: "ALL", active_indicator: $currentTier, active_value: 'All', fn: resetTierToAll() },
+    { name: "ADVANCED", active_indicator: $currentTier, active_value: 'Advanced', fn: filterItemsByTier('Advanced', $currentType) },
+    { name: "INTERMEDIATE", active_indicator: $currentTier, active_value: 'Intermediate', fn: filterItemsByTier('Intermediate', $currentType) },
+    { name: "BASIC", active_indicator: $currentTier, active_value: 'Basic', fn: filterItemsByTier('Basic', $currentType) },
   ]} />
   <FilterInput />
+  <Toggles toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
+    { name: "ALL", active_indicator: $currentType, active_value: 'All', fn: resetTypeToAll() },
+    { name: "WEAPONS", active_indicator: $currentType, active_value: 'Weapon', fn: filterItemsByType('Weapon', $currentTier) },
+    { name: "MAGIC", active_indicator: $currentType, active_value: 'Magic', fn: filterItemsByType('Magic', $currentTier) },
+    { name: "JUNGLE", active_indicator: $currentType, active_value: 'Jungle', fn: filterItemsByType('Jungle', $currentTier) },
+    { name: "MOVEMENT", active_indicator: $currentType, active_value: 'Movement', fn: filterItemsByType('Movement', $currentTier) },
+    { name: "SUPPORT", active_indicator: $currentType, active_value: 'Support', fn: filterItemsByType('Support', $currentTier) },
+  ]} />
 </div>
 
 <div class="items-container">
 
-  {#each weapons.basic as item}
+  {#each mainIterable as item}
     <ItemCard
       src = {item.image}
       shiki_name = {item.name}
