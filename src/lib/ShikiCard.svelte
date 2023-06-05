@@ -12,7 +12,7 @@
 
 </script>
 
-<a href="/shikigami/{slug}" class="shiki-card-anchor">
+<a href="/shikigami/{slug}" class="shiki-card-anchor" data-sveltekit-preload-data="tap">
   <div class="shiki-card">
     <div class="sc-image-container">
       <!-- <img class="shikigami-image" alt="shikigami portrait" src="{images[shikiga_data[shiki].式神全身像]}"> -->
