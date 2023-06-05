@@ -70,7 +70,7 @@
 
 <div class="skill-tab-container">
   <h3 class="stats-header"> 🔨 Skills</h3>
-  <Toggles toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
+  <Toggles toggle_icon="iconoir:nav-arrow-down" anchor_direction="right" buttons={[
     { name: "TRAIT", active_indicator: skill_tab_indicator, active_value: 0, fn: changeSkillDisplayed(0) },
     { name: "S1 / PASSIVE", active_indicator: skill_tab_indicator, active_value: 3, fn: changeSkillDisplayed(3) },
     { name: "S2", active_indicator: skill_tab_indicator, active_value: 1, fn: changeSkillDisplayed(1) },

@@ -116,7 +116,7 @@
           bind:search_value={search_value}
         />
       </span>
-      <Toggles toggle_icon="gridicons:dropdown" anchor_direction="right" buttons={[
+      <Toggles toggle_icon="iconoir:nav-arrow-down" anchor_direction="right" buttons={[
         { name: "ALL", active_indicator: $active_role, active_value: 'all', fn: toggleRole('all') },
         { name: "SAMURAI", active_indicator: $active_role, active_value: '侍', fn: toggleRole('侍') },
         { name: "NINJA", active_indicator: $active_role, active_value: '忍', fn: toggleRole('忍') },

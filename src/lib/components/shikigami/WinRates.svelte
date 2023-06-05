@@ -165,16 +165,16 @@
 
   <div class={isChartVisible ? "main-header" : "main-header main-header--closed"}>
     {#if isChartVisible}
-      <Toggles no_collapse=true toggle_icon="mdi:menu-down" anchor_direction="left" buttons={[
+      <Toggles no_collapse=true toggle_icon="iconoir:nav-arrow-down" anchor_direction="left" buttons={[
         { name: "❎", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
       ]} />
-      <Toggles toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
+      <Toggles toggle_icon="iconoir:nav-arrow-down" anchor_direction="right" buttons={[
         { name: "ALL MODES", active_indicator: buttonIndicator, active_value: 'all', fn: selectMode('all', 'all') },
         { name: "NORMAL", active_indicator: buttonIndicator, active_value: 'normal', fn: selectMode(wdata_noban, 'normal') },
         { name: "BAN", active_indicator: buttonIndicator, active_value: 'ban', fn: selectMode(wdata_ban, 'ban') },
         { name: "FOGBAN", active_indicator: buttonIndicator, active_value: 'fogban', fn: selectMode(wdata_fogban, 'fogban') }
       ]} />
-      <Toggles collapsed=true toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
+      <Toggles collapsed=true toggle_icon="iconoir:nav-arrow-down" anchor_direction="right" buttons={[
         { name: "ALL", active_indicator: currentTab, active_value: "all", fn: filterByClass('all') },
         { name: "SAMURAI", active_indicator: currentTab, active_value: "侍", fn: filterByClass('侍') },
         { name: "NINJA", active_indicator: currentTab, active_value: "忍", fn: filterByClass('忍') },
@@ -184,7 +184,7 @@
         { name: "SUPPORT", active_indicator: currentTab, active_value: "祝", fn: filterByClass('祝') },
       ]} />
     {:else}
-      <Toggles no_collapse=true toggle_icon="mdi:menu-down" anchor_direction="left" buttons={[
+      <Toggles no_collapse=true toggle_icon="iconoir:nav-arrow-down" anchor_direction="left" buttons={[
         { name: "🚀 SHOW FULL PERFORMANCE CHART", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
       ]} />
     {/if}

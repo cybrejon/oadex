@@ -100,7 +100,7 @@ import Icon from '@iconify/svelte';
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 7px 15px 7px 7px;
+  padding: 7px 15px;
 }
 
 .anchor-left {
@@ -176,7 +176,6 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 15px;
   }
 }
 </style>

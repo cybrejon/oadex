@@ -68,7 +68,7 @@
   styles="color: red; text-align: center;" container_margin='50px 0 0 0' />
 
 <div class="shiki-selection-header">
-  <Toggles collapsed=true toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
+  <Toggles collapsed=true toggle_icon="iconoir:nav-arrow-down" anchor_direction="left" buttons={[
     { name: "ALL", active_indicator: $currentTier, active_value: 'All', fn: resetTierToAll() },
     { name: "ADVANCED", active_indicator: $currentTier, active_value: 'Advanced', fn: filterItemsByTier('Advanced', $currentType) },
     { name: "INTERMEDIATE", active_indicator: $currentTier, active_value: 'Intermediate', fn: filterItemsByTier('Intermediate', $currentType) },
