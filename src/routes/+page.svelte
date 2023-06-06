@@ -63,6 +63,13 @@
     isAscending.update(bool => bool = true);
   }
 
+  // clear filter input
+  function clearSearch() {
+    role = shiki_names;
+    role_config.update(c => c = c.sort());
+    search_value = '';
+  }
+
   // sort order
   function sortAscend() {
     $hasBeenLeft
@@ -114,6 +121,7 @@
         <FilterInput
           fn={filterShiki}
           bind:search_value={search_value}
+          clearFunction={clearSearch}
         />
       </span>
       <Toggles toggle_icon="iconoir:nav-arrow-down" anchor_direction="right" buttons={[

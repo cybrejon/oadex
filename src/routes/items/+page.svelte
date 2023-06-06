@@ -1,7 +1,15 @@
 <script>
 
-  // import components
+  // import external css
+  import '$lib/styles/items.css';
+  import '$lib/styles/shikis.css';
+
+  //ANCHOR import components
+  import Toggles from '$lib/Toggles.svelte';
+  import ItemCard from '$lib/components/items/ItemCard.svelte';
+  import FilterInput from '$lib/components/FilterInput.svelte';
   import Note from "$lib/components/Note.svelte";
+  import Fuse from 'fuse.js';
 
   export let data;
   const itemNames = data.itemNames;
@@ -23,6 +31,7 @@
       mainIterable = itemData.filter(item => item.type == type && item.tier == cTier);
     }
     currentType.update(t => t = type);
+    search_value = '';
   };
 
   const resetTypeToAll = () => () => {
@@ -32,6 +41,7 @@
       mainIterable = itemData.filter(item => ['Weapon', 'Magic', 'Defense', 'Jungle', 'Movement', 'Support'].includes(item.type) && item.tier == $currentTier);
     }
     currentType.update(t => t = 'All');
+    search_value = '';
   };
 
   const filterItemsByTier = (tier, cType) => () => {
@@ -40,7 +50,8 @@
     } else {
       mainIterable = itemData.filter(item => item.tier == tier && item.type == cType);
     }
-      currentTier.update(t => t = tier);
+    currentTier.update(t => t = tier);
+    search_value = '';
   };
 
   const resetTierToAll = () => () => {
@@ -50,16 +61,41 @@
       mainIterable = itemData.filter(item => ['Advanced', 'Intermediate', 'Basic'].includes(item.tier) && item.type == $currentType);
     }
     currentTier.update(t => t = 'All');
+    search_value = '';
   };
 
-  // import external css
-  import '$lib/styles/items.css';
-  import '$lib/styles/shikis.css';
 
-  //ANCHOR import components
-  import Toggles from '$lib/Toggles.svelte';
-  import ItemCard from '$lib/components/items/ItemCard.svelte';
-  import FilterInput from '$lib/components/FilterInput.svelte';
+
+
+
+
+  let search_value;
+  const itemSearcher = new Fuse(mainIterable, {
+    keys: ['name', 'id'],
+  });
+
+  // perform search
+  let searchResults = [];
+  function searchItems() {
+    if (!search_value) return;
+    searchResults = itemSearcher.search(search_value);
+    mainIterable = searchResults.map(result => result.item);
+    currentTier.update(t => t = 'All');
+    currentType.update(t => t = 'All');
+  }
+
+  function clearSearch() {
+    search_value = '';
+    mainIterable = itemData;
+  }
+
+
+
+
+
+
+
+
 
 </script>
 
@@ -74,7 +110,11 @@
     { name: "INTERMEDIATE", active_indicator: $currentTier, active_value: 'Intermediate', fn: filterItemsByTier('Intermediate', $currentType) },
     { name: "BASIC", active_indicator: $currentTier, active_value: 'Basic', fn: filterItemsByTier('Basic', $currentType) },
   ]} />
-  <FilterInput />
+  <FilterInput
+    fn={searchItems}
+    bind:search_value={search_value}
+    clearFunction={clearSearch}
+  />
   <Toggles toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
     { name: "ALL", active_indicator: $currentType, active_value: 'All', fn: resetTypeToAll() },
     { name: "WEAPONS", active_indicator: $currentType, active_value: 'Weapon', fn: filterItemsByType('Weapon', $currentTier) },
