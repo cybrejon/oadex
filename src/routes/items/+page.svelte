@@ -64,11 +64,6 @@
     search_value = '';
   };
 
-
-
-
-
-
   let search_value;
   const itemSearcher = new Fuse(mainIterable, {
     keys: ['name', 'id'],
@@ -89,13 +84,10 @@
     mainIterable = itemData;
   }
 
-
-
-
-
-
-
-
+  let mobileHeaderDisplayMode = 'normal';
+  const toggleMobileHeaderMode = (mode) => () => {
+    mobileHeaderDisplayMode = mode;
+  };
 
 </script>
 
@@ -103,27 +95,49 @@
   text='WORK IN PROGRESS'
   styles="color: red; text-align: center;" container_margin='50px 0 0 0' />
 
-<div class="shiki-selection-header">
-  <Toggles collapsed=true toggle_icon="iconoir:nav-arrow-down" anchor_direction="left" buttons={[
-    { name: "ALL", active_indicator: $currentTier, active_value: 'All', fn: resetTierToAll() },
-    { name: "ADVANCED", active_indicator: $currentTier, active_value: 'Advanced', fn: filterItemsByTier('Advanced', $currentType) },
-    { name: "INTERMEDIATE", active_indicator: $currentTier, active_value: 'Intermediate', fn: filterItemsByTier('Intermediate', $currentType) },
-    { name: "BASIC", active_indicator: $currentTier, active_value: 'Basic', fn: filterItemsByTier('Basic', $currentType) },
-  ]} />
-  <FilterInput
-    fn={searchItems}
-    bind:search_value={search_value}
-    clearFunction={clearSearch}
-  />
-  <Toggles toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
-    { name: "ALL", active_indicator: $currentType, active_value: 'All', fn: resetTypeToAll() },
-    { name: "WEAPONS", active_indicator: $currentType, active_value: 'Weapon', fn: filterItemsByType('Weapon', $currentTier) },
-    { name: "MAGIC", active_indicator: $currentType, active_value: 'Magic', fn: filterItemsByType('Magic', $currentTier) },
-    { name: "JUNGLE", active_indicator: $currentType, active_value: 'Jungle', fn: filterItemsByType('Jungle', $currentTier) },
-    { name: "MOVEMENT", active_indicator: $currentType, active_value: 'Movement', fn: filterItemsByType('Movement', $currentTier) },
-    { name: "SUPPORT", active_indicator: $currentType, active_value: 'Support', fn: filterItemsByType('Support', $currentTier) },
-  ]} />
-</div>
+{#if mobileHeaderDisplayMode === 'normal'}
+  <div class="shiki-selection-header">
+    <Toggles collapsed=true toggle_icon="iconoir:nav-arrow-down" anchor_direction="left" buttons={[
+      { name: "ALL", active_indicator: $currentTier, active_value: 'All', fn: resetTierToAll() },
+      { name: "ADVANCED", active_indicator: $currentTier, active_value: 'Advanced', fn: filterItemsByTier('Advanced', $currentType) },
+      { name: "INTERMEDIATE", active_indicator: $currentTier, active_value: 'Intermediate', fn: filterItemsByTier('Intermediate', $currentType) },
+      { name: "BASIC", active_indicator: $currentTier, active_value: 'Basic', fn: filterItemsByTier('Basic', $currentType) },
+    ]} />
+    <span class="desktop-filter-bar-visibility-wrapper">
+      <FilterInput
+        fn={searchItems}
+        bind:search_value={search_value}
+        clearFunction={clearSearch}
+      />
+    </span>
+    <Toggles toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
+      { name: "ALL", active_indicator: $currentType, active_value: 'All', fn: resetTypeToAll() },
+      { name: "WEAPONS", active_indicator: $currentType, active_value: 'Weapon', fn: filterItemsByType('Weapon', $currentTier) },
+      { name: "MAGIC", active_indicator: $currentType, active_value: 'Magic', fn: filterItemsByType('Magic', $currentTier) },
+      { name: "JUNGLE", active_indicator: $currentType, active_value: 'Jungle', fn: filterItemsByType('Jungle', $currentTier) },
+      { name: "MOVEMENT", active_indicator: $currentType, active_value: 'Movement', fn: filterItemsByType('Movement', $currentTier) },
+      { name: "SUPPORT", active_indicator: $currentType, active_value: 'Support', fn: filterItemsByType('Support', $currentTier) },
+    ]} />
+    <span class="mobile-header-mode-toggle">
+      <Toggles no_collapse=true toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
+        { name: "🔎", active_indicator: 'a', active_value: 'q', fn: toggleMobileHeaderMode('filter') },
+      ]} />
+    </span>
+  </div>
+{/if}
+
+{#if mobileHeaderDisplayMode === 'filter'}
+  <div class="shiki-selection-header">
+    <FilterInput
+      fn={searchItems}
+      bind:search_value={search_value}
+      clearFunction={clearSearch}
+    />
+    <Toggles no_collapse=true toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
+      { name: "🔃", active_indicator: 'a', active_value: 'a', fn: toggleMobileHeaderMode('normal') },
+    ]} />
+  </div>
+{/if}
 
 <div class="items-container">
 
@@ -140,13 +154,30 @@
 
 <style>
 
-.items-container {
-  margin: auto;
-  display: flex;
-  align-items: center;
-  gap: 30px 10px;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+  .mobile-header-mode-toggle {
+    display: none;
+  }
+
+  .items-container {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 30px 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: 500px) {
+    .shiki-selection-header {
+      margin: 0 10px 10px 10px;
+      justify-content: flex-end;
+    }
+    .desktop-filter-bar-visibility-wrapper {
+      display: none;
+    }
+    .mobile-header-mode-toggle {
+      display: block;
+    }
+  }
 
 </style>

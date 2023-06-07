@@ -22,7 +22,7 @@
 
 .filter-input {
   width: 320px;
-  height: 36px;
+  height: 39px;
   border-radius: 10px;
   border: none;
   padding: 10px 10px 10px 15px;

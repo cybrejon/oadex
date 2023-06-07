@@ -90,11 +90,6 @@
   let mobileHeaderDisplayMode = 'normal';
   const toggleMobileHeaderMode = (mode) => () => {
     mobileHeaderDisplayMode = mode;
-    if (mode == 'normal') {
-      $hasBeenLeft
-      ? role_config.update(c => c = c.sort())
-      : role = role.sort();
-    }
   };
 
   onDestroy(() => {
@@ -149,7 +144,7 @@
         clearFunction={clearSearch}
       />
       <Toggles no_collapse=true toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
-        { name: "❌", active_indicator: 'a', active_value: 'a', fn: toggleMobileHeaderMode('normal') },
+        { name: "🔃", active_indicator: 'a', active_value: 'a', fn: toggleMobileHeaderMode('normal') },
       ]} />
     </div>
   {/if}

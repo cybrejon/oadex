@@ -135,7 +135,7 @@ button {
   font-weight: 800;
   color: #ffffffad;
   border-radius: 6px;
-  padding: 10px 15px;
+  padding: 11px 15px;
   border: none;
 }
 
