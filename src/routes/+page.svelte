@@ -146,6 +146,7 @@
       <FilterInput
         fn={filterShiki}
         bind:search_value={search_value}
+        clearFunction={clearSearch}
       />
       <Toggles no_collapse=true toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
         { name: "❌", active_indicator: 'a', active_value: 'a', fn: toggleMobileHeaderMode('normal') },
