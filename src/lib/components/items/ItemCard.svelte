@@ -2,6 +2,8 @@
 
   import { LazyImage } from 'svelte-lazy-image';
 
+  import placeholderImage from '$lib/assets/plat.png';
+
   export let src;
   export let shiki_name;
 
@@ -10,7 +12,7 @@
 <div class="item-card">
   <div class="sc-image-container">
     <!-- <img class="shikigami-image" alt="shikigami portrait" src="{images[shikiga_data[shiki].式神全身像]}"> -->
-    <LazyImage class="ic-item-image" alt="shikigami portrait" src="{src}"/>
+    <LazyImage class="ic-item-image" alt="shikigami portrait" src="{src}" placeholder={placeholderImage} />
   </div>
   <div class="sc-text-container">
     <p class="ic-item-name">{shiki_name}</p>

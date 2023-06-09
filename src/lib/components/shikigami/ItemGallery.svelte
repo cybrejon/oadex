@@ -9,7 +9,7 @@
 </script>
 
 <div class="item-gallery">
-  <p>I am currently split between showing the default builds (which no one is really a fan of) or manually fetching the top builds in game. If you wish to influence my decision on this, please consider joining my Discord, the link is below.</p>
+  <p>I am currently split between showing the default builds (which no one is really a fan of) or manually fetching the top builds in game. If you wish to influence my decision on this, please consider joining my <a href="http://discord.gg/KGsaAet">Discord</a></p>
 </div>
 
 <style>

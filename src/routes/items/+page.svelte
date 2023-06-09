@@ -10,14 +10,16 @@
   import FilterInput from '$lib/components/FilterInput.svelte';
   import Note from "$lib/components/Note.svelte";
   import Fuse from 'fuse.js';
+  import ItemPreview from './ItemPreview.svelte';
+  import Container from '$lib/components/shikigami/Container.svelte';
+
+  import { currentTier, currentType, itemData_store } from './items.stores';
+
+  $: console.log($itemData_store)
 
   export let data;
   const itemNames = data.itemNames;
   const itemData = data.itemData;
-
-  // import stores
-  //NOTE these shouldnt really need to be writeables;
-  import { currentTier, currentType } from './items.stores';
   
   itemData.sort((a, b) => {
     return a.name.localeCompare(b.name);
@@ -139,20 +141,33 @@
   </div>
 {/if}
 
-<div class="items-container">
+<div class="main-wrapper">
 
-  {#each mainIterable as item}
-    <ItemCard
-      src = {item.image}
-      shiki_name = {item.name}
-    />
-  {/each}
-  
+  <div class="items-container">
+    {#each mainIterable as item}
+      <ItemCard
+        src = {item.image}
+        shiki_name = {item.name}
+      />
+    {/each}
+  </div>
+
+  <Container className="preview-pane">
+    <ItemPreview />
+  </Container>
+
 </div>
 
 
 
 <style>
+
+  .main-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 15px;
+    position: relative;
+  }
 
   .mobile-header-mode-toggle {
     display: none;
@@ -177,6 +192,19 @@
     }
     .mobile-header-mode-toggle {
       display: block;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .main-wrapper {
+      grid-template-columns: minmax(300px, 1fr);
+      grid-template-rows: 1fr;
+    }
+    .items-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
     }
   }
 
