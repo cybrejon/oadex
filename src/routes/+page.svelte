@@ -32,7 +32,7 @@
 
     r === 'all'
     ? role = shiki_names.sort()
-    : role = shiki_names.filter(shiki => shikiga_data[shiki].式神定位[0] === r).sort();
+    : role = shiki_names.filter(shiki => shikiga_data[shiki].式神定位.includes(r)).sort();
 
     active_role.update(role => role = r);
     search_value = '';
