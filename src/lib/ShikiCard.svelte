@@ -49,6 +49,18 @@
   }
 }
 
+@keyframes loadingAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .shiki-card-anchor {
   text-decoration: none;
 }
@@ -63,7 +75,6 @@
   width: 100px;
   height: 150px;
   transition: .1s;
-  animation: fade .3s;
 }
 
 .new-tag {

@@ -13,7 +13,8 @@
   import ItemPreview from './ItemPreview.svelte';
   import Container from '$lib/components/shikigami/Container.svelte';
 
-  import { currentTier, currentType, itemData_store } from './items.stores';
+  import { currentTier, currentType, itemData_store, toggleStates } from './items.stores';
+  import { onMount } from 'svelte';
 
   $: console.log($itemData_store)
 
@@ -90,6 +91,16 @@
   const toggleMobileHeaderMode = (mode) => () => {
     mobileHeaderDisplayMode = mode;
   };
+
+  onMount(() => {
+    if ($currentTier == 'All' && $currentType == 'All') {
+      resetTierToAll()();
+      resetTypeToAll()();
+    } else {
+      filterItemsByTier($currentTier, $currentType)();
+      filterItemsByType($currentType, $currentTier)();
+    }
+  });
 
 </script>
 

@@ -22,12 +22,11 @@
       _wdata = wdata
     } else {
       _wdata = wdata.filter((shiki) => {
-        return shiki.shikiClass === shikiClass;
+        return shiki.shikiClass.includes(shikiClass);
       });
     };
 
   };
-
 
   let isDescending = false;
   let isPrDescending = false;
