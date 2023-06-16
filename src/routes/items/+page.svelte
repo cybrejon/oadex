@@ -66,6 +66,11 @@
     search_value = '';
   };
 
+  let isOpen_itemDrawer = false;
+  const toggleMobileItemSelection = () => () => {
+    isOpen_itemDrawer = !isOpen_itemDrawer;
+  }
+
   let search_value;
   const itemSearcher = new Fuse(mainIterable, {
     keys: ['name', 'id'],
@@ -79,6 +84,7 @@
     mainIterable = searchResults.map(result => result.item);
     currentTier.update(t => t = 'All');
     currentType.update(t => t = 'All');
+    isOpen_itemDrawer = true;
   }
 
   function clearSearch() {
@@ -149,11 +155,6 @@
     }
     activeItem = item.name;
   };
-
-  let isOpen_itemDrawer = false;
-  const toggleMobileItemSelection = () => () => {
-    isOpen_itemDrawer = !isOpen_itemDrawer;
-  }
 
   onMount(() => {
     if ($currentTier == 'All' && $currentType == 'All') {
@@ -253,7 +254,7 @@
 <div class="mobile-item-chooser-toggle">
   <Toggles
     iconOnly=true
-    iconOnlyButtonStyle="border-radius: 20px; padding: 10px; border: 3px solid #64676D; box-shadow: 0 5px #282A2F;"
+    iconOnlyButtonStyle="border-radius: 20px; padding: 10px; border: 3px solid #64676D; box-shadow: 0 8px #282A2F;"
     iconOnlyToggleStyle="font-size: 40px;"
     no_collapse=true
     toggle_icon="ep:menu"
@@ -271,8 +272,8 @@
   .mobile-item-chooser-toggle {
     display: none;
     position: fixed;
-    bottom: 50px;
-    right: 30px;
+    bottom: 20px;
+    right: 10px;
   }
 
   .main-wrapper {
