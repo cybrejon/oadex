@@ -27,7 +27,7 @@ const color_regex = new RegExp(colors.join("|"), "gi");
     <img class="item-image" src={image} alt="item" />
     <span>
       <h3 class="item-name">{name}</h3>
-      <p class="item-price">💵 {price}</p>
+      <p class="item-price">💰 {price}</p>
       <p class="item-type">⚔️ {type}</p>
       <p class="item-tier">📊 {tier}</p>
     </span>
