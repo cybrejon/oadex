@@ -59,7 +59,7 @@ const color_regex = new RegExp(colors.join("|"), "gi");
           <ItemCard
             src = {item.image}
             itemName = {item.name}
-            itemPrice = "🪙 {item.price}"
+            itemPrice = "💰 {item.price}"
             itemId = {item.id}
             fn={previewItem(item.name, {
               isGlobal: true
