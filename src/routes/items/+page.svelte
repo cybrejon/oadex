@@ -20,6 +20,11 @@
   const itemNames = data.itemNames;
   const itemData = data.itemData;
   const itemQuery = data.itemQuery;
+
+  let isOpen_itemDrawer = false;
+  const toggleMobileItemSelection = () => () => {
+    isOpen_itemDrawer = !isOpen_itemDrawer;
+  }
   
   itemData.sort((a, b) => {
     return a.name.localeCompare(b.name);
@@ -34,6 +39,7 @@
     }
     currentType.update(t => t = type);
     search_value = '';
+    isOpen_itemDrawer = true;
   };
 
   const resetTypeToAll = () => () => {
@@ -44,6 +50,7 @@
     }
     currentType.update(t => t = 'All');
     search_value = '';
+    isOpen_itemDrawer = true;
   };
 
   const filterItemsByTier = (tier, cType) => () => {
@@ -54,6 +61,7 @@
     }
     currentTier.update(t => t = tier);
     search_value = '';
+    isOpen_itemDrawer = true;
   };
 
   const resetTierToAll = () => () => {
@@ -64,12 +72,8 @@
     }
     currentTier.update(t => t = 'All');
     search_value = '';
+    isOpen_itemDrawer = true;
   };
-
-  let isOpen_itemDrawer = false;
-  const toggleMobileItemSelection = () => () => {
-    isOpen_itemDrawer = !isOpen_itemDrawer;
-  }
 
   let search_value;
   const itemSearcher = new Fuse(mainIterable, {
