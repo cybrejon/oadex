@@ -228,7 +228,7 @@
         <ItemCard
           src = {item.image}
           itemName = {item.name}
-          itemPrice = "🪙 {item.price}"
+          itemPrice = "💵 {item.price}"
           fn={previewItem(item.name)}
           utilFn={isOpen_itemDrawer && toggleMobileItemSelection()}
           {activeItem}
