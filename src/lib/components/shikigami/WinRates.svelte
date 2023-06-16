@@ -184,7 +184,7 @@
       ]} />
     {:else}
       <Toggles no_collapse=true toggle_icon="iconoir:nav-arrow-down" anchor_direction="left" buttons={[
-        { name: "🚀 SHOW FULL PERFORMANCE CHART", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
+        { name: "GLOBAL WIN-RATE CHART", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
       ]} />
     {/if}
   </div>
