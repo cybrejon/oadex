@@ -164,7 +164,7 @@
 
   <div class={isChartVisible ? "main-header" : "main-header main-header--closed"}>
     {#if isChartVisible}
-      <Toggles no_collapse=true toggle_icon="iconoir:nav-arrow-down" anchor_direction="left" buttons={[
+      <Toggles iconOnly=true no_collapse=true toggle_icon="ep:close-bold" anchor_direction="left" buttons={[
         { name: "❎", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
       ]} />
       <Toggles toggle_icon="iconoir:nav-arrow-down" anchor_direction="right" buttons={[

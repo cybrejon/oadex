@@ -119,7 +119,7 @@
           clearFunction={clearSearch}
         />
       </span>
-      <Toggles toggle_icon="iconoir:nav-arrow-down" anchor_direction="right" buttons={[
+      <Toggles toggle_icon="fluent:tag-question-mark-32-filled" anchor_direction="right" buttons={[
         { name: "ALL", active_indicator: $active_role, active_value: 'all', fn: toggleRole('all') },
         { name: "SAMURAI", active_indicator: $active_role, active_value: '侍', fn: toggleRole('侍') },
         { name: "NINJA", active_indicator: $active_role, active_value: '忍', fn: toggleRole('忍') },
@@ -129,7 +129,7 @@
         { name: "SUPPORT", active_indicator: $active_role, active_value: '祝', fn: toggleRole('祝') },
       ]} />
       <span class="mobile-header-mode-toggle">
-        <Toggles no_collapse=true toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
+        <Toggles iconOnly=true no_collapse=true toggle_icon="ion:search" anchor_direction="left" buttons={[
           { name: "🔎", active_indicator: 'a', active_value: 'q', fn: toggleMobileHeaderMode('filter') },
         ]} />
       </span>
@@ -143,7 +143,7 @@
         bind:search_value={search_value}
         clearFunction={clearSearch}
       />
-      <Toggles no_collapse=true toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
+      <Toggles iconOnly=true no_collapse=true toggle_icon="icon-park-outline:switch" anchor_direction="left" buttons={[
         { name: "🔃", active_indicator: 'a', active_value: 'a', fn: toggleMobileHeaderMode('normal') },
       ]} />
     </div>
