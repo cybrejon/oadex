@@ -7,6 +7,9 @@ import Icon from '@iconify/svelte';
   export let toggle_icon;
   export let no_collapse = false;
   export let collapsed = false;
+  export let iconOnly = false;
+  export let iconOnlyToggleStyle;
+  export let iconOnlyButtonStyle;
 
   let state = { isOpened: false };
 
@@ -33,7 +36,20 @@ import Icon from '@iconify/svelte';
   <div class={rootClass}>
     <div class="toggles-container">
       {#each buttons as btn}
-        <button class="{btn.active_indicator === btn.active_value && 'active-toggle'}" on:click={btn.fn}>{btn.name}</button>
+        {#if iconOnly}
+          <button
+            class="mobile-toggle-button"
+            style={iconOnlyButtonStyle}
+            on:click={btn.fn}
+            type="button">
+            <Icon
+              icon="{toggle_icon}"
+              style={iconOnlyToggleStyle ? iconOnlyToggleStyle : "font-size: 24px;"}
+            />
+          </button>
+        {:else}
+          <button class="{btn.active_indicator === btn.active_value && 'active-toggle'}" on:click={btn.fn}>{btn.name}</button>
+        {/if}
       {/each}
     </div>
   </div>
@@ -118,7 +134,7 @@ import Icon from '@iconify/svelte';
   box-shadow: 0 8px #282A2F;
   border: 4px solid #282A2F;
   position: absolute;
-  top: 55px;
+  top: 45px;
   transition: .2s;
   display: flex;
   flex-direction: column;
@@ -130,7 +146,7 @@ import Icon from '@iconify/svelte';
 }
 
 button {
-  background-color: rgba(255, 255, 255, 0.118);
+  background-color: #565A60;
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   color: #ffffffad;
