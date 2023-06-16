@@ -8,11 +8,17 @@
   export let new_shiki;
   export let in_rotation;
 
+  let isLoading = false;
+  const loading = () => () => {
+    isLoading = !isLoading;
+  };
+ 
   import placeholderImage from '$lib/assets/plat.png';
+  import Icon from '@iconify/svelte';
 
 </script>
 
-<a href="/shikigami/{slug}" class="shiki-card-anchor" data-sveltekit-preload-data="tap">
+<a on:click={loading()} href="/shikigami/{slug}" class="shiki-card-anchor" data-sveltekit-preload-data="tap">
   <div class="shiki-card">
     <div class="sc-image-container">
       <!-- <img class="shikigami-image" alt="shikigami portrait" src="{images[shikiga_data[shiki].式神全身像]}"> -->
@@ -32,10 +38,24 @@
     {#if in_rotation}
       <p class="free-tag">FREE</p>
     {/if}
+    {#if isLoading}
+      <div class="loading">
+        <Icon icon="svg-spinners:blocks-shuffle-2" style="font-size: 24px;" />
+      </div>
+    {/if}
   </div>
 </a>
 
 <style>
+
+.loading {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #42444A;
+  padding: 5px 5px 3px 5px;
+  border-radius: 6px;
+}
 
 @keyframes fade {
   from {
@@ -46,18 +66,6 @@
     opacity: 1;
     filter: brightness(1);
     box-shadow: 0 8px #282A2F;
-  }
-}
-
-@keyframes loadingAnimation {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: .5;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
