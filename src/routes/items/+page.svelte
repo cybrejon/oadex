@@ -329,7 +329,7 @@
       gap: 30px 10px;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding: 0 30px;
+      padding: 0 10px;
     }
   }
 
