@@ -433,11 +433,11 @@
     <div class="skill-order-title-wrapper">
       <h3>🔢 Skill Order</h3>
       {#if is_order_visible}  
-        <Toggles no_collapse="True" toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
+        <Toggles iconOnly=true no_collapse="True" toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
           { name: "HIDE", active_indicator: "d", active_value: "", fn: orderDisplayToggle() },
         ]} />
       {:else}
-        <Toggles no_collapse="True" toggle_icon="mdi:menu-up" anchor_direction="right" buttons={[
+        <Toggles iconOnly=true no_collapse="True" toggle_icon="mdi:menu-up" anchor_direction="right" buttons={[
           { name: "SHOW", active_indicator: "d", active_value: "", fn: orderDisplayToggle() },
         ]} />
       {/if}
