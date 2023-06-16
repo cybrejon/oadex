@@ -43,7 +43,7 @@
         _wdata = wdata
       } else {
         _wdata = wdata.filter((shiki) => {
-          return shiki.shikiClass === shikiClass;
+          return shiki.shikiClass.includes(shikiClass);
         });
       }
     if (isDescending) {
@@ -68,7 +68,7 @@
         _wdata = wdata
       } else {
         _wdata = wdata.filter((shiki) => {
-          return shiki.shikiClass === shikiClass;
+          return shiki.shikiClass.includes(shikiClass);
         });
       }
     if (isPrDescending) {
@@ -93,7 +93,7 @@
         _wdata = wdata
       } else {
         _wdata = wdata.filter((shiki) => {
-          return shiki.shikiClass === shikiClass;
+          return shiki.shikiClass.includes(shikiClass);
         });
       }
     if (isKDADescending) {
@@ -118,7 +118,7 @@
         _wdata = wdata
       } else {
         _wdata = wdata.filter((shiki) => {
-          return shiki.shikiClass === shikiClass;
+          return shiki.shikiClass.includes(shikiClass);
         });
       }
     if (isKillsDescending) {
