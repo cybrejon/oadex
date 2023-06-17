@@ -50,7 +50,6 @@
     }
     currentType.update(t => t = 'All');
     search_value = '';
-    isOpen_itemDrawer = true;
   };
 
   const filterItemsByTier = (tier, cType) => () => {
@@ -72,7 +71,6 @@
     }
     currentTier.update(t => t = 'All');
     search_value = '';
-    isOpen_itemDrawer = true;
   };
 
   let search_value;

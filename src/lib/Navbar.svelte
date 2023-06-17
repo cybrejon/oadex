@@ -34,6 +34,7 @@
     <ul id="mn" class="mobile-nav-ul">
       <li><a on:click={closeNav(250)} class="{active_path === '/' ? "nav-item nav-item--active" : "nav-item"}" href="/">SHIKIS</a></li>
       <li><a on:click={closeNav(250)} class="{active_path === '/items' ? "nav-item nav-item--active" : "nav-item"}" href="/items">ITEMS</a></li>
+      <li><a on:click={closeNav(250)} class="{active_path === '/chart' ? "nav-item nav-item--active" : "nav-item"}" href="/chart">CHART</a></li>
       <!-- <li><a on:click={closeNav(250)} class="{active_path === '/onmyodos' ? "nav-item nav-item--active" : "nav-item"}" href="/onmyodos">ONMYODOS</a></li> -->
       <!-- <li><a on:click={closeNav(250)} class="{active_path === '/spells' ? "nav-item nav-item--active" : "nav-item"}" href="/spells">SPELLS</a></li> -->
     </ul>
@@ -42,6 +43,7 @@
   <ul class="desktop-nav">
     <li><a class="{active_path === '/' ? "nav-item nav-item--active" : "nav-item"}" href="/">SHIKIS</a></li>
     <li><a class="{active_path === '/items' ? "nav-item nav-item--active" : "nav-item"}" href="/items">ITEMS</a></li>
+    <li><a class="{active_path === '/chart' ? "nav-item nav-item--active" : "nav-item"}" href="/chart">CHART</a></li>
     <!-- <li><a class="{active_path === '/onmyodos' ? "nav-item nav-item--active" : "nav-item"}" href="/onmyodos">ONMYODOS</a></li> -->
     <!-- <li><a class="{active_path === '/spells' ? "nav-item nav-item--active" : "nav-item"}" href="/spells">SPELLS</a></li> -->
   </ul>
