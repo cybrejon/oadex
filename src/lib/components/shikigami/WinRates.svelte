@@ -138,7 +138,7 @@
     thText_kda = 'KDA';
   };
 
-  let isChartVisible = false;
+  let isChartVisible = true;
   const toggleChart = () => () => {
     isChartVisible = !isChartVisible;
   }
