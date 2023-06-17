@@ -14,11 +14,6 @@ export async function load({ params, fetch }) {
     return await bdr.json();
   }
 
-  const getWrData = async (mode) => {
-    let wrdr = await fetch(`http://150.230.58.91:3000/wr?mode=${mode}`);    
-    return await wrdr.json();
-  }
-
   let pick_rate = { all: "⏳", noban: "⏳", ban: "⏳", fogban: "⏳" };
   let kda = { all: "⏳", noban: "⏳", ban: "⏳", fogban: "⏳" };
   let avg_kills = { all: "⏳", noban: "⏳", ban: "⏳", fogban: "⏳" };
@@ -81,10 +76,6 @@ export async function load({ params, fetch }) {
   };
   
   const bd = await getBioData();
-  const wrData = await getWrData('all');
-  const wrData_noban = await getWrData('noban');
-  const wrData_ban = await getWrData('ban');
-  const wrData_fogban = await getWrData('fogban');
 
   await getIndividualPerformance();
   
@@ -106,10 +97,6 @@ export async function load({ params, fetch }) {
       win_rate,
       pick_rate
     },
-    wrData,
-    wrData_ban,
-    wrData_noban,
-    wrData_fogban,
     sdata,
     bioData
   }

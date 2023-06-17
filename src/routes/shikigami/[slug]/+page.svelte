@@ -14,7 +14,6 @@
   import Skills from '$lib/components/shikigami/Skills.svelte';
   import ItemGallery from '$lib/components/shikigami/ItemGallery.svelte';
   import Toggles from '$lib/Toggles.svelte';
-  import WinRates from '$lib/components/shikigami/WinRates.svelte';
 
   // import data
   export let data;
@@ -23,11 +22,6 @@
   const bioData = data.bioData;
   const images = data.images;
   const performance = data.performance;
-
-  let wrData = data.wrData;
-  let wrData_ban = data.wrData_ban;
-  let wrData_noban = data.wrData_noban;
-  let wrData_fogban = data.wrData_fogban;
 
   const curr_shiki_obj = shikiga_data;
   const scores = curr_shiki_obj.评分;
@@ -357,18 +351,6 @@
   
   </Container>
 
-  <Container area_name="chart">
-    <WinRates
-      shiki_id={shiki_id}
-      shikiName={curr_shiki_obj.式神名称}
-      wdata={wrData}
-      wdata_ban={wrData_ban}
-      wdata_noban={wrData_noban}
-      wdata_fogban={wrData_fogban}
-      images={images}
-    />
-  </Container>
-
   <Stats area_name="stats-1" >
     <h3 class="stats-header">🧬 Base Stats</h3>
     <table class="stats-table">
@@ -523,7 +505,6 @@
     /* align-items: center; */
     grid-template-areas: 
     "basic gallery gallery basic2"
-    "chart chart chart chart"
     "stats-1 stats-1 skills skills"
     "usage usage skills skills"
     "item-gallery item-gallery . .";
@@ -651,7 +632,6 @@
       "gallery"
       "basic"
       "basic2"
-      "chart"
       "stats-1"
       "skills"
       "usage"
