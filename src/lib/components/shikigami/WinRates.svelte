@@ -164,9 +164,9 @@
 
   <div class={isChartVisible ? "main-header" : "main-header main-header--closed"}>
     {#if isChartVisible}
-      <Toggles iconOnly=true no_collapse=true toggle_icon="ep:close-bold" anchor_direction="left" buttons={[
+      <!-- <Toggles iconOnly=true no_collapse=true toggle_icon="ep:close-bold" anchor_direction="left" buttons={[
         { name: "❎", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
-      ]} />
+      ]} /> -->
       <Toggles toggle_icon="iconoir:nav-arrow-down" anchor_direction="right" buttons={[
         { name: "ALL MODES", active_indicator: buttonIndicator, active_value: 'all', fn: selectMode('all', 'all') },
         { name: "NORMAL", active_indicator: buttonIndicator, active_value: 'normal', fn: selectMode(wdata_noban, 'normal') },
@@ -244,7 +244,6 @@
 
   td:nth-child(2) {
     max-width: 200px;
-    
   }
 
   td:nth-child(3), th:nth-child(3),
@@ -293,6 +292,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 30px 0;
   }
 
   .main-header--closed {
@@ -315,7 +315,10 @@
     }
   }
 
-  @media only screen and (max-width: 490px) {
+  @media only screen and (max-width: 500px) {
+    .wr-main-container {
+      margin: 0 10px;
+    }
     td a {
       display: none;
     }

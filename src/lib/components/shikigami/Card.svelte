@@ -36,6 +36,7 @@
   }
 
   .card-title {
+    margin-bottom: 10px;
     font-weight: 800;
   }
 </style>

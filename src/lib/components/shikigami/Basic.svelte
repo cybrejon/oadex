@@ -16,7 +16,6 @@
     <p class="name {classification[0].toLowerCase()}-name">📝 {name}</p>
   </div>
   <ul class="classification-ul">
-    🏷
     {#each classification as role}
       <li class="c-li {role.toLowerCase()}">{role}</li>
     {/each}
@@ -29,21 +28,25 @@
   ]} />
   <Card title="Voice Actors">
     {#if voices[0]}
-      <li class="vas-li">🇯🇵 {voices[0]}</li>
+      <li class="vas-li"><span class="language">JP</span> - {voices[0]}</li>
     {/if}
     {#if voices[1]}
-      <li class="vas-li">🇨🇳 {voices[1]}</li>
+      <li class="vas-li"><span class="language">CN</span> - {voices[1]}</li>
     {/if}
     {#if voices[2]}
-      <li class="vas-li">🇺🇸 {voices[2]}</li>
+      <li class="vas-li"><span class="language">EN</span> - {voices[2]}</li>
     {/if}
     {#if voices[3]}
-      <li class="vas-li">🇰🇷 {voices[3]}</li>
+      <li class="vas-li"><span class="language">KR</span> - {voices[3]}</li>
     {/if}
   </Card>
   <slot />
 
 <style>
+
+  .language {
+    font-weight: 900;
+  }
 
   .name {
     font-size: 1.6rem;
