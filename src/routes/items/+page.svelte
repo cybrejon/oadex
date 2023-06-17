@@ -39,7 +39,6 @@
     }
     currentType.update(t => t = type);
     search_value = '';
-    isOpen_itemDrawer = true;
   };
 
   const resetTypeToAll = () => () => {
@@ -60,7 +59,6 @@
     }
     currentTier.update(t => t = tier);
     search_value = '';
-    isOpen_itemDrawer = true;
   };
 
   const resetTierToAll = () => () => {
@@ -86,7 +84,6 @@
     mainIterable = searchResults.map(result => result.item);
     currentTier.update(t => t = 'All');
     currentType.update(t => t = 'All');
-    isOpen_itemDrawer = true;
   }
 
   function clearSearch() {
