@@ -10,6 +10,7 @@ import Icon from '@iconify/svelte';
   export let iconOnly = false;
   export let iconOnlyToggleStyle;
   export let iconOnlyButtonStyle;
+  
 
   let state = { isOpened: false };
 

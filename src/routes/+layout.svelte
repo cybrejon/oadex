@@ -3,10 +3,11 @@
   import "../rwd.css";
   import Header from '$lib/Header.svelte';
   import { page } from '$app/stores';
+  import autoAnimate from '@formkit/auto-animate';
   $: curr_page = $page.url.pathname;
 </script>
 
-<div class="main-container">
+<div use:autoAnimate class="main-container">
   <Header active_path={curr_page}/>
   <slot />
 </div>

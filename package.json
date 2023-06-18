@@ -22,6 +22,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@formkit/auto-animate": "^0.7.0",
 		"@inqling/svelte-icons": "^2.4.0",
 		"@sentry/sveltekit": "^7.53.1",
 		"@tanstack/svelte-query": "^4.29.11",
