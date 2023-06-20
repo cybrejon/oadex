@@ -1,9 +1,6 @@
 <script>
   export let wdata;
-  export let wdata_ban;
-  export let wdata_noban;
-  export let wdata_fogban;
-
+  export let mode;
   export let images;
   export let shikiName;
   // export let shiki_id;
@@ -14,10 +11,11 @@
 
   $: _wdata = wdata;
 
-  let currentTab = 'all';
+  let classCurrentTab = 'all';
+  
   const filterByClass = (shikiClass) => () => {
 
-    currentTab = shikiClass;
+    classCurrentTab = shikiClass;
     if (shikiClass == 'all') {
       _wdata = wdata
     } else {
@@ -39,7 +37,7 @@
   let thText_kills = 'KILLS';
   
   const sortWr = (shikiClass) => () => {
-      if (currentTab === 'all') {
+      if (classCurrentTab === 'all') {
         _wdata = wdata
       } else {
         _wdata = wdata.filter((shiki) => {
@@ -64,7 +62,7 @@
   };
   
   const sortPr = (shikiClass) => () => {
-      if (currentTab === 'all') {
+      if (classCurrentTab === 'all') {
         _wdata = wdata
       } else {
         _wdata = wdata.filter((shiki) => {
@@ -89,7 +87,7 @@
   };
   
   const sortKda = (shikiClass) => () => {
-      if (currentTab === 'all') {
+      if (classCurrentTab === 'all') {
         _wdata = wdata
       } else {
         _wdata = wdata.filter((shiki) => {
@@ -114,7 +112,7 @@
   };
 
   const sortKills = (shikiClass) => () => {
-      if (currentTab === 'all') {
+      if (classCurrentTab === 'all') {
         _wdata = wdata
       } else {
         _wdata = wdata.filter((shiki) => {
@@ -142,20 +140,14 @@
   const toggleChart = () => () => {
     isChartVisible = !isChartVisible;
   }
-
-  let buttonIndicator = 'all';
-  const selectMode = (mode, btn) => () => {
-    if (mode == 'all') {
-      _wdata = wdata;
-    } else {
-      _wdata = mode;
-    }
-    buttonIndicator = btn;
+  
+  const selectMode = (mode) => () => {
+    window.location = `/chart?mode=${mode}`;
     thText_wr = '⬆️ WR';
     thText_pr = 'PR';
     thText_kda = 'KDA';
     thText_kills = 'KILLS';
-    currentTab = 'all';
+    classCurrentTab = 'all';
   }
 
 </script>
@@ -168,19 +160,19 @@
         { name: "❎", active_indicator: 'a', active_value: 'b', fn: toggleChart() },
       ]} /> -->
       <Toggles toggle_icon="iconoir:nav-arrow-down" anchor_direction="right" buttons={[
-        { name: "ALL MODES", active_indicator: buttonIndicator, active_value: 'all', fn: selectMode('all', 'all') },
-        { name: "NORMAL", active_indicator: buttonIndicator, active_value: 'normal', fn: selectMode(wdata_noban, 'normal') },
-        { name: "BAN", active_indicator: buttonIndicator, active_value: 'ban', fn: selectMode(wdata_ban, 'ban') },
-        { name: "FOGBAN", active_indicator: buttonIndicator, active_value: 'fogban', fn: selectMode(wdata_fogban, 'fogban') }
+        { name: "ALL MODES", active_indicator: mode, active_value: 'all', fn: selectMode('all') },
+        { name: "NORMAL", active_indicator: mode, active_value: 'noban', fn: selectMode('noban') },
+        { name: "BAN", active_indicator: mode, active_value: 'ban', fn: selectMode('ban') },
+        { name: "FOGBAN", active_indicator: mode, active_value: 'fogban', fn: selectMode('fogban') }
       ]} />
       <Toggles collapsed=true toggle_icon="fluent:tag-question-mark-32-filled" anchor_direction="right" buttons={[
-        { name: "ALL", active_indicator: currentTab, active_value: "all", fn: filterByClass('all') },
-        { name: "SAMURAI", active_indicator: currentTab, active_value: "侍", fn: filterByClass('侍') },
-        { name: "NINJA", active_indicator: currentTab, active_value: "忍", fn: filterByClass('忍') },
-        { name: "MARKSMAN", active_indicator: currentTab, active_value: "射", fn: filterByClass('射') },
-        { name: "TANK", active_indicator: currentTab, active_value: "守", fn: filterByClass('守') },
-        { name: "MAGE", active_indicator: currentTab, active_value: "巫", fn: filterByClass('巫') },
-        { name: "SUPPORT", active_indicator: currentTab, active_value: "祝", fn: filterByClass('祝') },
+        { name: "ALL", active_indicator: classCurrentTab, active_value: "all", fn: filterByClass('all') },
+        { name: "SAMURAI", active_indicator: classCurrentTab, active_value: "侍", fn: filterByClass('侍') },
+        { name: "NINJA", active_indicator: classCurrentTab, active_value: "忍", fn: filterByClass('忍') },
+        { name: "MARKSMAN", active_indicator: classCurrentTab, active_value: "射", fn: filterByClass('射') },
+        { name: "TANK", active_indicator: classCurrentTab, active_value: "守", fn: filterByClass('守') },
+        { name: "MAGE", active_indicator: classCurrentTab, active_value: "巫", fn: filterByClass('巫') },
+        { name: "SUPPORT", active_indicator: classCurrentTab, active_value: "祝", fn: filterByClass('祝') },
       ]} />
     {:else}
       <Toggles no_collapse=true toggle_icon="iconoir:nav-arrow-down" anchor_direction="left" buttons={[
@@ -195,22 +187,24 @@
           <thead>
             <th style:padding-left="10px">#</th>
             <th>📝</th>
-            <th class="th-toggle" on:click={sortWr(currentTab)} >{thText_wr} <span class="nth">- nth</span></th>
-            <th class="th-toggle" on:click={sortPr(currentTab)} >{thText_pr}</th>
-            <th class="th-toggle" on:click={sortKda(currentTab)} >{thText_kda}</th>
-            <th class="th-toggle" on:click={sortKills(currentTab)} >{thText_kills}</th>
+            <th class="th-toggle" on:click={sortWr(classCurrentTab)} >{thText_wr} <span class="nth">- nth</span></th>
+            <th class="th-toggle" on:click={sortPr(classCurrentTab)} >{thText_pr}</th>
+            <th class="th-toggle" on:click={sortKda(classCurrentTab)} >{thText_kda}</th>
+            <th class="th-toggle" on:click={sortKills(classCurrentTab)} >{thText_kills}</th>
           </thead>
           <tbody>
+
             {#each _wdata as data, i}
-            <tr class={shikiName === data.name ? "shiki-name-active" : ""}>
-              <td style:padding-left="10px">{i+1}.</td>
-              <td class="shiki-name"><LazyImage class="wr-shikigami-image" alt="shikigami portrait" src="{images[data.image]}"/><a href="/shikigami/{data.id}" target="_blank">{data.name}</a></td>
-              <td>{data.wr}% <span class="nth">- {data.number == 1 ? '🏆' : `${data.number}.`}</span></td>
-              <td>{data.pickRate}%</td>
-              <td>{data.kda}</td>
-              <td>{data.kills}</td>
-            </tr>
+              <tr class={shikiName === data.name ? "shiki-name-active" : ""}>
+                <td style:padding-left="10px">{i+1}.</td>
+                <td class="shiki-name"><LazyImage class="wr-shikigami-image" alt="shikigami portrait" src="{images[data.image]}"/><a href="/shikigami/{data.id}" target="_blank">{data.name}</a></td>
+                <td>{data.wr}% <span class="nth">- {data.number == 1 ? '🏆' : `${data.number}.`}</span></td>
+                <td>{data.pickRate}%</td>
+                <td>{data.kda}</td>
+                <td>{data.kills}</td>
+              </tr>
             {/each}
+
           </tbody>
         </table>
     </div>
