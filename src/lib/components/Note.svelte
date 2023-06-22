@@ -29,4 +29,10 @@
     column-gap: 10px;
     border-radius: 10px;
   }
+
+  @media only screen and (max-width: 500px) {
+    .container {
+      flex-direction: column;
+    }
+  }
 </style>
