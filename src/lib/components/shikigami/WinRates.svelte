@@ -185,7 +185,7 @@
     <div class="content">
         <table>
           <thead>
-            <th style:padding-left="10px">#</th>
+            <th>#</th>
             <th>📝</th>
             <th class="th-toggle" on:click={sortWr(classCurrentTab)} >{thText_wr} <span class="nth">- nth</span></th>
             <th class="th-toggle" on:click={sortPr(classCurrentTab)} >{thText_pr}</th>
@@ -196,7 +196,7 @@
 
             {#each _wdata as data, i}
               <tr class={shikiName === data.name ? "shiki-name-active" : ""}>
-                <td style:padding-left="10px">{i+1}.</td>
+                <td>{i+1}.</td>
                 <td class="shiki-name"><LazyImage class="wr-shikigami-image" alt="shikigami portrait" src="{images[data.image]}"/><a href="/shikigami/{data.id}" target="_blank">{data.name}</a></td>
                 <td>{data.wr}% <span class="nth">- {data.number == 1 ? '🏆' : `${data.number}.`}</span></td>
                 <td>{data.pickRate}%</td>
@@ -218,10 +218,15 @@
     background-color: #3C3F46;
   }
 
+  th:first-child {
+    text-align: center;
+  }
+
   td:first-child {
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
     width: 50px;
+    text-align: center;
   }
 
   td:nth-child(3), td:nth-child(5) {
