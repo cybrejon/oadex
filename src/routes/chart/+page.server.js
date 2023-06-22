@@ -2,8 +2,6 @@
 
 export async function load({ url }) {
 
-  console.log(url.searchParams.get('mode'));
-
   let mode = url.searchParams.get('mode');
   
   const getWrData = async (mode) => {

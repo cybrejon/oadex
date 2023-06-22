@@ -4,6 +4,7 @@
   import Icon from '@iconify/svelte';
 
   export let active_path;
+  export let routeId;
 
   export let type;
 
@@ -32,7 +33,7 @@
   <div class="mobile-nav">
     <button on:click={openNav} class="mobile-nav-toggle" type="button"><Icon icon="icon-park-outline:hamburger-button" style="font-size: 24px;" /></button>
     <ul id="mn" class="mobile-nav-ul">
-      <li><a on:click={closeNav(250)} class="{active_path === '/' ? "nav-item nav-item--active" : "nav-item"}" href="/">SHIKIS</a></li>
+      <li><a on:click={closeNav(250)} class="{active_path === '/' || routeId === '/shikigami/[slug]' ? "nav-item nav-item--active" : "nav-item"}" href="/">SHIKIS</a></li>
       <li><a on:click={closeNav(250)} class="{active_path === '/items' ? "nav-item nav-item--active" : "nav-item"}" href="/items">ITEMS</a></li>
       <li><a on:click={closeNav(250)} class="{active_path === '/chart' ? "nav-item nav-item--active" : "nav-item"}" href="/chart?mode=all">CHART</a></li>
       <!-- <li><a on:click={closeNav(250)} class="{active_path === '/onmyodos' ? "nav-item nav-item--active" : "nav-item"}" href="/onmyodos">ONMYODOS</a></li> -->
@@ -41,7 +42,7 @@
   </div>
 {:else}
   <ul class="desktop-nav">
-    <li><a class="{active_path === '/' ? "nav-item nav-item--active" : "nav-item"}" href="/">SHIKIS</a></li>
+    <li><a class="{active_path === '/' || routeId === '/shikigami/[slug]' ? "nav-item nav-item--active" : "nav-item"}" href="/">SHIKIS</a></li>
     <li><a class="{active_path === '/items' ? "nav-item nav-item--active" : "nav-item"}" href="/items">ITEMS</a></li>
     <li><a class="{active_path === '/chart' ? "nav-item nav-item--active" : "nav-item"}" href="/chart?mode=all">CHART</a></li>
     <!-- <li><a class="{active_path === '/onmyodos' ? "nav-item nav-item--active" : "nav-item"}" href="/onmyodos">ONMYODOS</a></li> -->

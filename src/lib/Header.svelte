@@ -2,6 +2,7 @@
   import banner from '$lib/assets/banner4.webp'
   import Navbar from '$lib/Navbar.svelte';
   export let active_path;
+  export let routeId;
 </script>
 
 <div class="main-header">
@@ -11,8 +12,8 @@
         <img src="{banner}" alt="banner">
       </a>
     </div>
-    <Navbar type="mobile" active_path={active_path} />
-    <Navbar active_path={active_path} />
+    <Navbar type="mobile" active_path={active_path} {routeId} />
+    <Navbar active_path={active_path} {routeId} />
   </div>
 </div>
 
