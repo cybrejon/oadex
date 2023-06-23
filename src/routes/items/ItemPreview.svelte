@@ -35,12 +35,12 @@ const color_regex = new RegExp(colors.join("|"), "gi");
   <div class="body">
     {#if abilities.active}
       <h3>Active Abilities</h3>
-      {abilities.active.replace(color_regex, " ")}
+      <p class="ability-text">{abilities.active.replace(color_regex, " ")}</p>
     {/if}
 
     {#if abilities.passive}
       <h3>Passive Abilities</h3>
-      {abilities.passive[0].replace(color_regex, " ")}
+      <p class="ability-text">{abilities.passive[0].replace(color_regex, " ")}</p>
     {/if}
 
     {#if attributes.length}
@@ -77,6 +77,11 @@ const color_regex = new RegExp(colors.join("|"), "gi");
 </div>
 
 <style>
+
+  .ability-text {
+    font-size: .9rem;
+    line-height: 27px;
+  }
 
   .required-items-container {
     display: flex;

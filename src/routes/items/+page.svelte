@@ -192,6 +192,7 @@
     <Toggles toggle_icon="fluent:tag-question-mark-32-filled" anchor_direction="left" buttons={[
       { name: "ALL", active_indicator: $currentType, active_value: 'All', fn: resetTypeToAll() },
       { name: "WEAPONS", active_indicator: $currentType, active_value: 'Weapon', fn: filterItemsByType('Weapon', $currentTier) },
+      { name: "DEFENSE", active_indicator: $currentType, active_value: 'Defense', fn: filterItemsByType('Defense', $currentTier) },
       { name: "MAGIC", active_indicator: $currentType, active_value: 'Magic', fn: filterItemsByType('Magic', $currentTier) },
       { name: "JUNGLE", active_indicator: $currentType, active_value: 'Jungle', fn: filterItemsByType('Jungle', $currentTier) },
       { name: "MOVEMENT", active_indicator: $currentType, active_value: 'Movement', fn: filterItemsByType('Movement', $currentTier) },
