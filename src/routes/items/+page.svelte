@@ -242,7 +242,7 @@
   </div>
 
   {#if !isOpen_itemDrawer}
-    <Container className="preview-pane">
+    <Container>
       <ItemPreview
         {...previewData}
         {itemData}
@@ -324,7 +324,6 @@
     }
     .items-container--visible {
       display: flex;
-      position: absolute;
       top: 0;
       left: 0;
       right: 0;
