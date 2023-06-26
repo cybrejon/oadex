@@ -1,14 +1,14 @@
 <script>
   export let fn;
   export let search_value;
-
+  export let width;
   export let clearFunction;
 
   import Icon from '@iconify/svelte';
 </script>
 
 <div class="filter-container">
-  <input on:keypress={fn} class="filter-input" type="text" placeholder="Filter" bind:value={search_value} >
+  <input style:width={width} on:keypress={fn} class="filter-input" type="text" placeholder="Filter" bind:value={search_value} >
   {#if search_value}
     <button on:click={clearFunction} type="button"><Icon icon="ic:round-clear" style="font-size: 24px;" /></button>
   {/if}
@@ -21,7 +21,6 @@
 }
 
 .filter-input {
-  width: 320px;
   height: 39px;
   border-radius: 10px;
   border: none;

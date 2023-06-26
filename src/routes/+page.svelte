@@ -17,6 +17,7 @@
 
   import { onDestroy } from 'svelte';
   import Fuse from 'fuse.js';
+  import { goto } from '$app/navigation';
 
   // import components
   import Note from "$lib/components/Note.svelte";
@@ -26,6 +27,8 @@
   import "$lib/styles/shikis.css";
 
   const shiki_names = Object.keys(shikiga_data).sort();
+  const shikiIDs = [];
+  shiki_names.forEach(name => shikiIDs.push(shikiga_data[name].式神ID	));
 
   $: role = shiki_names;
   const toggleRole = (r) => () => {
@@ -92,6 +95,11 @@
     mobileHeaderDisplayMode = mode;
   };
 
+  function randomShikigami() {
+    let id = shikiIDs[Math.floor(Math.random() * shikiIDs.length)];
+    goto(`/shikigami/${id}`);
+  }
+
   onDestroy(() => {
     // hasBeenLeft.update(bool => bool = true);
     !$role_config.length == 0
@@ -114,11 +122,19 @@
       ]} />
       <span class="desktop-filter-bar-visibility-wrapper">
         <FilterInput
+          width='250px'
           fn={filterShiki}
           bind:search_value={search_value}
           clearFunction={clearSearch}
         />
       </span>
+      <Toggles
+        iconOnly=true
+        toggle_icon="ion:dice"
+        anchor_direction="left"
+        buttons={[
+          { name: "a", active_indicator: 'e', active_value: 'i', fn: randomShikigami },
+      ]} />
       <Toggles toggle_icon="fluent:tag-question-mark-32-filled" anchor_direction="right" buttons={[
         { name: "ALL", active_indicator: $active_role, active_value: 'all', fn: toggleRole('all') },
         { name: "SAMURAI", active_indicator: $active_role, active_value: '侍', fn: toggleRole('侍') },

@@ -183,6 +183,7 @@
 
     <span class="desktop-filter-bar-visibility-wrapper">
       <FilterInput
+        width="300px"
         fn={searchItems}
         bind:search_value={search_value}
         clearFunction={clearSearch}
@@ -211,6 +212,7 @@
 {#if mobileHeaderDisplayMode === 'filter'}
   <div class="shiki-selection-header">
     <FilterInput
+      width="210px"
       fn={searchItems}
       bind:search_value={search_value}
       clearFunction={clearSearch}
