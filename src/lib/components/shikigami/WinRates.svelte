@@ -237,6 +237,16 @@
     font-weight: 800;
   }
 
+  thead {
+    position: sticky;
+    top: 0;
+    background-color: #36393F;
+  }
+
+  thead th {
+    padding: 10px 0;
+  }
+
   thead th:nth-child(2) {
     width: 200px;
   }
