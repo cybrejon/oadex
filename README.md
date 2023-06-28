@@ -4,4 +4,4 @@ OADex is a simple fan-made wiki for the mobile MOBA game Onmyoji Arena by NetEas
 
 # Contribute
 
-![Discord Banner 1](https://discordapp.com/api/guilds/640888147386826773/widget.png?style=banner1)
+Join my [Discord](http://discord.gg/KGsaAet)
