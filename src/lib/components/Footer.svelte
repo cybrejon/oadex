@@ -6,7 +6,6 @@
 <div class="footer">
 
   <div class="footer-block">
-    <p style="font-weight: 600;">OADex 2023, All rights reserved.</p>
     <div class="footer-links">
       <Toggles
         iconOnly=true
@@ -33,6 +32,7 @@
         ]}
       />
     </div>
+    <p style="font-weight: 600;">OADex 2023, All rights reserved.</p>
   </div>
   
 </div>
@@ -49,7 +49,7 @@
   .footer-block {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 20px;
   }
 
   .footer-links {
