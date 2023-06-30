@@ -484,7 +484,7 @@
   </Container>
 
   <Container area_name="item-gallery">
-    <h3>📚 Default Builds</h3>
+    <h3>📚 Builds</h3>
     <ItemGallery />
   </Container>
 

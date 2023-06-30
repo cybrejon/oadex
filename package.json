@@ -15,7 +15,7 @@
 		"@sveltejs/adapter-auto": "^1.0.3",
 		"@sveltejs/adapter-node": "^1.2.4",
 		"@sveltejs/adapter-vercel": "^1.0.6",
-		"@sveltejs/kit": "^1.20.5",
+		"@sveltejs/kit": "^1.21.0",
 		"@types/fuzzy-search": "^2.1.2",
 		"svelte": "^3.59.2",
 		"vite": "^4.3.9"
@@ -24,8 +24,8 @@
 	"dependencies": {
 		"@formkit/auto-animate": "^0.7.0",
 		"@inqling/svelte-icons": "^2.4.0",
-		"@sentry/sveltekit": "^7.56.0",
-		"@tanstack/svelte-query": "^4.29.15",
+		"@sentry/sveltekit": "^7.57.0",
+		"@tanstack/svelte-query": "^4.29.19",
 		"axios": "^1.4.0",
 		"fuse.js": "^6.6.2",
 		"fuzzy-search": "^3.2.1",
