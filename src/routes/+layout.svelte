@@ -6,6 +6,11 @@
   import { page } from '$app/stores';
   $: curr_page = $page.url.pathname;
   $: routeId = $page.route.id;
+
+  // vercel analytics
+  import { dev } from '$app/environment';
+  import { inject } from '@vercel/analytics';
+  inject({ mode: dev ? 'development' : 'production' });
 </script>
 
 <div class="main-container">

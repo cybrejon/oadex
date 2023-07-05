@@ -26,6 +26,7 @@
 		"@inqling/svelte-icons": "^2.4.0",
 		"@sentry/sveltekit": "^7.57.0",
 		"@tanstack/svelte-query": "^4.29.19",
+		"@vercel/analytics": "^1.0.1",
 		"axios": "^1.4.0",
 		"fuse.js": "^6.6.2",
 		"fuzzy-search": "^3.2.1",

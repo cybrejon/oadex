@@ -1,6 +1,4 @@
 <script>
-  /** @type {import('./$types').PageData} */
-  /** @type {import('./$types').Snapshot<string>} */
 
   // import stores
   import {
@@ -14,10 +12,12 @@
   export let data;
   const shikiga_data = data.shikiga_data;
   const images = data.images;
+  const shikiClassQuery = data.shikiClassQuery;
 
   import { onDestroy } from 'svelte';
   import Fuse from 'fuse.js';
   import { goto } from '$app/navigation';
+  import { roles } from '$lib/json/dictionary.json';
 
   // import components
   import Note from "$lib/components/Note.svelte";
@@ -46,6 +46,7 @@
     
     role_config.update(roles => roles = role);
     hasBeenLeft.update(bool => bool = false);
+
   }
 
   // start searcher
@@ -82,6 +83,7 @@
     isAscending.update(bool => bool = true);
     search_value = '';
   }
+
   function sortDescend() {
     $hasBeenLeft
     ? role_config.update(c => c = c.sort().reverse())
@@ -101,7 +103,6 @@
   }
 
   onDestroy(() => {
-    // hasBeenLeft.update(bool => bool = true);
     !$role_config.length == 0
     ? hasBeenLeft.update(bool => bool = true)
     : hasBeenLeft.update(bool => bool = false);

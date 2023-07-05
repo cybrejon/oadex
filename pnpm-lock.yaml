@@ -13,6 +13,7 @@ specifiers:
   '@sveltejs/kit': ^1.21.0
   '@tanstack/svelte-query': ^4.29.19
   '@types/fuzzy-search': ^2.1.2
+  '@vercel/analytics': ^1.0.1
   axios: ^1.4.0
   fuse.js: ^6.6.2
   fuzzy-search: ^3.2.1
@@ -26,6 +27,7 @@ dependencies:
   '@inqling/svelte-icons': 2.4.0_svelte@3.59.2
   '@sentry/sveltekit': 7.57.0_yhrwfyjwvkpxo375opowpx27ae
   '@tanstack/svelte-query': 4.29.19_svelte@3.59.2
+  '@vercel/analytics': 1.0.1
   axios: 1.4.0
   fuse.js: 6.6.2
   fuzzy-search: 3.2.1
@@ -874,6 +876,10 @@ packages:
   /@types/resolve/1.20.2:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
     dev: true
+
+  /@vercel/analytics/1.0.1:
+    resolution: {integrity: sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==}
+    dev: false
 
   /@vercel/nft/0.22.6:
     resolution: {integrity: sha512-gTsFnnT4mGxodr4AUlW3/urY+8JKKB452LwF3m477RFUJTAaDmcz2JqFuInzvdybYIeyIv1sSONEJxsxnbQ5JQ==}
