@@ -3,7 +3,7 @@
   export let style;
 </script>
 
-<div class={style === 'transparent' ? 'container container--alt' : 'container'} style:grid-area={area_name}>
+<div class={style === 'transparent' ? 'container--alt' : 'container'} style:grid-area={area_name}>
   <slot></slot>
 </div>
 
