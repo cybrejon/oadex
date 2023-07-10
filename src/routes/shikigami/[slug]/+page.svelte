@@ -121,6 +121,9 @@
 	<title>OADex | {curr_shiki_obj.式神名称}</title>
 </svelte:head>
 
+<Note text="Apologies for the instability that is constantly taking place, OADex will have a major back-end migration soon." styles="font-size: .8rem; text-align: center; color: yellow;" />
+
+
 <!-- <Note
   noIcon=true
   text="You're currently seeing beta changes, please bear with the page until I fix things."

@@ -115,6 +115,8 @@
   <meta description="The unofficial wiki for Onmyoji Arena.">
 </svelte:head>
 
+<Note text="Apologies for the instability that is constantly taking place, OADex will have a major back-end migration soon." styles="font-size: .8rem; text-align: center; color: yellow;" />
+
   {#if mobileHeaderDisplayMode === 'normal'}
     <div class="shiki-selection-header">
       <Toggles toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
