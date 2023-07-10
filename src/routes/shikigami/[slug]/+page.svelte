@@ -100,21 +100,6 @@
   const orderDisplayToggle = () => () => {
     is_order_visible = !is_order_visible;
   }
-
-  // disqus
-
-  (function() {
-    var disqus_config = function () {
-      this.page.url = 'https://oadex.vercel.app/shikigami/';  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = shiki_id; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://oadex.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-  })();
 </script>
 
 <svelte:head>
@@ -508,13 +493,6 @@
     <ItemGallery />
   </Container>
 
-  <Container area_name="disqus">
-    <h3>🗨️ Comments</h3>
-    <div id="disqus_thread"></div>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </Container>
-
-
 </div>
 
 <Note text="Information you see in this page is subject to change every Monday, Beijing Time. If you have any questions, please contact me at http://discord.gg/KGsaAet." styles="font-size: .8rem; text-align: center;" />
@@ -533,8 +511,7 @@
     "basic gallery gallery basic2"
     "stats-1 stats-1 skills skills"
     "usage usage skills skills"
-    "item-gallery item-gallery . ."
-    "disqus disqus disqus disqus";
+    "item-gallery item-gallery . .";
     gap: 20px;
     align-content: center;
     flex-wrap: wrap;
@@ -662,8 +639,7 @@
       "stats-1"
       "skills"
       "usage"
-      "item-gallery"
-      "disqus";
+      "item-gallery";
     }
 
     .performance-pager-container {
