@@ -3,6 +3,8 @@
   import { page } from '$app/stores'
   let shiki_id = $page.url.pathname.slice(11);
 
+  $: console.log($page.url);
+
   // components
   import Note from "$lib/components/Note.svelte";
   import Basic from '$lib/components/shikigami/Basic.svelte';
@@ -488,6 +490,24 @@
     <ItemGallery />
   </Container>
 
+  <Container area_name="disqus">
+    <h3>Comments</h3>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+          this.page.url = 'https://oadex.vercel.app/shikigami/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = shiki_id; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://oadex.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </Container>
+
 
 </div>
 
@@ -507,7 +527,8 @@
     "basic gallery gallery basic2"
     "stats-1 stats-1 skills skills"
     "usage usage skills skills"
-    "item-gallery item-gallery . .";
+    "item-gallery item-gallery . ."
+    "disqus disqus disqus disqus";
     gap: 20px;
     align-content: center;
     flex-wrap: wrap;
@@ -635,7 +656,8 @@
       "stats-1"
       "skills"
       "usage"
-      "item-gallery";
+      "item-gallery",
+      "disqus";
     }
 
     .performance-pager-container {
