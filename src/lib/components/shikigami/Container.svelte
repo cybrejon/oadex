@@ -22,7 +22,6 @@
     /* justify-content: space-between; */
     flex-direction: column;
     row-gap: 10px;
-    overflow: hidden;
     /* box-shadow:
       0 10px 10px #282a2f52,
       0 30px 30px #282a2f52,

@@ -659,7 +659,7 @@
       "stats-1"
       "skills"
       "usage"
-      "item-gallery",
+      "item-gallery"
       "disqus";
     }
 
