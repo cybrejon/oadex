@@ -3,8 +3,6 @@
   import { page } from '$app/stores'
   let shiki_id = $page.url.pathname.slice(11);
 
-  $: console.log($page.url);
-
   // components
   import Note from "$lib/components/Note.svelte";
   import Basic from '$lib/components/shikigami/Basic.svelte';

@@ -8,7 +8,7 @@ export async function load({ fetch, url }) {
 
   const itemQuery = getItemQuery();
 
-  const itemData_r = await fetch('http://150.230.58.91:3000/items');
+  const itemData_r = await fetch('http://141.147.147.96:3000/items');
   const itemData = await itemData_r.json();
 
   return {

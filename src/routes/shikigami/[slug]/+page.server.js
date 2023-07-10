@@ -3,14 +3,14 @@
 export async function load({ params, fetch }) {
 
   const getShikigamiData = async () => {
-    const response = await fetch(`http://150.230.58.91:3000/shiki?mode=queryshiki&shiki_id=${params.slug}`);
+    const response = await fetch(`http://141.147.147.96:3000/shiki?mode=queryshiki&shiki_id=${params.slug}`);
     return await response.json();
   }
 
   const sdata = await getShikigamiData();
 
   const getBioData = async () => {
-    const bdr = await fetch(`http://150.230.58.91:3000/bios?queryshiki=${sdata.式神名称}`);
+    const bdr = await fetch(`http://141.147.147.96:3000/bios?queryshiki=${sdata.式神名称}`);
     return await bdr.json();
   }
 
@@ -20,10 +20,10 @@ export async function load({ params, fetch }) {
   let win_rate = { all: "⏳", noban: "⏳", ban: "⏳", fogban: "⏳" };
 
   const urls = [
-    `http://150.230.58.91:3000/performance?shiki_id=${params.slug}&game_mode=all`,
-    `http://150.230.58.91:3000/performance?shiki_id=${params.slug}&game_mode=noban`,
-    `http://150.230.58.91:3000/performance?shiki_id=${params.slug}&game_mode=ban`,
-    `http://150.230.58.91:3000/performance?shiki_id=${params.slug}&game_mode=fogban`
+    `http://141.147.147.96:3000/performance?shiki_id=${params.slug}&game_mode=all`,
+    `http://141.147.147.96:3000/performance?shiki_id=${params.slug}&game_mode=noban`,
+    `http://141.147.147.96:3000/performance?shiki_id=${params.slug}&game_mode=ban`,
+    `http://141.147.147.96:3000/performance?shiki_id=${params.slug}&game_mode=fogban`
   ];
 
   const getIndividualPerformance = async () => {

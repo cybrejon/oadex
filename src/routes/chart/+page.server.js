@@ -5,7 +5,7 @@ export async function load({ url }) {
   let mode = url.searchParams.get('mode');
   
   const getWrData = async (mode) => {
-    let wrdr = await fetch(`http://150.230.58.91:3000/wr?mode=${mode}`);    
+    let wrdr = await fetch(`http://141.147.147.96:3000/wr?mode=${mode}`);    
     return await wrdr.json();
   }
 
