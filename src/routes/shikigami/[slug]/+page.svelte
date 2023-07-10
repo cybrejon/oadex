@@ -491,7 +491,7 @@
   </Container>
 
   <Container area_name="disqus">
-    <h3>Comments</h3>
+    <h3>🗨️ Comments</h3>
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function () {
