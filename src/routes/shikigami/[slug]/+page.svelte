@@ -100,7 +100,7 @@
   }
 
   try {
-    var disqus_config = function () {
+    let disqus_config = function () {
       this.page.url = window.location.href; // Use the current page's URL dynamically
       this.page.identifier = shiki_id; // Replace shiki_id with your page's unique identifier variable
     };
