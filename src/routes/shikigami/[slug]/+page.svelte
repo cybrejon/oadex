@@ -104,7 +104,27 @@
     this.page.url = window.location.href; // Use the current page's URL dynamically
     this.page.identifier = shiki_id; // Replace shiki_id with your page's unique identifier variable
   };
+  
+  // Load Disqus
+  (function() {
+    var d = document;
+    var s = d.createElement('script');
+    s.src = 'https://oadex.disqus.com/embed.js';
+
+    // Callback function after script is loaded
+    s.onload = function () {
+      // Reset Disqus configuration
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    };
+
+    (d.head || d.body).appendChild(s);
+  })();
 </script>
+
+
 
 <svelte:head>
 	<title>OADex | {curr_shiki_obj.式神名称}</title>
