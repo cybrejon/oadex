@@ -11,6 +11,24 @@
   import { dev } from '$app/environment';
   import { inject } from '@vercel/analytics';
   inject({ mode: dev ? 'development' : 'production' });
+
+  // Load Disqus
+  (function() {
+    var d = document;
+    var s = d.createElement('script');
+    s.src = 'https://oadex.disqus.com/embed.js';
+
+    // Callback function after script is loaded
+    s.onload = function () {
+      // Reset Disqus configuration
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    };
+
+    (d.head || d.body).appendChild(s);
+  })();
 </script>
 
 <div class="main-container">

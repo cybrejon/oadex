@@ -99,18 +99,11 @@
     is_order_visible = !is_order_visible;
   }
 
+  // Disqus configuration
   var disqus_config = function () {
-    this.page.url = 'https://oadex.vercel.app/shikigami/';  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = shiki_id; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.url = window.location.href; // Use the current page's URL dynamically
+    this.page.identifier = shiki_id; // Replace shiki_id with your page's unique identifier variable
   };
-
-  // disqus
-  (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://oadex.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
 </script>
 
 <svelte:head>
