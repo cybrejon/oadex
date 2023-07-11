@@ -107,8 +107,8 @@
     
     // Load Disqus
     (function() {
-      var d = document;
-      var s = d.createElement('script');
+      let d = document;
+      let s = d.createElement('script');
       s.src = 'https://oadex.disqus.com/embed.js';
 
       // Callback function after script is loaded
