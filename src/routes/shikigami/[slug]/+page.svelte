@@ -99,29 +99,36 @@
     is_order_visible = !is_order_visible;
   }
 
-  // Disqus configuration
-  var disqus_config = function () {
-    this.page.url = window.location.href; // Use the current page's URL dynamically
-    this.page.identifier = shiki_id; // Replace shiki_id with your page's unique identifier variable
-  };
-  
-  // Load Disqus
-  (function() {
-    var d = document;
-    var s = d.createElement('script');
-    s.src = 'https://oadex.disqus.com/embed.js';
-
-    // Callback function after script is loaded
-    s.onload = function () {
-      // Reset Disqus configuration
-      DISQUS.reset({
-        reload: true,
-        config: disqus_config
-      });
+  try {
+    var disqus_config = function () {
+      this.page.url = window.location.href; // Use the current page's URL dynamically
+      this.page.identifier = shiki_id; // Replace shiki_id with your page's unique identifier variable
     };
+    
+    // Load Disqus
+    (function() {
+      var d = document;
+      var s = d.createElement('script');
+      s.src = 'https://oadex.disqus.com/embed.js';
 
-    (d.head || d.body).appendChild(s);
-  })();
+      // Callback function after script is loaded
+      s.onload = function () {
+        // Reset Disqus configuration
+        DISQUS.reset({
+          reload: true,
+          config: disqus_config
+        });
+      };
+
+      (d.head || d.body).appendChild(s);
+    })();
+  } catch (error) {
+    console.log(error);
+    console.log('could not load Disqus');
+  }
+
+  // Disqus configuration
+  
 </script>
 
 
