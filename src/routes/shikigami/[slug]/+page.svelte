@@ -185,7 +185,7 @@
                 {#if bioData.bio1 === 'no bio yet'}
                   <p class="bio-contributor">Join <a href="http://discord.gg/KGsaAet">my discord</a> to submit missing bios!</p>
                 {:else}
-                  <p class="bio-contributor">Submitter: {bioData.contributor}</p>
+                  <p class="bio-contributor">Submitter: {bioData["contributor(s)"]}</p>
                   <p class="bio-contributor">Source: <a href="https://onmyoji.fandom.com/wiki/Onmyoji_Wiki">onmyoji.fandom.com</a></p>
                 {/if}
               </div>
@@ -200,7 +200,7 @@
                 {#if bioData.bio2 === 'no bio yet'}
                   <p class="bio-contributor">Join <a href="http://discord.gg/KGsaAet">my discord</a> to submit missing bios!</p>
                 {:else}
-                  <p class="bio-contributor">Submitter: {bioData.contributor}</p>
+                  <p class="bio-contributor">Submitter: {bioData["contributor(s)"]}</p>
                   <p class="bio-contributor">Source: <a href="https://onmyoji.fandom.com/wiki/Onmyoji_Wiki">onmyoji.fandom.com</a></p>
                 {/if}
               </div>
@@ -215,7 +215,7 @@
                 {#if bioData.bio3 === 'no bio yet'}
                   <p class="bio-contributor">Join <a href="http://discord.gg/KGsaAet">my discord</a> to submit missing bios!</p>
                 {:else}
-                  <p class="bio-contributor">Submitter: {bioData.contributor}</p>
+                  <p class="bio-contributor">Submitter: {bioData["contributor(s)"]}</p>
                   <p class="bio-contributor">Source: <a href="https://onmyoji.fandom.com/wiki/Onmyoji_Wiki">onmyoji.fandom.com</a></p>
                 {/if}
               </div>
