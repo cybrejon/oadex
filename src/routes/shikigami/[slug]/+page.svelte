@@ -522,7 +522,7 @@
   <Container area_name="onmyodo">
     <div class="skill-order-title-wrapper">
       <h3>📚 Onmyodos</h3>
-      {#if is_order_visible}  
+      {#if isOnmyodoShown}  
         <Toggles iconOnly=true no_collapse="True" toggle_icon="mdi:menu-up" anchor_direction="right" buttons={[
           { name: "HIDE", active_indicator: "d", active_value: "", fn: onmyodoDisplayToggle() },
         ]} />
