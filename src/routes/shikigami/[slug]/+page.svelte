@@ -14,6 +14,7 @@
   import Skills from '$lib/components/shikigami/Skills.svelte';
   import ItemGallery from '$lib/components/shikigami/ItemGallery.svelte';
   import Toggles from '$lib/Toggles.svelte';
+  import Onmyodo from '../../../lib/components/shikigami/Onmyodo.svelte';
 
   // import data
   export let data;
@@ -22,6 +23,7 @@
   const bioData = data.bioData;
   const images = data.images;
   const performance = data.performance;
+  const onmyodoData = data.onmyodos;
 
   const curr_shiki_obj = shikiga_data;
   const scores = curr_shiki_obj.评分;
@@ -99,6 +101,12 @@
     is_order_visible = !is_order_visible;
   }
 
+  // onymodo visibility toggle
+  let isOnmyodoShown = false;
+  const onmyodoDisplayToggle = () => () => {
+    isOnmyodoShown = !isOnmyodoShown;
+  }
+
   try {
     let disqus_config = function () {
       this.page.url = window.location.href; // Use the current page's URL dynamically
@@ -110,16 +118,6 @@
       let d = document;
       let s = d.createElement('script');
       s.src = 'https://oadex.disqus.com/embed.js';
-
-      // Callback function after script is loaded
-      s.onload = function () {
-        // Reset Disqus configuration
-        DISQUS.reset({
-          reload: true,
-          config: disqus_config
-        });
-      };
-
       (d.head || d.body).appendChild(s);
     })();
   } catch (error) {
@@ -136,9 +134,6 @@
 <svelte:head>
 	<title>OADex | {curr_shiki_obj.式神名称}</title>
 </svelte:head>
-
-<Note text="Apologies for the instability that is constantly taking place, OADex will have a major back-end migration soon." styles="font-size: .8rem; text-align: center; color: yellow;" />
-
 
 <!-- <Note
   noIcon=true
@@ -524,6 +519,25 @@
     <ItemGallery />
   </Container>
 
+  <Container area_name="onmyodo">
+    <div class="skill-order-title-wrapper">
+      <h3>📚 Onmyodos</h3>
+      {#if is_order_visible}  
+        <Toggles iconOnly=true no_collapse="True" toggle_icon="mdi:menu-up" anchor_direction="right" buttons={[
+          { name: "HIDE", active_indicator: "d", active_value: "", fn: onmyodoDisplayToggle() },
+        ]} />
+      {:else}
+        <Toggles iconOnly=true no_collapse="True" toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
+          { name: "SHOW", active_indicator: "d", active_value: "", fn: onmyodoDisplayToggle() },
+        ]} />
+      {/if}
+    </div>
+    {#if isOnmyodoShown}
+      <Onmyodo {onmyodoData} {images} />
+    {/if}
+    
+  </Container>
+
   <Container area_name="disqus">
     <div id="disqus_thread"></div>
   </Container>
@@ -546,7 +560,7 @@
     "basic gallery gallery basic2"
     "stats-1 stats-1 skills skills"
     "usage usage skills skills"
-    "item-gallery item-gallery . ."
+    "item-gallery item-gallery onmyodo onmyodo"
     "disqus disqus disqus disqus";
     gap: 20px;
     align-content: center;
@@ -676,6 +690,7 @@
       "skills"
       "usage"
       "item-gallery"
+      "onmyodo"
       "disqus";
     }
 

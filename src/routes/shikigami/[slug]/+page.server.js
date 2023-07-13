@@ -88,8 +88,16 @@ export async function load({ params, fetch }) {
       contributor: bd[0].fields.contributor
     };
   } catch (error) {
+    console.log(error);
   }
-  
+
+  async function getOnmyodos() {
+    const x = await fetch(`http://141.147.147.96:3000/onmyodos?shiki_id=${params.slug}`);
+    return await x.json();
+  }
+
+  const onmyodos = await getOnmyodos();
+    
   return {
     performance: {
       kda,
@@ -98,7 +106,8 @@ export async function load({ params, fetch }) {
       pick_rate
     },
     sdata,
-    bioData
+    bioData,
+    onmyodos
   }
 
 }

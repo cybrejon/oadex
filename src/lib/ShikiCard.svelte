@@ -31,6 +31,12 @@
     </div>
     <div class="sc-text-container">
       <p class="shikigami-name">{shiki_name}</p>
+      <!-- <div class="shiki-legends-container">
+        <div class="legend">
+          <Icon icon="iconamoon:comment-dots-fill" style="font-size: 16px;" />
+          <span class="disqus-comment-count" data-disqus-identifier="{slug}">nc</span>
+        </div>
+      </div> -->
     </div>
     {#if new_shiki}
       <p class="new-tag">NEW</p>
@@ -47,7 +53,26 @@
 </a>
 
 <style>
+  
+  /* .shiki-legends-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+  }
 
+  .legend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2px;
+  }
+
+  .legend > span {
+    font-weight: 600;
+    font-size: .7rem;
+  }
+ */
 .loading {
   position: absolute;
   top: 10px;
@@ -81,8 +106,10 @@
   box-shadow: 0 8px #282A2F;
   border-radius: 10px;
   width: 100px;
-  height: 150px;
+  height: 160px;
   transition: .1s;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .new-tag {
@@ -134,9 +161,10 @@
 
 .sc-text-container {
   display: flex;
+  row-gap: 5px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 55px;
 }
 
 .shikigami-name {

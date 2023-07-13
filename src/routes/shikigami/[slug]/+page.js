@@ -7,6 +7,7 @@ export async function load({ data }) {
   const shikiga_data = data.sdata;
   const bioData = data.bioData;
   const performance = data.performance;
+  const onmyodos = data.onmyodos;
 
   const wrData = data.wrData;
   const wrData_ban = data.wrData_ban;
@@ -14,6 +15,7 @@ export async function load({ data }) {
   const wrData_fogban = data.wrData_fogban;
 
   return {
+    onmyodos,
     performance,
     wrData,
     wrData_ban,
