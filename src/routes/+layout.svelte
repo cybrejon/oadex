@@ -1,6 +1,7 @@
 <script>
   import "../app.css";
   import "../rwd.css";
+  import favicon from '$lib/assets/favicon.png';
   import Header from '$lib/Header.svelte';
   import Footer from "$lib/components/Footer.svelte";
   import { page } from '$app/stores';
@@ -12,6 +13,10 @@
   import { inject } from '@vercel/analytics';
   inject({ mode: dev ? 'development' : 'production' });
 </script>
+
+<svelte:head>
+  <link rel="icon" href={favicon} />
+</svelte:head>
 
 <div class="main-container">
   <Header
