@@ -29,7 +29,7 @@
 
   const curr_shiki_obj = shikiga_data;
   const scores = curr_shiki_obj.评分;
-  const usage = curr_shiki_obj.式神攻略.replace(/#r/gi, '\n');
+  const usage = curr_shiki_obj.式神攻略.replace(/#r/gi, '<br>');
 
   // shikigami stats
   const mvsc_count = curr_shiki_obj.式神基础属性.移动速度.toString().split("").length;
@@ -519,7 +519,7 @@
 
   <Container area_name="usage">
     <h3>💡 How to use</h3>
-    <p class="usage-text">{usage}</p>
+    <p class="usage-text">{@html usage}</p>
   </Container>
 
   <Container area_name="builds">
