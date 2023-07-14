@@ -15,6 +15,7 @@
   import ItemGallery from '$lib/components/shikigami/ItemGallery.svelte';
   import Toggles from '$lib/Toggles.svelte';
   import Onmyodo from '../../../lib/components/shikigami/Onmyodo.svelte';
+  import Spells from '../../../lib/components/shikigami/Spells.svelte';
 
   // import data
   export let data;
@@ -24,6 +25,7 @@
   const images = data.images;
   const performance = data.performance;
   const onmyodoData = data.onmyodos;
+  const spellData = data.spells;
 
   const curr_shiki_obj = shikiga_data;
   const scores = curr_shiki_obj.评分;
@@ -88,7 +90,7 @@
   const pager = (page) => () => {
     current_page = page;
   }
-  
+
   // basic info / bio pager
   let basicPage = 1;
   const basicPager = (page) => () => {
@@ -105,6 +107,12 @@
   let isOnmyodoShown = false;
   const onmyodoDisplayToggle = () => () => {
     isOnmyodoShown = !isOnmyodoShown;
+  }
+
+  // spells visibility toggle
+  let isSpellsShown = false;
+  const spellsDisplayToggle = () => () => {
+    isSpellsShown = !isSpellsShown;
   }
 
   try {
@@ -514,14 +522,14 @@
     <p class="usage-text">{usage}</p>
   </Container>
 
-  <Container area_name="item-gallery">
+  <Container area_name="builds">
     <h3>📚 Builds</h3>
     <ItemGallery />
   </Container>
 
   <Container area_name="onmyodo">
     <div class="skill-order-title-wrapper">
-      <h3>📚 Onmyodos</h3>
+      <h3>☯️ Onmyodos</h3>
       {#if isOnmyodoShown}  
         <Toggles iconOnly=true no_collapse="True" toggle_icon="mdi:menu-up" anchor_direction="right" buttons={[
           { name: "HIDE", active_indicator: "d", active_value: "", fn: onmyodoDisplayToggle() },
@@ -534,6 +542,25 @@
     </div>
     {#if isOnmyodoShown}
       <Onmyodo {onmyodoData} {images} />
+    {/if}
+    
+  </Container>
+
+  <Container area_name="spells">
+    <div class="skill-order-title-wrapper">
+      <h3>🪄 Recommended Spells</h3>
+      {#if isSpellsShown}  
+        <Toggles iconOnly=true no_collapse="True" toggle_icon="mdi:menu-up" anchor_direction="right" buttons={[
+          { name: "HIDE", active_indicator: "d", active_value: "", fn: spellsDisplayToggle() },
+        ]} />
+      {:else}
+        <Toggles iconOnly=true no_collapse="True" toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
+          { name: "SHOW", active_indicator: "d", active_value: "", fn: spellsDisplayToggle() },
+        ]} />
+      {/if}
+    </div>
+    {#if isSpellsShown}
+      <Spells {spellData} {images} />
     {/if}
     
   </Container>
@@ -560,7 +587,8 @@
     "basic gallery gallery basic2"
     "stats-1 stats-1 skills skills"
     "usage usage skills skills"
-    "item-gallery item-gallery onmyodo onmyodo"
+    "spells spells onmyodo onmyodo"
+    "builds builds builds builds"
     "disqus disqus disqus disqus";
     gap: 20px;
     align-content: center;
@@ -689,8 +717,9 @@
       "stats-1"
       "skills"
       "usage"
-      "item-gallery"
+      "builds"
       "onmyodo"
+      "spells"
       "disqus";
     }
 

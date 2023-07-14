@@ -95,8 +95,13 @@ export async function load({ params, fetch }) {
     const x = await fetch(`http://141.147.147.96:3000/onmyodos?shiki_id=${params.slug}`);
     return await x.json();
   }
-
   const onmyodos = await getOnmyodos();
+    
+  async function getSpells() {
+    const x = await fetch(`http://141.147.147.96:3000/spells?shiki_id=${params.slug}`);
+    return await x.json();
+  }
+  const spells = await getSpells();
     
   return {
     performance: {
@@ -107,7 +112,8 @@ export async function load({ params, fetch }) {
     },
     sdata,
     bioData,
-    onmyodos
+    onmyodos,
+    spells
   }
 
 }
