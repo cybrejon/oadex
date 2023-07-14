@@ -16,9 +16,7 @@ export let previewItem;
 $: composites = requiredItems && itemData.filter(item => requiredItems.includes(item.name));
 
 import ItemCard from '$lib/components/items/ItemCard.svelte';
-
-const colors = ["#n", "#r", "#U", "#G", "#B", "#O", "#W", "#Y", "#P", "#c0095cc", "#c39b54a", "#c9e45fa", "#cffba35", "#cb82a2f", "#c35c6e7", "#cb82a2f", "#ce7ad2f", "#ca61fe4"];
-const color_regex = new RegExp(colors.join("|"), "gi");
+import { colorCodeRemove } from '../../lib/utils/colors';
 
 </script>
 
@@ -35,12 +33,12 @@ const color_regex = new RegExp(colors.join("|"), "gi");
   <div class="body">
     {#if abilities.active}
       <h3>Active Abilities</h3>
-      <p class="ability-text">{abilities.active.replace(color_regex, " ")}</p>
+      <p class="ability-text">{colorCodeRemove(abilities.active)}</p>
     {/if}
 
     {#if abilities.passive}
       <h3>Passive Abilities</h3>
-      <p class="ability-text">{abilities.passive[0].replace(color_regex, " ")}</p>
+      <p class="ability-text">{colorCodeRemove(abilities.passive[0])}</p>
     {/if}
 
     {#if attributes.length}
@@ -71,7 +69,7 @@ const color_regex = new RegExp(colors.join("|"), "gi");
 
     {#if specialAbility}
       <h3>Special Ability</h3>
-      {specialAbility.replace(color_regex, " ")}
+      {colorCodeRemove(specialAbility)}
     {/if}
   </div>
 </div>

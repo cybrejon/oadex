@@ -3,31 +3,12 @@
   // import components
   import Toggles from '$lib/Toggles.svelte';
 
+  import { colorCodeRemove } from '../../utils/colors';
+
   export let images;
 
   // ANCHOR skills
   export let curr_shiki_obj;
-
-  const colors = [
-    "#n",
-    "#r",
-    "#U",
-    "#G",
-    "#B",
-    "#O",
-    "#W",
-    "#Y",
-    "#P",
-    "#c0095cc",
-    "#c39b54a",
-    "#c9e45fa",
-    "#cffba35",
-    "#cb82a2f",
-    "#c35c6e7",
-    "#cb82a2f",
-    "#ce7ad2f",
-    "#ca61fe4"
-  ];
 
   let shikigami_skills = Object.keys(curr_shiki_obj.式神技能);
   let skills_data = shikigami_skills.map(skill => {
@@ -39,12 +20,9 @@
     };
   });
 
-  // remove color codes from defition text
-  const color_regex = new RegExp(colors.join("|"), "gi");
-
   let skill_name = curr_shiki_obj.式神技能.天生被动.技能名称;
   let skill_image = images[curr_shiki_obj.式神技能.天生被动.图标路径];
-  let skill_description = curr_shiki_obj.式神技能.天生被动.技能描述.replace(color_regex, "");
+  let skill_description = colorCodeRemove(curr_shiki_obj.式神技能.天生被动.技能描述);
   let skill_properties = curr_shiki_obj.式神技能.天生被动.技能成长;
 
   let skill_tab_indicator = 0;
@@ -53,7 +31,7 @@
     skill_name = skills_data[i].skill_name;
     skill_image = skills_data[i].image;
     skill_properties = skills_data[i].properties
-    skill_description = skills_data[i].description.replace(color_regex, "");
+    skill_description = colorCodeRemove(skills_data[i].description);
   }
 
   // remove the cd and mana cost from the properties to be shown separately
