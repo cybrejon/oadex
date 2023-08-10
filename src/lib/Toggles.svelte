@@ -169,8 +169,7 @@ button:hover {
 button:active {
   box-shadow: none;
   outline-offset: 2px;
-  outline: 2px solid #ffffff3b;
-  outline-style: dashed;
+  outline: 2px dashed #ffffff3b;
   transform: translateY(0);
 }
 

@@ -9,6 +9,10 @@
 
 </script>
 
+<svelte:head>
+	<title>OADex | Chart</title>
+</svelte:head>
+
 <WinRates
   wdata={wrData}
   {images}

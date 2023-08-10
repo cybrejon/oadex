@@ -167,6 +167,10 @@
 
 </script>
 
+<svelte:head>
+	<title>OADex | Items - {previewData.name}</title>
+</svelte:head>
+
 <!-- <Note noIcon=True
   text='WORK IN PROGRESS'
   styles="color: red; text-align: center;" container_margin='50px 0 0 0' /> -->
@@ -176,9 +180,9 @@
 
     <Toggles collapsed=true toggle_icon="streamline:money-graph-arrow-increase-ascend-growth-up-arrow-stats-graph-right-grow" anchor_direction="left" buttons={[
       { name: "ALL", active_indicator: $currentTier, active_value: 'All', fn: resetTierToAll() },
-      { name: "ADVANCED", active_indicator: $currentTier, active_value: 'Advanced', fn: filterItemsByTier('Advanced', $currentType) },
-      { name: "INTERMEDIATE", active_indicator: $currentTier, active_value: 'Intermediate', fn: filterItemsByTier('Intermediate', $currentType) },
-      { name: "BASIC", active_indicator: $currentTier, active_value: 'Basic', fn: filterItemsByTier('Basic', $currentType) },
+      { name: "T0", active_indicator: $currentTier, active_value: 'Advanced', fn: filterItemsByTier('Advanced', $currentType) },
+      { name: "T1", active_indicator: $currentTier, active_value: 'Intermediate', fn: filterItemsByTier('Intermediate', $currentType) },
+      { name: "T2", active_indicator: $currentTier, active_value: 'Basic', fn: filterItemsByTier('Basic', $currentType) },
     ]} />
 
     <span class="desktop-filter-bar-visibility-wrapper">
@@ -201,7 +205,7 @@
     ]} />
 
     <span class="mobile-header-mode-toggle">
-      <Toggles iconOnly=true no_collapse=true toggle_icon="ion:search" anchor_direction="left" buttons={[
+      <Toggles iconOnly=true no_collapse=true toggle_icon="solar:filter-bold" anchor_direction="left" buttons={[
         { name: "🔎", active_indicator: 'a', active_value: 'q', fn: toggleMobileHeaderMode('filter') },
       ]} />
     </span>

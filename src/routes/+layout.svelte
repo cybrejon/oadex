@@ -8,6 +8,9 @@
   $: curr_page = $page.url.pathname;
   $: routeId = $page.route.id;
 
+  export let data;
+  const searchIndex = data.searchIndex;
+
   // vercel analytics
   import { dev } from '$app/environment';
   import { inject } from '@vercel/analytics';
@@ -22,6 +25,7 @@
   <Header
     active_path={curr_page}
     {routeId}
+    {searchIndex}
   />
   <slot />
   <Footer />

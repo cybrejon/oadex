@@ -146,7 +146,7 @@
         { name: "SUPPORT", active_indicator: $active_role, active_value: '祝', fn: toggleRole('祝') },
       ]} />
       <span class="mobile-header-mode-toggle">
-        <Toggles iconOnly=true no_collapse=true toggle_icon="ion:search" anchor_direction="left" buttons={[
+        <Toggles iconOnly=true no_collapse=true toggle_icon="solar:filter-bold" anchor_direction="left" buttons={[
           { name: "🔎", active_indicator: 'a', active_value: 'q', fn: toggleMobileHeaderMode('filter') },
         ]} />
       </span>

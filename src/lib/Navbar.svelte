@@ -5,22 +5,26 @@
 
   export let active_path;
   export let routeId;
-
   export let type;
+
+  let overlayElement;
 
   const closeNav = (time) => () => {
     if (time) {
       setTimeout(() => {
         document.getElementById('mn').style.display = 'none';
         document.getElementById('nav-overlay').style.display = 'none';
+        overlayElement.style.display = 'none';
       }, time);
     } else {
       document.getElementById('mn').style.display = 'none';
       document.getElementById('nav-overlay').style.display = 'none';
+      overlayElement.style.display = 'none';
     }
   }
 
   function openNav() {
+    overlayElement.style.display = 'block';
     document.getElementById('mn').style.display = 'flex';
     document.getElementById('nav-overlay').style.display = 'block';
   }
@@ -28,9 +32,9 @@
 </script>
 
 {#if type === "mobile"}
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <div id="nav-overlay" on:click={closeNav()} class="overlay"></div>
   <div class="mobile-nav">
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <div bind:this={overlayElement} id="nav-overlay" on:click={closeNav()} class="overlay"></div>
     <button on:click={openNav} class="mobile-nav-toggle" type="button"><Icon icon="icon-park-outline:hamburger-button" style="font-size: 24px;" /></button>
     <ul id="mn" class="mobile-nav-ul">
       <li><a on:click={closeNav(250)} class="{active_path === '/' || routeId === '/shikigami/[slug]' ? "nav-item nav-item--active" : "nav-item"}" href="/">SHIKIS</a></li>
@@ -55,7 +59,7 @@
 
   .overlay {
     display: none;
-    z-index: 11;
+    z-index: 4;
     background-color: #282a2fc9;
     backdrop-filter: blur(5px);
     position: fixed;
@@ -67,9 +71,6 @@
 
   .mobile-nav-toggle {
     transition: .1s;
-    display: none;
-    margin-right: 10px;
-    margin-top: 10px;
     border: 2px solid #70737b;
     padding: 10px 10px 6px 10px;
     background-color: #585A5F;
@@ -98,6 +99,7 @@
   }
 
   .mobile-nav-ul {
+    z-index: 5;
     display: none;
     text-align: center;
     box-shadow: 0 8px #282a2f;
@@ -148,14 +150,5 @@
     background-color: #2e3035;
     border-color: transparent;
     box-shadow: none;
-  }
-
-  @media only screen and (max-width: 800px) {
-    .mobile-nav-toggle {
-      display: block;
-    }
-    .desktop-nav {
-      display: none;
-    }
   }
 </style>
