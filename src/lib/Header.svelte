@@ -16,12 +16,22 @@
       </a>
     </div>
     <Search {searchIndex} />
+
     <div class="mobile-nav-visibility-wrapper">
-      <Navbar type="mobile" active_path={active_path} {routeId} />
+      <Navbar
+        type="mobile"
+        {active_path}
+        {routeId}
+      />
     </div>
+
     <div class="desktop-nav-visibility-wrapper">
-      <Navbar active_path={active_path} {routeId} />
+      <Navbar
+        {active_path}
+        {routeId}
+      />
     </div>
+
   </div>
 </div>
 

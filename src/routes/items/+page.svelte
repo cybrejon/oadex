@@ -8,7 +8,6 @@
   import Toggles from '$lib/Toggles.svelte';
   import ItemCard from '$lib/components/items/ItemCard.svelte';
   import FilterInput from '$lib/components/FilterInput.svelte';
-  import Note from "$lib/components/Note.svelte";
   import Fuse from 'fuse.js';
   import ItemPreview from './ItemPreview.svelte';
   import Container from '$lib/components/shikigami/Container.svelte';
@@ -17,7 +16,6 @@
   import { onMount } from 'svelte';
 
   export let data;
-  const itemNames = data.itemNames;
   const itemData = data.itemData;
   const itemQuery = data.itemQuery;
 
@@ -105,6 +103,7 @@
     activeItem = queryItemProps.name;
     previewData = {
       name: queryItemProps.name,
+      id: queryItemProps.id,
       image: queryItemProps.image,
       type: queryItemProps.type,
       tier: queryItemProps.tier,
@@ -119,6 +118,7 @@
   } else {
     previewData = {
       name: mainIterable[0].name,
+      id: mainIterable[0].id,
       image: mainIterable[0].image,
       type: mainIterable[0].type,
       tier: mainIterable[0].tier,
@@ -143,6 +143,7 @@
     }
     previewData = {
       name: item.name,
+      id: item.id,
       image: item.image,
       type: item.type,
       tier: item.tier,
@@ -170,10 +171,6 @@
 <svelte:head>
 	<title>OADex | Items - {previewData.name}</title>
 </svelte:head>
-
-<!-- <Note noIcon=True
-  text='WORK IN PROGRESS'
-  styles="color: red; text-align: center;" container_margin='50px 0 0 0' /> -->
 
 {#if mobileHeaderDisplayMode === 'normal'}
   <div class="shiki-selection-header">

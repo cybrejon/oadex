@@ -1,6 +1,7 @@
 <script>
 
 export let name;
+export let id;
 export let image;
 export let type;
 export let tier;
@@ -9,14 +10,17 @@ export let abilities;
 export let attributes;
 export let requiredItems;
 export let specialAbility;
-
 export let itemData;
 export let previewItem;
 
 $: composites = requiredItems && itemData.filter(item => requiredItems.includes(item.name));
 
 import ItemCard from '$lib/components/items/ItemCard.svelte';
-import { colorCodeRemove } from '../../lib/utils/colors';
+import Note2 from '$lib/components/Note2.svelte';
+
+import { colorCodeRemove } from '$lib/utils/colors';
+
+import { itemNotes } from '$lib/json/item_notes.json';
 
 </script>
 
@@ -28,6 +32,7 @@ import { colorCodeRemove } from '../../lib/utils/colors';
       <p class="item-price">💰 {price}</p>
       <p class="item-type">⚔️ {type}</p>
       <p class="item-tier">📊 {tier}</p>
+      <p class="item-tier">🔖 ID: {id}</p>
     </span>
   </div>
   <div class="body">
@@ -38,7 +43,9 @@ import { colorCodeRemove } from '../../lib/utils/colors';
 
     {#if abilities.passive}
       <h3>Passive Abilities</h3>
-      <p class="ability-text">{colorCodeRemove(abilities.passive[0])}</p>
+      {#each abilities.passive as passive}
+        <p class="ability-text">{colorCodeRemove(passive)}</p>
+      {/each}
     {/if}
 
     {#if attributes.length}
@@ -48,6 +55,12 @@ import { colorCodeRemove } from '../../lib/utils/colors';
           <span class="attribute">{attribute}</span>
         {/each}
       </div>
+    {/if}
+
+    {#if itemNotes[name]}
+      <Note2 headerText='Correction'>
+        {itemNotes[name]}
+      </Note2>
     {/if}
 
     {#if requiredItems}
@@ -69,8 +82,9 @@ import { colorCodeRemove } from '../../lib/utils/colors';
 
     {#if specialAbility}
       <h3>Special Ability</h3>
-      {colorCodeRemove(specialAbility)}
+      <p>{colorCodeRemove(specialAbility)}</p>
     {/if}
+
   </div>
 </div>
 
