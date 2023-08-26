@@ -16,7 +16,6 @@
 <a class="item-anchor" on:click={fn} on:click={utilFn && utilFn} href={`/items?i=${itemName}`} data-sveltekit-noscroll data-sveltekit-preload-data="tap">
   <div class="item-card" class:item-card--active={activeItem == itemName}>
     <div class="sc-image-container">
-      <!-- <img class="shikigami-image" alt="shikigami portrait" src="{images[shikiga_data[shiki].式神全身像]}"> -->
       <LazyImage class="ic-item-image" alt="shikigami portrait" src="{src}" placeholder={placeholderImage} />
     </div>
     <div class="sc-text-container">

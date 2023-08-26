@@ -133,7 +133,8 @@
           <a href={result.item.path} bind:this={resultAnchorElement} data-sveltekit-reload>
             <div class="result">
               <div class="result-icon-container">
-                <Icon icon='charm:arrow-right' style='font-size: 22px; color: #ffffffe6;' />
+                <!-- <Icon icon='charm:arrow-right' style='font-size: 22px; color: #ffffffe6;' /> -->
+                <img class="result-image" src={result.item.image} alt="result thumbnail" />
               </div>
               <div class="result-text-container">
                 <p class="result-name">{result.item.name}</p>
@@ -165,6 +166,11 @@
 </dialog>
 
 <style>
+
+  .result-image {
+    width: 50px;
+    border-radius: 5px;
+  }
 
   .overlay {
     position: fixed;
@@ -279,7 +285,7 @@
   }
 
   .result {
-    padding: 15px 0;
+    padding: 10px 0;
     display: grid;
     grid-template-columns: 70px 1fr;
   }
