@@ -229,21 +229,23 @@
 
 <div class="main-wrapper">
 
-  <Container styles='height: 73vh; overflow-y: auto; background-color: transparent; display: block;'>
-    <div class:items-container={!isOpen_itemDrawer} class:items-container--visible={isOpen_itemDrawer}>
-      {#each mainIterable as item}
-        <ItemCard
-          src = {item.image}
-          itemName = {item.name}
-          itemPrice = "💰 {item.price}"
-          fn={previewItem(item.name)}
-          utilFn={isOpen_itemDrawer && toggleMobileItemSelection()}
-          {activeItem}
-          itemId = {item.id}
-        />
-      {/each}
-    </div>
-  </Container>
+  <span class:items-container-wrapper={!isOpen_itemDrawer}>
+    <Container styles='height: 73vh; overflow-y: auto; background-color: transparent; display: block;'>
+      <div class:items-container={!isOpen_itemDrawer} class:items-container--visible={isOpen_itemDrawer}>
+        {#each mainIterable as item}
+          <ItemCard
+            src = {item.image}
+            itemName = {item.name}
+            itemPrice = "💰 {item.price}"
+            fn={previewItem(item.name)}
+            utilFn={isOpen_itemDrawer && toggleMobileItemSelection()}
+            {activeItem}
+            itemId = {item.id}
+          />
+        {/each}
+      </div>
+    </Container>
+  </span>
 
   {#if !isOpen_itemDrawer}
     <Container styles='height: 73vh; overflow-y: auto; display: block;'>
@@ -322,6 +324,9 @@
     .main-wrapper {
       grid-template-columns: minmax(300px, 1fr);
       grid-template-rows: 1fr;
+    }
+    .items-container-wrapper {
+      display: none;
     }
     .items-container {
       display: none;
