@@ -180,11 +180,13 @@
       { name: "T0", active_indicator: $currentTier, active_value: 'Advanced', fn: filterItemsByTier('Advanced', $currentType) },
       { name: "T1", active_indicator: $currentTier, active_value: 'Intermediate', fn: filterItemsByTier('Intermediate', $currentType) },
       { name: "T2", active_indicator: $currentTier, active_value: 'Basic', fn: filterItemsByTier('Basic', $currentType) },
+      { name: "SPCL1", active_indicator: $currentTier, active_value: 4, fn: filterItemsByTier(4, $currentType) },
+      { name: "SPCL2", active_indicator: $currentTier, active_value: 5, fn: filterItemsByTier(5, $currentType) },
     ]} />
 
     <span class="desktop-filter-bar-visibility-wrapper">
       <FilterInput
-        width="300px"
+        width="215px"
         fn={searchItems}
         bind:search_value={search_value}
         clearFunction={clearSearch}
@@ -199,6 +201,7 @@
       { name: "JUNGLE", active_indicator: $currentType, active_value: 'Jungle', fn: filterItemsByType('Jungle', $currentTier) },
       { name: "MOVEMENT", active_indicator: $currentType, active_value: 'Movement', fn: filterItemsByType('Movement', $currentTier) },
       { name: "SUPPORT", active_indicator: $currentType, active_value: 'Support', fn: filterItemsByType('Support', $currentTier) },
+      { name: "T2 OLD", active_indicator: $currentType, active_value: 0, fn: filterItemsByType(0, $currentTier) },
     ]} />
 
     <span class="mobile-header-mode-toggle">
