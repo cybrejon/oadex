@@ -123,8 +123,6 @@ import { itemNotes } from '$lib/json/item_notes.json';
 
   .sticky-container {
     border-radius: 6px;
-    position: sticky;
-    top: 75px;
   }
 
   .head {

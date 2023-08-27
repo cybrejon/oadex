@@ -229,7 +229,7 @@
 
 <div class="main-wrapper">
 
-  <div class="items-container-wrapper">
+  <Container styles='height: 73vh; overflow-y: auto; background-color: transparent; display: block;'>
     <div class:items-container={!isOpen_itemDrawer} class:items-container--visible={isOpen_itemDrawer}>
       {#each mainIterable as item}
         <ItemCard
@@ -243,10 +243,10 @@
         />
       {/each}
     </div>
-  </div>
+  </Container>
 
   {#if !isOpen_itemDrawer}
-    <Container>
+    <Container styles='height: 73vh; overflow-y: auto; display: block;'>
       <ItemPreview
         {...previewData}
         {itemData}

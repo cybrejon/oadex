@@ -53,7 +53,7 @@
   background-color: #42444A;
   box-shadow: 0 8px #282A2F;
   border-radius: 10px;
-  width: 100px;
+  width: 90px;
   height: 150px;
   transition: .1s;
   animation: fade .3s;
@@ -102,10 +102,10 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 80px;
+  width: 70px;
   font-weight: 600;
   color: #fff;
-  font-size: .7rem;
+  font-size: .6rem;
   text-align: center;
 }
 

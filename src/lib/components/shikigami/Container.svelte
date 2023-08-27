@@ -1,31 +1,24 @@
 <script>
   export let area_name;
   export let style;
+  export let styles;
 </script>
 
-<div class={style === 'transparent' ? 'container--alt' : 'container'} style:grid-area={area_name}>
+<div class={style === 'transparent' ? 'container--alt' : 'container'} style:grid-area={area_name} style={styles}>
   <slot></slot>
 </div>
 
 <style>
   .container {
     background-color: #40444B;
-    /* background-image: url('$lib/assets/00000031.png');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 100px; */
     padding: 15px;
     border-radius: 10px;
     display: flex;
     border: 2px solid rgba(255, 255, 255, 0.189);
     box-shadow: 0 8px #282a2f;
-    /* justify-content: space-between; */
     flex-direction: column;
+    justify-content: flex-start;
     row-gap: 10px;
-    /* box-shadow:
-      0 10px 10px #282a2f52,
-      0 30px 30px #282a2f52,
-      0 80px 60px #282a2f52; */
   }
 
   .container--alt {
@@ -34,17 +27,4 @@
     padding: 0;
     filter: drop-shadow(0 10px 10px #282a2f52) drop-shadow(0 30px 30px #282a2f52) drop-shadow(0 80px 60px #282a2f52);
   }
-
-  /* @media only screen and (max-width: 500px) {
-    .container {
-      border-radius: 0;
-      display: flex;
-      border: none;
-      border-top: 2px solid rgba(255, 255, 255, 0.189);
-      border-bottom: 2px solid rgba(255, 255, 255, 0.189);
-      box-shadow: 0 8px #282a2f;
-      flex-direction: column;
-      row-gap: 10px;
-    }
-  } */
 </style>
