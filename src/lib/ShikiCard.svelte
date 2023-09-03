@@ -8,9 +8,9 @@
   export let new_shiki;
   export let in_rotation;
 
-  let isLoading = false;
+  let isLoading_local = false;
   const loading = () => () => {
-    isLoading = !isLoading;
+    isLoading_local = !isLoading_local;
   };
  
   import placeholderImage from '$lib/assets/plat.png';
@@ -44,7 +44,7 @@
     {#if in_rotation}
       <p class="free-tag">FREE</p>
     {/if}
-    {#if isLoading}
+    {#if isLoading_local}
       <div class="loading">
         <Icon icon="svg-spinners:blocks-shuffle-2" style="font-size: 24px;" />
       </div>
