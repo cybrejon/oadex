@@ -130,14 +130,10 @@
     })();
   } catch (error) {
     console.log(error);
-    console.log('could not load Disqus');
+    console.log('[cybrejon] could not load Disqus');
   }
-
-  // Disqus configuration
   
 </script>
-
-
 
 <svelte:head>
 	<title>OADex | {curr_shiki_obj.式神名称}</title>
