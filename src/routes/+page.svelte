@@ -12,12 +12,10 @@
   export let data;
   const shikiga_data = data.shikiga_data;
   const images = data.images;
-  const shikiClassQuery = data.shikiClassQuery;
 
   import { onDestroy } from 'svelte';
   import Fuse from 'fuse.js';
   import { goto } from '$app/navigation';
-  import { roles } from '$lib/json/dictionary.json';
 
   // import components
   import Note from "$lib/components/Note.svelte";

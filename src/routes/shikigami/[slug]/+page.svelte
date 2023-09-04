@@ -139,13 +139,6 @@
 	<title>OADex | {curr_shiki_obj.式神名称}</title>
 </svelte:head>
 
-<!-- <Note
-  noIcon=true
-  text="You're currently seeing beta changes, please bear with the page until I fix things."
-  styles="font-size: .8rem; text-align: center;"
-  container_margin='50px 0 0 0'
-/> -->
-
 <div class="container">
 
   <Container area_name="basic">
@@ -239,8 +232,6 @@
           </div>
 
         {/if}
-
-        
 
       </div>
     {/if}
