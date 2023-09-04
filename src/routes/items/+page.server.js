@@ -1,4 +1,4 @@
-/** @type {import('./$types').PageServerLoad} */
+import { PRIVATE_HOST_IP } from '$env/static/private';
 
 export async function load({ fetch, url }) {
 
@@ -8,7 +8,7 @@ export async function load({ fetch, url }) {
 
   const itemQuery = getItemQuery();
 
-  const itemData_r = await fetch('http://141.147.147.96:3000/items');
+  const itemData_r = await fetch(`${PRIVATE_HOST_IP}/items`);
   const itemData = await itemData_r.json();
 
   return {
