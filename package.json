@@ -33,6 +33,7 @@
 		"dotenv": "^16.3.1",
 		"fuse.js": "^6.6.2",
 		"fuzzy-search": "^3.2.1",
+		"showdown": "^2.1.0",
 		"svelte-lazy": "^1.2.1",
 		"svelte-lazy-image": "^0.5.1"
 	}

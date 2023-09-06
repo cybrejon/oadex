@@ -100,6 +100,8 @@
     goto(`/shikigami/${id}`);
   }
 
+  $: numberOfShikisCurrentlyShown = $role_config.length === 0 ? role.length : $role_config.length;
+
   onDestroy(() => {
     !$role_config.length == 0
     ? hasBeenLeft.update(bool => bool = true)
@@ -192,7 +194,7 @@
     {/each}
   {/if}
 </div>
-<Note noIcon=True text={`Number of shikigamis shown - ${$role_config.length === 0 ? role.length : $role_config.length}.`} styles="font-size: .8rem; text-align: center;" container_margin='50px 0 0 0' />
+<Note noIcon=True text={`Number of shikigamis shown - ${numberOfShikisCurrentlyShown}.`} styles="font-size: .8rem; text-align: center;" container_margin='50px 0 0 0' />
 
 
 <style>
