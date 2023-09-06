@@ -8,7 +8,7 @@
 </script>
 
 <div class="filter-container">
-  <input style:width={width} on:keypress={fn} class="filter-input" type="text" placeholder="Filter" bind:value={search_value} >
+  <input style:width={width} on:keypress={fn} class="filter-input" type="text" placeholder="Quick filter" bind:value={search_value} >
   {#if search_value}
     <button on:click={clearFunction} type="button"><Icon icon="ic:round-clear" style="font-size: 24px;" /></button>
   {/if}
