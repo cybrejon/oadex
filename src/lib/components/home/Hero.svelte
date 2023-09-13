@@ -131,6 +131,9 @@
     }
   }
   @media only screen and (width < 500px) {
+    .hero {
+      transform: skewY(-5deg);
+    }
     .hero-text {
       font-size: 3rem;
     }
