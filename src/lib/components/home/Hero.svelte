@@ -115,7 +115,6 @@
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 200px auto;
-      height: 80dvh;
     }
     .hero-image {
       display: none;
