@@ -120,4 +120,20 @@
   text-align: center;
 }
 
+@media only screen and (max-width: 500px) {
+  .item-card {
+    width: 70px;
+    height: 120px;
+  }
+  .ic-item-name {
+    width: 52px;
+    font-size: .5rem;
+  }
+
+  .ic-item-price {
+    width: 52px;
+    font-size: .6rem;
+  }
+}
+
 </style>

@@ -248,7 +248,7 @@
   </span>
 
   {#if !isOpen_itemDrawer}
-    <Container styles='height: 73vh; overflow-y: auto; display: block;'>
+    <Container styles='display: block;'>
       <ItemPreview
         {...previewData}
         {itemData}
@@ -280,7 +280,7 @@
   .mobile-item-chooser-toggle {
     display: none;
     position: fixed;
-    bottom: 20px;
+    bottom: 70px;
     right: 10px;
   }
 
@@ -330,6 +330,7 @@
     }
     .items-container {
       display: none;
+      padding: 0;
     }
     .items-container--visible {
       display: flex;
@@ -337,10 +338,10 @@
       left: 0;
       right: 0;
       align-items: center;
-      gap: 30px 10px;
+      gap: 15px 5px;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding: 0 10px;
+      padding: 0;
     }
   }
 

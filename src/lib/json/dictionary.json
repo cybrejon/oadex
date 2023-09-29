@@ -14,6 +14,14 @@
     "巫": "MAGE",
     "祝": "SUPPORT"
   },
+  "roles_reversed": {
+    "MARKSMAN": "射",
+    "NINJA": "忍",
+    "TANK": "守",
+    "SAMURAI": "侍",
+    "MAGE": "巫",
+    "SUPPORT": "祝"
+  },
   "roles2": [
     "射",
     "忍",

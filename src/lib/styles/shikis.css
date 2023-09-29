@@ -20,10 +20,11 @@
   padding: 10px 0;
   position: sticky;
   top: 0;
-  margin: 30px auto;
+  margin: 10px auto;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  gap: 10px;
   align-items: center;
 }
 

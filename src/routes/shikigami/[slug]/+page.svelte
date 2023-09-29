@@ -39,9 +39,10 @@
     : base_movement_speed = `${curr_shiki_obj.式神基础属性.移动速度.toString()}0`;
 
   const atk_speed = curr_shiki_obj.式神基础属性.攻击速度 * (1 + curr_shiki_obj.式神基础属性.攻速加成);
-  const base_atk_speed = atk_speed.toString().slice(0, 4);
+  const base_atk_speed = atk_speed.toFixed(2);
+
   const _growth_atk_speed = curr_shiki_obj.式神基础属性.攻速加成 + curr_shiki_obj.式神属性成长.攻速加成;
-  const growth_atk_speed = _growth_atk_speed.toString().slice(0, 4);
+  const growth_atk_speed = _growth_atk_speed.toFixed(2);
 
   const stats = {
     atk: {
@@ -394,7 +395,7 @@
         <td class="stat-property">⚔️ Attack speed</td>
         <td class="stat-value">{stats.atk_speed.base} aa/s</td>
         <!-- <td class="stat-growth">+ {stats.atk_speed.growth} /lvl</td> -->
-        <td class="stat-growth">revision needed</td>
+        <td class="stat-growth">HELP</td>
       </tr>
       <tr>
         <td class="stat-property">💫 Mana points</td>
@@ -663,7 +664,7 @@
 
   .bio-container {
     overflow-y: auto;
-    max-height: 520px;
+    max-height: 80vh;
     display: flex;
     flex-direction: column;
     row-gap: 10px;

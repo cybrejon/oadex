@@ -47,6 +47,7 @@
 
   .main-header {
     padding-top: 20px;
+    margin-bottom: 20px;
   }
 
   .main-header--inner {
