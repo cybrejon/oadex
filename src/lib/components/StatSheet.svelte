@@ -346,12 +346,6 @@
     background-color: rgb(58, 61, 66);
   }
 
-  td:nth-child(3) {
-    font-size: .7rem;
-    padding: 0 10px;
-    font-weight: 600;
-  }
-
   td:nth-child(2) {
     text-align: left;
     font-size: .8rem;
