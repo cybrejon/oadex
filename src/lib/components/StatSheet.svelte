@@ -111,6 +111,7 @@
 
   <Dropdown label='Columns'>
     <div style="height: 5px;"></div>
+    <Checkbox bind:checked={$visibleColumns.names}>Names</Checkbox>
     <Checkbox bind:checked={$visibleColumns.role}>Role</Checkbox>
     <Checkbox bind:checked={$visibleColumns.patk}>P. ATK</Checkbox>
     <Checkbox bind:checked={$visibleColumns.atkspd}>ATK SPEED</Checkbox>
@@ -190,7 +191,12 @@
         <tr>
           {#if $currentStatValues === 'base'}
             <td>{index + 1}.</td>
-              <td><img src={avatar} alt="shikigami"> <a data-sveltekit-preload-data="tap" href="/shikigami/{shiki.式神ID}">{shiki.式神名称}</a></td>
+            <td>
+              <img src={avatar} alt="shikigami">
+              {#if $visibleColumns.names}
+                <a data-sveltekit-preload-data="tap" href="/shikigami/{shiki.式神ID}">{shiki.式神名称}</a>
+              {/if}
+            </td>
             {#if $visibleColumns.role}
               <td>{shiki_roles}</td>
             {/if}
@@ -222,9 +228,15 @@
               <td>{base_movement_speed}</td>
             {/if}
           {/if}
+          
           {#if $currentStatValues === 'growth'}
             <td>{index + 1}.</td>
-            <td><img src={avatar} alt="shikigami"> <a data-sveltekit-preload-data="tap" href="/shikigami/{shiki.式神ID}">{shiki.式神名称}</a></td>
+            <td>
+              <img src={avatar} alt="shikigami">
+              {#if $visibleColumns.names}
+                <a data-sveltekit-preload-data="tap" href="/shikigami/{shiki.式神ID}">{shiki.式神名称}</a>
+              {/if}
+            </td>
             {#if $visibleColumns.role}
               <td>{shiki_roles}</td>
             {/if}
@@ -280,6 +292,7 @@
   .navigation {
     background-color: #36393F;
     position: sticky;
+    flex-wrap: wrap;
     top: 0;
     padding: 5px 0;
     z-index: 2;
@@ -312,10 +325,6 @@
     text-align: left;
   }
 
-  td:not(td:first-child) {
-    min-width: 110px;
-  }
-
   td:first-child {
     min-width: 60px;
   }
@@ -346,22 +355,22 @@
     background-color: rgb(58, 61, 66);
   }
 
-  td:nth-child(2) {
-    text-align: left;
-    font-size: .8rem;
-    padding: 0 10px 0 0;
-    font-weight: 600;
+  td:not(td:first-child):not(td:nth-child(2)) {
+    min-width: 110px;
   }
 
   td:nth-child(2) {
+    text-align: left;
+    font-size: .8rem;
+    font-weight: 600;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    gap: 10px;
   }
 
   td > img {
     width: 40px;
-    margin-right: 10px;
   }
 
   tr {

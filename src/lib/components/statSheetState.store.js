@@ -4,6 +4,7 @@ export let currentRole = writable('ALL');
 export let currentStatValues = writable('base');
 export let currentLevelSliderValue = writable(0);
 export let visibleColumns = writable({
+  names: true,
   role: false,
   patk: true,
   atkspd: true,
