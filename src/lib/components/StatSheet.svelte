@@ -11,6 +11,7 @@
     import Dropdown from './Dropdown.svelte';
     import Slider from './Slider.svelte';
     import Checkbox from './Checkbox.svelte';
+    import SideBar from './SideBar.svelte';
 
   export let data;
   export let images;
@@ -57,8 +58,6 @@
 
 </script>
 
-<p>test mode, not ready for mobile yet</p>
-
 <div class="navigation">
 
   <Dropdown bind:this={roleDropdownToggle} label='Role:' activeLabel={$currentRole}>
@@ -76,6 +75,22 @@
       {role}
     </Button2>
     {/each}
+  </Dropdown>
+
+  <Dropdown label='Columns'>
+    <div style="height: 5px;"></div>
+    <Checkbox bind:checked={$visibleColumns.names}>Names</Checkbox>
+    <Checkbox bind:checked={$visibleColumns.role}>Role</Checkbox>
+    <Checkbox bind:checked={$visibleColumns.patk}>P. ATK</Checkbox>
+    <Checkbox bind:checked={$visibleColumns.atkspd}>ATK SPEED</Checkbox>
+    <Checkbox bind:checked={$visibleColumns.hp}>HP</Checkbox>
+    <Checkbox bind:checked={$visibleColumns.hpregen}>HP Regen</Checkbox>
+    <Checkbox bind:checked={$visibleColumns.mp}>MP</Checkbox>
+    <Checkbox bind:checked={$visibleColumns.mpregen}>MP Regen</Checkbox>
+    <Checkbox bind:checked={$visibleColumns.parmor}>P. Armor</Checkbox>
+    <Checkbox bind:checked={$visibleColumns.marmor}>M. Armor</Checkbox>
+    <Checkbox bind:checked={$visibleColumns.mspeed}>MSpeed</Checkbox>
+    <div style="height: 5px;"></div>
   </Dropdown>
 
   <ButtonGroupDivider />
@@ -106,24 +121,6 @@
     max='17'
     >Level
   </Slider>
-
-  <ButtonGroupDivider />
-
-  <Dropdown label='Columns'>
-    <div style="height: 5px;"></div>
-    <Checkbox bind:checked={$visibleColumns.names}>Names</Checkbox>
-    <Checkbox bind:checked={$visibleColumns.role}>Role</Checkbox>
-    <Checkbox bind:checked={$visibleColumns.patk}>P. ATK</Checkbox>
-    <Checkbox bind:checked={$visibleColumns.atkspd}>ATK SPEED</Checkbox>
-    <Checkbox bind:checked={$visibleColumns.hp}>HP</Checkbox>
-    <Checkbox bind:checked={$visibleColumns.hpregen}>HP Regen</Checkbox>
-    <Checkbox bind:checked={$visibleColumns.mp}>MP</Checkbox>
-    <Checkbox bind:checked={$visibleColumns.mpregen}>MP Regen</Checkbox>
-    <Checkbox bind:checked={$visibleColumns.parmor}>P. Armor</Checkbox>
-    <Checkbox bind:checked={$visibleColumns.marmor}>M. Armor</Checkbox>
-    <Checkbox bind:checked={$visibleColumns.mspeed}>MSpeed</Checkbox>
-    <div style="height: 5px;"></div>
-  </Dropdown>
   
 </div>
 
@@ -391,5 +388,17 @@
   th {
     text-align: left;
     font-size: .8rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    .stat-sheet {
+      padding: 0 5px;
+    }
+    .navigation {
+      display: none;
+    }
+    td:first-child, th:first-child {
+      display: none;
+    }
   }
 </style>
