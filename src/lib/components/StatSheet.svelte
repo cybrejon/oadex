@@ -286,7 +286,6 @@
   .navigation {
     background-color: #36393F;
     position: sticky;
-    flex-wrap: wrap;
     top: 0;
     padding: 5px 0;
     z-index: 2;
