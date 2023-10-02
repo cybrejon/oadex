@@ -11,12 +11,10 @@
     import Dropdown from './Dropdown.svelte';
     import Slider from './Slider.svelte';
     import Checkbox from './Checkbox.svelte';
-    import SideBar from './SideBar.svelte';
 
   export let data;
   export let images;
 
-  let levelDropdownToggle;
   let roleDropdownToggle;
   let roleNames = Object.keys(roles_reversed);
 
@@ -49,12 +47,11 @@
 
   function modifyLevel(level) {
     $currentLevelSliderValue = level;
-    levelDropdownToggle.toggle();
   }
 
   onMount(() => {
     switchRoles($currentRole, true);
-  })
+  });
 
 </script>
 
@@ -68,12 +65,12 @@
       ALL
     </Button2>
     {#each roleNames as role}
-    <Button2
-      active={$currentRole === role}
-      fn={() => switchRoles(role)}
-      >
-      {role}
-    </Button2>
+      <Button2
+        active={$currentRole === role}
+        fn={() => switchRoles(role)}
+        >
+        {role}
+      </Button2>
     {/each}
   </Dropdown>
 
@@ -394,10 +391,13 @@
     .stat-sheet {
       padding: 0 5px;
     }
-    .navigation {
+    td:first-child, th:first-child {
       display: none;
     }
-    td:first-child, th:first-child {
+  }
+
+  @media only screen and (max-width: 800px) {
+    .navigation {
       display: none;
     }
   }

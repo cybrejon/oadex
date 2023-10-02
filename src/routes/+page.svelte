@@ -78,4 +78,11 @@
     justify-content: flex-start;
     align-items: center;
   }
+
+  @media only screen and (max-width: 800px) {
+    .extra-buttons {
+      justify-content: flex-end;
+      padding: 0 10px;
+    }
+  }
 </style>
