@@ -53,7 +53,7 @@
     color: #ffffffe6;
   }
   .sidebar-toggle {
-    display: flex;
+    display: none;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.118);
     border: 2px solid rgba(255, 255, 255, 0.189);
@@ -104,5 +104,11 @@
     gap: 10px;
     padding: 15px 0;
     color: #ffffff6c;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .sidebar-toggle {
+      display: flex;
+    }
   }
 </style>
