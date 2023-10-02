@@ -26,15 +26,15 @@
     </div>
 
     <nav>
-      <a class:active={$page.url.pathname === '/'} href="/">
+      <a on:click={toggle} class:active={$page.url.pathname === '/'} href="/">
         <Icon icon='ph:scroll-fill' style='font-size: 24px;' />
         Shikigamis
       </a>
-      <a class:active={$page.url.pathname === '/items'} href="/items">
+      <a on:click={toggle} class:active={$page.url.pathname === '/items'} href="/items">
         <Icon icon='game-icons:spiral-bottle' style='font-size: 24px;' />
         Items
       </a>
-      <a class:active={$page.url.pathname === '/chart'} href="/chart?mode=all">
+      <a on:click={toggle} class:active={$page.url.pathname === '/chart'} href="/chart?mode=all">
         <Icon icon='tabler:table-filled' style='font-size: 24px;' />
         Chart
       </a>
