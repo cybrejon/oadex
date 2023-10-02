@@ -3,6 +3,7 @@
   import banner from '$lib/assets/banner4.webp'
   import { page } from '$app/stores';
   import { isSideBarOpen } from './sidebarState';
+  import { fly } from 'svelte/transition';
 
   function toggle() {
     $isSideBarOpen = !$isSideBarOpen;
@@ -15,7 +16,7 @@
 </button>
 
 {#if $isSideBarOpen}
-<div class="sidebar">
+<div transition:fly={{ delay: 0, duration: 300, x: -100, y: 0 }} class="sidebar">
 
   <div class="sidebar-content">
 
@@ -63,14 +64,6 @@
     padding: 10px;
     cursor: pointer;
   }
-  @keyframes sidebarSlideIn {
-    from {
-      transform: translateX(-100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
   .sidebar {
     position: fixed;
     top: 0;
@@ -80,7 +73,6 @@
     z-index: 11;
     display: grid;
     grid-template-columns: 80% auto;
-    animation: sidebarSlideIn .2s;
   }
   .sidebar-content {
     padding: 10px;
