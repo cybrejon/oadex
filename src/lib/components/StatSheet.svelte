@@ -72,6 +72,12 @@
       Role
     </svelte:fragment>
     <svelte:fragment slot="content">
+      <Button2
+        active={$currentRole === 'ALL'}
+        fn={() => switchRoles('ALL')}
+        >
+        ALL
+      </Button2>
       {#each roleNames as role}
         <Button2
           active={$currentRole === role}
