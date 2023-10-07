@@ -11,12 +11,15 @@
     import Dropdown from './Dropdown.svelte';
     import Slider from './Slider.svelte';
     import Checkbox from './Checkbox.svelte';
+    import Accordion from './Accordion.svelte';
+    import AccordionItem from './AccordionItem.svelte';
 
   export let data;
   export let images;
 
   let roleDropdownToggle;
   let roleNames = Object.keys(roles_reversed);
+  let mobileAccordionIndex = 1;
 
   let baseIterable = [];
   function object2array(obj) {
@@ -49,11 +52,95 @@
     $currentLevelSliderValue = level;
   }
 
+  function toggleMobileControlAccordion(index) {
+    mobileAccordionIndex = index;
+  }
+
   onMount(() => {
     switchRoles($currentRole, true);
   });
 
 </script>
+
+<Accordion>
+
+  <AccordionItem 
+  styles='align-items: unset'
+  active={mobileAccordionIndex === 1}
+  fn={() => toggleMobileControlAccordion(1)}>
+    <svelte:fragment slot='name'>
+      Role
+    </svelte:fragment>
+    <svelte:fragment slot="content">
+      {#each roleNames as role}
+        <Button2
+          active={$currentRole === role}
+          fn={() => switchRoles(role)}
+          >
+          {role}
+        </Button2>
+      {/each}
+    </svelte:fragment>
+  </AccordionItem>
+
+  <AccordionItem
+  styles='gap: 10px; align-items: unset'
+  active={mobileAccordionIndex === 2}
+  fn={() => toggleMobileControlAccordion(2)}>
+    <svelte:fragment slot='name'>
+      Visible Columns
+    </svelte:fragment>
+    <svelte:fragment slot="content">
+      <Checkbox bind:checked={$visibleColumns.names}>Names</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.role}>Role</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.patk}>P. ATK</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.atkspd}>ATK SPEED</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.hp}>HP</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.hpregen}>HP Regen</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.mp}>MP</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.mpregen}>MP Regen</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.parmor}>P. Armor</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.marmor}>M. Armor</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.mspeed}>MSpeed</Checkbox>
+    </svelte:fragment>
+  </AccordionItem>
+
+  <AccordionItem
+  styles='gap: 10px; align-items: unset'
+  active={mobileAccordionIndex === 3}
+  fn={() => toggleMobileControlAccordion(3)}>
+    <svelte:fragment slot='name'>
+      Shikigami Level & Table Mode
+    </svelte:fragment>
+    <svelte:fragment slot="content">
+      <ButtonGroup>
+        <Button2
+        active={$currentStatValues === 'base'}
+        fn={() => switchValues('base')}
+        icon='ph:plant-fill'
+          >
+        </Button2>
+
+        <Button2
+        active={$currentStatValues === 'growth'}
+        fn={() => switchValues('growth')}
+        icon='uil:arrow-growth'
+          >
+        </Button2>
+      </ButtonGroup>
+
+      <Slider
+        status={$currentLevelSliderValue + 1}
+        fn={() => modifyLevel($currentLevelSliderValue)}
+        bind:value={$currentLevelSliderValue}
+        min='0'
+        max='17'
+        >Level
+      </Slider>
+    </svelte:fragment>
+  </AccordionItem>
+
+</Accordion>
 
 <div class="navigation">
 
@@ -90,8 +177,6 @@
     <div style="height: 5px;"></div>
   </Dropdown>
 
-  <ButtonGroupDivider />
-
   <ButtonGroup>
     <Button2
     active={$currentStatValues === 'base'}
@@ -107,8 +192,6 @@
       >
     </Button2>
   </ButtonGroup>
-
-  <ButtonGroupDivider />
 
   <Slider
     status={$currentLevelSliderValue + 1}
