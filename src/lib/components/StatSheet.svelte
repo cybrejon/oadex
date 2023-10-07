@@ -112,7 +112,7 @@
   </AccordionItem>
 
   <AccordionItem
-  styles='gap: 10px; align-items: unset'
+  styles='gap: 10px; align-items: flex-end'
   active={mobileAccordionIndex === 3}
   fn={() => toggleMobileControlAccordion(3)}>
     <svelte:fragment slot='name'>

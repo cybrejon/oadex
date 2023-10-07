@@ -31,7 +31,7 @@
 
 <style>
   .accordion {
-    min-width: 80vw;
+    width: 100vw;
     display: none;
     position: fixed;
     bottom: 90px;
@@ -39,6 +39,7 @@
     z-index: 10;
   }
   .pop-up {
+    min-width: 300px;
     overflow: hidden;
     position: absolute;
     bottom: 80px;
