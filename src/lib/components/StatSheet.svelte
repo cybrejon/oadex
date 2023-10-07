@@ -184,19 +184,12 @@
   </Dropdown>
 
   <ButtonGroup>
-    <Button2
-    active={$currentStatValues === 'base'}
-    fn={() => switchValues('base')}
-    icon='ph:plant-fill'
-      >
-    </Button2>
-
-    <Button2
-    active={$currentStatValues === 'growth'}
-    fn={() => switchValues('growth')}
-    icon='uil:arrow-growth'
-      >
-    </Button2>
+    {#each [
+      { name: 'base', icon: 'ph:plant-fill' },
+      { name: 'growth', icon: 'uil:arrow-growth' }
+    ] as btn}
+      <Button2 active={$currentStatValues === btn.name} fn={() => switchValues(btn.name)} icon={btn.icon}></Button2>
+    {/each}
   </ButtonGroup>
 
   <Slider
