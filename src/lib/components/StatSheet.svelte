@@ -1,18 +1,18 @@
 <script>
 
-  import { fade } from 'svelte/transition';
   import { roles, roles_reversed } from '$lib/json/dictionary';
   import { currentRole, currentStatValues, currentLevelSliderValue, visibleColumns } from './statSheetState.store.js';
   import ButtonGroup from '$lib/components/ButtonGroup.svelte';
   import Button2 from '$lib/components/Button2.svelte';
-  import { onDestroy, onMount } from 'svelte';
-  import ButtonGroupDivider from './ButtonGroupDivider.svelte';
+  import { onMount } from 'svelte';
   import Note from "$lib/components/Note.svelte";
-    import Dropdown from './Dropdown.svelte';
-    import Slider from './Slider.svelte';
-    import Checkbox from './Checkbox.svelte';
-    import Accordion from './Accordion.svelte';
-    import AccordionItem from './AccordionItem.svelte';
+  import Dropdown from './Dropdown.svelte';
+  import Slider from './Slider.svelte';
+  import Checkbox from './Checkbox.svelte';
+  import Accordion from './Accordion.svelte';
+  import AccordionItem from './AccordionItem.svelte';
+  import { tableSorting } from '$userStore/statTable';
+    import Icon from '@iconify/svelte';
 
   export let data;
   export let images;
@@ -28,7 +28,7 @@
     };
   };
 
-  let mainIterable = baseIterable;
+  $: mainIterable = baseIterable;
 
   object2array(data);
 
@@ -56,8 +56,25 @@
     mobileAccordionIndex = index;
   }
 
+  function sortColumn(prop, columnName) {
+    $tableSorting.lastSorted = columnName;
+    $tableSorting.lastProp = prop;
+    mainIterable.sort((a, b) => {
+      let s;
+      if ($tableSorting.sorting[columnName].isHigh) {
+        s = a.式神基础属性[prop] - b.式神基础属性[prop]
+      } else {
+        s = b.式神基础属性[prop] - a.式神基础属性[prop]
+      }
+      return s;
+    });
+    mainIterable = mainIterable;
+    $tableSorting.sorting[columnName].isHigh = !$tableSorting.sorting[columnName].isHigh;
+  }
+
   onMount(() => {
     switchRoles($currentRole, true);
+    $tableSorting.lastSorted = '';
   });
 
 </script>
@@ -213,31 +230,87 @@
           <th>Role</th>
         {/if}
         {#if $visibleColumns.patk}
-          <th>P. ATK</th>
+          <th style="cursor: pointer;" on:click={() => sortColumn('物理伤害', 'patk')}>
+            <span>
+              {#if $tableSorting.lastSorted === 'patk'}
+                <Icon icon='fa:sort' style='font-size: 16px;' />
+              {/if}
+              P. ATK
+            </span>
+          </th>
         {/if}
         {#if $visibleColumns.atkspd}
           <th>ATK Speed</th>
         {/if}
         {#if $visibleColumns.hp}
-          <th>HP</th>
+          <th style="cursor: pointer;" on:click={() => sortColumn('生命值', 'hp')}>
+            <span>
+              {#if $tableSorting.lastSorted === 'hp'}
+                <Icon icon='fa:sort' style='font-size: 16px;' />
+              {/if}
+              HP
+            </span>
+          </th>
         {/if}
         {#if $visibleColumns.hpregen}
-          <th>HP Regen</th>
+          <th style="cursor: pointer;" on:click={() => sortColumn('生命恢复', 'hpregen')}>
+            <span>
+              {#if $tableSorting.lastSorted === 'hpregen'}
+                <Icon icon='fa:sort' style='font-size: 16px;' />
+              {/if}
+              HP Regen
+            </span>
+          </th>
         {/if}
         {#if $visibleColumns.mp}
-          <th>MP</th>
+          <th style="cursor: pointer;" on:click={() => sortColumn('魔法上限', 'mp')}>
+            <span>
+              {#if $tableSorting.lastSorted === 'mp'}
+                <Icon icon='fa:sort' style='font-size: 16px;' />
+              {/if}
+              MP
+            </span>
+          </th>
         {/if}
         {#if $visibleColumns.mpregen}
-          <th>MP Regen</th>
+          <th style="cursor: pointer;" on:click={() => sortColumn('魔法回复', 'mpregen')}>
+            <span>
+              {#if $tableSorting.lastSorted === 'mpregen'}
+                <Icon icon='fa:sort' style='font-size: 16px;' />
+              {/if}
+              MP Regen
+            </span>
+          </th>
         {/if}
         {#if $visibleColumns.parmor}
-          <th>P. Armor</th>
+          <th style="cursor: pointer;" on:click={() => sortColumn('护甲', 'parmor')}>
+            <span>
+              {#if $tableSorting.lastSorted === 'parmor'}
+                <Icon icon='fa:sort' style='font-size: 16px;' />
+              {/if}
+              P. Armor
+            </span>
+          </th>
         {/if}
         {#if $visibleColumns.marmor}
-          <th>M. Armor</th>
+          <th style="cursor: pointer;" on:click={() => sortColumn('魔抗', 'marmor')}>
+            <span>
+              {#if $tableSorting.lastSorted === 'marmor'}
+                <Icon icon='fa:sort' style='font-size: 16px;' />
+              {/if}
+              M. Armor
+            </span>
+          </th>
         {/if}
         {#if $visibleColumns.mspeed}
-          <th>MSpeed</th>
+          <th style="cursor: pointer;" on:click={() => sortColumn('移动速度', 'movement')}>
+            <span>
+              {#if $tableSorting.lastSorted === 'movement'}
+                <Icon icon='fa:sort' style='font-size: 16px;' />
+              {/if}
+              MSpeed
+            </span>
+          </th>
         {/if}
       </tr>
     </thead>
@@ -392,8 +465,16 @@
   }
 
   thead th {
+    user-select: none;
     padding: 10px 0;
     text-align: center;
+  }
+
+  thead th > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
   }
 
   thead th:nth-child(2) {

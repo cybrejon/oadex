@@ -39,6 +39,7 @@
     z-index: 10;
   }
   .pop-up {
+    box-shadow: 0 8px #282a2f;
     min-width: 300px;
     overflow: hidden;
     position: absolute;
