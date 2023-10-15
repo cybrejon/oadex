@@ -1,5 +1,6 @@
 const syntax = {
   "#n": "</span>",
+  "#r": "</span><br><div style=\"height: 10px;\"></div>",
   "#O": "<span style=\"color: #FFA957;\">",
   "#c9e45fa": "<span style=\"color: #c9e45f;\"> ",
   "#cffba35": "<span style=\"color: #CFFBA3;\"> ",
@@ -26,4 +27,4 @@ const codeRegex = new RegExp(code.join("|"), "gi");
 
 export function highlight(text) {
   return text.replace(codeRegex, (match) => syntax[match])
-}
+};
