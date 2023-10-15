@@ -5,7 +5,8 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			$userStore: 'src/userStore'
+			$userStore: 'src/userStore',
+			$utils: 'src/utils'
 		}
 	},
 	vitePlugin: {

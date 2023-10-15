@@ -5,6 +5,8 @@
 
   import { colorCodeRemove } from '../../utils/colors';
 
+  import { highlight } from '$utils/highlighting';
+
   export let images;
 
   // ANCHOR skills
@@ -22,7 +24,7 @@
 
   let skill_name = curr_shiki_obj.式神技能.天生被动.技能名称;
   let skill_image = images[curr_shiki_obj.式神技能.天生被动.图标路径];
-  let skill_description = colorCodeRemove(curr_shiki_obj.式神技能.天生被动.技能描述);
+  let skill_description = highlight(curr_shiki_obj.式神技能.天生被动.技能描述);
   let skill_properties = curr_shiki_obj.式神技能.天生被动.技能成长;
 
   let skill_tab_indicator = 0;
@@ -31,7 +33,7 @@
     skill_name = skills_data[i].skill_name;
     skill_image = skills_data[i].image;
     skill_properties = skills_data[i].properties
-    skill_description = colorCodeRemove(skills_data[i].description);
+    skill_description = highlight(skills_data[i].description);
   }
 
   // remove the cd and mana cost from the properties to be shown separately
@@ -77,7 +79,7 @@
       </div>
     </div>
   </div>
-  <p class="skill-description">{skill_description}</p>
+  <p class="skill-description">{@html skill_description}</p>
   <div class="skill-properties-container">
     {#each skill_properties_unique as skill_prop}
       <div class="skill-property">
