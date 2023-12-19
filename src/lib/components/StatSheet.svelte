@@ -503,7 +503,7 @@
     border-bottom-right-radius: 6px;
   }
 
-  td:nth-child(3n+2) {
+  td:nth-child(2n+2) {
     background-color: rgb(58, 61, 66);
   }
 
