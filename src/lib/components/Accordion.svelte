@@ -41,7 +41,9 @@
   .pop-up {
     box-shadow: 0 8px #282a2f;
     min-width: 300px;
-    overflow: hidden;
+    height: 60dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
     position: absolute;
     bottom: 80px;
     right: 0;
