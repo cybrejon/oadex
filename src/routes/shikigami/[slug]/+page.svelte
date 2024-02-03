@@ -222,6 +222,36 @@
             </div>
           {/if}
 
+          {#if bioData.bio4}
+            <div class="bio">
+              <h3 class="bio-header">📔 Bio 4</h3>
+              <p class="bio-text">{bioData.bio4}</p>
+              <div class="bio-contributor-container">
+                {#if bioData.bio4 === 'no bio yet'}
+                  <p class="bio-contributor">Join <a href="http://discord.gg/KGsaAet">my discord</a> to submit missing bios!</p>
+                {:else}
+                  <p class="bio-contributor">Submitter: {bioData.contributor}</p>
+                  <p class="bio-contributor">Source: <a href="https://onmyoji.fandom.com/wiki/Onmyoji_Wiki">onmyoji.fandom.com</a></p>
+                {/if}
+              </div>
+            </div>
+          {/if}
+
+          {#if bioData.bio5}
+            <div class="bio">
+              <h3 class="bio-header">📔 Bio 5</h3>
+              <p class="bio-text">{bioData.bio5}</p>
+              <div class="bio-contributor-container">
+                {#if bioData.bio5 === 'no bio yet'}
+                  <p class="bio-contributor">Join <a href="http://discord.gg/KGsaAet">my discord</a> to submit missing bios!</p>
+                {:else}
+                  <p class="bio-contributor">Submitter: {bioData.contributor}</p>
+                  <p class="bio-contributor">Source: <a href="https://onmyoji.fandom.com/wiki/Onmyoji_Wiki">onmyoji.fandom.com</a></p>
+                {/if}
+              </div>
+            </div>
+          {/if}
+
         {:else}
 
           <div class="bio">
