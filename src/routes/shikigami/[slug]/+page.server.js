@@ -85,8 +85,8 @@ export async function load({ params, fetch }) {
       bio1: bd[0].fields?.bio1,
       bio2: bd[0].fields?.bio2,
       bio3: bd[0].fields?.bio3,
-      bio3: bd[0].fields?.bio4,
-      bio3: bd[0].fields?.bio5,
+      bio4: bd[0].fields?.bio4,
+      bio5: bd[0].fields?.bio5,
       contributor: bd[0].fields.contributor
     };
   } catch (error) {
