@@ -32,7 +32,7 @@
         ]}
       />
     </div>
-    <p style="font-weight: 600;">OADex 2023, All rights reserved.</p>
+    <p style="font-weight: 600;">OADex 2024, All rights reserved.</p>
   </div>
   
 </div>
