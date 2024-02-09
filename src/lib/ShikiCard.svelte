@@ -39,7 +39,7 @@
       </div> -->
     </div>
     {#if new_shiki}
-      <p class="new-tag">NEW</p>
+      <p class="new-tag">RECENT</p>
     {/if}
     {#if in_rotation}
       <p class="free-tag">FREE</p>
@@ -118,7 +118,6 @@
   font-size: .6rem;
   position: absolute;
   top: 10px;
-  right: 40px;
   left: 10px;
   background-color: red;
   color: #fff;
