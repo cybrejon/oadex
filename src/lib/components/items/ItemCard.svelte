@@ -13,7 +13,7 @@
 
 </script>
 
-<a class="item-anchor" on:click={fn} on:click={utilFn && utilFn} href={`/items?i=${itemName}`} data-sveltekit-noscroll data-sveltekit-preload-data="tap">
+  <a class="item-anchor" on:click={fn} on:click={utilFn && utilFn} href={`/items?i=${itemName}`} data-sveltekit-noscroll data-sveltekit-preload-data="tap">
   <div class="item-card" class:item-card--active={activeItem == itemName}>
     <div class="sc-image-container">
       <LazyImage class="ic-item-image" alt="shikigami portrait" src="{src}" placeholder={placeholderImage} />

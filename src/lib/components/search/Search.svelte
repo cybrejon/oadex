@@ -11,6 +11,8 @@
 
   let searchValue;
 
+  
+
   let results_r = [];
   let results = [];
   let modalInputElement;
@@ -138,7 +140,7 @@
               </div>
               <div class="result-text-container">
                 <p class="result-name">{result.item.name}</p>
-                <p class="result-type">{result.item.type}</p>
+                <p class="result-type">{result.item.type} | ID: {result.item.id}</p>
               </div>
             </div>
           </a>
