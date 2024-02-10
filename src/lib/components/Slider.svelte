@@ -5,11 +5,12 @@
   export let fn;
   export let status;
   export let styles;
+  export let disabled = false;
 </script>
 
 <div class="slider" style={styles}>
   <p><slot /></p>
-  <input on:change={fn} type="range" bind:value {min} {max} id="range">
+  <input {disabled} on:change={fn} type="range" bind:value {min} {max} id="range">
   <p class="status">{status}</p>
 </div>
 
@@ -61,5 +62,10 @@
     height: 36px; /* Slider handle height */
     background: #CDFE05; /* Green background */
     cursor: pointer; /* Cursor on hover */
+  }
+
+  input:disabled {
+    opacity: .5;
+    filter: grayscale(1);
   }
 </style>
