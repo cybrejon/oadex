@@ -12,7 +12,7 @@
   import Accordion from './Accordion.svelte';
   import AccordionItem from './AccordionItem.svelte';
   import { tableSorting } from '$userStore/statTable';
-    import Icon from '@iconify/svelte';
+  import Icon from '@iconify/svelte';
 
   export let data;
   export let images;
@@ -61,7 +61,7 @@
     $tableSorting.lastProp = prop;
     mainIterable.sort((a, b) => {
       let s;
-      if ($tableSorting.sorting[columnName].isHigh) {
+      if ($tableSorting.sorting[columnName].base.isHigh) {
         s = a.式神基础属性[prop] - b.式神基础属性[prop]
       } else {
         s = b.式神基础属性[prop] - a.式神基础属性[prop]
@@ -69,7 +69,7 @@
       return s;
     });
     mainIterable = mainIterable;
-    $tableSorting.sorting[columnName].isHigh = !$tableSorting.sorting[columnName].isHigh;
+    $tableSorting.sorting[columnName].base.isHigh = !$tableSorting.sorting[columnName].base.isHigh;
   }
 
   onMount(() => {
@@ -158,6 +158,7 @@
         bind:value={$currentLevelSliderValue}
         min='0'
         max='17'
+        disabled={$currentStatValues === 'growth'}
         >Level
       </Slider>
     </svelte:fragment>
@@ -215,6 +216,7 @@
     bind:value={$currentLevelSliderValue}
     min='0'
     max='17'
+    disabled={$currentStatValues === 'growth'}
     >Level
   </Slider>
   

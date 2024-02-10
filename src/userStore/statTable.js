@@ -5,28 +5,68 @@ export let tableSorting = writable({
   lastProp: '',
   sorting: {
     patk: {
-      isHigh: false
+      base: {
+        isHigh: false
+      },
+      growth: {
+        isHigh: false
+      }
     },
     hp: {
-      isHigh: false
+      base: {
+        isHigh: false
+      },
+      growth: {
+        isHigh: false
+      }
     },
     hpregen: {
-      isHigh: false
+      base: {
+        isHigh: false
+      },
+      growth: {
+        isHigh: false
+      }
     },
     mp: {
-      isHigh: false
+      base: {
+        isHigh: false
+      },
+      growth: {
+        isHigh: false
+      }
     },
     mpregen: {
-      isHigh: false
+      base: {
+        isHigh: false
+      },
+      growth: {
+        isHigh: false
+      }
     },
     parmor: {
-      isHigh: false
+      base: {
+        isHigh: false
+      },
+      growth: {
+        isHigh: false
+      }
     },
     marmor: {
-      isHigh: false
+      base: {
+        isHigh: false
+      },
+      growth: {
+        isHigh: false
+      }
     },
     movement: {
-      isHigh: false
+      base: {
+        isHigh: false
+      },
+      growth: {
+        isHigh: false
+      }
     }
   }
 });
