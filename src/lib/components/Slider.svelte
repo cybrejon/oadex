@@ -29,7 +29,7 @@
     gap: 15px;
     background-color: #2E3035;
     padding: 15px 15px 15px 20px;
-    border-radius: 100px;
+    border-radius: 10px;
     font-size: .8rem;
     font-weight: 600;
     min-width: 200px;
