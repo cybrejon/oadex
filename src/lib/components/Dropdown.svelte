@@ -32,7 +32,7 @@
   .dropdown {
     position: relative;
     background-color: #2E3035;
-    border-radius: 100px;
+    border-radius: 10px;
     padding: 5px;
   }
   .dropdown-toggle {
@@ -43,11 +43,10 @@
     color: #C9CAC8;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    border-radius: 100px;
+    border-radius: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
   }
   .dropdown-toggle:hover, .dropdown-toggle:active {
     background-color: #CDFE05;
@@ -59,12 +58,10 @@
     flex-direction: column;
     background-color: #2E3035;
     position: absolute;
-    top: 20px;
-    padding: 25px 5px 5px 5px;
+    top: 50px;
+    padding: 5px;
     left: 0;
     right: 0;
-    border-bottom-left-radius: 23px;
-    border-bottom-right-radius: 23px;
-    z-index: -1;
+    border-radius: 10px;
   }
 </style>
