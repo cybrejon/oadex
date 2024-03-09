@@ -90,13 +90,13 @@ export async function load({ params, fetch }) {
       contributor: bd[0].fields.contributor
     };
   } catch (error) {
-    console.log(error);
-  }
+    console.log("[bios] could not load one of the bios; no bio data found");
+  };
 
   async function getOnmyodos() {
     const x = await fetch(`${PRIVATE_HOST_IP}/onmyodos?shiki_id=${params.slug}`);
     return await x.json();
-  }
+  };
   const onmyodos = await getOnmyodos();
     
   async function getSpells() {
