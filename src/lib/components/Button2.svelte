@@ -4,11 +4,12 @@
   export let fn;
   export let link;
   export let active = false;
+  export let styles;
   import Icon from '@iconify/svelte';
 </script>
 
 {#if type === 'button'}
-  <button class:iconless-padding={!icon} class:active type="button" on:click={fn}>
+  <button style={styles} class:iconless-padding={!icon} class:active type="button" on:click={fn}>
     {#if icon}
       <Icon icon={icon} style='font-size: 24px;' />
     {/if}
@@ -17,7 +18,7 @@
 {/if}
 
 {#if type === 'link'}
-  <a class:iconless-padding={!icon} class:active href={link} on:click={fn}>
+  <a style={styles} class:iconless-padding={!icon} class:active href={link} on:click={fn}>
     {#if icon}
       <Icon icon={icon} style='font-size: 24px;' />
     {/if}
@@ -43,7 +44,7 @@
     padding: 6px 15px;
     display: flex;
     column-gap: 10px;
-    border-radius: 100px;
+    border-radius: 6px;
     color: #ffffffad;
     align-items: center;
     justify-content: center;
@@ -64,10 +65,15 @@
     background-color: #565A60;
   }
 
+  button:focus {
+    background-color: #f2ffbc;
+    color: #2E3035;
+  }
+
   button:active, a:active {
+    background-color: #CDFE05;
     box-shadow: none;
-    background-color: #565A60;
-    color: #ffffffad;
-    outline: 2px dashed #ffffff3b;
+    color: #2E3035;
+    outline: 2px dashed #CDFE05;
   }
 </style>
