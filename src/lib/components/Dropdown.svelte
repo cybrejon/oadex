@@ -36,6 +36,7 @@
     padding: 5px;
   }
   .dropdown-toggle {
+    user-select: none;
     gap: 10px;
     padding: 6px 18px 6px 15px;
     border: none;
