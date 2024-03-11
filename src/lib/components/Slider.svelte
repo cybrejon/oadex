@@ -22,6 +22,7 @@
   }
 
   .slider {
+    user-select: none;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
