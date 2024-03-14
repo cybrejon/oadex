@@ -39,6 +39,7 @@
   }
 
   button, a {
+    user-select: none;
     font-weight: 600;
     border: none;
     padding: 6px 15px;
