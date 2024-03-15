@@ -167,7 +167,7 @@
 }
 
 .shikigami-name {
-  white-space: nowrap;
+  /* white-space: nowrap; */
   overflow: hidden;
   text-overflow: ellipsis;
   width: 80px;
