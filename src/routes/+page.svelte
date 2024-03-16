@@ -13,19 +13,8 @@
 
   // import stores
   import {
-    active_role,
-    isAscending,
-    role_config,
-    hasBeenLeft,
     isTableMode
-  } from './store.js';
-
-  let shikigamisState = {
-    active_role,
-    isAscending,
-    role_config,
-    hasBeenLeft
-  };
+  } from '$userStore/store.js';
 
   function toggleTableMode(mode) {
     mode === 'table'
@@ -63,7 +52,6 @@
   <Shikigamis
     {shikiga_data}
     {images}
-    {...shikigamisState}
   />
 {/if}
 
