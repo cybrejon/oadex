@@ -1,15 +1,12 @@
 <script>
 
   // import components
-  import Toggles from '$lib/Toggles.svelte';
-
-  import { colorCodeRemove } from '../../utils/colors';
-
   import { highlight } from '$utils/highlighting';
+  import Button2 from '../Button2.svelte';
+  import Dropdown from '../Dropdown.svelte';
 
   export let images;
 
-  // ANCHOR skills
   export let curr_shiki_obj;
 
   let shikigami_skills = Object.keys(curr_shiki_obj.式神技能);
@@ -29,6 +26,7 @@
 
   let skill_tab_indicator = 0;
   const changeSkillDisplayed = (i) => () => {
+    skillsDropdown.toggle();
     skill_tab_indicator = i;
     skill_name = skills_data[i].skill_name;
     skill_image = skills_data[i].image;
@@ -46,17 +44,37 @@
       }
     });
 
+  let skillsDropdown;
+
+  let skill_position_name = {
+    0: "TRAIT",
+    1: "S2",
+    2: "ULTIMATE",
+    3: "PASSIVE",
+    4: "S3"
+  };
+
 </script>
 
 <div class="skill-tab-container">
   <h3 class="stats-header"> 🔨 Skills</h3>
-  <Toggles toggle_icon="ph:circles-three-plus-fill" anchor_direction="right" buttons={[
-    { name: "TRAIT", active_indicator: skill_tab_indicator, active_value: 0, fn: changeSkillDisplayed(0) },
-    { name: "S1 / PASSIVE", active_indicator: skill_tab_indicator, active_value: 3, fn: changeSkillDisplayed(3) },
-    { name: "S2", active_indicator: skill_tab_indicator, active_value: 1, fn: changeSkillDisplayed(1) },
-    { name: "S3", active_indicator: skill_tab_indicator, active_value: 4, fn: changeSkillDisplayed(4) },
-    { name: "ULT", active_indicator: skill_tab_indicator, active_value: 2, fn: changeSkillDisplayed(2) },
-  ]} />
+  <Dropdown bind:this={skillsDropdown} label={skill_position_name[skill_tab_indicator]}>
+    <Button2 fn={changeSkillDisplayed(0)} active={skill_tab_indicator === 0}>
+      TRAIT
+    </Button2>
+    <Button2 fn={changeSkillDisplayed(3)} active={skill_tab_indicator === 3}>
+      S1 / PASSIVE
+    </Button2>
+    <Button2 fn={changeSkillDisplayed(1)} active={skill_tab_indicator === 1}>
+      S2
+    </Button2>
+    <Button2 fn={changeSkillDisplayed(4)} active={skill_tab_indicator === 4}>
+      S3
+    </Button2>
+    <Button2 fn={changeSkillDisplayed(2)} active={skill_tab_indicator === 2}>
+      ULTIMATE
+    </Button2>
+  </Dropdown>
 </div>
 <div class="skill-container">
   <div class="skill-info-header-container">
