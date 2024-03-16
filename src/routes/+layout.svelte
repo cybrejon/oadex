@@ -4,7 +4,7 @@
   import favicon from '$lib/assets/favicon.png';
   import Header from '$lib/Header.svelte';
   import Footer from "$lib/components/Footer.svelte";
-  import LoadingBar from "../lib/components/LoadingBar.svelte";
+  import LoadingBar from "$lib/components/LoadingBar.svelte";
   import { page } from '$app/stores';
   $: curr_page = $page.url.pathname;
   $: routeId = $page.route.id;
@@ -15,7 +15,7 @@
   // vercel analytics
   import { dev } from '$app/environment';
   import { inject } from '@vercel/analytics';
-  import { isLoading } from "./store";
+  import { isLoading } from "$userStore/store";
   import { afterNavigate, beforeNavigate } from '$app/navigation';
   inject({ mode: dev ? 'development' : 'production' });
 
