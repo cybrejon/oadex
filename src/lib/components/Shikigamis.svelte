@@ -1,27 +1,34 @@
 <script>
-  import Toggles from '$lib/Toggles.svelte';
   import ShikiCard from '$lib/ShikiCard.svelte';
-  import FilterInput from '$lib/components/FilterInput.svelte';
   import Note from "$lib/components/Note.svelte";
+  import Button2 from "$lib/components/Button2.svelte";
+  import ButtonGroup from "$lib/components/ButtonGroup.svelte";
+  import Dropdown from './Dropdown.svelte';
 
   import "$lib/styles/shikis.css";
+
+  // import stores
+  import {
+    active_role,
+    isAscending,
+    role_config,
+    hasBeenLeft,
+  } from '$userStore/store.js';
+
+  import { roles } from "$lib/json/dictionary.json";
 
   export let shikiga_data;
   export let images;
 
-  export let active_role;
-  export let isAscending;
-  export let role_config;
-  export let hasBeenLeft;
-
   import Fuse from 'fuse.js';
   import { onDestroy } from 'svelte';
   import { goto } from '$app/navigation';
-  import { fade } from 'svelte/transition';
 
   const shiki_names = Object.keys(shikiga_data).sort();
   const shikiIDs = [];
   shiki_names.forEach(name => shikiIDs.push(shikiga_data[name].式神ID	));
+
+  let mobile_role_switcher_toggle;
 
   $: role = shiki_names;
   const toggleRole = (r) => () => {
@@ -31,7 +38,6 @@
     : role = shiki_names.filter(shiki => shikiga_data[shiki].式神定位.includes(r)).sort();
 
     active_role.update(role => role = r);
-    search_value = '';
 
     $isAscending
     ? role = role.sort()
@@ -40,31 +46,8 @@
     role_config.update(roles => roles = role);
     hasBeenLeft.update(bool => bool = false);
 
-  }
+    mobile_role_switcher_toggle.toggle();
 
-  // start searcher
-  let search_value;
-  const shiki_fuse = new Fuse(shiki_names);
-
-  // perform search
-  let results = [];
-  function filterShiki() {
-    if (!search_value) return;
-    results = shiki_fuse.search(search_value);
-    if ($hasBeenLeft) {
-      $role_config = results.map((result) => result.item);
-    } else {
-      role = results.map((result) => result.item);
-    }
-    active_role.update(role => role = 'all');
-    isAscending.update(bool => bool = true);
-  }
-
-  // clear filter input
-  function clearSearch() {
-    role = shiki_names;
-    role_config.update(c => c = c.sort());
-    search_value = '';
   }
 
   // sort order
@@ -74,7 +57,6 @@
     : role = role.sort();
     role = role.sort()
     isAscending.update(bool => bool = true);
-    search_value = '';
   }
 
   function sortDescend() {
@@ -82,17 +64,12 @@
     ? role_config.update(c => c = c.sort().reverse())
     : role = role.sort().reverse();
     isAscending.update(bool => bool = false);
-    search_value = '';
   }
-
-  let mobileHeaderDisplayMode = 'normal';
-  const toggleMobileHeaderMode = (mode) => () => {
-    mobileHeaderDisplayMode = mode;
-  };
 
   function randomShikigami() {
     let id = shikiIDs[Math.floor(Math.random() * shikiIDs.length)];
     goto(`/shikigami/${id}`);
+    mobile_role_switcher_toggle.toggle();
   }
 
   $: numberOfShikisCurrentlyShown = $role_config.length === 0 ? role.length : $role_config.length;
@@ -104,56 +81,70 @@
   });
 </script>
 
-{#if mobileHeaderDisplayMode === 'normal'}
-    <div class="shiki-selection-header">
-      <Toggles toggle_icon="ic:round-sort" anchor_direction="left" buttons={[
-        { name: "A-Z", active_indicator: $isAscending, active_value: true, fn: sortAscend },
-        { name: "Z-A", active_indicator: $isAscending, active_value: false, fn: sortDescend },
-      ]} />
-      <span class="desktop-filter-bar-visibility-wrapper">
-        <FilterInput
-          width='250px'
-          fn={filterShiki}
-          bind:search_value={search_value}
-          clearFunction={clearSearch}
-        />
-      </span>
-      <Toggles
-        iconOnly=true
-        toggle_icon="ion:dice"
-        anchor_direction="left"
-        buttons={[
-          { name: "a", active_indicator: 'e', active_value: 'i', fn: randomShikigami },
-      ]} />
-      <Toggles toggle_icon="fluent:tag-question-mark-32-filled" anchor_direction="right" buttons={[
-        { name: "ALL", active_indicator: $active_role, active_value: 'all', fn: toggleRole('all') },
-        { name: "SAMURAI", active_indicator: $active_role, active_value: '侍', fn: toggleRole('侍') },
-        { name: "NINJA", active_indicator: $active_role, active_value: '忍', fn: toggleRole('忍') },
-        { name: "MARKSMAN", active_indicator: $active_role, active_value: '射', fn: toggleRole('射') },
-        { name: "TANK", active_indicator: $active_role, active_value: '守', fn: toggleRole('守') },
-        { name: "MAGE", active_indicator: $active_role, active_value: '巫', fn: toggleRole('巫') },
-        { name: "SUPPORT", active_indicator: $active_role, active_value: '祝', fn: toggleRole('祝') },
-      ]} />
-      <span class="mobile-header-mode-toggle">
-        <Toggles iconOnly=true no_collapse=true toggle_icon="solar:filter-bold" anchor_direction="left" buttons={[
-          { name: "🔎", active_indicator: 'a', active_value: 'q', fn: toggleMobileHeaderMode('filter') },
-        ]} />
-      </span>
-    </div>
-  {/if}
-
-  {#if mobileHeaderDisplayMode === 'filter'}
-    <div class="shiki-selection-header">
-      <FilterInput
-        fn={filterShiki}
-        bind:search_value={search_value}
-        clearFunction={clearSearch}
-      />
-      <Toggles iconOnly=true no_collapse=true toggle_icon="icon-park-outline:switch" anchor_direction="left" buttons={[
-        { name: "🔃", active_indicator: 'a', active_value: 'a', fn: toggleMobileHeaderMode('normal') },
-      ]} />
-    </div>
-  {/if}
+<div class="shiki-selection-header">
+  <ButtonGroup>
+    <Button2 active={$isAscending === true} fn={() => sortAscend()}>
+      A-Z
+    </Button2>
+    <Button2 active={$isAscending === false} fn={() => sortDescend()}>
+      Z-A
+    </Button2>
+  </ButtonGroup>
+  <div class="desktop-role-switcher-wrapper">
+    <ButtonGroup>
+      <Button2 fn={() => randomShikigami()} styles='font-weight: 800;'>
+        RANDOM
+      </Button2>
+      <Button2 active={$active_role === 'all'} fn={toggleRole('all')}>
+        ALL
+      </Button2>
+      <Button2 active={$active_role === '侍'} fn={toggleRole('侍')}>
+        SAMURAI
+      </Button2>
+      <Button2 active={$active_role === '忍'} fn={toggleRole('忍')}>
+        NINJA
+      </Button2>
+      <Button2 active={$active_role === '射'} fn={toggleRole('射')}>
+        MARKSMAN
+      </Button2>
+      <Button2 active={$active_role === '守'} fn={toggleRole('守')}>
+        TANK
+      </Button2>
+      <Button2 active={$active_role === '巫'} fn={toggleRole('巫')}>
+        MAGE
+      </Button2>
+      <Button2 active={$active_role === '祝'} fn={toggleRole('祝')}>
+        SUPPORT
+      </Button2>
+    </ButtonGroup>
+  </div>
+  <div class="mobile-role-switcher-wrapper">
+    <Dropdown bind:this={mobile_role_switcher_toggle} label={roles[$active_role] || "ALL"}>
+      <Button2 fn={() => randomShikigami()} icon="ion:dice" />
+      <Button2 active={$active_role === 'all'} fn={toggleRole('all')}>
+        ALL
+      </Button2>
+      <Button2 active={$active_role === '侍'} fn={toggleRole('侍')}>
+        SAMURAI
+      </Button2>
+      <Button2 active={$active_role === '忍'} fn={toggleRole('忍')}>
+        NINJA
+      </Button2>
+      <Button2 active={$active_role === '射'} fn={toggleRole('射')}>
+        MARKSMAN
+      </Button2>
+      <Button2 active={$active_role === '守'} fn={toggleRole('守')}>
+        TANK
+      </Button2>
+      <Button2 active={$active_role === '巫'} fn={toggleRole('巫')}>
+        MAGE
+      </Button2>
+      <Button2 active={$active_role === '祝'} fn={toggleRole('祝')}>
+        SUPPORT
+      </Button2>
+    </Dropdown>
+  </div>
+</div>
   
 <div class="shiki-selection-container">
   {#if $hasBeenLeft}
@@ -186,20 +177,22 @@
 
 <style>
 
-  .mobile-header-mode-toggle {
+  .mobile-role-switcher-wrapper {
     display: none;
+  }
+
+  @media screen and (width < 865px) {
+    .desktop-role-switcher-wrapper {
+      display: none;
+    }
+    .mobile-role-switcher-wrapper {
+      display: block;
+    }
   }
 
   @media only screen and (max-width: 500px) {
     .shiki-selection-header {
       margin: 0 10px 10px 10px;
-      justify-content: flex-end;
-    }
-    .desktop-filter-bar-visibility-wrapper {
-      display: none;
-    }
-    .mobile-header-mode-toggle {
-      display: block;
     }
   }
 
