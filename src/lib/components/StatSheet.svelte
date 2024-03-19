@@ -204,10 +204,10 @@
 
   <ButtonGroup>
     {#each [
-      { name: 'base', icon: 'ph:plant-fill' },
+      { name: 'base', icon: 'ic:round-minus' },
       { name: 'growth', icon: 'uil:arrow-growth' }
     ] as btn}
-      <Button2 active={$currentStatValues === btn.name} fn={() => switchValues(btn.name)} icon={btn.icon}></Button2>
+      <Button2 active={$currentStatValues === btn.name} fn={() => switchValues(btn.name)} icon={btn.icon} />
     {/each}
   </ButtonGroup>
 
