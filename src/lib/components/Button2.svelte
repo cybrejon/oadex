@@ -44,6 +44,7 @@
     border: none;
     padding: 6px 15px;
     display: flex;
+    font-size: .8rem;
     column-gap: 10px;
     border-radius: 6px;
     color: #ffffffad;
@@ -54,7 +55,6 @@
     /* background-color: #4c5058; */
     background-color: transparent;
     outline-offset: 3px;
-    transition: .2s;
     outline: 2px dashed transparent;
   }
 
