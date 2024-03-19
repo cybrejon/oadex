@@ -189,7 +189,6 @@
   </Dropdown>
 
   <Dropdown label='Columns'>
-    <div style="height: 5px;"></div>
     <Checkbox bind:checked={$visibleColumns.names}>Names</Checkbox>
     <Checkbox bind:checked={$visibleColumns.role}>Role</Checkbox>
     <Checkbox bind:checked={$visibleColumns.patk}>P. ATK</Checkbox>
