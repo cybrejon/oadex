@@ -45,6 +45,7 @@ body {
 }
 
 .main-container {
-  width: 1120px;
+  /* width: 1120px; */
+  width: 1420px;
   margin: 0 auto;
 }

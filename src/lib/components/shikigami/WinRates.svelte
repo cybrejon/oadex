@@ -154,6 +154,7 @@
 
 <div class="wr-main-container">
 
+  <!-- TODO refactor page controls to use Button2 instead of the old Toggles component -->
   <div class={isChartVisible ? "main-header" : "main-header main-header--closed"}>
     {#if isChartVisible}
       <!-- <Toggles iconOnly=true no_collapse=true toggle_icon="ep:close-bold" anchor_direction="left" buttons={[

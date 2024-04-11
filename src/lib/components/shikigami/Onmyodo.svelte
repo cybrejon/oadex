@@ -2,6 +2,7 @@
   export let onmyodoData;
   export let images;
   import { colorCodeRemove } from '$lib/utils/colors.js';
+  import { highlight } from '$lib/utils/highlighting';
 </script>
 
 <div class="onmyodos">
@@ -12,7 +13,7 @@
       </div>
       <div class="text-container">
         <p class="onmyodo-name">{onmyodo.阴阳术名称}</p>
-        <p class="onmyodo-description">{colorCodeRemove(onmyodo.阴阳术说明)}</p>
+        <p class="onmyodo-description">{@html highlight(onmyodo.阴阳术说明)}</p>
       </div>
     </div>
   {/each}

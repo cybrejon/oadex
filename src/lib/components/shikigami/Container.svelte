@@ -2,9 +2,10 @@
   export let area_name;
   export let style;
   export let styles;
+  export let id;
 </script>
 
-<div class={style === 'transparent' ? 'container--alt' : 'container'} style:grid-area={area_name} style={styles}>
+<div {id} class={style === 'transparent' ? 'container--alt' : 'container'} style:grid-area={area_name} style={styles}>
   <slot></slot>
 </div>
 

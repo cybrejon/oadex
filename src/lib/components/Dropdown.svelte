@@ -1,16 +1,18 @@
 <script>
   import Icon from '@iconify/svelte';
+  export let icon = 'iconamoon:arrow-down-2-bold';
   export let label;
   export let activeLabel;
+  export let styles;
   let isOpen = false;
   export function toggle() {
     isOpen = !isOpen;
   }
 </script>
 
-<div class="dropdown">
+<div class="dropdown" style={styles}>
   <button on:click={toggle} type="button" class="dropdown-toggle">
-    <Icon icon='iconamoon:arrow-down-2-bold' style='font-size: 24px;' />
+    <Icon {icon} style='font-size: 24px;' />
     {#if label}
       {label}
     {/if}
@@ -36,6 +38,7 @@
     padding: 5px;
   }
   .dropdown-toggle {
+    min-width: 100px;
     user-select: none;
     gap: 10px;
     padding: 6px 18px 6px 15px;

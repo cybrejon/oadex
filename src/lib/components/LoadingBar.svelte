@@ -1,7 +1,6 @@
 <script>
-    import { isLoading } from "../../routes/store";
+  import { isLoading } from "$userStore/store";
 </script>
-
 
 {#if $isLoading}
   <div class="container">
