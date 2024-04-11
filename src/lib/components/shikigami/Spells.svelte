@@ -2,6 +2,7 @@
   export let spellData;
   export let images;
   import { colorCodeRemove } from '$lib/utils/colors.js';
+  import { highlight } from '$lib/utils/highlighting';
 </script>
 
 <div class="spells">
@@ -12,7 +13,7 @@
       </div>
       <div class="text-container">
         <p class="spell-name">{spell.灵咒名称}</p>
-        <p class="spell-description">{colorCodeRemove(spell.灵咒技能描述)}</p>
+        <p class="spell-description">{@html highlight(spell.灵咒技能描述)}</p>
       </div>
     </div>
   {/each}
