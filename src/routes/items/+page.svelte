@@ -11,13 +11,19 @@
   import Fuse from 'fuse.js';
   import ItemPreview from './ItemPreview.svelte';
   import Container from '$lib/components/shikigami/Container.svelte';
+  import Button2 from '$lib/components/Button2.svelte';
+  import ButtonGroup from '$lib/components/ButtonGroup.svelte';
 
   import { currentTier, currentType } from './items.stores';
   import { onMount } from 'svelte';
+  import Dropdown from '../../lib/components/Dropdown.svelte';
 
   export let data;
   const itemData = data.itemData;
   const itemQuery = data.itemQuery;
+
+  let tier_dropdown_toggle;
+  let type_dropdown_toggle;
 
   let isOpen_itemDrawer = false;
   const toggleMobileItemSelection = () => () => {
@@ -29,7 +35,7 @@
   });
 
   let mainIterable = itemData;
-  const filterItemsByType = (type, cTier) => () => {
+  const filterItemsByType = (type, cTier, isBeingMounted = false) => () => {
     if (cTier == 'All') {
       mainIterable = itemData.filter(item => item.type == type);
     } else {
@@ -37,9 +43,12 @@
     }
     currentType.update(t => t = type);
     search_value = '';
+    if (!isBeingMounted) {
+      type_dropdown_toggle.toggle();
+    }
   };
 
-  const resetTypeToAll = () => () => {
+  const resetTypeToAll = (isBeingMounted = false) => () => {
     if ($currentTier == 'All') {
       mainIterable = itemData;
     } else {
@@ -47,9 +56,12 @@
     }
     currentType.update(t => t = 'All');
     search_value = '';
+    if (!isBeingMounted) {
+      type_dropdown_toggle.toggle();
+    }
   };
 
-  const filterItemsByTier = (tier, cType) => () => {
+  const filterItemsByTier = (tier, cType, isBeingMounted = false) => () => {
     if (cType == 'All') {
       mainIterable = itemData.filter(item => item.tier == tier);
     } else {
@@ -57,9 +69,12 @@
     }
     currentTier.update(t => t = tier);
     search_value = '';
+    if (!isBeingMounted) {
+      tier_dropdown_toggle.toggle();
+    }
   };
 
-  const resetTierToAll = () => () => {
+  function resetTierToAll(isBeingMounted = false) {
     if ($currentType == 'All') {
       mainIterable = itemData;
     } else {
@@ -67,6 +82,9 @@
     }
     currentTier.update(t => t = 'All');
     search_value = '';
+    if (!isBeingMounted) {
+      tier_dropdown_toggle.toggle();
+    }
   };
 
   let search_value;
@@ -136,8 +154,8 @@
     let item;
     if (isGlobal) {
       item = itemData.filter(item => item.name == name)[0];
-      resetTierToAll()();
-      resetTypeToAll()();
+      resetTierToAll(true);
+      resetTypeToAll(true)();
     } else {
       item = mainIterable.filter(item => item.name == name)[0];
     }
@@ -158,11 +176,11 @@
 
   onMount(() => {
     if ($currentTier == 'All' && $currentType == 'All') {
-      resetTierToAll()();
-      resetTypeToAll()();
+      resetTierToAll(true);
+      resetTypeToAll(true)();
     } else {
-      filterItemsByTier($currentTier, $currentType)();
-      filterItemsByType($currentType, $currentTier)();
+      filterItemsByTier($currentTier, $currentType, true)();
+      filterItemsByType($currentType, $currentTier, true)();
     }
   });
 
@@ -175,40 +193,84 @@
 {#if mobileHeaderDisplayMode === 'normal'}
   <div class="shiki-selection-header">
 
-    <Toggles collapsed=true toggle_icon="streamline:money-graph-arrow-increase-ascend-growth-up-arrow-stats-graph-right-grow" anchor_direction="left" buttons={[
-      { name: "ALL", active_indicator: $currentTier, active_value: 'All', fn: resetTierToAll() },
-      { name: "T0", active_indicator: $currentTier, active_value: 'Advanced', fn: filterItemsByTier('Advanced', $currentType) },
-      { name: "T1", active_indicator: $currentTier, active_value: 'Intermediate', fn: filterItemsByTier('Intermediate', $currentType) },
-      { name: "T2", active_indicator: $currentTier, active_value: 'Basic', fn: filterItemsByTier('Basic', $currentType) },
-      { name: "SPCL1", active_indicator: $currentTier, active_value: 4, fn: filterItemsByTier(4, $currentType) },
-      { name: "SPCL2", active_indicator: $currentTier, active_value: 5, fn: filterItemsByTier(5, $currentType) },
-    ]} />
+    <Dropdown bind:this={tier_dropdown_toggle} label={typeof $currentTier === 'number' ? 'Special Items' : $currentTier} icon='streamline:money-graph-arrow-increase-ascend-growth-up-arrow-stats-graph-right-grow'>
+      <Button2 active={$currentTier === 'All'} fn={resetTierToAll}>
+        All
+      </Button2>
+      <Button2 active={$currentTier === 'Advanced'} fn={filterItemsByTier('Advanced', $currentType)}>
+        Tier 0
+      </Button2>
+      <Button2 active={$currentTier === 'Intermediate'} fn={filterItemsByTier('Intermediate', $currentType)}>
+        Tier 1
+      </Button2>
+      <Button2 active={$currentTier === 'Basic'} fn={filterItemsByTier('Basic', $currentType)}>
+        Tier 2
+      </Button2>
+      <Button2 active={$currentTier === 4} fn={filterItemsByTier(4, $currentType)}>
+        Special 1
+      </Button2>
+      <Button2 active={$currentTier === 5} fn={filterItemsByTier(5, $currentType)}>
+        Special 2
+      </Button2>
+    </Dropdown>
 
-    <span class="desktop-filter-bar-visibility-wrapper">
-      <FilterInput
-        width="215px"
-        fn={searchItems}
-        bind:search_value={search_value}
-        clearFunction={clearSearch}
-      />
-    </span>
+    <div class="desktop-item-type-switcher-wrapper">
+      <ButtonGroup>
+        <Button2 active={$currentType === 'ALL'} fn={resetTypeToAll()}>
+          ALL
+        </Button2>
+        <Button2 active={$currentType === 'Weapon'} fn={filterItemsByType('Weapon', $currentTier)}>
+          WEAPONS
+        </Button2>
+        <Button2 active={$currentType === 'Defense'} fn={filterItemsByType('Defense', $currentTier)}>
+          DEFENSE
+        </Button2>
+        <Button2 active={$currentType === 'Magic'} fn={filterItemsByType('Magic', $currentTier)}>
+          MAGIC
+        </Button2>
+        <Button2 active={$currentType === 'Jungle'} fn={filterItemsByType('Jungle', $currentTier)}>
+          JUNGLE
+        </Button2>
+        <Button2 active={$currentType === 'Movement'} fn={filterItemsByType('Movement', $currentTier)}>
+          MOVEMENT
+        </Button2>
+        <Button2 active={$currentType === 'Support'} fn={filterItemsByType('Support', $currentTier)}>
+          SUPPORT
+        </Button2>
+        <Button2 active={$currentType === 0} fn={filterItemsByType(0, $currentTier)}>
+          T2 OLD
+        </Button2>
+      </ButtonGroup>
+    </div>
 
-    <Toggles toggle_icon="fluent:tag-question-mark-32-filled" anchor_direction="left" buttons={[
-      { name: "ALL", active_indicator: $currentType, active_value: 'All', fn: resetTypeToAll() },
-      { name: "WEAPONS", active_indicator: $currentType, active_value: 'Weapon', fn: filterItemsByType('Weapon', $currentTier) },
-      { name: "DEFENSE", active_indicator: $currentType, active_value: 'Defense', fn: filterItemsByType('Defense', $currentTier) },
-      { name: "MAGIC", active_indicator: $currentType, active_value: 'Magic', fn: filterItemsByType('Magic', $currentTier) },
-      { name: "JUNGLE", active_indicator: $currentType, active_value: 'Jungle', fn: filterItemsByType('Jungle', $currentTier) },
-      { name: "MOVEMENT", active_indicator: $currentType, active_value: 'Movement', fn: filterItemsByType('Movement', $currentTier) },
-      { name: "SUPPORT", active_indicator: $currentType, active_value: 'Support', fn: filterItemsByType('Support', $currentTier) },
-      { name: "T2 OLD", active_indicator: $currentType, active_value: 0, fn: filterItemsByType(0, $currentTier) },
-    ]} />
-
-    <span class="mobile-header-mode-toggle">
-      <Toggles iconOnly=true no_collapse=true toggle_icon="solar:filter-bold" anchor_direction="left" buttons={[
-        { name: "🔎", active_indicator: 'a', active_value: 'q', fn: toggleMobileHeaderMode('filter') },
-      ]} />
-    </span>
+    <div class="mobile-item-type-switcher-wrapper">
+      <Dropdown bind:this={type_dropdown_toggle} label={typeof $currentType === 'number' ? 'Tier 2 Old' : $currentType}>
+        <Button2 active={$currentType === 'ALL'} fn={resetTypeToAll()}>
+          ALL
+        </Button2>
+        <Button2 active={$currentType === 'Weapon'} fn={filterItemsByType('Weapon', $currentTier)}>
+          WEAPONS
+        </Button2>
+        <Button2 active={$currentType === 'Defense'} fn={filterItemsByType('Defense', $currentTier)}>
+          DEFENSE
+        </Button2>
+        <Button2 active={$currentType === 'Magic'} fn={filterItemsByType('Magic', $currentTier)}>
+          MAGIC
+        </Button2>
+        <Button2 active={$currentType === 'Jungle'} fn={filterItemsByType('Jungle', $currentTier)}>
+          JUNGLE
+        </Button2>
+        <Button2 active={$currentType === 'Movement'} fn={filterItemsByType('Movement', $currentTier)}>
+          MOVEMENT
+        </Button2>
+        <Button2 active={$currentType === 'Support'} fn={filterItemsByType('Support', $currentTier)}>
+          SUPPORT
+        </Button2>
+        <Button2 active={$currentType === 0} fn={filterItemsByType(0, $currentTier)}>
+          T2 OLD
+        </Button2>
+      </Dropdown>
+    </div>
 
   </div>
 {/if}
@@ -291,7 +353,7 @@
     position: relative;
   }
 
-  .mobile-header-mode-toggle {
+  .mobile-item-type-switcher-wrapper {
     display: none;
   }
 
@@ -304,16 +366,19 @@
     flex-wrap: wrap;
   }
 
+  @media screen and (width < 940px) {
+    .desktop-item-type-switcher-wrapper {
+      display: none;
+    }
+    .mobile-item-type-switcher-wrapper {
+      display: block;
+    }
+  }
+
   @media only screen and (max-width: 500px) {
     .shiki-selection-header {
       margin: 0 10px 10px 10px;
       justify-content: flex-end;
-    }
-    .desktop-filter-bar-visibility-wrapper {
-      display: none;
-    }
-    .mobile-header-mode-toggle {
-      display: block;
     }
   }
 
