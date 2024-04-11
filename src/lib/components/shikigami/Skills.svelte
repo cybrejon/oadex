@@ -1,7 +1,7 @@
 <script>
 
   // import components
-  import { highlight } from '$utils/highlighting';
+  import { highlight } from '$lib/utils/highlighting';
   import Button2 from '../Button2.svelte';
   import Dropdown from '../Dropdown.svelte';
 
@@ -97,7 +97,9 @@
       </div>
     </div>
   </div>
-  <p class="skill-description">{@html skill_description}</p>
+  <p class="skill-description">
+    {@html skill_description}
+  </p>
   <div class="skill-properties-container">
     {#each skill_properties_unique as skill_prop}
       <div class="skill-property">
