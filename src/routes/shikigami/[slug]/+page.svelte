@@ -16,6 +16,9 @@
   import Toggles from '$lib/Toggles.svelte';
   import Onmyodo from '../../../lib/components/shikigami/Onmyodo.svelte';
   import Spells from '../../../lib/components/shikigami/Spells.svelte';
+  import Button2 from '../../../lib/components/Button2.svelte';
+  import ButtonGroup from '../../../lib/components/ButtonGroup.svelte';
+    import DamageTypePill from '../../../lib/components/DamageTypePill.svelte';
 
   // import data
   export let data;
@@ -88,13 +91,13 @@
 
   // perf / kda pager
   let current_page = 1;
-  const pager = (page) => () => {
+  const performancePagination = (page) => () => {
     current_page = page;
   }
 
   // basic info / bio pager
   let basicPage = 1;
-  const basicPager = (page) => () => {
+  const basicStatsPagination = (page) => () => {
     basicPage = page;
   }
 
@@ -116,6 +119,17 @@
     isSpellsShown = !isSpellsShown;
   }
 
+  function getDamageType() {
+    const skill_descriptions =
+    curr_shiki_obj.式神技能.天生被动.技能描述 +
+    curr_shiki_obj.式神技能.二技能.技能描述 +
+    curr_shiki_obj.式神技能.四技能.技能描述 +
+    curr_shiki_obj.式神技能.一技能.技能描述 +
+    curr_shiki_obj.式神技能.三技能.技能描述;
+    const damage_types = ['magic damage', 'physical damage', 'true damage'];
+    return damage_types.filter(damage => skill_descriptions.toLowerCase().includes(damage));
+  }
+
   try {
     let disqus_config = function () {
       this.page.url = window.location.href; // Use the current page's URL dynamically
@@ -130,10 +144,9 @@
       (d.head || d.body).appendChild(s);
     })();
   } catch (error) {
-    console.log(error);
-    console.log('[cybrejon] could not load Disqus');
+    console.log('[cybrejon] could not load Disqus, this is expected during development');
   }
-  
+
 </script>
 
 <svelte:head>
@@ -141,14 +154,47 @@
 </svelte:head>
 
 <div class="container">
+  
+  <!-- <ButtonGroup area_name="page-controls" styles="justify-content: flex-start; flex-wrap: wrap;">
+    <Button2 icon='ion:arrow-back' type="link" link="/" />
+    <Button2 type="link" link="/shikigami/{shiki_id}/edit">
+      Edit page
+    </Button2>
+    <Button2 type="link" link="/shikigami/{shiki_id}/buildsuggest">
+      Suggest build
+    </Button2>
+  </ButtonGroup> -->
+
+  <Container area_name="damage-type" styles='align-items: center; flex-direction: row; gap: 10px; flex-wrap: wrap;'>
+    <p style="font-size: .9rem;">Damage type:</p>
+    {#if getDamageType().includes('physical damage')}
+      <DamageTypePill damage_type='physical'>
+        Physical
+      </DamageTypePill>
+    {/if}
+    {#if getDamageType().includes('magic damage')}
+      <DamageTypePill damage_type='magic'>
+        Magic
+      </DamageTypePill>
+    {/if}
+    {#if getDamageType().includes('true damage')}
+      <DamageTypePill damage_type='true'>
+        True
+      </DamageTypePill>
+    {/if}
+  </Container>
 
   <Container area_name="basic">
 
     <div class="performance-pager-container">
-      <Toggles no_collapse="True" toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
-        { name: "BASIC", active_indicator: basicPage, active_value: 1, fn: basicPager(1) },
-        { name: "BIO", active_indicator: basicPage, active_value: 2, fn: basicPager(2) },
-      ]} />
+      <ButtonGroup>
+        <Button2 fn={basicStatsPagination(1)} active={basicPage === 1}>
+          BASIC
+        </Button2>
+        <Button2 fn={basicStatsPagination(2)} active={basicPage === 2}>
+          BIO
+        </Button2>
+      </ButtonGroup>
     </div>
 
     {#if basicPage === 1}
@@ -277,10 +323,14 @@
   <Container area_name="basic2">
 
     <div class="performance-pager-container">
-      <Toggles no_collapse="True" toggle_icon="mdi:menu-down" anchor_direction="right" buttons={[
-        { name: "PERFORMANCE", active_indicator: current_page, active_value: 1, fn: pager(1) },
-        { name: "KDA/KILLS", active_indicator: current_page, active_value: 2, fn: pager(2) },
-      ]} />
+      <ButtonGroup>
+        <Button2 fn={performancePagination(1)} active={current_page === 1}>
+          PERFORMANCE
+        </Button2>
+        <Button2 fn={performancePagination(2)} active={current_page === 2}>
+          KDA/KILLS
+        </Button2>
+      </ButtonGroup>
     </div>
     
     
@@ -602,6 +652,8 @@
     grid-template-rows: auto;
     /* align-items: center; */
     grid-template-areas: 
+    "page-controls page-controls page-controls page-controls"
+    "damage-type damage-type damage-type damage-type"
     "basic gallery gallery basic2"
     "stats-1 stats-1 skills skills"
     "usage usage skills skills"
@@ -729,6 +781,8 @@
     .container {
       grid-template-columns: 1fr;
       grid-template-areas: 
+      "page-controls"
+      "damage-type"
       "gallery"
       "basic"
       "basic2"
