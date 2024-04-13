@@ -3,6 +3,7 @@
   // import data
   export let data;
   const shikiga_data = data.shikiga_data;
+  const damage_types = data.damage_types;
   const images = data.images;
 
   // import components
@@ -51,6 +52,7 @@
 {#if !$isTableMode}
   <Shikigamis
     {shikiga_data}
+    {damage_types}
     {images}
   />
 {/if}
