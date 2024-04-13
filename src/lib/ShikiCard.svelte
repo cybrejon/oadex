@@ -7,6 +7,7 @@
   export let shiki_name;
   export let new_shiki;
   export let in_rotation;
+  export let dtype;
 
   let isLoading_local = false;
   const loading = () => () => {
@@ -38,12 +39,28 @@
         </div>
       </div> -->
     </div>
+
+    <!-- TAGS -->
     {#if new_shiki}
-      <p class="new-tag">RECENT</p>
+      <p class="tag new-tag">RECENT</p>
     {/if}
     {#if in_rotation}
-      <p class="free-tag">FREE</p>
+      <p class="tag free-tag">FREE</p>
     {/if}
+
+    <!-- DAMAGE TYPES -->
+    {#if dtype[0].damage_types.includes('physical damage') && dtype[0].damage_types.includes('magic damage')}
+      <p class="tag damage-physical-magic-tag">P + M</p>
+    {:else if dtype[0].damage_types.includes('physical damage') && dtype[0].damage_types.includes('true damage')}
+      <p class="tag damage-physical-true-tag">P + T</p>
+    {:else if dtype[0].damage_types.includes('magic damage') && dtype[0].damage_types.includes('true damage')}
+      <p class="tag damage-magic-true-tag">M + T</p>
+    {:else if dtype[0].damage_types.includes('physical damage')}
+      <p class="tag damage-physical-tag">P</p>
+    {:else if dtype[0].damage_types.includes('magic damage')}
+      <p class="tag damage-magic-tag">M</p>
+    {/if}
+
     {#if isLoading_local}
       <div class="loading">
         <Icon icon="svg-spinners:blocks-shuffle-2" style="font-size: 24px;" />
@@ -112,31 +129,59 @@
   grid-template-rows: repeat(2, 1fr);
 }
 
-.new-tag {
+.tag {
   text-align: center;
   font-weight: 800;
   font-size: .6rem;
   position: absolute;
+  padding: 2px 5px 2px 5px;
+  border-radius: 3px;
+}
+
+.new-tag {
   top: 10px;
   left: 10px;
   background-color: red;
   color: #fff;
-  padding: 3px 5px 2px 5px;
-  border-radius: 3px;
 }
 
 .free-tag {
-  text-align: center;
-  font-weight: 800;
-  font-size: .6rem;
-  position: absolute;
   bottom: 39px;
   right: 5px;
   left: 5px;
   background-color: #CDFE05;
   color: #282A2F;
-  padding: 3px 5px 2px 5px;
-  border-radius: 3px;
+}
+
+.damage-physical-magic-tag {
+  bottom: 5px;
+  left: 5px;
+  background-image: linear-gradient(to right, #fe0505, #b705fe);
+  color: #ffffff;
+}
+.damage-physical-true-tag {
+  bottom: 5px;
+  left: 5px;
+  background-image: linear-gradient(to right, #fe0505, #05d9fe);
+  color: #ffffff;
+}
+.damage-magic-true-tag {
+  bottom: 5px;
+  left: 5px;
+  background-image: linear-gradient(to right, #b705fe, #05d9fe);
+  color: #ffffff;
+}
+.damage-physical-tag {
+  bottom: 5px;
+  left: 5px;
+  background-color: #fe0505;
+  color: #ffffff;
+}
+.damage-magic-tag {
+  bottom: 5px;
+  left: 5px;
+  background-color: #b705fe;
+  color: #ffffff;
 }
 
 .shiki-card:hover {
@@ -167,7 +212,7 @@
 }
 
 .shikigami-name {
-  /* white-space: nowrap; */
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 80px;
