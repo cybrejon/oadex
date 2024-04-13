@@ -17,8 +17,9 @@
 
   import { roles } from "$lib/json/dictionary.json";
 
-  export let shikiga_data;
-  export let images;
+  export let shikiga_data; // object
+  export let damage_types; // array
+  export let images; // array
 
   import Fuse from 'fuse.js';
   import { onDestroy } from 'svelte';
@@ -91,10 +92,8 @@
     </Button2>
   </ButtonGroup>
   <div class="desktop-role-switcher-wrapper">
+    <Button2 fn={() => randomShikigami()} styles='fonqt-weight: 800;' icon='ion:dice' />
     <ButtonGroup>
-      <Button2 fn={() => randomShikigami()} styles='font-weight: 800;'>
-        RANDOM
-      </Button2>
       <Button2 active={$active_role === 'all'} fn={toggleRole('all')}>
         ALL
       </Button2>
@@ -150,7 +149,10 @@
   {#if $hasBeenLeft}
     {#each $role_config as shiki}
 
+    {@const dtype = damage_types.filter(damage => damage.name === shiki)}
+
       <ShikiCard
+        {dtype}
         slug = {shikiga_data[shiki].式神ID}
         src = {images[shikiga_data[shiki].式神方头像]}
         shiki_name = {shiki}
@@ -161,7 +163,10 @@
   {:else}
     {#each role as shiki}
 
+    {@const dtype = damage_types.filter(damage => damage.name === shiki)}
+
       <ShikiCard
+        {dtype}
         slug = {shikiga_data[shiki].式神ID}
         src = {images[shikiga_data[shiki].式神方头像]}
         shiki_name = {shiki}
@@ -176,6 +181,13 @@
 
 
 <style>
+  
+  .desktop-role-switcher-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
 
   .mobile-role-switcher-wrapper {
     display: none;
