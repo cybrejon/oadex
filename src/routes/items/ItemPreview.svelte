@@ -17,10 +17,8 @@ $: composites = requiredItems && itemData.filter(item => requiredItems.includes(
 
 import ItemCard from '$lib/components/items/ItemCard.svelte';
 import Note2 from '$lib/components/Note2.svelte';
-
-import { colorCodeRemove } from '$lib/utils/colors';
-
 import { itemNotes } from '$lib/json/item_notes.json';
+import { highlight } from '$lib/utils/highlighting';
 
 </script>
 
@@ -38,13 +36,13 @@ import { itemNotes } from '$lib/json/item_notes.json';
   <div class="body">
     {#if abilities.active}
       <h3>Active Abilities</h3>
-      <p class="ability-text">{colorCodeRemove(abilities.active)}</p>
+      <p class="ability-text">{@html highlight(abilities.active)}</p>
     {/if}
 
     {#if abilities.passive}
       <h3>Passive Abilities</h3>
       {#each abilities.passive as passive}
-        <p class="ability-text">{colorCodeRemove(passive)}</p>
+        <p class="ability-text">{@html highlight(passive)}</p>
       {/each}
     {/if}
 
@@ -82,7 +80,7 @@ import { itemNotes } from '$lib/json/item_notes.json';
 
     {#if specialAbility}
       <h3>Special Ability</h3>
-      <p>{colorCodeRemove(specialAbility)}</p>
+      <p>{@html highlight(specialAbility)}</p>
     {/if}
 
   </div>
