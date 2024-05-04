@@ -199,7 +199,11 @@
               <tr class={shikiName === data.name ? "shiki-name-active" : ""}>
                 <td>{i+1}.</td>
                 <td class="shiki-name"><LazyImage class="wr-shikigami-image" alt="shikigami portrait" src="{images[data.image]}"/><a href="/shikigami/{data.id}" target="_blank">{data.name}</a></td>
-                <td>{data.wr}% <span class="nth">- {data.number == 1 ? '🏆' : `${data.number}.`}</span></td>
+                <td 
+                class:red={data.wr < 50}
+                class:yellow={data.wr >= 50 && data.wr <= 51}
+                class:blue={data.wr >= 51}
+                >{data.wr}% <span class="nth">- {data.number == 1 ? '🏆' : `${data.number}.`}</span></td>
                 <td>{data.pickRate}%</td>
                 <td>{data.kda}</td>
                 <td>{data.kills}</td>
@@ -214,6 +218,16 @@
 
 
 <style>
+
+  .red {
+    color: #ff4545;
+  }
+  .yellow {
+    color: #fffb00;
+  }
+  .blue {
+    color: #7976ff;
+  }
 
   td {
     background-color: #3C3F46;
