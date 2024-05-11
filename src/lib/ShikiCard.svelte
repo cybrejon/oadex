@@ -17,8 +17,6 @@
   import placeholderImage from '$lib/assets/plat.png';
   import Icon from '@iconify/svelte';
 
-  $: console.log(dtype[0].damage_types.length === 3);
-
 </script>
 
 <a on:click={loading()} href="/shikigami/{slug}" class="shiki-card-anchor" data-sveltekit-preload-data="tap">
