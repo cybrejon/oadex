@@ -17,6 +17,8 @@
   import placeholderImage from '$lib/assets/plat.png';
   import Icon from '@iconify/svelte';
 
+  $: console.log(dtype[0].damage_types.length === 3);
+
 </script>
 
 <a on:click={loading()} href="/shikigami/{slug}" class="shiki-card-anchor" data-sveltekit-preload-data="tap">
@@ -49,16 +51,18 @@
     {/if}
 
     <!-- DAMAGE TYPES -->
-    {#if dtype[0].damage_types.includes('physical damage') && dtype[0].damage_types.includes('magic damage')}
+    {#if dtype[0].damage_types.includes('physical damage') && dtype[0].damage_types.includes('magic damage') && !dtype[0].damage_types.includes('true damage')}
       <p class="tag damage-physical-magic-tag">P + M</p>
-    {:else if dtype[0].damage_types.includes('physical damage') && dtype[0].damage_types.includes('true damage')}
+    {:else if dtype[0].damage_types.includes('physical damage') && dtype[0].damage_types.includes('true damage') && !dtype[0].damage_types.includes('magic damage')}
       <p class="tag damage-physical-true-tag">P + T</p>
-    {:else if dtype[0].damage_types.includes('magic damage') && dtype[0].damage_types.includes('true damage')}
+    {:else if dtype[0].damage_types.includes('magic damage') && dtype[0].damage_types.includes('true damage') && !dtype[0].damage_types.includes('physical damage')}
       <p class="tag damage-magic-true-tag">M + T</p>
-    {:else if dtype[0].damage_types.includes('physical damage')}
+    {:else if dtype[0].damage_types.includes('physical damage') && !dtype[0].damage_types.includes('true damage')}
       <p class="tag damage-physical-tag">P</p>
-    {:else if dtype[0].damage_types.includes('magic damage')}
+    {:else if dtype[0].damage_types.includes('magic damage') && !dtype[0].damage_types.includes('true damage')}
       <p class="tag damage-magic-tag">M</p>
+    {:else if dtype[0].damage_types.length === 3}
+      <p class="tag damage-all-tag">P + M + T</p>
     {/if}
 
     {#if isLoading_local}
@@ -157,6 +161,12 @@
   bottom: 5px;
   left: 5px;
   background-image: linear-gradient(to right, #fe0505, #b705fe);
+  color: #ffffff;
+}
+.damage-all-tag {
+  bottom: 5px;
+  left: 5px;
+  background-image: linear-gradient(to right, #fe0505, #b705fe, #05d9fe);
   color: #ffffff;
 }
 .damage-physical-true-tag {
