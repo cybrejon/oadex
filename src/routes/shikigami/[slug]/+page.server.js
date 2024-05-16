@@ -9,6 +9,23 @@ export async function load({ params, fetch }) {
 
   const sdata = await getShikigamiData();
 
+  async function getGuideList(u) {
+    try {
+      const x = await fetch(u);
+      return x.json();
+    } catch (error) {
+      throw new Error(`Could not find any guides for the shikigami ${params.slug}, or see error if otherwise:\n${error.message}`);
+    };
+  }
+
+  const shikigami_name = sdata.式神名称;
+  let guide_list;
+  try {
+    guide_list = await getGuideList(`${PRIVATE_HOST_IP}/cms/api/guide/list?shiki_id=${shikigami_name}`);
+  } catch (error) {
+    console.log(error);    
+  }
+
   const getBioData = async () => {
     const bdr = await fetch(`${PRIVATE_HOST_IP}/bios?queryshiki=${sdata.式神名称}`);
     return await bdr.json();
@@ -106,6 +123,7 @@ export async function load({ params, fetch }) {
   const spells = await getSpells();
     
   return {
+    guide_list,
     performance: {
       kda,
       avg_kills,
