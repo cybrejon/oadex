@@ -8,24 +8,27 @@
   import List from '$lib/components/renderers/List.svelte';
   import Paragraph from '$lib/components/renderers/Paragraph.svelte';
   import Strong from '$lib/components/renderers/inline/Strong.svelte';
+  import Container from "$lib/components/shikigami/Container.svelte";
 
 </script>
 
-<div class="markdown-container">
-  <h1 class="title">{data.guide_data.title}</h1>
-  
-  <SvelteMarkdown source={data.guide_data.md.join('\n\n')}
-    renderers={
-      {
-        blockquote: BlockQuote,
-        hr: HorizontalRule,
-        heading: Heading,
-        list: List,
-        paragraph: Paragraph,
+<Container>
+  <div class="markdown-container">
+    <h1 class="title">{data.guide_data.title}</h1>
+
+    <SvelteMarkdown source={data.guide_data.md.join('\n\n')}
+      renderers={
+        {
+          blockquote: BlockQuote,
+          hr: HorizontalRule,
+          heading: Heading,
+          list: List,
+          paragraph: Paragraph,
+        }
       }
-    }
-  />
-</div>
+    />
+  </div>
+</Container>
 
 <style>
   .title {
