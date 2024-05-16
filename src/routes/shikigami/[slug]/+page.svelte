@@ -14,15 +14,17 @@
   import Skills from '$lib/components/shikigami/Skills.svelte';
   import ItemGallery from '$lib/components/shikigami/ItemGallery.svelte';
   import Toggles from '$lib/Toggles.svelte';
-  import Onmyodo from '../../../lib/components/shikigami/Onmyodo.svelte';
-  import Spells from '../../../lib/components/shikigami/Spells.svelte';
-  import Button2 from '../../../lib/components/Button2.svelte';
-  import ButtonGroup from '../../../lib/components/ButtonGroup.svelte';
-    import DamageTypePill from '../../../lib/components/DamageTypePill.svelte';
+  import Onmyodo from '$lib/components/shikigami/Onmyodo.svelte';
+  import Spells from '$lib/components/shikigami/Spells.svelte';
+  import Button2 from '$lib/components/Button2.svelte';
+  import ButtonGroup from '$lib/components/ButtonGroup.svelte';
+  import DamageTypePill from '$lib/components/DamageTypePill.svelte';
+  import GuidesList from '$lib/components/guides/GuidesList.svelte';
 
   // import data
   export let data;
   const { dictionary } = data;
+  const guide_list = data.guide_list;
   const shikiga_data = data.shikiga_data;
   const bioData = data.bioData;
   const images = data.images;
@@ -590,9 +592,9 @@
     <p class="usage-text">{@html usage}</p>
   </Container>
 
-  <Container area_name="builds">
-    <h3>📚 Builds</h3>
-    <ItemGallery />
+  <Container area_name="guides">
+    <h3>📚 Guides</h3>
+    <GuidesList {guide_list} />
   </Container>
 
   <Container area_name="onmyodo">
@@ -658,7 +660,7 @@
     "stats-1 stats-1 skills skills"
     "usage usage skills skills"
     "spells spells onmyodo onmyodo"
-    "builds builds builds builds"
+    "guides guides guides guides"
     "disqus disqus disqus disqus";
     gap: 20px;
     align-content: center;
@@ -777,7 +779,7 @@
     margin-top: 10px;
   }
 
-  @media only screen and (max-width: 845px) {
+  @media screen and (max-width: 845px) {
     .container {
       grid-template-columns: 1fr;
       grid-template-areas: 
@@ -789,7 +791,7 @@
       "stats-1"
       "skills"
       "usage"
-      "builds"
+      "guides"
       "onmyodo"
       "spells"
       "disqus";
