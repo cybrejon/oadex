@@ -9,6 +9,7 @@ export async function load({ data }) {
   const performance = data.performance;
   const onmyodos = data.onmyodos;
   const spells = data.spells;
+  const guide_list = data.guide_list;
 
   const wrData = data.wrData;
   const wrData_ban = data.wrData_ban;
@@ -16,6 +17,7 @@ export async function load({ data }) {
   const wrData_fogban = data.wrData_fogban;
 
   return {
+    guide_list,
     spells,
     onmyodos,
     performance,
