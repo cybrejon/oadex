@@ -12,7 +12,7 @@
 
 </script>
 
-<Container>
+<Container styles="padding: 30px 15px;">
   <div class="markdown-container">
     <h1 class="title">{data.guide_data.title}</h1>
 

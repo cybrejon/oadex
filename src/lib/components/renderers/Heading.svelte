@@ -20,6 +20,6 @@
 
 <style>
   h1, h2, h3, h4, h5, h6 {
-    margin: 10px 0 20px;
+    margin: 15px 0 10px;
   }
 </style>
