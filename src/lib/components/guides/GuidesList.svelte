@@ -15,10 +15,6 @@
             <Icon icon='lets-icons:book-fill' style='font-size: 1.3rem;' />
             <p>{guide.title}</p>
           </div>
-          <div class="guide--author-container">
-            <p>{guide.author}</p>
-            <Icon icon='mdi:user' style='font-size: 1.3rem;' />
-          </div>
         </div>
       </a>
     {/each}
