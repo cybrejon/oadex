@@ -6,10 +6,9 @@
   import '$assets/github_markdown.css';
 </script>
 
-
 <ButtonGroup area_name="page-controls" styles="justify-content: flex-start; flex-wrap: wrap; margin-bottom: 20px;">
   <Button2 icon='ion:arrow-back' type="button" fn={() => history.back()} />
-  <Button2 type="button">Submit Guide</Button2>
+  <!-- <Button2 type="button">Submit Guide</Button2> -->
 </ButtonGroup>
 
 <Container styles="padding: 30px 15px;">
