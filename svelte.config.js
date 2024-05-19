@@ -6,12 +6,13 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$userStore: 'src/userStore',
-			$utils: 'src/utils'
+			$utils: 'src/utils',
+			$assets: 'src/lib/assets'
 		}
 	},
-	vitePlugin: {
-		inspector: true
-	}
+	// vitePlugin: {
+	// 	inspector: true
+	// }
 };
 
 export default config;
