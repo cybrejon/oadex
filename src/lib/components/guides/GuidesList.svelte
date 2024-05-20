@@ -19,7 +19,7 @@
       </a>
     {/each}
   {:else}
-      <p>no guides for this Shikigami yet</p>
+    <p>No guides for this Shikigami yet. Join our <a href="http://discord.gg/KGsaAet">Discord</a> server to submit a guide.</p>
   {/if}
   
 </div>
