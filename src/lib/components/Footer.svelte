@@ -1,36 +1,14 @@
 <script>
-  import Toggles from '$lib/Toggles.svelte';
-  import { goto } from '$app/navigation';
+  import Button2 from '$lib/components/Button2.svelte';
 </script>
 
 <div class="footer">
 
   <div class="footer-block">
     <div class="footer-links">
-      <Toggles
-        iconOnly=true
-        no_collapse=true
-        toggle_icon="mingcute:discord-fill"
-        buttons={[
-          { name: "a", active_indicator: 'a', active_value: 'a', fn: () => goto('http://discord.gg/KGsaAet') },
-        ]}
-      />
-      <Toggles
-        iconOnly=true
-        no_collapse=true
-        toggle_icon="mdi:github"
-        buttons={[
-          { name: "a", active_indicator: 'a', active_value: 'a', fn: () => goto('https://github.com/cybrejon/oadex') },
-        ]}
-      />
-      <Toggles
-        iconOnly=true
-        no_collapse=true
-        toggle_icon="tabler:api"
-        buttons={[
-          { name: "a", active_indicator: 'a', active_value: 'a', fn: () => goto('https://github.com/cybrejon/onmyoji-arena-wiki-api') },
-        ]}
-      />
+      <Button2 icon='mingcute:discord-fill' type='link' link='http://discord.gg/KGsaAet' />
+      <Button2 icon='mdi:github' type='link' link='https://github.com/cybrejon/oadex' />
+      <Button2 icon='tabler:api' type='link' link='https://github.com/cybrejon/onmyoji-arena-wiki-api' />
     </div>
     <p style="font-weight: 600;">OADex 2024, All rights reserved.</p>
   </div>
