@@ -9,6 +9,14 @@
   export let in_rotation;
   export let dtype;
 
+  $: d_names = dtype[0].damage_types;
+
+  let labels = {
+    "physical damage": "P",
+    "magic damage": "M",
+    "true damage": "T"
+  };
+
   let isLoading_local = false;
   const loading = () => () => {
     isLoading_local = !isLoading_local;
@@ -48,20 +56,18 @@
       <p class="tag free-tag">FREE</p>
     {/if}
 
-    <!-- DAMAGE TYPES -->
-    {#if dtype[0].damage_types.includes('physical damage') && dtype[0].damage_types.includes('magic damage') && !dtype[0].damage_types.includes('true damage')}
-      <p class="tag damage-physical-magic-tag">P + M</p>
-    {:else if dtype[0].damage_types.includes('physical damage') && dtype[0].damage_types.includes('true damage') && !dtype[0].damage_types.includes('magic damage')}
-      <p class="tag damage-physical-true-tag">P + T</p>
-    {:else if dtype[0].damage_types.includes('magic damage') && dtype[0].damage_types.includes('true damage') && !dtype[0].damage_types.includes('physical damage')}
-      <p class="tag damage-magic-true-tag">M + T</p>
-    {:else if dtype[0].damage_types.includes('physical damage') && !dtype[0].damage_types.includes('true damage')}
-      <p class="tag damage-physical-tag">P</p>
-    {:else if dtype[0].damage_types.includes('magic damage') && !dtype[0].damage_types.includes('true damage')}
-      <p class="tag damage-magic-tag">M</p>
-    {:else if dtype[0].damage_types.length === 3}
-      <p class="tag damage-all-tag">P + M + T</p>
-    {/if}
+    <!-- TODO include Spell damage -->
+
+    <div class="tags">
+      {#each d_names as damage}
+          <p
+            class="tag"
+            class:damage-physical-tag = {damage === 'physical damage'}
+            class:damage-magic-tag = {damage === 'magic damage'}
+            class:damage-true-tag = {damage === 'true damage'}
+          >{labels[damage]}</p>
+      {/each}
+    </div>
 
     {#if isLoading_local}
       <div class="loading">
@@ -131,16 +137,25 @@
   grid-template-rows: repeat(2, 1fr);
 }
 
+.tags {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  display: flex;
+  gap: 5px;
+}
+
 .tag {
   text-align: center;
   font-weight: 800;
   font-size: .6rem;
-  position: absolute;
   padding: 2px 5px 2px 5px;
   border-radius: 3px;
 }
 
 .new-tag {
+  position: absolute;
   top: 10px;
   left: 10px;
   background-color: red;
@@ -148,6 +163,7 @@
 }
 
 .free-tag {
+  position: absolute;
   bottom: 39px;
   right: 5px;
   left: 5px;
@@ -155,41 +171,17 @@
   color: #282A2F;
 }
 
-.damage-physical-magic-tag {
-  bottom: 5px;
-  left: 5px;
-  background-image: linear-gradient(to right, #fe0505, #b705fe);
-  color: #ffffff;
-}
-.damage-all-tag {
-  bottom: 5px;
-  left: 5px;
-  background-image: linear-gradient(to right, #fe0505, #b705fe, #05d9fe);
-  color: #ffffff;
-}
-.damage-physical-true-tag {
-  bottom: 5px;
-  left: 5px;
-  background-image: linear-gradient(to right, #fe0505, #05d9fe);
-  color: #ffffff;
-}
-.damage-magic-true-tag {
-  bottom: 5px;
-  left: 5px;
-  background-image: linear-gradient(to right, #b705fe, #05d9fe);
-  color: #ffffff;
-}
 .damage-physical-tag {
-  bottom: 5px;
-  left: 5px;
   background-color: #fe0505;
   color: #ffffff;
 }
 .damage-magic-tag {
-  bottom: 5px;
-  left: 5px;
   background-color: #b705fe;
   color: #ffffff;
+}
+.damage-true-tag {
+  background-color: #05d9fe;
+  color: #36393F;
 }
 
 .shiki-card:hover {
