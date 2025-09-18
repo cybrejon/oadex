@@ -1,40 +1,43 @@
 {
-	"name": "test3",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview"
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.5.27",
-		"@sveltejs/vite-plugin-svelte": "^4.0.0",
-		"svelte": "^5.0.0",
-		"vite": "^5.4.4"
-	},
-	"type": "module",
-	"dependencies": {
-		"@formkit/auto-animate": "^0.8.2",
-		"@iconify/svelte": "^4.0.1",
-		"@inqling/svelte-icons": "^4.1.3",
-		"@notionhq/client": "^2.2.15",
-		"@sveltejs/adapter-vercel": "^5.3.0",
-		"@vercel/analytics": "^1.2.2",
-		"axios": "^1.6.8",
-		"dotenv": "^16.4.5",
-		"fuse.js": "^7.0.0",
-		"fuzzy-search": "^3.2.1",
-		"marked": "^12.0.2",
-		"rehype-sanitize": "^6.0.0",
-		"rehype-stringify": "^10.0.0",
-		"remark-parse": "^11.0.0",
-		"remark-rehype": "^11.1.0",
-		"showdown": "^2.1.0",
-		"snarkdown": "^2.0.0",
-		"svelte-lazy": "^1.2.7",
-		"svelte-lazy-image": "^0.5.1",
-		"unified": "^11.0.4"
-	}
+  "name": "test3",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/kit": "^2.5.27",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0",
+    "svelte": "^5.0.0",
+    "vite": "^5.4.4"
+  },
+  "type": "module",
+  "dependencies": {
+    "@formkit/auto-animate": "^0.8.2",
+    "@iconify/svelte": "^4.0.1",
+    "@inqling/svelte-icons": "^4.1.3",
+    "@notionhq/client": "^2.2.15",
+    "@sveltejs/adapter-vercel": "^5.3.0",
+    "@vercel/analytics": "^1.2.2",
+    "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
+    "fuse.js": "^7.0.0",
+    "fuzzy-search": "^3.2.1",
+    "marked": "^12.0.2",
+    "rehype-sanitize": "^6.0.0",
+    "rehype-stringify": "^10.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.0",
+    "showdown": "^2.1.0",
+    "snarkdown": "^2.0.0",
+    "svelte-lazy": "^1.2.7",
+    "svelte-lazy-image": "^0.5.1",
+    "unified": "^11.0.4"
+  },
+  "engines": {
+    "node": "22.19.0"
+  }
 }
