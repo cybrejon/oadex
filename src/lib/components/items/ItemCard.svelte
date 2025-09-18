@@ -49,7 +49,7 @@
             {#if attribute.includes("Life Steal")}
               <p class="ic-item-extra life-steal">Life Steal</p>
             {/if}
-            {#if attribute.includes("HP") && !attribute.includes("HP Regen")}
+            {#if attribute.includes("HP") && !attribute.includes("HP Regen") && !attribute.includes("Bonus HP")}
               <p class="ic-item-extra hp">HP</p>
             {/if}
             {#if attribute.includes("HP Regen")}
@@ -57,6 +57,18 @@
             {/if}
             {#if attribute.includes("Cooldown Reduction") && !attribute.includes("Spell Cooldown Reduction")}
               <p class="ic-item-extra cdr">CDR</p>
+            {/if}
+            {#if attribute.includes("Magic Resist")}
+              <p class="ic-item-extra mres">MRes</p>
+            {/if}
+            {#if attribute.includes("MP") && !attribute.includes("MP Regen")}
+              <p class="ic-item-extra mp">MP</p>
+            {/if}
+            {#if attribute.includes("MP Regen")}
+              <p class="ic-item-extra mp-regen">MP Regen</p>
+            {/if}
+            {#if attribute.includes("Armor")}
+              <p class="ic-item-extra armor">Armor</p>
             {/if}
           {/each}
         </div>
@@ -196,6 +208,18 @@
   }
   .cdr {
     color: #6beeff;
+  }
+  .mp {
+    color: #6b6eff;
+  }
+  .mp-regen {
+    color: #ff6bf8;
+  }
+  .mres {
+    color: #bc6bff;
+  }
+  .armor {
+    color: #dfff6b;
   }
 
   .ic-item-price {
