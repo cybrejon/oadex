@@ -1,11 +1,8 @@
 <script>
-
-
-
-import ItemCard from '$lib/components/items/ItemCard.svelte';
-import Note2 from '$lib/components/Note2.svelte';
-import { itemNotes } from '$lib/json/item_notes.json';
-import { highlight } from '$lib/utils/highlighting';
+  import ItemCard from "$lib/components/items/ItemCard.svelte";
+  import Note2 from "$lib/components/Note2.svelte";
+  import { itemNotes } from "$lib/json/item_notes.json";
+  import { highlight } from "$lib/utils/highlighting";
   let {
     name,
     id,
@@ -18,10 +15,13 @@ import { highlight } from '$lib/utils/highlighting';
     requiredItems,
     specialAbility,
     itemData,
-    previewItem
+    previewItem,
   } = $props();
 
-let composites = $derived(requiredItems && itemData.filter(item => requiredItems.includes(item.name)));
+  let composites = $derived(
+    requiredItems &&
+      itemData.filter((item) => requiredItems.includes(item.name))
+  );
 </script>
 
 <div class="sticky-container">
@@ -58,7 +58,7 @@ let composites = $derived(requiredItems && itemData.filter(item => requiredItems
     {/if}
 
     {#if itemNotes[name]}
-      <Note2 headerText='Correction'>
+      <Note2 headerText="Correction">
         {itemNotes[name]}
       </Note2>
     {/if}
@@ -68,12 +68,12 @@ let composites = $derived(requiredItems && itemData.filter(item => requiredItems
       <div class="required-items-container">
         {#each composites as item}
           <ItemCard
-            src = {item.image}
-            itemName = {item.name}
-            itemPrice = "💰 {item.price}"
-            itemId = {item.id}
+            src={item.image}
+            itemName={item.name}
+            itemPrice="💰 {item.price}"
+            itemId={item.id}
             fn={previewItem(item.name, {
-              isGlobal: true
+              isGlobal: true,
             })}
           />
         {/each}
@@ -84,14 +84,12 @@ let composites = $derived(requiredItems && itemData.filter(item => requiredItems
       <h3>Special Ability</h3>
       <p>{@html highlight(specialAbility)}</p>
     {/if}
-
   </div>
 </div>
 
 <style>
-
   .ability-text {
-    font-size: .9rem;
+    font-size: 0.9rem;
     line-height: 27px;
   }
 
@@ -116,13 +114,15 @@ let composites = $derived(requiredItems && itemData.filter(item => requiredItems
   }
 
   .attribute {
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: rgb(255, 211, 128);
     font-weight: 600;
   }
 
   .sticky-container {
     border-radius: 6px;
+    position: sticky;
+    top: 85px;
   }
 
   .head {
@@ -154,7 +154,8 @@ let composites = $derived(requiredItems && itemData.filter(item => requiredItems
     font-weight: 600;
   }
 
-  .item-type, .item-tier {
-    font-size: .8rem;
+  .item-type,
+  .item-tier {
+    font-size: 0.8rem;
   }
 </style>

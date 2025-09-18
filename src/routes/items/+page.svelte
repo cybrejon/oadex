@@ -389,7 +389,7 @@
 <div class="main-wrapper">
   <span class:items-container-wrapper={!isOpen_itemDrawer}>
     <Container
-      styles="height: 73vh; overflow-y: auto; background-color: transparent; display: block;"
+      styles="background-color: transparent; display: block; padding: 0; border: none;"
     >
       <div
         class:items-container={!isOpen_itemDrawer}
@@ -460,7 +460,7 @@
   .items-container {
     margin: auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
     justify-content: space-between;
     flex-wrap: wrap;
