@@ -1,5 +1,3 @@
-<!-- @migration-task Error while migrating Svelte code: can't migrate `let state = { isOpened: false };` to `$state` because there's a variable named state.
-     Rename the variable and try again or migrate by hand. -->
 <script>
   import { handlers } from 'svelte/legacy';
 

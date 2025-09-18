@@ -22,14 +22,7 @@
     "MAGE": "巫",
     "SUPPORT": "祝"
   },
-  "roles2": [
-    "射",
-    "忍",
-    "守",
-    "侍",
-    "巫",
-    "祝"
-  ],
+  "roles2": ["射", "忍", "守", "侍", "巫", "祝"],
   "roles_numeral": {
     "1": "SAMURAI",
     "2": "MAGE",
@@ -45,20 +38,13 @@
     "野": "Jungler/Gank",
     "下": "Bottom Laner Marksman"
   },
-  "non_global_shikis": [
-    "1124",
-    "1119",
-    "1120",
-    "1125",
-    "1101",
-    "1102"
-  ],
-  "difficulty" : {
-    "1" : "Very Easy",
-    "2" : "Easy",
-    "3" : "Normal",
-    "4" : "Hard",
-    "5" : "Extreme"
+  "non_global_shikis": ["1124", "1119", "1120", "1125", "1101", "1102"],
+  "difficulty": {
+    "1": "Very Easy",
+    "2": "Easy",
+    "3": "Normal",
+    "4": "Hard",
+    "5": "Extreme"
   },
   "colors": [
     "#n",
@@ -78,6 +64,7 @@
     "#c35c6e7",
     "#cb82a2f",
     "#ce7ad2f",
-    "#ca61fe4"
+    "#ca61fe4",
+    "#cff3636"
   ]
 }
