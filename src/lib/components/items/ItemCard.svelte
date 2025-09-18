@@ -32,13 +32,18 @@
       />
     </div>
     <div class="sc-text-container">
-      <p class="ic-item-name">{itemName}</p>
+      <p class="ic-item-name">
+        {#if abilities?.active}
+          [A]
+        {/if}
+        {itemName}
+      </p>
       <p class="ic-item-price">{itemPrice}</p>
       {#if attributes}
         <div class="attributes">
           {#each attributes as attribute}
             {#if attribute.includes("Crit Rate")}
-              <p class="ic-item-extra crit">Crit</p>
+              <p class="ic-item-extra crit">CRIT</p>
             {/if}
             {#if attribute.includes("Armor Penetration")}
               <p class="ic-item-extra pen">Arm Pen</p>
@@ -69,6 +74,9 @@
             {/if}
             {#if attribute.includes("Armor")}
               <p class="ic-item-extra armor">Armor</p>
+            {/if}
+            {#if attribute.includes("Magic Penetration")}
+              <p class="ic-item-extra mpen">M-Pen</p>
             {/if}
           {/each}
         </div>
@@ -214,6 +222,9 @@
   }
   .mp-regen {
     color: #ff6bf8;
+  }
+  .mpen {
+    color: #fd2e7d;
   }
   .mres {
     color: #bc6bff;
