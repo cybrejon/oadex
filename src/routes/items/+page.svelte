@@ -389,7 +389,7 @@
 <div class="main-wrapper">
   <span class:items-container-wrapper={!isOpen_itemDrawer}>
     <Container
-      styles="background-color: transparent; display: block; padding: 0; border: none;"
+      styles="background-color: transparent; display: block; padding: 0; border: none; box-shadow: none;"
     >
       <div
         class:items-container={!isOpen_itemDrawer}
