@@ -1,16 +1,18 @@
 <script>
-  export let fn;
-  export let search_value;
-  export let width;
-  export let clearFunction;
 
   import Icon from '@iconify/svelte';
+  let {
+    fn,
+    search_value = $bindable(),
+    width,
+    clearFunction
+  } = $props();
 </script>
 
 <div class="filter-container">
-  <input style:width={width} on:keypress={fn} class="filter-input" type="text" placeholder="Quick filter" bind:value={search_value} >
+  <input style:width={width} onkeypress={fn} class="filter-input" type="text" placeholder="Quick filter" bind:value={search_value} >
   {#if search_value}
-    <button on:click={clearFunction} type="button"><Icon icon="ic:round-clear" style="font-size: 24px;" /></button>
+    <button onclick={clearFunction} type="button"><Icon icon="ic:round-clear" style="font-size: 24px;" /></button>
   {/if}
 </div>
 

@@ -2,14 +2,7 @@
 
   import { LazyImage } from 'svelte-lazy-image';
 
-  export let slug;
-  export let src;
-  export let shiki_name;
-  export let new_shiki;
-  export let in_rotation;
-  export let dtype;
 
-  $: d_names = dtype[0].damage_types;
 
   let labels = {
     "physical damage": "P",
@@ -17,17 +10,26 @@
     "true damage": "T"
   };
 
-  let isLoading_local = false;
+  let isLoading_local = $state(false);
   const loading = () => () => {
     isLoading_local = !isLoading_local;
   };
  
   import placeholderImage from '$lib/assets/plat.png';
   import Icon from '@iconify/svelte';
+  let {
+    slug,
+    src,
+    shiki_name,
+    new_shiki,
+    in_rotation,
+    dtype
+  } = $props();
 
+  let d_names = $derived(dtype[0].damage_types);
 </script>
 
-<a on:click={loading()} href="/shikigami/{slug}" class="shiki-card-anchor" data-sveltekit-preload-data="tap">
+<a onclick={loading()} href="/shikigami/{slug}" class="shiki-card-anchor" data-sveltekit-preload-data="tap">
   <div class="shiki-card">
     <div class="sc-image-container">
       <!-- <img class="shikigami-image" alt="shikigami portrait" src="{images[shikiga_data[shiki].式神全身像]}"> -->

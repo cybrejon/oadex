@@ -1,6 +1,5 @@
 <script>
-  export let title;
-  export let content = [];
+  let { title, content = [], children } = $props();
 </script>
 
 <div class="card">
@@ -13,7 +12,7 @@
         <li class="card-li">{item}</li>
       {/if}
     {/each}
-    <slot></slot>
+    {@render children?.()}
   </ul>
 </div>
 

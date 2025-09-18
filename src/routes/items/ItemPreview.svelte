@@ -1,25 +1,27 @@
 <script>
 
-export let name;
-export let id;
-export let image;
-export let type;
-export let tier;
-export let price;
-export let abilities;
-export let attributes;
-export let requiredItems;
-export let specialAbility;
-export let itemData;
-export let previewItem;
 
-$: composites = requiredItems && itemData.filter(item => requiredItems.includes(item.name));
 
 import ItemCard from '$lib/components/items/ItemCard.svelte';
 import Note2 from '$lib/components/Note2.svelte';
 import { itemNotes } from '$lib/json/item_notes.json';
 import { highlight } from '$lib/utils/highlighting';
+  let {
+    name,
+    id,
+    image,
+    type,
+    tier,
+    price,
+    abilities,
+    attributes,
+    requiredItems,
+    specialAbility,
+    itemData,
+    previewItem
+  } = $props();
 
+let composites = $derived(requiredItems && itemData.filter(item => requiredItems.includes(item.name)));
 </script>
 
 <div class="sticky-container">

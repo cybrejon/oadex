@@ -4,9 +4,7 @@
   import { useLazyImage as lazyImage } from 'svelte-lazy-image';
   import Container from "$lib/components/shikigami/Container.svelte";
   import Button from "$lib/components/Button.svelte";
-  export let area_name;
-  export let data;
-  export let link;
+  let { area_name, data, link } = $props();
 
   let {
     image_url: image_url,

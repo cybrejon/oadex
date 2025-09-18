@@ -5,7 +5,7 @@
   import Hero from '../../lib/components/home/Hero.svelte';
   import Art from '../../lib/components/home/Art.svelte';
 
-  let windowNavigator;
+  let windowNavigator = $state();
 
 </script>
 

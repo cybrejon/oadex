@@ -18,14 +18,14 @@
   import { onMount } from 'svelte';
   import Dropdown from '../../lib/components/Dropdown.svelte';
 
-  export let data;
+  let { data } = $props();
   const itemData = data.itemData;
   const itemQuery = data.itemQuery;
 
-  let tier_dropdown_toggle;
-  let type_dropdown_toggle;
+  let tier_dropdown_toggle = $state();
+  let type_dropdown_toggle = $state();
 
-  let isOpen_itemDrawer = false;
+  let isOpen_itemDrawer = $state(false);
   const toggleMobileItemSelection = () => () => {
     isOpen_itemDrawer = !isOpen_itemDrawer;
   }
@@ -34,7 +34,7 @@
     return a.name.localeCompare(b.name);
   });
 
-  let mainIterable = itemData;
+  let mainIterable = $state(itemData);
   const filterItemsByType = (type, cTier, isBeingMounted = false) => () => {
     if (cTier == 'All') {
       mainIterable = itemData.filter(item => item.type == type);
@@ -87,7 +87,7 @@
     }
   };
 
-  let search_value;
+  let search_value = $state();
   const itemSearcher = new Fuse(mainIterable, {
     keys: ['name', 'id'],
   });
@@ -107,14 +107,14 @@
     mainIterable = itemData;
   }
 
-  let mobileHeaderDisplayMode = 'normal';
+  let mobileHeaderDisplayMode = $state('normal');
   const toggleMobileHeaderMode = (mode) => () => {
     mobileHeaderDisplayMode = mode;
   };
 
   // preview pane
-  let previewData = {};
-  let activeItem;
+  let previewData = $state({});
+  let activeItem = $state();
 
   if (itemQuery) {
     const queryItemProps = mainIterable.filter(item => item.name == itemQuery)[0];

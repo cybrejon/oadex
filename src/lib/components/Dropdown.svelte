@@ -1,17 +1,30 @@
 <script>
   import Icon from '@iconify/svelte';
-  export let icon = 'iconamoon:arrow-down-2-bold';
-  export let label;
-  export let activeLabel;
-  export let styles;
-  let isOpen = false;
+  /**
+   * @typedef {Object} Props
+   * @property {string} [icon]
+   * @property {any} label
+   * @property {any} activeLabel
+   * @property {any} styles
+   * @property {import('svelte').Snippet} [children]
+   */
+
+  /** @type {Props} */
+  let {
+    icon = 'iconamoon:arrow-down-2-bold',
+    label,
+    activeLabel,
+    styles,
+    children
+  } = $props();
+  let isOpen = $state(false);
   export function toggle() {
     isOpen = !isOpen;
   }
 </script>
 
 <div class="dropdown" style={styles}>
-  <button on:click={toggle} type="button" class="dropdown-toggle">
+  <button onclick={toggle} type="button" class="dropdown-toggle">
     <Icon {icon} style='font-size: 24px;' />
     {#if label}
       {label}
@@ -24,7 +37,7 @@
   </button>
   {#if isOpen}
     <div class="dropdown-items">
-      <slot />
+      {@render children?.()}
     </div>
   {/if}
   

@@ -5,9 +5,8 @@
   import Button2 from '../Button2.svelte';
   import Dropdown from '../Dropdown.svelte';
 
-  export let images;
 
-  export let curr_shiki_obj;
+  let { images, curr_shiki_obj } = $props();
 
   let shikigami_skills = Object.keys(curr_shiki_obj.式神技能);
   let skills_data = shikigami_skills.map(skill => {
@@ -19,12 +18,12 @@
     };
   });
 
-  let skill_name = curr_shiki_obj.式神技能.天生被动.技能名称;
-  let skill_image = images[curr_shiki_obj.式神技能.天生被动.图标路径];
-  let skill_description = highlight(curr_shiki_obj.式神技能.天生被动.技能描述);
-  let skill_properties = curr_shiki_obj.式神技能.天生被动.技能成长;
+  let skill_name = $state(curr_shiki_obj.式神技能.天生被动.技能名称);
+  let skill_image = $state(images[curr_shiki_obj.式神技能.天生被动.图标路径]);
+  let skill_description = $state(highlight(curr_shiki_obj.式神技能.天生被动.技能描述));
+  let skill_properties = $state(curr_shiki_obj.式神技能.天生被动.技能成长);
 
-  let skill_tab_indicator = 0;
+  let skill_tab_indicator = $state(0);
   const changeSkillDisplayed = (i) => () => {
     skillsDropdown.toggle();
     skill_tab_indicator = i;
@@ -35,16 +34,16 @@
   }
 
   // remove the cd and mana cost from the properties to be shown separately
-  $: skill_prop_names = Object.keys(skill_properties);
-  $: skill_prop_names_unique = skill_prop_names.filter(char => char != "冷却" && char != "消耗");
-  $: skill_properties_unique = skill_prop_names_unique.map(char => {
+  let skill_prop_names = $derived(Object.keys(skill_properties));
+  let skill_prop_names_unique = $derived(skill_prop_names.filter(char => char != "冷却" && char != "消耗"));
+  let skill_properties_unique = $derived(skill_prop_names_unique.map(char => {
       return {
         name: char,
         value: skill_properties[char]
       }
-    });
+    }));
 
-  let skillsDropdown;
+  let skillsDropdown = $state();
 
   let skill_position_name = {
     0: "TRAIT",

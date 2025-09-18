@@ -3,10 +3,8 @@
   import Navbar from '$lib/Navbar.svelte';
   import Search from '$lib/components/search/Search.svelte';
     import SideBar from './components/SideBar.svelte';
-  export let active_path;
-  export let routeId;
 
-  export let searchIndex;
+  let { active_path, routeId, searchIndex } = $props();
 </script>
 
 <div class="main-header">

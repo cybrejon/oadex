@@ -1,12 +1,11 @@
 <script>
-  export let button_type;
-  export let link;
+  let { button_type, link, children } = $props();
 </script>
 
 {#if button_type === 'anchor'}
-  <a rel="noreferrer" target="_blank" href={link} class="btn"><slot></slot></a>
+  <a rel="noreferrer" target="_blank" href={link} class="btn">{@render children?.()}</a>
 {:else}
-  <button class="btn"><slot></slot></button>
+  <button class="btn">{@render children?.()}</button>
 {/if}
 
 

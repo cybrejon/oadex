@@ -1,9 +1,9 @@
 <script>
-  export let data;
   import Container from "$lib/components/shikigami/Container.svelte";
   import Button2 from '$lib/components/Button2.svelte';
   import ButtonGroup from '$lib/components/ButtonGroup.svelte';
   import '$assets/github_markdown.css';
+  let { data } = $props();
 </script>
 
 <ButtonGroup area_name="page-controls" styles="justify-content: flex-start; flex-wrap: wrap; margin-bottom: 20px;">

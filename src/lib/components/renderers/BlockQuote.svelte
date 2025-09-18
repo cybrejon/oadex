@@ -1,7 +1,13 @@
 <script>
   import Icon from "@iconify/svelte";
-  export let text = "";
   import SvelteMarkdown from 'svelte-markdown';
+  /**
+   * @typedef {Object} Props
+   * @property {string} [text]
+   */
+
+  /** @type {Props} */
+  let { text = "" } = $props();
 </script>
 
 <div class="blockquote-container">

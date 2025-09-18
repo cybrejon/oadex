@@ -17,21 +17,19 @@
 
   import { roles } from "$lib/json/dictionary.json";
 
-  export let shikiga_data; // object
-  export let damage_types; // array
-  export let images; // array
 
   import Fuse from 'fuse.js';
   import { onDestroy } from 'svelte';
   import { goto } from '$app/navigation';
+  let { shikiga_data, damage_types, images } = $props();
 
   const shiki_names = Object.keys(shikiga_data).sort();
   const shikiIDs = [];
   shiki_names.forEach(name => shikiIDs.push(shikiga_data[name].式神ID	));
 
-  let mobile_role_switcher_toggle;
+  let mobile_role_switcher_toggle = $state();
 
-  $: role = shiki_names;
+  let role = $derived(shiki_names);
   const toggleRole = (r) => () => {
 
     r === 'all'
@@ -73,7 +71,7 @@
     mobile_role_switcher_toggle.toggle();
   }
 
-  $: numberOfShikisCurrentlyShown = $role_config.length === 0 ? role.length : $role_config.length;
+  let numberOfShikisCurrentlyShown = $derived($role_config.length === 0 ? role.length : $role_config.length);
 
   onDestroy(() => {
     !$role_config.length == 0

@@ -1,15 +1,22 @@
 <script>
-  export let ordered = false;
-  export let start;
+  /**
+   * @typedef {Object} Props
+   * @property {boolean} [ordered]
+   * @property {any} start
+   * @property {import('svelte').Snippet} [children]
+   */
+
+  /** @type {Props} */
+  let { ordered = false, start, children } = $props();
 </script>
 
 {#if ordered}
   <ol {start}>
-    <slot />
+    {@render children?.()}
   </ol>
 {:else}
   <ul>
-    <slot />
+    {@render children?.()}
   </ul>
 {/if}
 

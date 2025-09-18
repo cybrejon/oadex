@@ -1,9 +1,9 @@
 <script>
-  export let data = {
+  let { data = {
     property,
     value,
     grid_area
-  }
+  } } = $props();
 </script>
 
 <div class="stat-card" style="grid-area: {data.grid_area && data.grid_area};">

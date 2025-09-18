@@ -2,20 +2,24 @@
   import Icon from "@iconify/svelte";
   import { slide } from "svelte/transition";
   import { quintOut } from 'svelte/easing';
-  export let active;
-  export let fn;
-  export let styles;
+  let {
+    active,
+    fn,
+    styles,
+    name,
+    content
+  } = $props();
 </script>
 
 <div class="accordion-item">
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <div class="toggle" on:click={fn}>
+  <!-- svelte-ignore a11y_click_events_have_key_events -->
+  <div class="toggle" onclick={fn}>
     <Icon icon={active ? "akar-icons:radio-fill" : "akar-icons:radio"} style='font-size: 16px' />
-    <p class="toggle-text"><slot name="name" /></p>
+    <p class="toggle-text">{@render name?.()}</p>
   </div>
   {#if active}
     <div transition:slide={{ duration: 300, easing: quintOut, axis: 'y' }} class="accordion-item-content" style={styles}>
-      <slot name="content" />
+      {@render content?.()}
     </div>
   {/if}
 </div>

@@ -1,7 +1,13 @@
 <script>
   import Icon from "@iconify/svelte";
-  export let text = "";
-  export let depth;
+  /**
+   * @typedef {Object} Props
+   * @property {string} [text]
+   * @property {any} depth
+   */
+
+  /** @type {Props} */
+  let { text = "", depth } = $props();
 </script>
 
 {#if depth === 1}

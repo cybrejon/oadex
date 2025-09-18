@@ -1,5 +1,5 @@
 <script>
-  export let damage_type;
+  let { damage_type, children } = $props();
 </script>
 
 <div class="container"
@@ -7,7 +7,7 @@
   class:magic={damage_type === 'magic'}
   class:true={damage_type === 'true'}
   >
-  <p><slot /></p>
+  <p>{@render children?.()}</p>
 </div>
 
 <style>

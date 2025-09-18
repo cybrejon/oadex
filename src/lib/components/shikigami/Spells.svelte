@@ -1,8 +1,7 @@
 <script>
-  export let spellData;
-  export let images;
   import { colorCodeRemove } from '$lib/utils/colors.js';
   import { highlight } from '$lib/utils/highlighting';
+  let { spellData, images } = $props();
 </script>
 
 <div class="spells">

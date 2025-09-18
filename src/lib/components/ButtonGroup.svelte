@@ -1,10 +1,9 @@
 <script>
-  export let area_name;
-  export let styles;
+  let { area_name, styles, children } = $props();
 </script>
 
 <div style:grid-area={area_name} style={styles}>
-  <slot />
+  {@render children?.()}
 </div>
 
 <style>

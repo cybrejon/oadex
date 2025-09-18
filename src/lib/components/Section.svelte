@@ -1,9 +1,9 @@
 <script>
-  export let styles;
+  let { styles, children } = $props();
 </script>
 
 <div style={styles}>
-  <slot />
+  {@render children?.()}
 </div>
 
 <style>

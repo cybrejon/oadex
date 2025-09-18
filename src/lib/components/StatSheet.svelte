@@ -1,7 +1,5 @@
 <script>
 
-  export let data;
-  export let images;
 
   import { roles, roles_reversed } from '$lib/json/dictionary';
   import { currentRole, currentStatValues, currentLevelSliderValue, visibleColumns } from './statSheetState.store.js';
@@ -17,10 +15,11 @@
   import Accordion from './Accordion.svelte';
   import AccordionItem from './AccordionItem.svelte';
   import Icon from '@iconify/svelte';
+  let { data, images } = $props();
 
-  let roleDropdownToggle;
+  let roleDropdownToggle = $state();
   let roleNames = Object.keys(roles_reversed);
-  let mobileAccordionIndex = 1;
+  let mobileAccordionIndex = $state(1);
 
   let baseIterable = [];
   function object2array(obj) {
@@ -29,7 +28,7 @@
     };
   };
 
-  $: mainIterable = baseIterable;
+  let mainIterable = $derived(baseIterable);
 
   object2array(data);
 
@@ -88,83 +87,95 @@
   styles='align-items: unset'
   active={mobileAccordionIndex === 1}
   fn={() => toggleMobileControlAccordion(1)}>
-    <svelte:fragment slot='name'>
-      Role
-    </svelte:fragment>
-    <svelte:fragment slot="content">
-      <Button2
-        active={$currentRole === 'ALL'}
-        fn={() => switchRoles('ALL')}
-        >
-        ALL
-      </Button2>
-      {#each roleNames as role}
+    {#snippet name()}
+      
+        Role
+      
+      {/snippet}
+    {#snippet content()}
+      
         <Button2
-          active={$currentRole === role}
-          fn={() => switchRoles(role)}
+          active={$currentRole === 'ALL'}
+          fn={() => switchRoles('ALL')}
           >
-          {role}
+          ALL
         </Button2>
-      {/each}
-    </svelte:fragment>
+        {#each roleNames as role}
+          <Button2
+            active={$currentRole === role}
+            fn={() => switchRoles(role)}
+            >
+            {role}
+          </Button2>
+        {/each}
+      
+      {/snippet}
   </AccordionItem>
 
   <AccordionItem
   styles='gap: 10px; align-items: unset'
   active={mobileAccordionIndex === 2}
   fn={() => toggleMobileControlAccordion(2)}>
-    <svelte:fragment slot='name'>
-      Visible Columns
-    </svelte:fragment>
-    <svelte:fragment slot="content">
-      <Checkbox bind:checked={$visibleColumns.names}>Names</Checkbox>
-      <Checkbox bind:checked={$visibleColumns.role}>Role</Checkbox>
-      <Checkbox bind:checked={$visibleColumns.patk}>P. ATK</Checkbox>
-      <Checkbox bind:checked={$visibleColumns.atkspd}>ATK SPEED</Checkbox>
-      <Checkbox bind:checked={$visibleColumns.hp}>HP</Checkbox>
-      <Checkbox bind:checked={$visibleColumns.hpregen}>HP Regen</Checkbox>
-      <Checkbox bind:checked={$visibleColumns.mp}>MP</Checkbox>
-      <Checkbox bind:checked={$visibleColumns.mpregen}>MP Regen</Checkbox>
-      <Checkbox bind:checked={$visibleColumns.parmor}>P. Armor</Checkbox>
-      <Checkbox bind:checked={$visibleColumns.marmor}>M. Armor</Checkbox>
-      <Checkbox bind:checked={$visibleColumns.mspeed}>MSpeed</Checkbox>
-    </svelte:fragment>
+    {#snippet name()}
+      
+        Visible Columns
+      
+      {/snippet}
+    {#snippet content()}
+      
+        <Checkbox bind:checked={$visibleColumns.names}>Names</Checkbox>
+        <Checkbox bind:checked={$visibleColumns.role}>Role</Checkbox>
+        <Checkbox bind:checked={$visibleColumns.patk}>P. ATK</Checkbox>
+        <Checkbox bind:checked={$visibleColumns.atkspd}>ATK SPEED</Checkbox>
+        <Checkbox bind:checked={$visibleColumns.hp}>HP</Checkbox>
+        <Checkbox bind:checked={$visibleColumns.hpregen}>HP Regen</Checkbox>
+        <Checkbox bind:checked={$visibleColumns.mp}>MP</Checkbox>
+        <Checkbox bind:checked={$visibleColumns.mpregen}>MP Regen</Checkbox>
+        <Checkbox bind:checked={$visibleColumns.parmor}>P. Armor</Checkbox>
+        <Checkbox bind:checked={$visibleColumns.marmor}>M. Armor</Checkbox>
+        <Checkbox bind:checked={$visibleColumns.mspeed}>MSpeed</Checkbox>
+      
+      {/snippet}
   </AccordionItem>
 
   <AccordionItem
   styles='gap: 10px; align-items: flex-end'
   active={mobileAccordionIndex === 3}
   fn={() => toggleMobileControlAccordion(3)}>
-    <svelte:fragment slot='name'>
-      Shikigami Level & Table Mode
-    </svelte:fragment>
-    <svelte:fragment slot="content">
-      <ButtonGroup>
-        <Button2
-        active={$currentStatValues === 'base'}
-        fn={() => switchValues('base')}
-        icon='ph:plant-fill'
-          >
-        </Button2>
+    {#snippet name()}
+      
+        Shikigami Level & Table Mode
+      
+      {/snippet}
+    {#snippet content()}
+      
+        <ButtonGroup>
+          <Button2
+          active={$currentStatValues === 'base'}
+          fn={() => switchValues('base')}
+          icon='ph:plant-fill'
+            >
+          </Button2>
 
-        <Button2
-        active={$currentStatValues === 'growth'}
-        fn={() => switchValues('growth')}
-        icon='uil:arrow-growth'
-          >
-        </Button2>
-      </ButtonGroup>
+          <Button2
+          active={$currentStatValues === 'growth'}
+          fn={() => switchValues('growth')}
+          icon='uil:arrow-growth'
+            >
+          </Button2>
+        </ButtonGroup>
 
-      <Slider
-        status={$currentLevelSliderValue + 1}
-        fn={() => modifyLevel($currentLevelSliderValue)}
-        bind:value={$currentLevelSliderValue}
-        min='0'
-        max='17'
-        disabled={$currentStatValues === 'growth'}
-        >Level
-      </Slider>
-    </svelte:fragment>
+        <Slider
+          status={$currentLevelSliderValue + 1}
+          fn={() => modifyLevel($currentLevelSliderValue)}
+          bind:value={$currentLevelSliderValue}
+          min='0'
+          max='17'
+          disabled={$currentStatValues === 'growth'}
+          >Level
+        </Slider>
+      
+      {/snippet}
   </AccordionItem>
 
 </Accordion>
@@ -245,7 +256,7 @@
         ] as th}
           {#if th.column_id}
             {#if th.metadata}
-              <th style="cursor: pointer; {$currentStatValues === "growth" && "cursor: not-allowed;"}" on:click={() => sortColumn(th.metadata.cn, th.metadata.en)}>
+              <th style="cursor: pointer; {$currentStatValues === "growth" && "cursor: not-allowed;"}" onclick={() => sortColumn(th.metadata.cn, th.metadata.en)}>
                 <span>
                   {#if $tableSorting.lastSorted === th.metadata.en}
                     <Icon icon='fa:sort' style='font-size: 16px; {$currentStatValues === "growth" && "opacity: .2;"}' />

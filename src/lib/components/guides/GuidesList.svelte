@@ -1,9 +1,9 @@
 <script>
-  export let guide_list;
 
   import Icon from '@iconify/svelte';
-  import { page } from '$app/stores'
-  let shiki_id = $page.url.pathname.slice(11);
+  import { page } from '$app/state'
+  let { guide_list } = $props();
+  let shiki_id = page.url.pathname.slice(11);
 </script>
 
 <div class="list">

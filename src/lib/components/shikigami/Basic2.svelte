@@ -1,5 +1,5 @@
 <script>
-  export let data;
+  let { data, children } = $props();
 
   let { 
     difficulty: difficulty,
@@ -21,4 +21,4 @@
   `${buffs} - 💊 BUFF Rating`,
   `${agility} - 🏃‍♀️ AGILITY Rating`
 ]} />
-<slot />
+{@render children?.()}

@@ -1,16 +1,32 @@
 <script>
-  export let value;
-  export let max;
-  export let min;
-  export let fn;
-  export let status;
-  export let styles;
-  export let disabled = false;
+  /**
+   * @typedef {Object} Props
+   * @property {any} value
+   * @property {any} max
+   * @property {any} min
+   * @property {any} fn
+   * @property {any} status
+   * @property {any} styles
+   * @property {boolean} [disabled]
+   * @property {import('svelte').Snippet} [children]
+   */
+
+  /** @type {Props} */
+  let {
+    value = $bindable(),
+    max,
+    min,
+    fn,
+    status,
+    styles,
+    disabled = false,
+    children
+  } = $props();
 </script>
 
 <div class="slider" style={styles}>
-  <p><slot /></p>
-  <input {disabled} on:change={fn} type="range" bind:value {min} {max} id="range">
+  <p>{@render children?.()}</p>
+  <input {disabled} onchange={fn} type="range" bind:value {min} {max} id="range">
   <p class="status">{status}</p>
 </div>
 

@@ -1,10 +1,12 @@
 <script>
   import Icon from '@iconify/svelte';
-  export let text;
-  export let area_name;
-  export let styles;
-  export let noIcon;
-  export let container_margin;
+  let {
+    text,
+    area_name,
+    styles,
+    noIcon,
+    container_margin
+  } = $props();
 </script>
 
 <div class="container" style:grid-area={area_name} style:margin={container_margin}>

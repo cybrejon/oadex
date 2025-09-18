@@ -1,25 +1,27 @@
 <script>
-  export let searchIndex;
+  import { handlers } from 'svelte/legacy';
+
 
   import Fuse from 'fuse.js';
   import Icon from '@iconify/svelte';
   import Toggles from '$lib/Toggles.svelte';
+  let { searchIndex } = $props();
 
   const fuse = new Fuse(searchIndex, {
     keys: ['name', 'keywords', 'id']
   });
 
-  let searchValue;
+  let searchValue = $state();
 
   
 
   let results_r = [];
-  let results = [];
-  let modalInputElement;
+  let results = $state([]);
+  let modalInputElement = $state();
   let currentListPosition = -1;
-  let searchModalElement;
-  let resultAnchorElement;
-  let resultsList;
+  let searchModalElement = $state();
+  let resultAnchorElement = $state();
+  let resultsList = $state();
 
   function startSearch(e) {
     if (!searchValue || e.key == 'Enter') return;
@@ -99,23 +101,21 @@
 </script>
 
 <svelte:window
-  on:keydown={(e) => openSearchByKeyboard(e)}
-  on:keydown={(e) => setIsSearchOpen2False(e)}
-  on:keydown={(e) => navigateResults(e)}
-  on:keypress={(e) => startSearch(e)}
+  onkeydown={handlers((e) => openSearchByKeyboard(e), (e) => setIsSearchOpen2False(e), (e) => navigateResults(e))}
+  onkeypress={(e) => startSearch(e)}
 />
 
 <div class="search-toggle-container">
   <div class="search-icon-container">
     <Icon icon='iconamoon:search-fill' style='font-size: 18px;' />
   </div>
-  <button class="search-modal-toggle" type="button" on:click={openSearch}> <span class="search-toggle-search-text">Search</span><span class='hint hint--toggle'>Press <span class="key-code">/</span> to open search</span></button>
+  <button class="search-modal-toggle" type="button" onclick={openSearch}> <span class="search-toggle-search-text">Search</span><span class='hint hint--toggle'>Press <span class="key-code">/</span> to open search</span></button>
 </div>
 
 <dialog bind:this={searchModalElement}>
 
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <div id="nav-overlay" on:click={closeModal} class="overlay"></div>
+  <!-- svelte-ignore a11y_click_events_have_key_events -->
+  <div id="nav-overlay" onclick={closeModal} class="overlay"></div>
 
   <div class="results">
 

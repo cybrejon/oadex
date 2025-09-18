@@ -1,19 +1,23 @@
 <script>
+  import { handlers } from 'svelte/legacy';
+
 
   import { LazyImage } from 'svelte-lazy-image';
 
   import placeholderImage from '$lib/assets/plat.png';
 
-  export let src;
-  export let itemName;
-  export let itemPrice;
-  export let fn;
-  export let utilFn;
-  export let activeItem;
+  let {
+    src,
+    itemName,
+    itemPrice,
+    fn,
+    utilFn,
+    activeItem
+  } = $props();
 
 </script>
 
-  <a class="item-anchor" on:click={fn} on:click={utilFn && utilFn} href={`/items?i=${itemName}`} data-sveltekit-noscroll data-sveltekit-preload-data="tap">
+  <a class="item-anchor" onclick={handlers(fn, utilFn && utilFn)} href={`/items?i=${itemName}`} data-sveltekit-noscroll data-sveltekit-preload-data="tap">
   <div class="item-card" class:item-card--active={activeItem == itemName}>
     <div class="sc-image-container">
       <LazyImage class="ic-item-image" alt="item image" src="{src}" placeholder={placeholderImage} />

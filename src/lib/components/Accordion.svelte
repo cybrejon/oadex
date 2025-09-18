@@ -2,8 +2,15 @@
   import Toggles from '$lib/Toggles.svelte';
 
   import { fade } from 'svelte/transition';
+  /**
+   * @typedef {Object} Props
+   * @property {import('svelte').Snippet} [children]
+   */
 
-  let isOpen = false;
+  /** @type {Props} */
+  let { children } = $props();
+
+  let isOpen = $state(false);
 
   function toggle() {
     isOpen = !isOpen;
@@ -24,7 +31,7 @@
   />
   {#if isOpen}
     <div transition:fade={{ duration: 300 }} class="pop-up">
-      <slot />
+      {@render children?.()}
     </div>
   {/if}
 </div>

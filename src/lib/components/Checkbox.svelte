@@ -1,11 +1,11 @@
 <!-- took everything straight off of https://www.w3schools.com/howto/howto_css_custom_checkbox.asp -->
 
 <script>
-  export let checked;
+  let { checked = $bindable(), children } = $props();
 </script>
 
 <label>
-  <slot />
+  {@render children?.()}
   <input bind:checked type="checkbox">
   <span></span>
 </label>

@@ -1,5 +1,5 @@
 <script>
-  export let page_title;
+  let { page_title } = $props();
 </script>
 
 <h2>{page_title}</h2>

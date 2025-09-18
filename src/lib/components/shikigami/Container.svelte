@@ -1,12 +1,15 @@
 <script>
-  export let area_name;
-  export let style;
-  export let styles;
-  export let id;
+  let {
+    area_name,
+    style,
+    styles,
+    id,
+    children
+  } = $props();
 </script>
 
 <div {id} class={style === 'transparent' ? 'container--alt' : 'container'} style:grid-area={area_name} style={styles}>
-  <slot></slot>
+  {@render children?.()}
 </div>
 
 <style>

@@ -1,7 +1,14 @@
 <script>
-  export let headerText;
   import Icon from "@iconify/svelte";
-  export let icon = 'tabler:bulb-filled';
+  /**
+   * @typedef {Object} Props
+   * @property {any} headerText
+   * @property {string} [icon]
+   * @property {import('svelte').Snippet} [children]
+   */
+
+  /** @type {Props} */
+  let { headerText, icon = 'tabler:bulb-filled', children } = $props();
 </script>
 
 <div class="note">
@@ -10,7 +17,7 @@
       <Icon {icon} style='font-size: 30px;' /><p>{headerText}</p>
     </div>
   {/if}
-  <p class="text"><slot /></p>
+  <p class="text">{@render children?.()}</p>
 </div>
 
 <style>

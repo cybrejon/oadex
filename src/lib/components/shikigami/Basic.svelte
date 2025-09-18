@@ -1,5 +1,5 @@
 <script>
-  export let data;
+  let { data, children } = $props();
 
   let { 
     name: name,
@@ -40,7 +40,7 @@
       <li class="vas-li"><span class="language">KR</span> - {voices[3]}</li>
     {/if}
   </Card>
-  <slot />
+  {@render children?.()}
 
 <style>
 

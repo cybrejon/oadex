@@ -1,29 +1,45 @@
 <script>
-  export let type = 'button';
-  export let icon;
-  export let fn;
-  export let link;
-  export let active = false;
-  export let disabled = false;
-  export let styles;
   import Icon from '@iconify/svelte';
+  /**
+   * @typedef {Object} Props
+   * @property {string} [type]
+   * @property {any} icon
+   * @property {any} fn
+   * @property {any} link
+   * @property {boolean} [active]
+   * @property {boolean} [disabled]
+   * @property {any} styles
+   * @property {import('svelte').Snippet} [children]
+   */
+
+  /** @type {Props} */
+  let {
+    type = 'button',
+    icon,
+    fn,
+    link,
+    active = false,
+    disabled = false,
+    styles,
+    children
+  } = $props();
 </script>
 
 {#if type === 'button'}
-  <button style={styles} class:iconless-padding={!icon} class:active type="button" on:click={fn} class:disabled>
+  <button style={styles} class:iconless-padding={!icon} class:active type="button" onclick={fn} class:disabled>
     {#if icon}
       <Icon icon={icon} style='font-size: 24px;' />
     {/if}
-    <slot />
+    {@render children?.()}
   </button>
 {/if}
 
 {#if type === 'link'}
-  <a style={styles} class:iconless-padding={!icon} class:active href={link} on:click={fn} class:disabled>
+  <a style={styles} class:iconless-padding={!icon} class:active href={link} onclick={fn} class:disabled>
     {#if icon}
       <Icon icon={icon} style='font-size: 24px;' />
     {/if}
-    <slot />
+    {@render children?.()}
   </a>
 {/if}
 

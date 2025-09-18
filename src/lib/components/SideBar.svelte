@@ -1,9 +1,16 @@
 <script>
   import Icon from '@iconify/svelte';
   import banner from '$lib/assets/banner4.webp'
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import { isSideBarOpen } from './sidebarState';
   import { fly } from 'svelte/transition';
+  /**
+   * @typedef {Object} Props
+   * @property {import('svelte').Snippet} [children]
+   */
+
+  /** @type {Props} */
+  let { children } = $props();
 
   function toggle() {
     $isSideBarOpen = !$isSideBarOpen;
@@ -11,7 +18,7 @@
 
 </script>
 
-<button on:click={toggle} type="button" class="sidebar-toggle">
+<button onclick={toggle} type="button" class="sidebar-toggle">
   <Icon icon='heroicons-outline:menu' style='font-size: 24px;' />
 </button>
 
@@ -27,26 +34,26 @@
     </div>
 
     <nav>
-      <a on:click={toggle} class:active={$page.url.pathname === '/'} href="/">
+      <a onclick={toggle} class:active={page.url.pathname === '/'} href="/">
         <Icon icon='ph:scroll-fill' style='font-size: 24px;' />
         Shikigamis
       </a>
-      <a on:click={toggle} class:active={$page.url.pathname === '/items'} href="/items">
+      <a onclick={toggle} class:active={page.url.pathname === '/items'} href="/items">
         <Icon icon='game-icons:spiral-bottle' style='font-size: 24px;' />
         Items
       </a>
-      <a on:click={toggle} class:active={$page.url.pathname === '/chart'} href="/chart?mode=all">
+      <a onclick={toggle} class:active={page.url.pathname === '/chart'} href="/chart?mode=all">
         <Icon icon='tabler:table-filled' style='font-size: 24px;' />
         Chart
       </a>
     </nav>
 
-    <slot />
+    {@render children?.()}
 
   </div>
   
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <div on:click={toggle} contenteditable="false" class="sidebar-close-area"></div>
+  <!-- svelte-ignore a11y_click_events_have_key_events -->
+  <div onclick={toggle} contenteditable="false" class="sidebar-close-area"></div>
 
 </div>
 {/if}

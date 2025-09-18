@@ -1,8 +1,8 @@
 <script>
   import Container from '$lib/components/shikigami/Container.svelte';
-  export let area_name;
+  let { area_name, children } = $props();
 </script>
 
 <Container area_name={area_name}>
-  <slot></slot>
+  {@render children?.()}
 </Container>
