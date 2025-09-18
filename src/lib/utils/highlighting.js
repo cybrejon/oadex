@@ -15,6 +15,7 @@ const syntax = {
   "#cff3636": '<span style="color: #cff363"> ',
   "#cFFFFFF": '<span style="color: #cFFFFF;"> ',
   "#c0066cc": '<span style="color: #c0066c;"> ',
+  "#c00ff00": '<span style="color: #c00ff0;"> ',
   "#R": '<span style="color: #E75955;"> ',
   "#W": '<span style="color: #ffffff;"> ',
   "#K": '<span style="color: #000000;"> ',
