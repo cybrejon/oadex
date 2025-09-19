@@ -192,7 +192,7 @@
     text-overflow: ellipsis;
     width: 70px;
     font-weight: 600;
-    font-size: 0.6rem;
+    font-size: 0.4rem;
     text-align: center;
   }
 
@@ -256,6 +256,12 @@
 
     .ic-item-price {
       width: 52px;
+      font-size: 0.6rem;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    .ic-item-extra {
       font-size: 0.6rem;
     }
   }
