@@ -12,7 +12,6 @@
   import { inject } from "@vercel/analytics";
   import { isLoading } from "$userStore/store";
   import { afterNavigate, beforeNavigate } from "$app/navigation";
-  import { onMount } from "svelte";
   import WarningStrip from "../lib/components/WarningStrip.svelte";
   let { data, children } = $props();
   inject({ mode: dev ? "development" : "production" });
@@ -29,6 +28,11 @@
 
   let curr_page = $state(page.url.pathname);
   let routeId = $state(page.route.id);
+
+  $effect(() => {
+    curr_page = page.url.pathname;
+    routeId = page.route.id;
+  });
 </script>
 
 <svelte:head>
