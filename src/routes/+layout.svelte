@@ -39,7 +39,6 @@
   <link rel="icon" href={favicon} />
 </svelte:head>
 
-<WarningStrip />
 <LoadingBar />
 
 <div class="main-container">
