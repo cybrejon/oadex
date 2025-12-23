@@ -1,5 +1,7 @@
 <script>
   import Icon from '@iconify/svelte';
+  import { onMount, onDestroy } from 'svelte';
+
   /**
    * @typedef {Object} Props
    * @property {string} [icon]
@@ -18,12 +20,34 @@
     children
   } = $props();
   let isOpen = $state(false);
+  let dropdownElement;
+
   export function toggle() {
     isOpen = !isOpen;
   }
+
+  function handleClickOutside(event) {
+    if (dropdownElement && !dropdownElement.contains(event.target)) {
+      isOpen = false;
+    }
+  }
+
+  onMount(() => {
+    // Only add event listener if running in browser environment
+    if (typeof document !== 'undefined') {
+      document.addEventListener('click', handleClickOutside);
+    }
+  });
+
+  onDestroy(() => {
+    // Only remove event listener if running in browser environment
+    if (typeof document !== 'undefined') {
+      document.removeEventListener('click', handleClickOutside);
+    }
+  });
 </script>
 
-<div class="dropdown" style={styles}>
+<div class="dropdown" style={styles} bind:this={dropdownElement}>
   <button onclick={toggle} type="button" class="dropdown-toggle">
     <Icon {icon} style='font-size: 24px;' />
     {#if label}
@@ -40,7 +64,7 @@
       {@render children?.()}
     </div>
   {/if}
-  
+
 </div>
 
 <style>

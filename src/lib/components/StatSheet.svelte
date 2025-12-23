@@ -33,13 +33,18 @@
 
   // Computed filtered and sorted data
   let mainIterable = $derived.by(() => {
+    // Get current values from stores
+    const currentRoleValue = $currentRole;
+    const currentStatValuesValue = $currentStatValues;
+    const currentLevelSliderValueValue = $currentLevelSliderValue;
+
     // Apply role filter
-    let filteredData = $currentRole === 'ALL'
+    let filteredData = currentRoleValue === 'ALL'
       ? [...baseIterable]
-      : baseIterable.filter(shiki => shiki.式神定位.includes(roles_reversed[$currentRole]));
+      : baseIterable.filter(shiki => shiki.式神定位.includes(roles_reversed[currentRoleValue]));
 
     // Apply sorting if a field is selected and we're in base stats mode
-    if (sortField && $currentStatValues === 'base') {
+    if (sortField && currentStatValuesValue === 'base') {
       filteredData.sort((a, b) => {
         let valueA, valueB;
 
@@ -50,8 +55,8 @@
         const growthB = b.式神属性成长[sortField] || 0; // Default to 0 if growth doesn't exist
 
         // Calculate the actual value at the current level
-        valueA = baseA + (growthA * $currentLevelSliderValue);
-        valueB = baseB + (growthB * $currentLevelSliderValue);
+        valueA = baseA + (growthA * currentLevelSliderValueValue);
+        valueB = baseB + (growthB * currentLevelSliderValueValue);
 
         // Handle potential string values by converting to number if possible
         if (typeof valueA === 'string' && !isNaN(parseFloat(valueA))) {
@@ -78,7 +83,7 @@
 
   function switchRoles(role, closeOnMount = false) {
     $currentRole = role;
-    if (!closeOnMount) {
+    if (!closeOnMount && roleDropdownToggle && typeof roleDropdownToggle.toggle === 'function') {
       roleDropdownToggle.toggle();
     }
   };
@@ -98,7 +103,8 @@
   // TODO different sort modes for base and growth stats
   function sortColumn(prop, columnName) {
     // Don't sort if in growth mode
-    if ($currentStatValues === 'growth') return;
+    const currentStatValuesValue = $currentStatValues;
+    if (currentStatValuesValue === 'growth') return;
 
     // If clicking the same field, toggle direction; otherwise, set new field with descending order
     if (sortColumnId === columnName) {
@@ -116,7 +122,8 @@
   }
 
   onMount(() => {
-    switchRoles($currentRole, true);
+    const initialRole = $currentRole;
+    switchRoles(initialRole, true);
     $tableSorting.lastSorted = '';
   });
 
