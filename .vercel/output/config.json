@@ -1,0 +1,63 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"src": "/_app/immutable/.+",
+			"headers": {
+				"cache-control": "public, immutable, max-age=31536000"
+			}
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "^/?(?:/__data.json)?$",
+			"dest": "/"
+		},
+		{
+			"src": "^/api/items/?(?:/__data.json)?$",
+			"dest": "/api/items"
+		},
+		{
+			"src": "^/api/wr-pr/?(?:/__data.json)?$",
+			"dest": "/api/wr-pr"
+		},
+		{
+			"src": "^/chart/?(?:/__data.json)?$",
+			"dest": "/chart"
+		},
+		{
+			"src": "^/home/?(?:/__data.json)?$",
+			"dest": "/home"
+		},
+		{
+			"src": "^/items/?(?:/__data.json)?$",
+			"dest": "/items"
+		},
+		{
+			"src": "^/items/([^/]+?)/?(?:/__data.json)?$",
+			"dest": "/items/[slug]"
+		},
+		{
+			"src": "^/onmyodos/?(?:/__data.json)?$",
+			"dest": "/onmyodos"
+		},
+		{
+			"src": "^/shikigami/([^/]+?)/?(?:/__data.json)?$",
+			"dest": "/shikigami/[slug]"
+		},
+		{
+			"src": "^/shikigami/([^/]+?)/guide/([^/]+?)/?(?:/__data.json)?$",
+			"dest": "/shikigami/[slug]/guide/[slug]"
+		},
+		{
+			"src": "^/spells/?(?:/__data.json)?$",
+			"dest": "/spells"
+		},
+		{
+			"src": "/.*",
+			"dest": "/![-]/catchall"
+		}
+	],
+	"overrides": {}
+}

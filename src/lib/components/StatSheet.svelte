@@ -21,23 +21,62 @@
   let roleNames = Object.keys(roles_reversed);
   let mobileAccordionIndex = $state(1);
 
-  let baseIterable = [];
-  function object2array(obj) {
-    for (let x in obj) {
-      baseIterable.push(data[x]);
-    };
-  };
+  // Convert object to array once
+  let baseIterable = $derived.by(() => {
+    return Object.keys(data).map(key => data[key]);
+  });
 
-  let mainIterable = $derived(baseIterable);
+  // State for sorting
+  let sortField = $state(null);
+  let sortColumnId = $state(null);
+  let isDescending = $state(true);
 
-  object2array(data);
+  // Computed filtered and sorted data
+  let mainIterable = $derived.by(() => {
+    // Apply role filter
+    let filteredData = $currentRole === 'ALL'
+      ? [...baseIterable]
+      : baseIterable.filter(shiki => shiki.式神定位.includes(roles_reversed[$currentRole]));
+
+    // Apply sorting if a field is selected and we're in base stats mode
+    if (sortField && $currentStatValues === 'base') {
+      filteredData.sort((a, b) => {
+        let valueA, valueB;
+
+        // Get the base and growth attribute values
+        const baseA = a.式神基础属性[sortField];
+        const baseB = b.式神基础属性[sortField];
+        const growthA = a.式神属性成长[sortField] || 0; // Default to 0 if growth doesn't exist
+        const growthB = b.式神属性成长[sortField] || 0; // Default to 0 if growth doesn't exist
+
+        // Calculate the actual value at the current level
+        valueA = baseA + (growthA * $currentLevelSliderValue);
+        valueB = baseB + (growthB * $currentLevelSliderValue);
+
+        // Handle potential string values by converting to number if possible
+        if (typeof valueA === 'string' && !isNaN(parseFloat(valueA))) {
+          valueA = parseFloat(valueA);
+        }
+        if (typeof valueB === 'string' && !isNaN(parseFloat(valueB))) {
+          valueB = parseFloat(valueB);
+        }
+
+        // For non-numeric values, use string comparison
+        if (typeof valueA === 'string' && typeof valueB === 'string') {
+          return isDescending
+            ? valueB.localeCompare(valueA)
+            : valueA.localeCompare(valueB);
+        }
+
+        // For numeric values
+        return isDescending ? valueB - valueA : valueA - valueB;
+      });
+    }
+
+    return filteredData;
+  });
 
   function switchRoles(role, closeOnMount = false) {
-    if (role === 'ALL') {
-      mainIterable = baseIterable;
-    } else {
-      mainIterable = baseIterable.filter(shiki => shiki.式神定位.includes(roles_reversed[role]));
-    }
     $currentRole = role;
     if (!closeOnMount) {
       roleDropdownToggle.toggle();
@@ -58,20 +97,22 @@
 
   // TODO different sort modes for base and growth stats
   function sortColumn(prop, columnName) {
+    // Don't sort if in growth mode
     if ($currentStatValues === 'growth') return;
+
+    // If clicking the same field, toggle direction; otherwise, set new field with descending order
+    if (sortColumnId === columnName) {
+      isDescending = !isDescending;
+    } else {
+      sortField = prop;
+      sortColumnId = columnName;
+      isDescending = true; // Default to descending for new sorts
+    }
+
+    // Update the store to maintain compatibility with existing UI indicators
     $tableSorting.lastSorted = columnName;
     $tableSorting.lastProp = prop;
-    mainIterable.sort((a, b) => {
-      let s;
-      if ($tableSorting.sorting[columnName].base.isHigh) {
-        s = a.式神基础属性[prop] - b.式神基础属性[prop]
-      } else {
-        s = b.式神基础属性[prop] - a.式神基础属性[prop]
-      }
-      return s;
-    });
-    mainIterable = mainIterable;
-    $tableSorting.sorting[columnName].base.isHigh = !$tableSorting.sorting[columnName].base.isHigh;
+    $tableSorting.sorting[columnName].base.isHigh = isDescending;
   }
 
   onMount(() => {

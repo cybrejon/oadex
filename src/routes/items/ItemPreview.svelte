@@ -123,6 +123,7 @@
     border-radius: 6px;
     position: sticky;
     top: 85px;
+    overflow-y: scroll;
   }
 
   .head {
