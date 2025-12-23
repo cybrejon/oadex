@@ -1,139 +1,77 @@
 <script>
-  // export let shiki_id;
-
   import { LazyImage } from "svelte-lazy-image";
   import Toggles from "$lib/Toggles.svelte";
   import "$lib/styles/wr.css";
-  let {
-    wdata,
-    mode,
-    images,
-    shikiName
-  } = $props();
-
-  let _wdata = $derived(wdata);
+  let { wdata, mode, images, shikiName } = $props();
 
   let classCurrentTab = $state("all");
+  let sortField = $state(null);
+  let isDescending = $state(true);
 
-  const filterByClass = (shikiClass) => () => {
-    classCurrentTab = shikiClass;
-    if (shikiClass == "all") {
-      _wdata = wdata;
-    } else {
-      _wdata = wdata.filter((shiki) => {
-        return shiki.shikiClass.includes(shikiClass);
+  // Computed filtered and sorted data
+  let _wdata = $derived.by(() => {
+    // First apply the class filter
+    let filteredData = classCurrentTab === "all"
+      ? wdata
+      : wdata.filter((shiki) => shiki.shikiClass.includes(classCurrentTab));
+
+    // Then apply sorting if a field is selected
+    if (sortField) {
+      filteredData = [...filteredData]; // Create a copy to avoid mutating original
+      filteredData.sort((a, b) => {
+        let valueA, valueB;
+
+        switch (sortField) {
+          case 'wr':
+            valueA = parseFloat(a.wr);
+            valueB = parseFloat(b.wr);
+            break;
+          case 'pickRate':
+            valueA = parseFloat(a.pickRate);
+            valueB = parseFloat(b.pickRate);
+            break;
+          case 'kda':
+            valueA = a.kda;
+            valueB = b.kda;
+            break;
+          case 'kills':
+            valueA = a.kills;
+            valueB = b.kills;
+            break;
+          default:
+            return 0;
+        }
+
+        return isDescending ? valueB - valueA : valueA - valueB;
       });
     }
-  };
 
-  let isDescending = false;
-  let isPrDescending = false;
-  let isKDADescending = false;
-  let isKillsDescending = false;
+    return filteredData;
+  });
 
   let thText_wr = $state("⬆️ WR");
   let thText_pr = $state("PR");
   let thText_kda = $state("KDA");
   let thText_kills = $state("KILLS");
 
-  const sortWr = (shikiClass) => () => {
-    if (classCurrentTab === "all") {
-      _wdata = wdata;
-    } else {
-      _wdata = wdata.filter((shiki) => {
-        return shiki.shikiClass.includes(shikiClass);
-      });
-    }
-    if (isDescending) {
-      thText_wr = "⬆️ WR";
-      _wdata.sort((a, b) => {
-        return parseFloat(b.wr) - parseFloat(a.wr);
-      });
-    } else {
-      thText_wr = "⬇️ WR";
-      _wdata.sort((a, b) => {
-        return parseFloat(a.wr) - parseFloat(b.wr);
-      });
-    }
-    isDescending = !isDescending;
-    thText_pr = "PR";
-    thText_kda = "KDA";
-    thText_kills = "KILLS";
+  const filterByClass = (shikiClass) => () => {
+    classCurrentTab = shikiClass;
   };
 
-  const sortPr = (shikiClass) => () => {
-    if (classCurrentTab === "all") {
-      _wdata = wdata;
+  const sortData = (field) => {
+    // If clicking the same field, toggle direction; otherwise, set new field with descending order
+    if (sortField === field) {
+      isDescending = !isDescending;
     } else {
-      _wdata = wdata.filter((shiki) => {
-        return shiki.shikiClass.includes(shikiClass);
-      });
+      sortField = field;
+      isDescending = true; // Default to descending for new sorts
     }
-    if (isPrDescending) {
-      thText_pr = "⬆️ PR";
-      _wdata.sort((a, b) => {
-        return parseFloat(b.pickRate) - parseFloat(a.pickRate);
-      });
-    } else {
-      thText_pr = "⬇️ PR";
-      _wdata.sort((a, b) => {
-        return parseFloat(a.pickRate) - parseFloat(b.pickRate);
-      });
-    }
-    isPrDescending = !isPrDescending;
-    thText_wr = "WR";
-    thText_kda = "KDA";
-    thText_kills = "KILLS";
-  };
 
-  const sortKda = (shikiClass) => () => {
-    if (classCurrentTab === "all") {
-      _wdata = wdata;
-    } else {
-      _wdata = wdata.filter((shiki) => {
-        return shiki.shikiClass.includes(shikiClass);
-      });
-    }
-    if (isKDADescending) {
-      thText_kda = "⬆️ KDA";
-      _wdata.sort((a, b) => {
-        return b.kda - a.kda;
-      });
-    } else {
-      thText_kda = "⬇️ KDA";
-      _wdata.sort((a, b) => {
-        return a.kda - b.kda;
-      });
-    }
-    isKDADescending = !isKDADescending;
-    thText_wr = "WR";
-    thText_pr = "PR";
-    thText_kills = "KILLS";
-  };
-
-  const sortKills = (shikiClass) => () => {
-    if (classCurrentTab === "all") {
-      _wdata = wdata;
-    } else {
-      _wdata = wdata.filter((shiki) => {
-        return shiki.shikiClass.includes(shikiClass);
-      });
-    }
-    if (isKillsDescending) {
-      thText_kills = "⬆️ KILLS";
-      _wdata.sort((a, b) => {
-        return b.kills - a.kills;
-      });
-    } else {
-      thText_kills = "⬇️ KILLS";
-      _wdata.sort((a, b) => {
-        return a.kills - b.kills;
-      });
-    }
-    isKillsDescending = !isKillsDescending;
-    thText_wr = "WR";
-    thText_pr = "PR";
-    thText_kda = "KDA";
+    // Update the header text indicators
+    thText_wr = field === 'wr' ? (isDescending ? "⬆️ WR" : "⬇️ WR") : "WR";
+    thText_pr = field === 'pickRate' ? (isDescending ? "⬆️ PR" : "⬇️ PR") : "PR";
+    thText_kda = field === 'kda' ? (isDescending ? "⬆️ KDA" : "⬇️ KDA") : "KDA";
+    thText_kills = field === 'kills' ? (isDescending ? "⬆️ KILLS" : "⬇️ KILLS") : "KILLS";
   };
 
   let isChartVisible = $state(true);
@@ -143,6 +81,9 @@
 
   const selectMode = (mode) => () => {
     window.location = `/chart?mode=${mode}`;
+    // Reset sorting when changing mode
+    sortField = null;
+    isDescending = true;
     thText_wr = "⬆️ WR";
     thText_pr = "PR";
     thText_kda = "KDA";
@@ -263,16 +204,16 @@
           <tr>
             <th>#</th>
             <th>📝</th>
-            <th class="th-toggle" onclick={sortWr(classCurrentTab)}
+            <th class="th-toggle" onclick={() => sortData('wr')}
               >{thText_wr} <span class="nth">- nth</span></th
             >
-            <th class="th-toggle" onclick={sortPr(classCurrentTab)}
+            <th class="th-toggle" onclick={() => sortData('pickRate')}
               >{thText_pr}</th
             >
-            <th class="th-toggle" onclick={sortKda(classCurrentTab)}
+            <th class="th-toggle" onclick={() => sortData('kda')}
               >{thText_kda}</th
             >
-            <th class="th-toggle" onclick={sortKills(classCurrentTab)}
+            <th class="th-toggle" onclick={() => sortData('kills')}
               >{thText_kills}</th
             >
           </tr>
