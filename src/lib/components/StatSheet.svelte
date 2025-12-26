@@ -1,20 +1,23 @@
 <script>
+  import { roles, roles_reversed } from "$lib/json/dictionary";
+  import {
+    currentRole,
+    currentStatValues,
+    currentLevelSliderValue,
+    visibleColumns,
+  } from "./statSheetState.store.js";
+  import { onMount } from "svelte";
+  import { tableSorting } from "$userStore/statTable";
 
-
-  import { roles, roles_reversed } from '$lib/json/dictionary';
-  import { currentRole, currentStatValues, currentLevelSliderValue, visibleColumns } from './statSheetState.store.js';
-  import { onMount } from 'svelte';
-  import { tableSorting } from '$userStore/statTable';
-
-  import ButtonGroup from '$lib/components/ButtonGroup.svelte';
-  import Button2 from '$lib/components/Button2.svelte';
+  import ButtonGroup from "$lib/components/ButtonGroup.svelte";
+  import Button2 from "$lib/components/Button2.svelte";
   import Note from "$lib/components/Note.svelte";
-  import Dropdown from './Dropdown.svelte';
-  import Slider from './Slider.svelte';
-  import Checkbox from './Checkbox.svelte';
-  import Accordion from './Accordion.svelte';
-  import AccordionItem from './AccordionItem.svelte';
-  import Icon from '@iconify/svelte';
+  import Dropdown from "./Dropdown.svelte";
+  import Slider from "./Slider.svelte";
+  import Checkbox from "./Checkbox.svelte";
+  import Accordion from "./Accordion.svelte";
+  import AccordionItem from "./AccordionItem.svelte";
+  import Icon from "@iconify/svelte";
   let { data, images } = $props();
 
   let roleDropdownToggle = $state();
@@ -23,7 +26,7 @@
 
   // Convert object to array once
   let baseIterable = $derived.by(() => {
-    return Object.keys(data).map(key => data[key]);
+    return Object.keys(data).map((key) => data[key]);
   });
 
   // State for sorting
@@ -39,12 +42,15 @@
     const currentLevelSliderValueValue = $currentLevelSliderValue;
 
     // Apply role filter
-    let filteredData = currentRoleValue === 'ALL'
-      ? [...baseIterable]
-      : baseIterable.filter(shiki => shiki.式神定位.includes(roles_reversed[currentRoleValue]));
+    let filteredData =
+      currentRoleValue === "ALL"
+        ? [...baseIterable]
+        : baseIterable.filter((shiki) =>
+            shiki.式神定位.includes(roles_reversed[currentRoleValue])
+          );
 
     // Apply sorting if a field is selected and we're in base stats mode
-    if (sortField && currentStatValuesValue === 'base') {
+    if (sortField && currentStatValuesValue === "base") {
       filteredData.sort((a, b) => {
         let valueA, valueB;
 
@@ -55,19 +61,19 @@
         const growthB = b.式神属性成长[sortField] || 0; // Default to 0 if growth doesn't exist
 
         // Calculate the actual value at the current level
-        valueA = baseA + (growthA * currentLevelSliderValueValue);
-        valueB = baseB + (growthB * currentLevelSliderValueValue);
+        valueA = baseA + growthA * currentLevelSliderValueValue;
+        valueB = baseB + growthB * currentLevelSliderValueValue;
 
         // Handle potential string values by converting to number if possible
-        if (typeof valueA === 'string' && !isNaN(parseFloat(valueA))) {
+        if (typeof valueA === "string" && !isNaN(parseFloat(valueA))) {
           valueA = parseFloat(valueA);
         }
-        if (typeof valueB === 'string' && !isNaN(parseFloat(valueB))) {
+        if (typeof valueB === "string" && !isNaN(parseFloat(valueB))) {
           valueB = parseFloat(valueB);
         }
 
         // For non-numeric values, use string comparison
-        if (typeof valueA === 'string' && typeof valueB === 'string') {
+        if (typeof valueA === "string" && typeof valueB === "string") {
           return isDescending
             ? valueB.localeCompare(valueA)
             : valueA.localeCompare(valueB);
@@ -83,10 +89,14 @@
 
   function switchRoles(role, closeOnMount = false) {
     $currentRole = role;
-    if (!closeOnMount && roleDropdownToggle && typeof roleDropdownToggle.toggle === 'function') {
+    if (
+      !closeOnMount &&
+      roleDropdownToggle &&
+      typeof roleDropdownToggle.toggle === "function"
+    ) {
       roleDropdownToggle.toggle();
     }
-  };
+  }
 
   function switchValues(mode) {
     $currentStatValues = mode;
@@ -104,7 +114,7 @@
   function sortColumn(prop, columnName) {
     // Don't sort if in growth mode
     const currentStatValuesValue = $currentStatValues;
-    if (currentStatValuesValue === 'growth') return;
+    if (currentStatValuesValue === "growth") return;
 
     // If clicking the same field, toggle direction; otherwise, set new field with descending order
     if (sortColumnId === columnName) {
@@ -124,130 +134,107 @@
   onMount(() => {
     const initialRole = $currentRole;
     switchRoles(initialRole, true);
-    $tableSorting.lastSorted = '';
+    $tableSorting.lastSorted = "";
   });
-
 </script>
 
 <Accordion>
-
-  <AccordionItem 
-  styles='align-items: unset'
-  active={mobileAccordionIndex === 1}
-  fn={() => toggleMobileControlAccordion(1)}>
+  <AccordionItem
+    styles="align-items: unset"
+    active={mobileAccordionIndex === 1}
+    fn={() => toggleMobileControlAccordion(1)}
+  >
     {#snippet name()}
-      
-        Role
-      
-      {/snippet}
+      Role
+    {/snippet}
     {#snippet content()}
-      
-        <Button2
-          active={$currentRole === 'ALL'}
-          fn={() => switchRoles('ALL')}
-          >
-          ALL
+      <Button2 active={$currentRole === "ALL"} fn={() => switchRoles("ALL")}>
+        ALL
+      </Button2>
+      {#each roleNames as role}
+        <Button2 active={$currentRole === role} fn={() => switchRoles(role)}>
+          {role}
         </Button2>
-        {#each roleNames as role}
-          <Button2
-            active={$currentRole === role}
-            fn={() => switchRoles(role)}
-            >
-            {role}
-          </Button2>
-        {/each}
-      
-      {/snippet}
+      {/each}
+    {/snippet}
   </AccordionItem>
 
   <AccordionItem
-  styles='gap: 10px; align-items: unset'
-  active={mobileAccordionIndex === 2}
-  fn={() => toggleMobileControlAccordion(2)}>
+    styles="gap: 10px; align-items: unset"
+    active={mobileAccordionIndex === 2}
+    fn={() => toggleMobileControlAccordion(2)}
+  >
     {#snippet name()}
-      
-        Visible Columns
-      
-      {/snippet}
+      Visible Columns
+    {/snippet}
     {#snippet content()}
-      
-        <Checkbox bind:checked={$visibleColumns.names}>Names</Checkbox>
-        <Checkbox bind:checked={$visibleColumns.role}>Role</Checkbox>
-        <Checkbox bind:checked={$visibleColumns.patk}>P. ATK</Checkbox>
-        <Checkbox bind:checked={$visibleColumns.atkspd}>ATK SPEED</Checkbox>
-        <Checkbox bind:checked={$visibleColumns.hp}>HP</Checkbox>
-        <Checkbox bind:checked={$visibleColumns.hpregen}>HP Regen</Checkbox>
-        <Checkbox bind:checked={$visibleColumns.mp}>MP</Checkbox>
-        <Checkbox bind:checked={$visibleColumns.mpregen}>MP Regen</Checkbox>
-        <Checkbox bind:checked={$visibleColumns.parmor}>P. Armor</Checkbox>
-        <Checkbox bind:checked={$visibleColumns.marmor}>M. Armor</Checkbox>
-        <Checkbox bind:checked={$visibleColumns.mspeed}>MSpeed</Checkbox>
-      
-      {/snippet}
+      <Checkbox bind:checked={$visibleColumns.names}>Names</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.role}>Role</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.patk}>P. ATK</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.atkspd}>ATK SPEED</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.hp}>HP</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.hpregen}>HP Regen</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.mp}>MP</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.mpregen}>MP Regen</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.parmor}>P. Armor</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.marmor}>M. Armor</Checkbox>
+      <Checkbox bind:checked={$visibleColumns.mspeed}>MSpeed</Checkbox>
+    {/snippet}
   </AccordionItem>
 
   <AccordionItem
-  styles='gap: 10px; align-items: flex-end'
-  active={mobileAccordionIndex === 3}
-  fn={() => toggleMobileControlAccordion(3)}>
+    styles="gap: 10px; align-items: flex-end"
+    active={mobileAccordionIndex === 3}
+    fn={() => toggleMobileControlAccordion(3)}
+  >
     {#snippet name()}
-      
-        Shikigami Level & Table Mode
-      
-      {/snippet}
+      Shikigami Level & Table Mode
+    {/snippet}
     {#snippet content()}
-      
-        <ButtonGroup>
-          <Button2
-          active={$currentStatValues === 'base'}
-          fn={() => switchValues('base')}
-          icon='ph:plant-fill'
-            >
-          </Button2>
+      <ButtonGroup>
+        <Button2
+          active={$currentStatValues === "base"}
+          fn={() => switchValues("base")}
+          icon="ph:plant-fill"
+        ></Button2>
 
-          <Button2
-          active={$currentStatValues === 'growth'}
-          fn={() => switchValues('growth')}
-          icon='uil:arrow-growth'
-            >
-          </Button2>
-        </ButtonGroup>
+        <Button2
+          active={$currentStatValues === "growth"}
+          fn={() => switchValues("growth")}
+          icon="uil:arrow-growth"
+        ></Button2>
+      </ButtonGroup>
 
-        <Slider
-          status={$currentLevelSliderValue + 1}
-          fn={() => modifyLevel($currentLevelSliderValue)}
-          bind:value={$currentLevelSliderValue}
-          min='0'
-          max='17'
-          disabled={$currentStatValues === 'growth'}
-          >Level
-        </Slider>
-      
-      {/snippet}
+      <Slider
+        status={$currentLevelSliderValue + 1}
+        fn={() => modifyLevel($currentLevelSliderValue)}
+        bind:value={$currentLevelSliderValue}
+        min="0"
+        max="17"
+        disabled={$currentStatValues === "growth"}
+        >Level
+      </Slider>
+    {/snippet}
   </AccordionItem>
-
 </Accordion>
 
 <div class="navigation">
-
-  <Dropdown bind:this={roleDropdownToggle} label='Role:' activeLabel={$currentRole}>
-    <Button2
-      active={$currentRole === 'ALL'}
-      fn={() => switchRoles('ALL')}
-      >
+  <Dropdown
+    bind:this={roleDropdownToggle}
+    label="Role:"
+    activeLabel={$currentRole}
+  >
+    <Button2 active={$currentRole === "ALL"} fn={() => switchRoles("ALL")}>
       ALL
     </Button2>
     {#each roleNames as role}
-      <Button2
-        active={$currentRole === role}
-        fn={() => switchRoles(role)}
-        >
+      <Button2 active={$currentRole === role} fn={() => switchRoles(role)}>
         {role}
       </Button2>
     {/each}
   </Dropdown>
 
-  <Dropdown label='Columns'>
+  <Dropdown label="Columns">
     <Checkbox bind:checked={$visibleColumns.names}>Names</Checkbox>
     <Checkbox bind:checked={$visibleColumns.role}>Role</Checkbox>
     <Checkbox bind:checked={$visibleColumns.patk}>P. ATK</Checkbox>
@@ -262,11 +249,12 @@
   </Dropdown>
 
   <ButtonGroup>
-    {#each [
-      { name: 'base', icon: 'ic:round-minus' },
-      { name: 'growth', icon: 'uil:arrow-growth' }
-    ] as btn}
-      <Button2 active={$currentStatValues === btn.name} fn={() => switchValues(btn.name)} icon={btn.icon} />
+    {#each [{ name: "base", icon: "ic:round-minus" }, { name: "growth", icon: "uil:arrow-growth" }] as btn}
+      <Button2
+        active={$currentStatValues === btn.name}
+        fn={() => switchValues(btn.name)}
+        icon={btn.icon}
+      />
     {/each}
   </ButtonGroup>
 
@@ -274,40 +262,35 @@
     status={$currentLevelSliderValue + 1}
     fn={() => modifyLevel($currentLevelSliderValue)}
     bind:value={$currentLevelSliderValue}
-    min='0'
-    max='17'
-    disabled={$currentStatValues === 'growth'}
+    min="0"
+    max="17"
+    disabled={$currentStatValues === "growth"}
     >Level
   </Slider>
-  
 </div>
 
 <div class="stat-sheet">
   <table>
     <thead>
       <tr>
-        
         <th>#</th>
         <th>📝</th>
 
-        {#each [
-          { name: 'Role', column_id: $visibleColumns.role },
-          { name: 'P. ATK', column_id: $visibleColumns.patk, metadata: { en: 'patk', cn: '物理伤害' } },
-          { name: 'ATK Speed', column_id: $visibleColumns.atkspd },
-          { name: 'HP', column_id: $visibleColumns.hp, metadata: { en: 'hp', cn: '生命值' } },
-          { name: 'HP Regen', column_id: $visibleColumns.hpregen, metadata: { en: 'hpregen', cn: '生命恢复' } },
-          { name: 'MP', column_id: $visibleColumns.mp, metadata: { en: 'mp', cn: '魔法上限' } },
-          { name: 'MP Regen', column_id: $visibleColumns.mpregen, metadata: { en: 'mpregen', cn: '魔法回复' } },
-          { name: 'P. Armor', column_id: $visibleColumns.parmor, metadata: { en: 'parmor', cn: '护甲' } },
-          { name: 'M. Armor', column_id: $visibleColumns.marmor, metadata: { en: 'marmor', cn: '魔抗' } },
-          { name: 'M-Speed', column_id: $visibleColumns.mspeed, metadata: { en: 'movement', cn: '移动速度' } },
-        ] as th}
+        {#each [{ name: "Role", column_id: $visibleColumns.role }, { name: "P. ATK", column_id: $visibleColumns.patk, metadata: { en: "patk", cn: "物理伤害" } }, { name: "ATK Speed", column_id: $visibleColumns.atkspd }, { name: "HP", column_id: $visibleColumns.hp, metadata: { en: "hp", cn: "生命值" } }, { name: "HP Regen", column_id: $visibleColumns.hpregen, metadata: { en: "hpregen", cn: "生命恢复" } }, { name: "MP", column_id: $visibleColumns.mp, metadata: { en: "mp", cn: "魔法上限" } }, { name: "MP Regen", column_id: $visibleColumns.mpregen, metadata: { en: "mpregen", cn: "魔法回复" } }, { name: "P. Armor", column_id: $visibleColumns.parmor, metadata: { en: "parmor", cn: "护甲" } }, { name: "M. Armor", column_id: $visibleColumns.marmor, metadata: { en: "marmor", cn: "魔抗" } }, { name: "M-Speed", column_id: $visibleColumns.mspeed, metadata: { en: "movement", cn: "移动速度" } }] as th}
           {#if th.column_id}
             {#if th.metadata}
-              <th style="cursor: pointer; {$currentStatValues === "growth" && "cursor: not-allowed;"}" onclick={() => sortColumn(th.metadata.cn, th.metadata.en)}>
+              <th
+                style="cursor: pointer; {$currentStatValues === 'growth' &&
+                  'cursor: not-allowed;'}"
+                onclick={() => sortColumn(th.metadata.cn, th.metadata.en)}
+              >
                 <span>
                   {#if $tableSorting.lastSorted === th.metadata.en}
-                    <Icon icon='fa:sort' style='font-size: 16px; {$currentStatValues === "growth" && "opacity: .2;"}' />
+                    <Icon
+                      icon="fa:sort"
+                      style="font-size: 16px; {$currentStatValues ===
+                        'growth' && 'opacity: .2;'}"
+                    />
                   {/if}
                   {th.name}
                 </span>
@@ -319,12 +302,13 @@
             {/if}
           {/if}
         {/each}
-
       </tr>
     </thead>
     <tbody contenteditable="false">
       {#each mainIterable as shiki, index}
-        {@const shiki_roles = shiki.式神定位.map(role => roles[role]).join(', ')}
+        {@const shiki_roles = shiki.式神定位
+          .map((role) => roles[role])
+          .join(", ")}
         {@const avatar = images[shiki.式神方头像]}
         {@const base = shiki.式神基础属性}
         {@const growth = shiki.式神属性成长}
@@ -344,61 +328,96 @@
         {@const marmor = base.魔抗}
         {@const marmor_growth = growth.魔抗}
         {@const mvsc_count = base.移动速度.toString().split("").length}
-        {@const base_movement_speed = mvsc_count >= 3 ? base.移动速度.toString().slice(0, 2) + base.移动速度.toString().slice(1, 2) : `${base.移动速度.toString()}0`}
+        {@const base_movement_speed =
+          mvsc_count >= 3
+            ? base.移动速度.toString().slice(0, 2) +
+              base.移动速度.toString().slice(1, 2)
+            : `${base.移动速度.toString()}0`}
         <tr>
-          {#if $currentStatValues === 'base'}
+          {#if $currentStatValues === "base"}
             <td>{index + 1}.</td>
             <td>
-              <img src={avatar} alt="shikigami">
+              <img src={avatar} alt="shikigami" />
               {#if $visibleColumns.names}
-                <a data-sveltekit-preload-data="tap" href="/shikigami/{shiki.式神ID}">{shiki.式神名称}</a>
+                <a
+                  data-sveltekit-preload-data="tap"
+                  href="/shikigami/{shiki.式神ID}">{shiki.式神名称}</a
+                >
               {/if}
             </td>
             {#if $visibleColumns.role}
               <td>{shiki_roles}</td>
             {/if}
             {#if $visibleColumns.patk}
-              <td>{(attack + (attack_growth * $currentLevelSliderValue)).toFixed(2)}</td>
+              <td
+                >{(attack + attack_growth * $currentLevelSliderValue).toFixed(
+                  2
+                )}</td
+              >
             {/if}
             {#if $visibleColumns.atkspd}
               <td>{attack_speed} <span class="unit">ATK /s</span></td>
             {/if}
             {#if $visibleColumns.hp}
-              <td>{(hp + (hp_growth * $currentLevelSliderValue)).toFixed(2)} <span class="unit">HP</span></td>
+              <td
+                >{(hp + hp_growth * $currentLevelSliderValue).toFixed(2)}
+                <span class="unit">HP</span></td
+              >
             {/if}
             {#if $visibleColumns.hpregen}
-              <td>+ {(hp_regen + (hp_regen_growth * $currentLevelSliderValue)).toFixed(2)} <span class="unit">HP /s</span></td>
+              <td
+                >+ {(
+                  hp_regen +
+                  hp_regen_growth * $currentLevelSliderValue
+                ).toFixed(2)} <span class="unit">HP /s</span></td
+              >
             {/if}
             {#if $visibleColumns.mp}
-              <td>{mana + (mana_growth * $currentLevelSliderValue)} <span class="unit">MP</span></td>
+              <td
+                >{mana + mana_growth * $currentLevelSliderValue}
+                <span class="unit">MP</span></td
+              >
             {/if}
             {#if $visibleColumns.mpregen}
-              <td>+ {(mp_regen + (mp_regen_growth * $currentLevelSliderValue)).toFixed()} <span class="unit">MP /s</span></td>
+              <td
+                >+ {(
+                  mp_regen +
+                  mp_regen_growth * $currentLevelSliderValue
+                ).toFixed()} <span class="unit">MP /s</span></td
+              >
             {/if}
             {#if $visibleColumns.parmor}
-              <td>{(parmor + (parmor_growth * $currentLevelSliderValue)).toFixed()}</td>
+              <td
+                >{(
+                  parmor +
+                  parmor_growth * $currentLevelSliderValue
+                ).toFixed()}</td
+              >
             {/if}
             {#if $visibleColumns.marmor}
-              <td>{marmor + (marmor_growth * $currentLevelSliderValue)}</td>
+              <td>{marmor + marmor_growth * $currentLevelSliderValue}</td>
             {/if}
             {#if $visibleColumns.mspeed}
               <td>{base_movement_speed}</td>
             {/if}
           {/if}
-          
-          {#if $currentStatValues === 'growth'}
+
+          {#if $currentStatValues === "growth"}
             <td>{index + 1}.</td>
             <td>
-              <img src={avatar} alt="shikigami">
+              <img src={avatar} alt="shikigami" />
               {#if $visibleColumns.names}
-                <a data-sveltekit-preload-data="tap" href="/shikigami/{shiki.式神ID}">{shiki.式神名称}</a>
+                <a
+                  data-sveltekit-preload-data="tap"
+                  href="/shikigami/{shiki.式神ID}">{shiki.式神名称}</a
+                >
               {/if}
             </td>
             {#if $visibleColumns.role}
               <td>{shiki_roles}</td>
             {/if}
             {#if $visibleColumns.patk}
-              <td>+ {attack_growth}  <span class="unit">/lvl</span></td>
+              <td>+ {attack_growth} <span class="unit">/lvl</span></td>
             {/if}
             {#if $visibleColumns.atkspd}
               <td><span class="unit">need research</span></td>
@@ -410,10 +429,16 @@
               <td>+ {hp_regen_growth} <span class="unit">HP /lvl</span></td>
             {/if}
             {#if $visibleColumns.mp}
-              <td>+ {mana_growth ? mana_growth : "n/a"} <span class="unit">MP /lvl</span></td>
+              <td
+                >+ {mana_growth ? mana_growth : "n/a"}
+                <span class="unit">MP /lvl</span></td
+              >
             {/if}
             {#if $visibleColumns.mpregen}
-              <td>+ {mp_regen_growth ? mp_regen_growth : "n/a"} <span class="unit">MP/s /lvl</span></td>
+              <td
+                >+ {mp_regen_growth ? mp_regen_growth : "n/a"}
+                <span class="unit">MP/s /lvl</span></td
+              >
             {/if}
             {#if $visibleColumns.parmor}
               <td>+ {parmor_growth} <span class="unit"> /lvl</span></td>
@@ -428,16 +453,20 @@
         </tr>
       {/each}
     </tbody>
-</table>
+  </table>
 </div>
 
-<Note noIcon=True text={`Number of shikigamis shown - ${mainIterable.length}.`} styles="font-size: .8rem; text-align: center;" container_margin='50px 0 0 0' />
+<Note
+  noIcon="True"
+  text={`Number of shikigamis shown - ${mainIterable.length}.`}
+  styles="font-size: .8rem; text-align: center;"
+  container_margin="50px 0 0 0"
+/>
 
 <style>
-
   .unit {
     color: #ffffff88;
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 
   .stat-sheet {
@@ -447,7 +476,7 @@
   }
 
   .navigation {
-    background-color: #36393F;
+    background-color: #36393f;
     position: sticky;
     top: 0;
     padding: 5px 0;
@@ -469,7 +498,7 @@
   thead {
     position: sticky;
     top: 0;
-    background-color: #36393F;
+    background-color: #36393f;
   }
 
   thead th {
@@ -495,8 +524,8 @@
 
   td {
     text-align: center;
-    background-color: #3C3F46;
-    font-size: .9rem;
+    background-color: #3c3f46;
+    font-size: 0.9rem;
   }
 
   td:first-child {
@@ -511,7 +540,7 @@
     border-bottom-right-radius: 6px;
   }
 
-  td:nth-child(2n+2) {
+  td:nth-child(2n + 2) {
     background-color: rgb(58, 61, 66);
   }
 
@@ -521,7 +550,7 @@
 
   td:nth-child(2) {
     text-align: left;
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: 600;
     display: flex;
     justify-content: flex-start;
@@ -531,6 +560,10 @@
 
   td > img {
     width: 40px;
+    min-height: 40px;
+    background-color: #00000027;
+    border-radius: 6px;
+    border: 1px solid #ffffff23;
   }
 
   tr {
@@ -550,14 +583,15 @@
 
   th {
     text-align: left;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   @media only screen and (max-width: 500px) {
     .stat-sheet {
       padding: 0 5px;
     }
-    td:first-child, th:first-child {
+    td:first-child,
+    th:first-child {
       display: none;
     }
   }
