@@ -29,20 +29,22 @@
 
   let mobile_role_switcher_toggle = $state();
 
-  let role = $derived(shiki_names);
+  let role = $state([...shiki_names]);
   const toggleRole = (r) => () => {
 
+    let filteredRole;
     r === 'all'
-    ? role = shiki_names.sort()
-    : role = shiki_names.filter(shiki => shikiga_data[shiki].式神定位.includes(r)).sort();
+    ? filteredRole = [...shiki_names]
+    : filteredRole = shiki_names.filter(shiki => shikiga_data[shiki].式神定位.includes(r));
 
     active_role.update(role => role = r);
 
+    // Apply the current sort order after filtering
     $isAscending
-    ? role = role.sort()
-    : role = role.sort().reverse();
-    
-    role_config.update(roles => roles = role);
+    ? role = [...filteredRole].sort()
+    : role = [...filteredRole].sort().reverse();
+
+    role_config.update(roles => [...role]);
     hasBeenLeft.update(bool => bool = false);
 
     mobile_role_switcher_toggle.toggle();
@@ -51,17 +53,22 @@
 
   // sort order
   function sortAscend() {
-    $hasBeenLeft
-    ? role_config.update(c => c = c.sort())
-    : role = role.sort();
-    role = role.sort()
+    if ($hasBeenLeft) {
+      role_config.update(c => [...c].sort()); // Create a new sorted array
+      role = $role_config;
+    } else {
+      role = [...role].sort(); // Create a new sorted array
+    }
     isAscending.update(bool => bool = true);
   }
 
   function sortDescend() {
-    $hasBeenLeft
-    ? role_config.update(c => c = c.sort().reverse())
-    : role = role.sort().reverse();
+    if ($hasBeenLeft) {
+      role_config.update(c => [...c].sort().reverse());
+      role = $role_config;
+    } else {
+      role = [...role].sort().reverse(); // Create a new reversed sorted array
+    }
     isAscending.update(bool => bool = false);
   }
 
@@ -142,7 +149,7 @@
     </Dropdown>
   </div>
 </div>
-  
+
 <div class="shiki-selection-container">
   {#if $hasBeenLeft}
     {#each $role_config as shiki}
@@ -170,7 +177,7 @@
         shiki_name = {shiki}
         new_shiki = {shikiga_data[shiki].新式神}
       />
-      
+
     {/each}
   {/if}
 </div>
@@ -179,7 +186,7 @@
 
 
 <style>
-  
+
   .desktop-role-switcher-wrapper {
     display: flex;
     align-items: center;
