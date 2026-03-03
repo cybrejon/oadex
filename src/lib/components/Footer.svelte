@@ -10,7 +10,7 @@
       <Button2 icon='mdi:github' type='link' link='https://github.com/cybrejon/oadex' />
       <Button2 icon='tabler:api' type='link' link='https://github.com/cybrejon/onmyoji-arena-wiki-api' />
     </div>
-    <p style="font-weight: 600;">OADex 2024, All rights reserved.</p>
+    <p style="font-weight: 600;">OADex 2026, All rights reserved.</p>
   </div>
   
 </div>
