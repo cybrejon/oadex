@@ -182,7 +182,8 @@
   {/if}
 </div>
 
-<Note noIcon=True text={`Number of shikigamis shown - ${numberOfShikisCurrentlyShown}.`} styles="font-size: .8rem; text-align: center;" container_margin='50px 0 0 0' />
+<!-- <Note noIcon=True text={`Number of shikigamis shown - ${numberOfShikisCurrentlyShown}.`} styles="font-size: .8rem; text-align: center;" container_margin='50px 0 0 0' /> -->
+<Note noIcon=True text="Last updated: July 14, 2026." styles="font-size: .8rem; text-align: center; color: orange;" container_margin='50px 0 0 0' />
 
 
 <style>
