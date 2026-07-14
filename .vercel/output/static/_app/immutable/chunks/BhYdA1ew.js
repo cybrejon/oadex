@@ -1,0 +1,1 @@
+import"./CWj6FrbW.js";import{f as l,E as i,t as d,b as m,d as n,F as f,r as p}from"./SffS3sds.js";import{s as v}from"./Gn3FEbkU.js";var c=l('<div class="svelte-w49llb"><!></div>');function y(s,t){var e=c();let a;var r=n(e);i(r,()=>t.children??f),p(e),d(o=>a=v(e,t.styles,a,o),[()=>({"grid-area":t.area_name})]),m(s,e)}export{y as B};

@@ -1,19 +1,17 @@
-import { PRIVATE_HOST_IP } from '$env/static/private';
+import itemData from '$lib/data/items_transformed.js';
+import images from '$lib/data/images.js';
 
-export async function load({ fetch, url }) {
-
+export function load({ url }) {
   function getItemQuery() {
     return !!url.searchParams.get('i') && url.searchParams.get('i');
   }
 
   const itemQuery = getItemQuery();
 
-  const itemData_r = await fetch(`${PRIVATE_HOST_IP}/items`);
-  const itemData = await itemData_r.json();
+  const resolved = itemData.map(item => ({
+    ...item,
+    image: images[item.image] || item.image
+  }));
 
-  return {
-    itemData,
-    itemQuery
-  }
-
+  return { itemData: resolved, itemQuery };
 }
