@@ -1,1 +1,0 @@
-import"../chunks/CWj6FrbW.js";import"../chunks/CV5_jdq4.js";import{N as e}from"../chunks/LhokJS7y.js";async function t(){}const i=Object.freeze(Object.defineProperty({__proto__:null,load:t},Symbol.toStringTag,{value:"Module"}));function c(o){e(o,{text:"Page is under construction"})}export{c as component,i as universal};

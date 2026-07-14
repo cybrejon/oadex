@@ -1,4 +1,0 @@
-const brief_mushishi_guide_by_maximus_111 = { "title": "Brief Mushishi Guide by maximus_111", "shikigami_name": "Mushishi", "md": "[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]\n[object Promise]" };
-export {
-  brief_mushishi_guide_by_maximus_111 as default
-};
